@@ -5,14 +5,16 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 ## Alunos integrantes da equipe
 
 * Alexandre Ottoni Righas
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Carlos José Gomes Batista Figueiredo
+* Henrique Ferreira Sales
+* Henrique Lima Volponi
+* ⁠João Gabriel Silva Custódio
+* Marcos Alberto Ferreira Pinto
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Gabriel Barbosa da Fonseca
+* Michelle Hanne Soares de Andrade
 
 ## Instruções de utilização
 
