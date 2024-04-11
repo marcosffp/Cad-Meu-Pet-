@@ -149,38 +149,55 @@ Os requisitos de um projeto são classificados em dois grupos:
 ## Wireframes
 
 ### Home
-![home](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/49a97c85-ca32-47e7-b616-dd4b952ac413)![homeM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/23952317-a464-4bba-96ac-90fc26842a67)
+![home](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/49a97c85-ca32-47e7-b616-dd4b952ac413)
+
+![homeM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/23952317-a464-4bba-96ac-90fc26842a67)
 
 ### Menu
 ![menuM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e3ab276c-ed0b-4496-9c2a-7ac88c34a28d)
 
 ### Cadastrar
-![cadastrar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/909376be-3d41-4e28-b9b2-b1d7c42245ee)![cadastrarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/50e391f2-4f1f-4549-88c8-1bf4def4afba)
+![cadastrar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/909376be-3d41-4e28-b9b2-b1d7c42245ee)
+
+![cadastrarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/50e391f2-4f1f-4549-88c8-1bf4def4afba)
 
 ### Conta do usuário
-![conta_do_usuarioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/5ec8fb8b-3be1-468a-84be-05e7120f3b16)![conta_do_usuario](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c5a72081-5b3b-49b4-aad9-c20f53d827c0)
+![conta_do_usuarioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/5ec8fb8b-3be1-468a-84be-05e7120f3b16)
+
+![conta_do_usuario](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c5a72081-5b3b-49b4-aad9-c20f53d827c0)
 
 ### Desaparecidos e Localizados
-![desaparecidos_localizados](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ef28375a-ca78-462b-803e-6c4087fe40ca)![desaparecidos_e_localizadosM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/366773a2-3381-484d-80d8-36639921f962)
+![desaparecidos_localizados](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ef28375a-ca78-462b-803e-6c4087fe40ca)
+
+![desaparecidos_e_localizadosM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/366773a2-3381-484d-80d8-36639921f962)
 
 ### Filtros
 ![filtro](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/93e0ee5b-c58d-4292-a2a7-d8b30cd1251c)![flitroM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/39c34a97-1df2-4191-a8c5-2808453dfe79)
 
 ### Ferramentas
-![ferramentas](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/fbe6479f-971b-4737-9fba-f0dc61afeae4)![ferramentasM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f3e93ad3-dee1-4f8a-a255-c888207fe859)
+![ferramentas](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/fbe6479f-971b-4737-9fba-f0dc61afeae4)
+
+![ferramentasM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f3e93ad3-dee1-4f8a-a255-c888207fe859)
 
 ### Blog
-![blog](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8da45e20-f95f-434a-8e05-444fd714e2d7)![blogM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/703d7f78-014e-4790-87a4-11afe8407207)
+![blog](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8da45e20-f95f-434a-8e05-444fd714e2d7)
+
+![blogM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/703d7f78-014e-4790-87a4-11afe8407207)
 
 ### Anunciar
-![anunciar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/1cd2f687-d2c4-46cb-89fb-eebf02698e3e)![anunciarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e7444989-cf22-4f13-b315-b8b5f6fd946b)
+![anunciar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/1cd2f687-d2c4-46cb-89fb-eebf02698e3e)
+
+![anunciarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e7444989-cf22-4f13-b315-b8b5f6fd946b)
 
 ### Atualizar o anúncio
 ![atualizar_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d98d9117-945a-414b-8e86-973b26efaffa)
+
 ![atualizar_anuncioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ce7e96d2-6170-4ed7-ad76-cfbb4d7a5000)
 
 ### FAQ
-![faq](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/7b948456-0634-4082-91c1-96f88071e456)![faqM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d6a9f712-d1a8-40f9-bfe5-6e7d962cca1f)
+![faq](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/7b948456-0634-4082-91c1-96f88071e456)
+
+![faqM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d6a9f712-d1a8-40f9-bfe5-6e7d962cca1f)
 
 
 ***Paleta de cores***
@@ -188,6 +205,7 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 ***Fontes***
 ![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f5be4455-144c-4017-9f5f-d1e3d9348a75)
+
 ![fonte_secundaria](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/a35322fb-66d3-4bbc-9238-57d192d62494)
 
 **Link**:
