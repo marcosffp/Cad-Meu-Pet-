@@ -139,8 +139,9 @@ Os requisitos de um projeto são classificados em dois grupos:
   (Prioridade ALTA);
 
 ## User Flow
+![user_flow](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/dcba3412-9358-4d5f-8c1e-6c3ea978d425)![user_flowM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/2c53d6b8-2a03-47a9-ae24-3934f9989da7)
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
+
 
 **Links Úteis**:
 
@@ -153,8 +154,14 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 ### Home
 ![home](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/49a97c85-ca32-47e7-b616-dd4b952ac413)![homeM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/23952317-a464-4bba-96ac-90fc26842a67)
 
+### Menu
+![menuM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e3ab276c-ed0b-4496-9c2a-7ac88c34a28d)
+
 ### Cadastrar
 ![cadastrar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/909376be-3d41-4e28-b9b2-b1d7c42245ee)![cadastrarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/50e391f2-4f1f-4549-88c8-1bf4def4afba)
+
+### Conta do usuário
+![conta_do_usuarioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/5ec8fb8b-3be1-468a-84be-05e7120f3b16)![conta_do_usuario](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c5a72081-5b3b-49b4-aad9-c20f53d827c0)
 
 ### Desaparecidos e Localizados
 ![desaparecidos_localizados](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ef28375a-ca78-462b-803e-6c4087fe40ca)![desaparecidos_e_localizadosM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/366773a2-3381-484d-80d8-36639921f962)
@@ -175,14 +182,9 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 ![atualizar_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d98d9117-945a-414b-8e86-973b26efaffa)
 ![atualizar_anuncioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ce7e96d2-6170-4ed7-ad76-cfbb4d7a5000)
 
+### FAQ
+![faq](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/7b948456-0634-4082-91c1-96f88071e456)![faqM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d6a9f712-d1a8-40f9-bfe5-6e7d962cca1f)
 
-
-**Links Úteis**:
-
-- [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-- [Figma](https://www.figma.com/)
-- [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-- [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
 
 ## Gestão de Projetos
 
