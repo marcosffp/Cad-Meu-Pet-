@@ -84,34 +84,55 @@ Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de le
 Os requisitos de um projeto são classificados em dois grupos:
 
 - [Requisitos Funcionais (RF)
+  
   -RF-001: O tutor faz o cadastro do animal perdido (Prioridade ALTA);
+  
   -RF-002: O usuário busca animais perdidos (Prioridade MÉDIA);
+  
   -RF-003: O usuário filtra os animais por tipo (Prioridade BAIXA);
+  
   -RF-004: O usuário deve ser cadastrado na plataforma (Prioridade ALTA);
+  
   -RF-005: O tutor deve atualizar os status do animal (Prioridade ALTA);
+  
   -RF-006: O tutor deve ser cadastrado na plataforma (Prioridade ALTA);
+  
   -RF-007: O usuário deve entrar em contato com o tutor quando achar o pet (Prioridade BAIXA);
+  
   -RF-008: O usuário e o tutor podem editar seu perfil na plataforma (Prioridade MÉDIA);
+  
   -RF-009: O sistema informará o número de casos de pets reunidos como uma medida de acompanhamento e avaliação 
   da eficácia das ações de reunificação de animais perdidos com seus tutores (Prioridade MÉDIA);
+  
   -RF-010: Os usuários podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status 
   e removendo-o das listagens de animais perdidos (Prioridade ALTA);
+  
 
 - [Requisitos Não Funcionais (RNF)
+  
   -RF-001: Desenvolvimento do site usando HTML, CSS e JS (Prioridade ALTA);
+  
   -RF-002: Utilização de banco de dados localStorage (Prioridade MÉDIA);
+  
   -RF-003: Suporte para todos os navegadores gerais (Prioridade ALTA);
+  
   -RF-004: Site responsivo (Prioridade MÉDIA);
+  
   -RF-005: Suporte para múltiplos dispositivos, smartphone, tablet e desktop (Prioridade MÉDIA);
+  
   -RF-006: A aplicação da API do Google Maps para o registro do endereço do último avistamento do animal de 
   estimação e para facilitar o encontro entre o proprietário do animal e a pessoa que o encontrou (Prioridade 
   ALTA);
+  
   -RF-007: Temas claro e escuro (Prioridade BAIXA);
+  
   -RF-008: Assegurar a integridade e confidencialidade dos dados dos usuários mediante a utilização de 
   plataformas reconhecidas, tais como o ambiente de desenvolvimento Visual Studio Code (VSCode) e a interface de 
   armazenamento local denominada localStorage, na construção do site (Prioridade ALTA);
+  
   -RF-009: Além disso, é compatível com múltiplos idiomas, garantindo uma experiência inclusiva para usuários de 
   diversas origens e regiões geográficas (Prioridade MÉDIA);
+  
   -RF-010: Seguir as diretrizes de acessibilidade da Web Content Accessibility Guidelines (WCAG) para garantir 
   que pessoas com deficiências possam acessar e utilizar todas as funcionalidades do site de forma eficaz. 
   (Prioridade ALTA);
