@@ -172,7 +172,8 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 ![anunciar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/1cd2f687-d2c4-46cb-89fb-eebf02698e3e)![anunciarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e7444989-cf22-4f13-b315-b8b5f6fd946b)
 
 ### Atualizar o anúncio
-![atualizar_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d98d9117-945a-414b-8e86-973b26efaffa)![atualizar_anuncioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ce7e96d2-6170-4ed7-ad76-cfbb4d7a5000)
+![atualizar_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d98d9117-945a-414b-8e86-973b26efaffa)
+![atualizar_anuncioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ce7e96d2-6170-4ed7-ad76-cfbb4d7a5000)
 
 
 
