@@ -143,7 +143,7 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 
 **Link**:
-- [User Flow]([https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534](https://miro.com/app/board/uXjVKVKBgkY=/?share_link_id=808348729949))
+- [User Flow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
 
 
 ## Wireframes
@@ -183,6 +183,13 @@ Os requisitos de um projeto são classificados em dois grupos:
 ![faq](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/7b948456-0634-4082-91c1-96f88071e456)![faqM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d6a9f712-d1a8-40f9-bfe5-6e7d962cca1f)
 
 
+***Paleta de cores***
+![paleta_de_cores](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/798e8187-6adc-488a-afde-b81e110cb94a)
+
+***Fontes***
+![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f5be4455-144c-4017-9f5f-d1e3d9348a75)
+![fonte_secundaria](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/a35322fb-66d3-4bbc-9238-57d192d62494)
+
 **Link**:
 - [Wireframe](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design)
 
@@ -190,14 +197,77 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 ## Gestão de Projetos
 
- Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
+### Metodologia
 
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+Detalhes sobre a organização do grupo e o ferramental empregado:
 
-**Links Úteis**:
+-Processo de Design Thinking: Plataforma Figma 
+[Link Design Thinking](https://www.figma.com/file/kIKNbYDNAJAC2btmjOb3zP/Untitled?type=design&node-id=0%3A1&mode=design&t=A09p9qmoB4UIzsRM-1)
 
-- [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-- [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-- [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-- [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-- [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+-Repositório de código: Plataforma GitHub 
+[Link Repositório](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/)
+
+-Projeção inicial das telas: Plataforma Figma 
+[Link Telas]([https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design))
+
+-Projeção User Flow: Plataforma Miro
+[Link User Flow]((https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666))
+
+-Apresentação do projeto: Plataforma Canva
+[Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+
+### Gestão do Projeto feita no Trello
+![gestao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d850406d-a2ae-4035-a3fd-3c0392a809b2)
+
+
+Dividimos em 4 partes:
+
+-Apresentação: João Gabriel
+-Documento: João Gabriel e Marcos Alberto
+-Wireframe: Alexandre Righas, Carlos José, Henrique Volponi e Marcos Alberto
+-User Flow: Marcos Alberto
+-Slide: João Gabriel e Marcos Alberto
+
+
+### Design Thinking
+![matriz_de_alinhamento](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/51339850-d8ed-419d-bb37-73b028ed7249)
+![mapa_de_stakeholders](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/bf980e98-c6f1-4288-8b80-d5d0f77d307b)
+![persona1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/b18bd537-c00d-4bcd-a048-6e9bc479d581)
+![persona2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c0504549-3e89-4ecd-8046-288efd46a2c3)
+![persona3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/6bf07078-71ed-481a-a5de-6b69bf084973)
+![mural_de_possibilidades](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e6a4e569-03f7-4f23-833d-c3ca24a106f0)
+![mapa_de_prorizacao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e4ccf493-47c8-4401-a96c-a0e05e46bb5f)
+
+### Scrum
+
+-Planejamento em Sprints:
+O projeto foi dividido em sprints curtos, cada um com metas e entregas específicas. A equipe planejava cada sprint em conjunto, definindo as tarefas e os critérios de aceitação.
+
+-Reuniões Semanais:
+Reuniões diárias curtas (daily scrums) sincronizavam a equipe, permitindo que cada membro compartilhasse seus progressos, desafios e impedimentos.
+
+-Retrospectivas Constantes:
+Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que poderia ser aprimorado, aprimorando continuamente seus processos e dinâmicas de trabalho.
+
+
+# Referências Bibliográficas
+
+- https://www.folhape.com.br/colunistas/tecnologia-e-games/o-scrum-e-o-github-projects-para-gerenciamento-de-projetos/41913/
+  
+- https://youtu.be/VvkT4I7WrmM?si=z3R0D500VgWt5IP1
+  
+- https://youtu.be/zh90BESE-W8?si=pxWiDT83ik0QQ7Ps
+  
+- https://youtu.be/7hZMGSamsYA?si=GMqDBDPjen7tT7vP
+  
+- https://youtu.be/NXm7Ms_1Qjk?si=ViLndsyMTlHZHO97
+  
+- https://www-petz-com-br.cdn.ampproject.org/v/s/www.petz.com.br/blog/cachorros/saude-e-cuidados-cachorros/saude-pet/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=17128701459291&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.petz.com.br%2Fblog%2Fcachorros%2Fsaude-e-cuidados-cachorros%2Fsaude-pet%2F
+  
+- https://www.petshopcontrol.com.br/blog/alimentacao-saudavel-para-pets-o-que-voce-precisa-saber/?gad_source=1&gclid=Cj0KCQjwlN6wBhCcARIsAKZvD5jczGXjbqHt2adG17Uurw_9QGyGkgb-4DXFi9w1G7Og-GYSTQUessAaAkQjEALw_wcB
+
+
+
+
+
