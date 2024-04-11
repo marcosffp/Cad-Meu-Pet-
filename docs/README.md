@@ -142,12 +142,9 @@ Os requisitos de um projeto são classificados em dois grupos:
 ![user_flow](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/dcba3412-9358-4d5f-8c1e-6c3ea978d425)![user_flowM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/2c53d6b8-2a03-47a9-ae24-3934f9989da7)
 
 
+**Link**:
+- [User Flow]([https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534](https://miro.com/app/board/uXjVKVKBgkY=/?share_link_id=808348729949))
 
-**Links Úteis**:
-
-- [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-- [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-- [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 ## Wireframes
 
@@ -184,6 +181,11 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 ### FAQ
 ![faq](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/7b948456-0634-4082-91c1-96f88071e456)![faqM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d6a9f712-d1a8-40f9-bfe5-6e7d962cca1f)
+
+
+**Link**:
+- [Wireframe](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design)
+
 
 
 ## Gestão de Projetos
