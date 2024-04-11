@@ -172,7 +172,9 @@ Os requisitos de um projeto são classificados em dois grupos:
 ![desaparecidos_e_localizadosM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/366773a2-3381-484d-80d8-36639921f962)
 
 ### Filtros
-![filtro](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/93e0ee5b-c58d-4292-a2a7-d8b30cd1251c)![flitroM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/39c34a97-1df2-4191-a8c5-2808453dfe79)
+![filtro](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/93e0ee5b-c58d-4292-a2a7-d8b30cd1251c)
+
+![flitroM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/39c34a97-1df2-4191-a8c5-2808453dfe79)
 
 ### Ferramentas
 ![ferramentas](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/fbe6479f-971b-4737-9fba-f0dc61afeae4)
@@ -242,9 +244,13 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 Dividimos em 4 partes:
 
 -Apresentação: João Gabriel
+
 -Documento: João Gabriel e Marcos Alberto
+
 -Wireframe: Alexandre Righas, Carlos José, Henrique Volponi e Marcos Alberto
+
 -User Flow: Marcos Alberto
+
 -Slide: João Gabriel e Marcos Alberto
 
 
