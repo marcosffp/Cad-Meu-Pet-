@@ -108,6 +108,7 @@ Os requisitos de um projeto são classificados em dois grupos:
   e removendo-o das listagens de animais perdidos (Prioridade ALTA);
   
 
+
 - [Requisitos Não Funcionais (RNF)
   
   -RF-001: Desenvolvimento do site usando HTML, CSS e JS (Prioridade ALTA);
@@ -134,7 +135,7 @@ Os requisitos de um projeto são classificados em dois grupos:
   diversas origens e regiões geográficas (Prioridade MÉDIA);
   
   -RF-010: Seguir as diretrizes de acessibilidade da Web Content Accessibility Guidelines (WCAG) para garantir 
-  que pessoas com deficiências possam acessar e utilizar todas as funcionalidades do site de forma eficaz. 
+  que pessoas com deficiências possam acessar e utilizar todas as funcionalidades do site de forma eficaz 
   (Prioridade ALTA);
 
 ## User Flow
@@ -149,7 +150,31 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
-Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
+### Home
+![home](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/49a97c85-ca32-47e7-b616-dd4b952ac413)![homeM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/23952317-a464-4bba-96ac-90fc26842a67)
+
+### Cadastrar
+![cadastrar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/909376be-3d41-4e28-b9b2-b1d7c42245ee)![cadastrarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/50e391f2-4f1f-4549-88c8-1bf4def4afba)
+
+### Desaparecidos e Localizados
+![desaparecidos_localizados](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ef28375a-ca78-462b-803e-6c4087fe40ca)![desaparecidos_e_localizadosM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/366773a2-3381-484d-80d8-36639921f962)
+
+### Filtros
+![filtro](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/93e0ee5b-c58d-4292-a2a7-d8b30cd1251c)![flitroM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/39c34a97-1df2-4191-a8c5-2808453dfe79)
+
+### Ferramentas
+![ferramentas](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/fbe6479f-971b-4737-9fba-f0dc61afeae4)![ferramentasM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f3e93ad3-dee1-4f8a-a255-c888207fe859)
+
+### Blog
+![blog](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8da45e20-f95f-434a-8e05-444fd714e2d7)![blogM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/703d7f78-014e-4790-87a4-11afe8407207)
+
+### Anunciar
+![anunciar](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/1cd2f687-d2c4-46cb-89fb-eebf02698e3e)![anunciarM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e7444989-cf22-4f13-b315-b8b5f6fd946b)
+
+### Atualizar o anúncio
+![atualizar_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d98d9117-945a-414b-8e86-973b26efaffa)![atualizar_anuncioM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/ce7e96d2-6170-4ed7-ad76-cfbb4d7a5000)
+
+
 
 **Links Úteis**:
 
