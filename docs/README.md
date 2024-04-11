@@ -232,11 +232,17 @@ Dividimos em 4 partes:
 
 ### Design Thinking
 ![matriz_de_alinhamento](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/51339850-d8ed-419d-bb37-73b028ed7249)
+
 ![mapa_de_stakeholders](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/bf980e98-c6f1-4288-8b80-d5d0f77d307b)
+
 ![persona1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/b18bd537-c00d-4bcd-a048-6e9bc479d581)
+
 ![persona2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c0504549-3e89-4ecd-8046-288efd46a2c3)
+
 ![persona3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/6bf07078-71ed-481a-a5de-6b69bf084973)
+
 ![mural_de_possibilidades](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e6a4e569-03f7-4f23-833d-c3ca24a106f0)
+
 ![mapa_de_prorizacao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e4ccf493-47c8-4401-a96c-a0e05e46bb5f)
 
 ### Scrum
