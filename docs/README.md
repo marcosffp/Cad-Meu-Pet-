@@ -15,20 +15,22 @@ A documentação do projeto inclui as seguintes seções:
 O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
 
 # Orientações gerais
-
-Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
-
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
 
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+### Matriz de alinhamento
+![matriz_de_alinhamento](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/afd81d3b-09fd-4865-a142-d9e651a9ab15)
 
-**Links Úteis**:
+### Mural de possibilidades
+![Uploading mural_de_possibilidades.png…]()
 
-- [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-- [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-- [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+####
+
+
+
+
+
 
 ## Objetivos
 
