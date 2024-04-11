@@ -19,67 +19,60 @@ O template para o site é estruturado e permite que a equipe evolua a documenta�
 
 Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
 
-### Matriz de alinhamento
-![matriz_de_alinhamento](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/afd81d3b-09fd-4865-a142-d9e651a9ab15)
-
-### Mural de possibilidades
-![Uploading mural_de_possibilidades.png…]()
-
-####
-
-
-
-
-
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+O objetivo principal do projeto "Cadê meu pet?" é oferecer uma plataforma online onde os donos de animais perdidos possam registrar seus animais desaparecidos e onde membros da comunidade possam ajudar na busca e localização desses animais. Além disso, o projeto visa promover a conscientização sobre a importância da identificação e registro de animais de estimação, assim como a necessidade de colaboração da comunidade para reunir animais perdidos com seus donos.
 
-**Links Úteis**:
-
-- [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Este projeto foi concebido como uma resposta à necessidade de uma solução eficaz e acessível para ajudar a localizar animais perdidos. Ao fornecer uma plataforma centralizada e de fácil acesso, o "Cadê meu pet?" visa facilitar o processo de busca e reunificação de animais perdidos com seus donos, reduzindo assim o tempo de separação e minimizando o sofrimento tanto dos animais quanto de seus donos.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
-**Links Úteis**:
-
-- [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+**Donos de Animais Perdidos:**
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
+O público-alvo deste perfil é diversificado, abrangendo homens e mulheres de todas as faixas etárias, com variados níveis de renda e educação. Seu conhecimento prévio inclui habilidades básicas de navegação na web, e alguns podem ter alguma experiência anterior em lidar com animais perdidos. Em relação à tecnologia, são tanto usuários iniciantes quanto experientes, desde que capazes de usar um smartphone, desktop e navegar na internet. São receptivos a aprender novas ferramentas para auxiliar na busca por seus companheiros pets, valorizando a simplicidade e a acessibilidade do site. No contexto hierárquico, são os próprios donos dos animais que lideram a decisão de utilizar o site, embora possam buscar auxílio de familiares, amigos e vizinhos para utilizar e divulgar a busca.
 
-**Links Úteis**:
+**Membros da Comunidade:**
 
-- [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-- [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo deste perfil é formado por pessoas de todas as idades interessadas em auxiliar animais vulneráveis, podendo ser parte de grupos de proteção animal, voluntários em abrigos ou indivíduos preocupados. Seu conhecimento prévio abrange familiaridade com a comunidade local, experiência em busca de animais perdidos e consciência dos recursos disponíveis. Em termos de tecnologia, são usuários de smartphone, desktop e navegar na internet, dispostos a utilizar o site para compartilhar informações e ajudar na busca. Valorizam a eficiência do site para essa causa e atuam de forma autônoma, colaborando entre si e com organizações de resgate.
+
+**Organizações de Resgate de Animais e Abrigos:**
+
+Organizações sem fins lucrativos e abrigos especializados em resgate, cuidado e reabilitação de animais perdidos e abandonados buscam parcerias e ferramentas tecnológicas para ampliar seu alcance e aumentar as chances de encontrar lares para os animais sob seus cuidados. Em termos de tecnologia, capacidade de integrar o site em seus sistemas de gestão e comunicação, buscando ferramentas que otimizem seus processos, aumentem a eficiência e ampliem o alcance de suas ações. Com vasta experiência no manejo de animais perdidos e conhecimento dos recursos disponíveis na comunidade, essas organizações valorizam a segurança, confiabilidade e integração de aplicativos em seus sistemas de gestão e comunicação. Autônomas em suas operações, elas podem colaborar entre si e com a comunidade para expandir suas ações de busca e resgate.
+
 
 ## Personas
 
-Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
+**Pedro
 
-**Links Úteis**:
+Pedro, o Entusiasta da Comunidade, é um jovem de 22 anos apaixonado por jogar futebol e estudante com o sonho de atuar na área de seu interesse acadêmico. Ele desempenha um papel crucial na comunidade, utilizando uma variedade de ferramentas físicas e digitais, como cartazes, smartphones e redes sociais, para compartilhar informações e auxiliar na localização e devolução de animais perdidos. Seus objetivos principais ao utilizar serviços são encontrar o animal perdido, informar o tutor do animal e contribuir para a comunidade compartilhando informações sobre animais encontrados. Para Pedro, é essencial que o site ofereça facilidade de uso e comunicação eficaz, além de demonstrar empatia e compreensão em relação à sua situação emocional. Qualquer falha na comunicação sobre o progresso da busca ou falta de suporte pode deixá-lo furioso, então é crucial garantir uma experiência positiva para ele, reconhecendo e valorizando suas contribuições para a comunidade.
 
-- [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-- [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-- [Rock Content](https://rockcontent.com/blog/personas/)
-- [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+
+**Heitor
+
+
+Heitor, aos 27 anos, é um vendedor de eletrodomésticos com um hobby de boxe. Sua personalidade observadora o leva a utilizar uma variedade de objetos físicos e digitais, como cartazes, flyers, smartphone, computador, mapas online e câmera, tanto em casa quanto durante buscas na vizinhança, parques ou outros locais onde o animal possa ter sido visto. Seus objetivos principais ao utilizar o serviço são encontrar seu animal perdido, aumentando as chances de localizá-lo, e receber apoio da comunidade. Heitor espera divulgar informações sobre seu pet, como fotos e detalhes do desaparecimento, para receber ajuda de outros usuários. Para ele, o site é essencial, oferecendo uma plataforma especializada que conecta tutores em busca de seus animais de estimação, fornecendo suporte emocional e recursos práticos durante esse momento estressante. No mapa de empatia, é crucial facilitar a navegação no site, tornando-o intuitivo e claro. Manter Heitor informado sobre o progresso das buscas é fundamental, enquanto a falta de comunicação e a dificuldade no uso do site são situações que o deixariam furioso. Ele valoriza a transparência e o suporte durante todo o processo de busca por seu animal de estimação perdido.
+
+
+**Ana
+
+Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de ler livros. Sua personalidade simpática e seu sonho de conhecer lugares turísticos pelo mundo refletem sua disposição para ajudar os outros e sua curiosidade sobre o mundo. Ela utiliza uma variedade de objetos físicos, como cartazes e flyers, e digitais, como smartphone, computador, mapas online e câmera. Como voluntária, Ana acessa o site "Cade Meu Pet" pelo seu smartphone para anunciar informações adicionais sobre os animais perdidos. Para tratá-la bem, é fundamental manter uma comunicação clara e transparente, reconhecendo seu esforço e acolhendo suas contribuições. Ana valoriza ser mantida informada sobre as atividades e ações do site, e não suportaria a desvalorização de seu trabalho e esforço como voluntária, a falta de reconhecimento de seus feedbacks e sugestões, ou a criação de dificuldades no uso do site.
+
 
 ## Histórias de Usuários
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+-Eu como Heitor, quero buscar na lista de animais perdidos cadastrados no site para encontrar o seu pet perdido.
+-Eu como Heitor, quero cadastrar o meu pet para ajudar o animal a ser encontrado pelo usuário do site.
+-Eu como Heitor, quero atualizar as informações do animal para informar novos detalhes sobre os status (desaparecido ou encontrado) do pet conforme passa o tempo.
+-Eu como Pedro, quero verificar se o pet que encontrei abandonado pertence a alguém, caso tenha dono, para informar a situação atual do animal a esse proprietário.
+-Eu como Pedro, quero informar ao tutor do animal que encontrei o pet perdido para reunir o animal com seu tutor.
+-Eu como Ana, informar ao proprietário do pet que uma pessoa conhecida encontrou o animal para auxiliar na reunião do animal e seu tutor.
 
-**Links Úteis**:
-
-- [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-- [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
 
