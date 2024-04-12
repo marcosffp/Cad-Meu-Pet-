@@ -244,7 +244,7 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 ![gestao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d850406d-a2ae-4035-a3fd-3c0392a809b2)
 
 
-Dividimos em 4 partes:
+Dividimos em 6 partes:
 
 -Apresentação: João Gabriel
 
@@ -255,6 +255,8 @@ Dividimos em 4 partes:
 -User Flow: Marcos Alberto
 
 -Slide: João Gabriel e Marcos Alberto
+
+-Mapa de priorização: Henrique Sales
 
 
 ### Design Thinking
