@@ -66,24 +66,24 @@ Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de le
 
 ## Histórias de Usuários
 
--Eu como Heitor, quero buscar na lista de animais perdidos cadastrados no site para encontrar o seu pet perdido.
+-Eu, como Heitor, quero buscar na lista de animais perdidos cadastrados no site para encontrar o seu pet perdido.
 
--Eu como Heitor, quero cadastrar o meu pet para ajudar o animal a ser encontrado pelo usuário do site.
+-Eu, como Heitor, quero cadastrar o meu pet para ajudar o animal a ser encontrado pelo usuário do site.
 
--Eu como Heitor, quero atualizar as informações do animal para informar novos detalhes sobre os status (desaparecido ou encontrado) do pet conforme passa o tempo.
+-Eu, como Heitor, quero atualizar as informações do animal para informar novos detalhes sobre os status (desaparecido ou encontrado) do pet conforme passa o tempo.
 
--Eu como Pedro, quero verificar se o pet que encontrei abandonado pertence a alguém, caso tenha dono, para informar a situação atual do animal a esse proprietário.
+-Eu, como Pedro, quero verificar se o pet que encontrei abandonado pertence a alguém, caso tenha dono, para informar a situação atual do animal a esse proprietário.
 
--Eu como Pedro, quero informar ao tutor do animal que encontrei o pet perdido para reunir o animal com seu tutor.
+-Eu, como Pedro, quero informar ao tutor do animal que encontrei o pet perdido para reunir o animal com seu tutor.
 
--Eu como Ana, informar ao proprietário do pet que uma pessoa conhecida encontrou o animal para auxiliar na reunião do animal e seu tutor.
+-Eu, como Ana, informar ao proprietário do pet que uma pessoa conhecida encontrou o animal para auxiliar na reunião do animal e seu tutor.
 
 
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
 
-- [Requisitos Funcionais (RF)
+- Requisitos Funcionais (RF):
   
   -RF-001: O tutor faz o cadastro do animal perdido (Prioridade ALTA);
   
@@ -109,7 +109,7 @@ Os requisitos de um projeto são classificados em dois grupos:
   
 
 
-- [Requisitos Não Funcionais (RNF)
+- [Requisitos Não Funcionais (RNF):
   
   -RF-001: Desenvolvimento do site usando HTML, CSS e JS (Prioridade ALTA);
   
@@ -228,10 +228,10 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 [Link Repositório](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/)
 
 -Projeção inicial das telas: Plataforma Figma 
-[Link Telas](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design))
+[Link Telas](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design)
 
 -Projeção User Flow: Plataforma Miro
-[LinkUserFlow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
+[Link User Flow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
 
 -Apresentação do projeto: Plataforma Canva
 [Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
