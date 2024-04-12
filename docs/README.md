@@ -236,6 +236,9 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 -Apresentação do projeto: Plataforma Canva
 [Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+-Documento do projeto: Plataforma Google Docs
+[Link Documento](https://docs.google.com/document/d/1p3YGO5zTh6CFM80vLJAyFamxe8zpayfklHWP2kTKxk4/edit?usp=sharing)
+
 
 ### Gestão do Projeto feita no Trello
 ![gestao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d850406d-a2ae-4035-a3fd-3c0392a809b2)
