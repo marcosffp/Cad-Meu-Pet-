@@ -109,7 +109,7 @@ Os requisitos de um projeto são classificados em dois grupos:
   
 
 
-- [Requisitos Não Funcionais (RNF):
+-Requisitos Não Funcionais (RNF):
   
   -RF-001: Desenvolvimento do site usando HTML, CSS e JS (Prioridade ALTA);
   
@@ -262,11 +262,11 @@ Dividimos em 4 partes:
 
 ![mapa_de_stakeholders](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/bf980e98-c6f1-4288-8b80-d5d0f77d307b)
 
-![persona1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/b18bd537-c00d-4bcd-a048-6e9bc479d581)
+![persona1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/3cd761b4-f616-48bd-a10c-117eb03a9f82)
 
-![persona2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c0504549-3e89-4ecd-8046-288efd46a2c3)
+![persona2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/45c61d43-67c3-4ee7-a1e0-60198d874c39)
 
-![persona3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/6bf07078-71ed-481a-a5de-6b69bf084973)
+![persona3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/dc3a5e59-58f0-45fa-8e4f-c0cc3e98d403)
 
 ![mural_de_possibilidades](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e6a4e569-03f7-4f23-833d-c3ca24a106f0)
 
