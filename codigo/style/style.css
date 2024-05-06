@@ -1,0 +1,120 @@
+/* Estilo geral */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.btn-anunciar,
+.btn-cadastrar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-anunciar {
+    margin-right: 20px;
+}
+
+/* Seção de criação de anúncio */
+
+.criar-anuncio {
+    padding: 20px;
+}
+
+.criar-anuncio h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.criar-anuncio p {
+    margin-bottom: 20px;
+}
+
+.imagem-pet {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagem-pet img {
+    width: 300px;
+    height: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    border: 2px solid green; /* Set border width and color */
+    padding: 15px; /* Add some padding inside the form */
+  }
+
+.tituloAnuncio {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+input[type="text"],
+input[type="date"],
+
+textarea {
+  border: 3px solid green; /* Set border width and color for inputs and textarea */
+  padding: 5px; /* Add some padding inside the input fields */
+  border-radius: 5px; /* Add some padding inside the input fields */
+}
+
+

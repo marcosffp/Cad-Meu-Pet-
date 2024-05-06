@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadê Meu Pet?</title>
+    <link rel="stylesheet" href="/codigo/style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Cadê Meu Pet?</li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Desaparecidos</a></li>
+                <li><a href="#">Localizados</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <button class="btn-anunciar">Anunciar</button>
+                <button class="btn-cadastrar">Cadastrar</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="criar-anuncio">
+            <h2>Crie um anúncio para seu pet perdido</h2>
+            <p>Descreva seu pet e ajude a encontrá-lo!</p>
+            <div class="imagem-pet">
+                <img src="pet.jpg" alt="Imagem do pet">
+            </div>
+            <form action="#">
+                <h1 class="tituloAnuncio">Informações sobre o pet</h1>
+                <input type="hidden" name="tituloAnuncio" id="tituloAnuncio" value="1">
+
+                <label for="titulo1">Status</label>
+                <input type="text" id="titulo1" name="titulo1" required>
+
+                <label for="titulo2">Especie</label>
+                <input type="text" id="titulo2" name="titulo2" required>
+                
+                <label for="titulo2">Genero</label>
+                <input type="text" id="titulo2" name="titulo2" required>
+
+                <label for="titulo2">Nome do pet</label>
+                <input type="text" id="titulo2" name="titulo2" required>
+
+                <label for="localizacao">Visto pela ultima vez:</label>
+                <input type="text" id="localizacao" name="localizacao" required>
+
+                <label for="data">Data do desaparecimento:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="contato">Contato:</label>
+                <input type="text" id="contato" name="contato" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <button type="submit">Criar anúncio</button>
+            </form>
+        </section>
+
+        </main>
+
+    <footer>
+        <p>&copy; 2024 Cadê Meu Pet?</p>
+    </footer>
+</body>
+</html>
