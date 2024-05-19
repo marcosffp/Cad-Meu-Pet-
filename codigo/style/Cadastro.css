@@ -1,357 +1,205 @@
-/* Estilo geral */
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px;
+header .logo {
+  font-size: 24px;
+  color: #00a651;
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
 }
 
-.btn-anunciar,
-.btn-cadastrar {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+nav .btn {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #00a651;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.btn-anunciar {
-    margin-right: 20px;
+nav .btn:hover {
+  background-color: #007d3c;
 }
 
-/* Seção de criação de anúncio */
-
-.criar-anuncio {
-    padding: 20px;
+main {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
 }
 
-.criar-anuncio h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.create-ad {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
 }
 
-.criar-anuncio p {
-    margin-bottom: 20px;
+.create-ad h2 {
+  color: #00a651;
+  margin-bottom: 10px;
 }
 
-.imagem-pet {
-    text-align: center;
-    margin-bottom: 20px;
+.create-ad p {
+  margin-bottom: 30px;
+  color: #666;
 }
 
-.imagem-pet img {
-    width: 300px;
-    height: auto;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="date"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
-
-footer {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
+.form-container .form-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 form {
-    border: 2px solid green; /* Set border width and color */
-    padding: 15px; /* Add some padding inside the form */
-  }
-
-.tituloAnuncio {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #4CAF50;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
 }
 
-input[type="text"],
-input[type="date"],
+form h3 {
+  margin-bottom: 15px;
+  color: #00a651;
+}
 
-textarea {
-  border: 3px solid green; /* Set border width and color for inputs and textarea */
-  padding: 5px; /* Add some padding inside the input fields */
-  border-radius: 5px; /* Add some padding inside the input fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #00a651;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #007d3c;
+}
+
+.form{
+  width: 50%;
+}
+
+.form-contianer{
+ width: 50%;
 }
 
 /* Define estilos para o rodapé */
 .rodape {
-    color: var(--cor0);
-    padding: 40px 0;
-  }
-  
-  /* Define estilos para o contêiner do rodapé */
-  .container-rodape {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  /* Define estilos para as informações no rodapé */
-  .informacoes,
-  .links-uteis,
-  .redes-sociais {
-    flex-basis: 30%;
-    text-align: center;
-    color: var(--cor6);
-  }
-  
-  /* Define estilos para os parágrafos e títulos no rodapé */
-  .rodape p,
-  .rodape h4 {
-    color: var(--cor6);
-    margin-bottom: 20px;
-  }
-  
-  /* Define estilos para as listas no rodapé */
-  .rodape ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Define estilos para os itens da lista no rodapé */
-  .rodape li {
-    margin-bottom: 10px;
-  }
-  
-  /* Define estilos para os links no rodapé */
-  .rodape a {
-    color: var(--cor6);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  /* Define estilos para os links no rodapé quando hover */
-  .rodape a:hover {
-    color: var(--cor3);
-  }
-  
-  /* Define estilos para a linha horizontal no rodapé */
-  .rodape hr {
-    margin: 20px 0;
-    border: 1px solid var(--cor6);
-  }
-  
-  /* Define estilos para o texto de direitos autorais no rodapé */
-  .direitos-autorais {
-    text-align: center;
-    font-size: 12px;
-  }
+  color: var(--cor0);
+  padding: 40px 0;
+}
 
-  * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Define o tamanho da fonte para o elemento html */
-  html {
-    font-size: 1em;
-  }
-  
-  /* Define estilos para o corpo da página */
-  body {
-    height: 100%;
-    background-color: var(--cor0);
-    font-family: var(--fonte-destaque);
-  }
-  
-  /* Define variáveis de cores e fontes */
-  :root {
-    --cor0: #f9f9fa;
-    --cor1: #cdfff2;
-    --cor2: #cffaef;
-    --cor3: #8acfbe;
-    --cor4: #287a66;
-    --cor5: #285046;
-    --cor6: #2e3132;
-    --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
-    --fonte-destaque: "Baloo Bhai 2", sans-serif;
-  }
-  
-  /* Define estilos para o cabeçalho */
-  .cabecalho {
-    color: var(--cor6);
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--cor0);
-    box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
-    margin-top: 7px;
-    padding-bottom: 20px;
-  }
-  
-  /* Define estilos para o logotipo */
-  .logo {
-    color: var(--cor4);
-    text-decoration: none;
-    font-size: 25px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 50px;
-    white-space: nowrap;
-    font-family: var(--fonte-padrao);
-    font-weight: bolder;
-  }
-  
-  .logo:hover {
-    color: var(--cor3);
-  }
-  /* Define estilos para o menu */
-  .menu {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Define estilos para os itens do menu no cabeçalho */
-  .cabecalho .menu li {
-    margin-left: 20px;
-    margin-right: 10px;
-    font-size: 20px;
-  }
-  
-  /* Define estilos para os links no menu do cabeçalho quando hover */
-  .cabecalho .menu li a:hover {
-    color: var(--cor3);
-  }
-  
-  /* Define estilos para os links no menu do cabeçalho */
-  .cabecalho .menu li a {
-    text-decoration: none;
-  }
-  
-  /* Define estilos para os itens do menu */
-  .menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  /* Define estilos para os links no menu */
-  .menu li a {
-    color: var(--cor6);
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  
-  /* Define estilos para os botões "Anunciar" e "Cadastrar" */
-  #Anunciar a,
-  #Cadastrar a {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-family: var(--fonte-padrao);
-    font-weight: bolder;
-  }
-  
-  /* Define estilos para o botão "Anunciar" */
-  #Anunciar a {
-    background-color: var(--cor4);
-    color: var(--cor0);
-  }
-  
-  /* Define estilos para o botão "Anunciar" quando hover */
-  #Anunciar a:hover {
-    background-color: var(--cor5);
-  }
-  
-  /* Define estilos para o botão "Anunciar" quando ativo */
-  #Anunciar a:active {
-    background-color: var(--cor6);
-  }
-  
-  /* Define estilos para o botão "Cadastrar" */
-  #Cadastrar a {
-    color: var(--cor4);
-    border: 2px solid var(--cor4);
-  }
-  
-  /* Define estilos para o botão "Cadastrar" quando hover */
-  #Cadastrar a:hover {
-    background-color: var(--cor3);
-  }
-  
-  /* Define estilos para o botão "Cadastrar" quando ativo */
-  #Cadastrar a:active {
-    background-color: var(--cor6);
-  }
+/* Define estilos para o contêiner do rodapé */
+.container-rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  .criarAnuncio{
-    flex: 1 1 40%;
-    margin: 5px;
+/* Define estilos para as informações no rodapé */
+.informacoes,
+.links-uteis,
+.redes-sociais {
+  flex-basis: 30%;
+  text-align: center;
+  color: var(--cor6);
+}
 
-  }
+/* Define estilos para os parágrafos e títulos no rodapé */
+.rodape p,
+.rodape h4 {
+  color: var(--cor6);
+  margin-bottom: 20px;
+}
 
-  .criarAnuncio{
-    padding: 20px;
-  }
-  
-  .imagem-pet {
-    text-align: left;
-    margin-bottom: 20px;
-  }
+/* Define estilos para as listas no rodapé */
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .formularioprocura{
-    text-align: left;
-    float: right;
-    width: 30%;
-  }
+/* Define estilos para os itens da lista no rodapé */
+.rodape li {
+  margin-bottom: 10px;
+}
 
-    .criarAnuncio{
-        color:#4CAF50
-    }
-    p{
-        color:#333
-    }
+/* Define estilos para os links no rodapé */
+.rodape a {
+  color: var(--cor6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  
+/* Define estilos para os links no rodapé quando hover */
+.rodape a:hover {
+  color: var(--cor3);
+}
 
+/* Define estilos para a linha horizontal no rodapé */
+.rodape hr {
+  margin: 20px 0;
+  border: 1px solid var(--cor6);
+}
 
+/* Define estilos para o texto de direitos autorais no rodapé */
+.direitos-autorais {
+  text-align: center;
+  font-size: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
