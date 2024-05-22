@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Editar Perfil</title>
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <h1><a href="#" class="logo">cadê meu pet?</a></h1>
+      <nav class="menu">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li>
+            <a href="#desaparecidos-localizados">Desaparecidos e Localizados</a>
+          </li>
+          <li><a href="#ferramentas">Ferramentas</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li id="Anunciar"><a href="#anunciar">Anunciar</a></li>
+          <li id="Cadastrar"><a href="#cadastrar">Cadastrar</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <article>
+      <section class="profile-card">
+          <div class="profile-img">
+              <img src="" alt="perfil">
+          </div>
+          <div class="profile-info">
+              <h2 id="nome"></h2>
+              <p id="descricao"></p>
+          </div>
+          <div class="profile-details">
+              <label for="situacao">Situação:</label>
+              <input type="text" id="situacao" name="situacao"><br><br>
+              <label for="especie">Espécie:</label>
+              <input type="text" id="especie" name="especie"><br><br>
+              <label for="genero">Gênero:</label>
+              <input type="text" id="genero" name="genero"><br><br>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome"><br><br>
+              <label for="foto">Foto:</label>
+              <input type="file" id="foto" name="foto"><br><br>
+              <label for="descricao">Descrição:</label>
+              <input type="text" id="descricao" name="descricao"><br><br>
+              <button class="botao" id="enviar">Enviar</button> 
+            </div>
+      </section>
+  </article>
+
+    <footer class="rodape">
+      <hr />
+      <div class="container-rodape">
+        <div class="informacoes">
+          <h4>Contato</h4>
+          <p>
+            Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+            MG
+          </p>
+          <p>Telefone: (33) 99950-3571</p>
+          <p>Email: mafpinto@sga.pucminas.br</p>
+        </div>
+
+        <div class="links-uteis">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="politicas_privacidade/politicas.html">Políticas de Privacidade</a></li>
+            <li><a href="termos_uso/termos.html">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <div class="redes-sociais">
+          <h4>Redes Sociais</h4>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="direitos-autorais">
+        &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
