@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/codigo/style/login.css"/>
+    <title>Login</title>
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <h1><a href="#" class="logo">cadê meu pet?</a></h1>
+      <nav class="menu">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li>
+            <a href="#desaparecidos-localizados">Desaparecidos e Localizados</a>
+          </li>
+          <li><a href="#ferramentas">Ferramentas</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li id="Anunciar"><a href="#anunciar">Anunciar</a></li>
+          <li id="Cadastrar"><a href="#cadastrar">Cadastrar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="login">
+      <div class="login-box">
+        <h2>Login</h2>
+        <input type="email" id="email-login" name="email-login" placeholder="Email">
+        <input type="password" id="senha-login" name="senha-login" placeholder="senha">
+        <button onclick="login()" class="Entrar">Entrar</button>
+        <p>Não tem uma conta? <a href="cadastro.html">cadastre-se</a></p>
+      </div>
+    </section>
+    <script src="/codigo/javascript/login.js"></script>
+    <footer class="rodape">
+      <hr />
+      <div class="container-rodape">
+        <div class="informacoes">
+          <h4>Contato</h4>
+          <p>
+            Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+            MG
+          </p>
+          <p>Telefone: (33) 99950-3571</p>
+          <p>Email: mafpinto@sga.pucminas.br</p>
+        </div>
+
+        <div class="links-uteis">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="politicas_privacidade/politicas.html">Políticas de Privacidade</a></li>
+            <li><a href="termos_uso/termos.html">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <div class="redes-sociais">
+          <h4>Redes Sociais</h4>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="direitos-autorais">
+        &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
