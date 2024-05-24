@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../style/Home.css"/>
+  <title>Cadê meu Pêt?</title>
+</head>
+
+<body>
+  <!-- Cabeçalho do site -->
+  <header class="cabecalho">
+    <h1><a href="../html/Home.html" class="logo">cadê meu pet?</a></h1>
+    <div class="mobile-menu-icon">
+      <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <!-- Navegação do site -->
+    <nav class="menu">
+      <ul>
+        <li><a href="../html/Home.html" target="_blank">Início</a></li>
+        <li>
+          <a href="#desaparecidos-localizados" target="_blank">Desaparecidos e Localizados</a>
+        </li>
+        <li><a href="#ferramentas" target="_blank">Ferramentas</a></li>
+        <li><a href="#blog" target="_blank">Blog</a></li>
+        <li><a href="#faq" target="_blank">FAQ</a></li>
+        <li id="Anunciar"><a href="#anunciar" target="_blank">Anunciar</a></li>
+        <li id="Cadastrar"><a href="#cadastrar" target="_blank">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seção de conteúdo -->
+    <section class="conteudo">
+      <div class="informacao">
+        <h1>Reencontre seu pet perdido!</h1>
+        <p>
+          Utilize ferramentas de busca para encontrar seu pet perdido de forma rápida e eficiente. Crie seu anúncio
+          gratuito agora mesmo para ter
+          acesso ao Painel de Busca, onde poderá divulgar informações importantes sobre o seu animal de estimação
+          desaparecido, como
+          fotos, descrição detalhada e localização onde foi visto pela última vez. Quanto mais detalhes fornecer,
+          maiores serão as chances de
+          encontrá-lo. Não perca tempo, comece a busca pelo seu companheiro peludo hoje mesmo.
+        </p>
+
+        <!-- Botões de ação -->
+        <div class="butoes">
+          <div class="butao-perdi">
+            <a href="#anunciar" target="_blank">
+              <button>
+                Perdi meu pet
+                <p>Quero anunciar</p>
+              </button>
+            </a>
+          </div>
+          <div class="butao-achei">
+            <a href="#desaparecidos-localizados" target="_blank">
+                <button>
+                    Achei um pet
+                    <p>Quero buscar o tutor</p>
+                </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="estatistica">
+          <p>Animais de estimação reunidos</p>
+          <div>
+            <button onclick="aumentarReunidos()">Encontrado +1</button>
+            <button onclick="diminuirReunidos()">Desaparecido -1</button>
+          </div>
+          <span class="number" id="pets-reunidos"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de carrossel de imagens -->
+    <section class="carrosel">
+      <div class="imagens">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/logo_marca.jpg" class="d-block w-100" alt="Logo do site" />
+            </div>
+            <div class="carousel-item">
+              <img src="../img/tutor_e_seu_pet.png" class="d-block w-100" alt="Tutor com o seu cachorro" />
+            </div>
+            <div class="carousel-item">
+              <img src="../img/tutor_e_seu_passaro.png" class="d-block w-100" alt="tutor com o seu pássaro" />
+            </div>
+            <div class="carousel-item">
+              <img src="../img/tutora_e_seu_gato.jpg" class="d-block w-100" alt="Tutora com o seu gato" />
+            </div>
+            <div class="carousel-item">
+              <img src="../img/familia_e_seu_pet.jpg" class="d-block w-100" alt="Mãe e filha com o seu cachorro" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Sessão de Relatos-->
+  <section>
+  <div class="container">
+    <div class="row">
+      <div id="msg" class="col-sm-10 offset-sm-1 ">
+        <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+      </div>
+    </div>
+
+
+    <article id="relatos" class="relatos">
+      <h2>Relatos</h2>
+      <div class="cardss">
+        <div class="row row-cols-1 row-cols-md-3 g-3" id="relatos-container">
+        </div>
+      </div>
+      <div class="criar-relato">
+        <button><a href="../html/CadastroRelato.html" target="_blank">Criar relato</a></button>
+      </div>
+      <div class="criar-relato">
+        <button><a href="../html/Dev.html">Dev relatos</a></button>
+      </div>
+    </article>
+  </div>
+  </section> 
+
+  <!--Rodapé-->
+  <footer class="rodape">
+    <hr />
+    <div class="container-rodape">
+      <div class="informacoes">
+        <h4>Contato</h4>
+        <p>
+          Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+          MG
+        </p>
+        <p>Telefone: (33) 99950-3571</p>
+        <p>Email: mafpinto@sga.pucminas.br</p>
+      </div>
+
+      <div class="links-uteis">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a href="../html/Politicas.html" target="_blank">Políticas de Privacidade</a></li>
+          <li><a href="../html/Termos.html" target="_blank">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+      <!-- Seção de redes sociais -->
+      <div class="redes-sociais">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/"  target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="direitos-autorais">
+      &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../javascript/Home.js"></script>
+</body>
+
+</html>

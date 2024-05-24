@@ -1,0 +1,449 @@
+/* Define estilos globais para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  /* Define o tamanho da fonte para o elemento html */
+  html {
+    font-size: 1em;
+  }
+
+  /* Define estilos para o corpo da página */
+  body {
+    height: 100%;
+    background-color: var(--cor0);
+    font-family: var(--fonte-destaque);
+  }
+
+  /* Define variáveis de cores e fontes */
+  :root {
+    --cor0: #f9f9fa;
+    --cor1: #cdfff2;
+    --cor2: #cffaef;
+    --cor3: #8acfbe;
+    --cor4: #287a66;
+    --cor5: #285046;
+    --cor6: #2e3132;
+    --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
+    --fonte-destaque: "Baloo Bhai 2", sans-serif;
+  }
+
+  /* Define estilos para o cabeçalho */
+  .cabecalho {
+    color: var(--cor6);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor0);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  /* Define estilos para o logotipo */
+  .logo {
+    color: var(--cor4);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 50px;
+    white-space: nowrap;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+  }
+
+  .logo:hover {
+    color: var(--cor3);
+  }
+  /* Define estilos para o menu */
+  .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Define estilos para os itens do menu no cabeçalho */
+  .cabecalho .menu li {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  /* Define estilos para os links no menu do cabeçalho quando hover */
+  .cabecalho .menu li a:hover {
+    color: var(--cor3);
+  }
+
+  /* Define estilos para os links no menu do cabeçalho */
+  .cabecalho .menu li a {
+    text-decoration: none;
+  }
+
+  /* Define estilos para os itens do menu */
+  .menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  /* Define estilos para os links no menu */
+  .menu li a {
+    color: var(--cor6);
+    text-decoration: none;
+    vertical-align: middle;
+  }
+
+  /* Define estilos para os botões "Anunciar" e "Cadastrar" */
+  #Anunciar a,
+  #Cadastrar a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+  }
+
+  /* Define estilos para o botão "Anunciar" */
+  #Anunciar a {
+    background-color: var(--cor4);
+    color: var(--cor0);
+  }
+
+  /* Define estilos para o botão "Anunciar" quando hover */
+  #Anunciar a:hover {
+    background-color: var(--cor5);
+  }
+
+  /* Define estilos para o botão "Anunciar" quando ativo */
+  #Anunciar a:active {
+    background-color: var(--cor6);
+  }
+
+  /* Define estilos para o botão "Cadastrar" */
+  #Cadastrar a {
+    color: var(--cor4);
+    border: 2px solid var(--cor4);
+  }
+
+  /* Define estilos para o botão "Cadastrar" quando hover */
+  #Cadastrar a:hover {
+    background-color: var(--cor3);
+  }
+
+  /* Define estilos para o botão "Cadastrar" quando ativo */
+  #Cadastrar a:active {
+    background-color: var(--cor6);
+  }
+
+  /* Define estilos para o ícone do menu mobile */
+  .mobile-menu-icon {
+    display: none;
+  }
+  .mobile-menu-icon button {
+    background-color: transparent;
+  }
+
+  /* Define estilos para o título h1 */
+   .container h1 {
+     text-align: center; /* Centraliza o texto */
+     margin-top: 20px;
+     font-weight: bolder;
+     color: var(--cor4);
+     margin-left: 30px;
+     display: inline-block; 
+}
+
+  /* Define estilos para o elemento main */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+/* Define estilos para os botões do formulário */
+#btnInsert,
+#btnUpdate,
+#btnDelete,
+#btnClear {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+}
+
+/* Define estilos para o botão Inserir */
+#btnInsert {
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border: none;
+}
+
+/* Define estilos para o botão Inserir quando hover */
+#btnInsert:hover {
+    background-color: var(--cor5);
+}
+
+/* Define estilos para o botão Alterar */
+#btnUpdate {
+    background-color: var(--cor3);
+    color: var(--cor0);
+    border: none;
+}
+
+/* Define estilos para o botão Alterar quando hover */
+#btnUpdate:hover {
+    background-color: var(--cor1);
+  color: var(--cor6);
+}
+
+/* Define estilos para o botão Excluir */
+#btnDelete {
+    background-color: var(--cor6);
+    color: var(--cor0);
+    border: none;
+}
+
+/* Define estilos para o botão Excluir quando hover */
+#btnDelete:hover {
+    background-color: var(--cor2);
+  color: var(--cor6);
+}
+
+/* Define estilos para o botão Limpar Form */
+#btnClear {
+    background-color: var(--cor0);
+    color: var(--cor4);
+    border: 2px solid var(--cor4);
+}
+
+/* Define estilos para o botão Limpar Form quando hover */
+#btnClear:hover {
+    background-color: var(--cor3);
+}
+
+
+label {
+  font-weight: bolder;
+}
+::placeholder {
+  color: var(--cor3);
+  opacity: 3;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:  var(--cor3);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:  var(--cor3);
+  opacity:  3;
+}
+#msg {
+   height: 60px;
+}
+
+  /* Define estilos para o rodapé */
+  .rodape {
+    color: var(--cor0);
+    padding: 40px 0;
+  }
+
+  /* Define estilos para o contêiner do rodapé */
+  .container-rodape {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* Define estilos para as informações no rodapé */
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%;
+    text-align: center;
+    color: var(--cor6);
+  }
+
+  /* Define estilos para os parágrafos e títulos no rodapé */
+  .rodape p,
+  .rodape h4 {
+    color: var(--cor6);
+    margin-bottom: 20px;
+  }
+
+  /* Define estilos para as listas no rodapé */
+  .rodape ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Define estilos para os itens da lista no rodapé */
+  .rodape li {
+    margin-bottom: 10px;
+  }
+
+  /* Define estilos para os links no rodapé */
+  .rodape a {
+    color: var(--cor6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  /* Define estilos para os links no rodapé quando hover */
+  .rodape a:hover {
+    color: var(--cor3);
+  }
+
+  /* Define estilos para a linha horizontal no rodapé */
+  .rodape hr {
+    margin: 20px 0;
+    border: 1px solid var(--cor6);
+  }
+
+  /* Define estilos para o texto de direitos autorais no rodapé */
+  .direitos-autorais {
+    text-align: center;
+    font-size: 12px;
+  }
+
+
+  /* Define estilos para a versão mobile do menu */
+  @media screen and (max-width: 768px) {
+    .cabecalho {
+      align-items: normal;
+    }
+
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+
+  .menu {
+      list-style-type: none;
+      margin-top: 0; 
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
+    }
+
+
+    .menu.active {
+      height: 450px;
+      min-height: 150px;
+    }
+
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: left;
+      color: var(--cor0);
+    }
+
+    .menu li a:hover {
+      color: var(--cor0);
+    }
+
+    #Anunciar a,
+    #Cadastrar a {
+      margin-top: 10px;
+      background-color: var(--cor4);
+      color: var(--cor0);
+      border: 0px;
+    }
+
+    #Anunciar a:hover,
+    #Cadastrar a:hover {
+      background-color: var(--cor3);
+    }
+
+
+    .mobile-menu-icon {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .mobile-menu-icon i {
+      color: var(--cor4);
+    }
+  }
+
+  /* Define estilos para a versão tablet do menu */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .cabecalho {
+      align-items: normal;
+    }
+
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      list-style-type: none;
+      margin-top: 10px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
+    }
+
+    .menu.active {
+      height: 450px;
+      min-height: 150px;
+    }
+
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: left;
+      color: var(--cor0);
+    }
+
+    .menu li a:hover {
+      color: var(--cor0);
+    }
+
+    #Anunciar a,
+    #Cadastrar a,
+    .butao-achei button {
+        margin-top: 10px; /* Adiciona espaço entre os botões */
+        background-color: var(--cor4);
+        color: var(--cor0);
+        border: 0px;
+    }
+
+    #Anunciar a:hover,
+    #Cadastrar a:hover {
+        background-color: var(--cor3);
+    }
+
+  }
