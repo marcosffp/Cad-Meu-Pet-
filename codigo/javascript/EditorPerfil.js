@@ -20,3 +20,14 @@ enviarButton.addEventListener('click', (e) => {
     localStorage.setItem('perfil', JSON.stringify(perfil));
     alert('Perfil salvo com sucesso!');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".mobile-menu-icon button");
+    const menu = document.querySelector(".menu");
+  
+    menuIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+  
+    init();
+  });
