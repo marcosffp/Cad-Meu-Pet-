@@ -1,0 +1,474 @@
+/* Define estilos globais para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Define o tamanho da fonte para o elemento html */
+html {
+    font-size: 1em;
+}
+
+/* Define estilos para o corpo da página */
+body {
+    height: 100%;
+    background-color: var(--cor0);
+    font-family: var(--fonte-destaque);
+}
+
+/* Define variáveis de cores e fontes */
+:root {
+    --cor0: #f9f9fa;
+    --cor1: #cdfff2;
+    --cor2: #cffaef;
+    --cor3: #8acfbe;
+    --cor4: #287a66;
+    --cor5: #285046;
+    --cor6: #2e3132;
+    --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
+    --fonte-destaque: "Baloo Bhai 2", sans-serif;
+}
+
+/* Define estilos para o cabeçalho */
+.cabecalho {
+    color: var(--cor6);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor0);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* Define estilos para o logotipo */
+.logo {
+    color: var(--cor4);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 50px;
+    white-space: nowrap;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+}
+
+.logo:hover {
+    color: var(--cor3);
+}
+/* Define estilos para o menu */
+.menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Define estilos para os itens do menu no cabeçalho */
+.cabecalho .menu li {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Define estilos para os links no menu do cabeçalho quando hover */
+.cabecalho .menu li a:hover {
+    color: var(--cor3);
+}
+
+/* Define estilos para os links no menu do cabeçalho */
+.cabecalho .menu li a {
+    text-decoration: none;
+}
+
+/* Define estilos para os itens do menu */
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* Define estilos para os links no menu */
+.menu li a {
+    color: var(--cor6);
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* Define estilos para os botões "Anunciar" e "Cadastrar" */
+#Anunciar a,
+#Cadastrar a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+}
+
+/* Define estilos para o botão "Anunciar" */
+#Anunciar a {
+    background-color: var(--cor4);
+    color: var(--cor0);
+}
+
+/* Define estilos para o botão "Anunciar" quando hover */
+#Anunciar a:hover {
+    background-color: var(--cor5);
+}
+
+/* Define estilos para o botão "Anunciar" quando ativo */
+#Anunciar a:active {
+    background-color: var(--cor6);
+}
+
+/* Define estilos para o botão "Cadastrar" */
+#Cadastrar a {
+    color: var(--cor4);
+    border: 2px solid var(--cor4);
+}
+
+/* Define estilos para o botão "Cadastrar" quando hover */
+#Cadastrar a:hover {
+    background-color: var(--cor3);
+}
+
+/* Define estilos para o botão "Cadastrar" quando ativo */
+#Cadastrar a:active {
+    background-color: var(--cor6);
+}
+
+/* Define estilos para o ícone do menu mobile */
+.mobile-menu-icon {
+    display: none;
+}
+.mobile-menu-icon button {
+    background-color: transparent;
+}
+
+/* Define estilos para o ícone do menu mobile */
+.mobile-menu-icon {
+    display: none;
+}
+.mobile-menu-icon button {
+    background-color: transparent;
+}
+
+/* Define estilos para a seção de ferramentas */
+.section-busca {
+    padding: 2em;
+    font-family: var(--fonte-padrao);
+}
+
+.section-busca h1 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: var(--cor4);
+    font-weight: bolder;
+}
+
+.section-busca p {
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    color: var(--cor6);
+}
+
+.ferramenta-anuncio h2,
+.ferramenta-anuncios h2 {
+    font-weight: bolder;
+}
+
+.ferramenta-anuncio,
+.ferramenta-anuncios {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+.ferramenta-anuncios {
+    margin-left: 40px;
+    padding-top: 40px;
+}
+
+.ferramenta-anuncio img,
+.ferramenta-anuncios img {
+    width: 300px;
+    max-width: 100%; /* Tornando a imagem responsiva */
+    height: auto; /* Tornando a altura automática */
+    border-radius: 10px;
+    margin-right: 20px; /* Reduzindo a margem direita */
+}
+
+.ferramenta-anuncio .anuncio-texto,
+.ferramenta-anuncios .anuncios-texto {
+    flex: 1;
+}
+
+.ferramenta-anuncio h2,
+.ferramenta-anuncios h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    color: var(--cor4);
+}
+
+.ferramenta-anuncio p,
+.ferramenta-anuncios p {
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: var(--cor6);
+}
+
+
+
+/* Define estilos para o rodapé */
+.rodape {
+    color: var(--cor0);
+    padding: 40px 0;
+}
+
+/* Define estilos para o contêiner do rodapé */
+.container-rodape {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Define estilos para as informações no rodapé */
+.informacoes,
+.links-uteis,
+.redes-sociais {
+    flex-basis: 30%;
+    text-align: center;
+    color: var(--cor6);
+}
+
+/* Define estilos para os parágrafos e títulos no rodapé */
+.rodape p,
+.rodape h4 {
+    color: var(--cor6);
+    margin-bottom: 20px;
+}
+
+/* Define estilos para as listas no rodapé */
+.rodape ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Define estilos para os itens da lista no rodapé */
+.rodape li {
+    margin-bottom: 10px;
+}
+
+/* Define estilos para os links no rodapé */
+.rodape a {
+    color: var(--cor6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Define estilos para os links no rodapé quando hover */
+.rodape a:hover {
+    color: var(--cor3);
+}
+
+/* Define estilos para a linha horizontal no rodapé */
+.rodape hr {
+    margin: 20px 0;
+    border: 1px solid var(--cor6);
+}
+
+/* Define estilos para o texto de direitos autorais no rodapé */
+.direitos-autorais {
+    text-align: center;
+    font-size: 12px;
+}
+ 
+  /* Define estilos para a versão mobile do menu */
+  @media screen and (max-width: 768px) {
+    .cabecalho {
+      align-items: normal;
+    }
+  
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+  .menu {
+      list-style-type: none;
+      margin-top: 0; 
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
+    }
+  
+  
+    .menu.active {
+      height: 450px;
+      min-height: 150px;
+    }
+  
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+  
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: left;
+      color: var(--cor0);
+    }
+  
+    .menu li a:hover {
+      color: var(--cor0);
+    }
+  
+    #Anunciar a,
+    #Cadastrar a {
+      margin-top: 10px;
+      background-color: var(--cor4);
+      color: var(--cor0);
+      border: 0px;
+    }
+  
+    #Anunciar a:hover,
+    #Cadastrar a:hover {
+      background-color: var(--cor3);
+    }
+
+  
+    .mobile-menu-icon {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  
+    .mobile-menu-icon i {
+      color: var(--cor4);
+    }
+
+    .ferramenta-anuncio,
+    .ferramenta-anuncios {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .ferramenta-anuncio img,
+    .ferramenta-anuncios img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0;
+    }
+  
+    .ferramenta-anuncio .anuncio-texto,
+    .ferramenta-anuncios .anuncios-texto {
+      text-align: center;
+    }
+    .ferramenta-anuncios {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; /* Remove a margem à esquerda */
+        padding-top: 20px; /* Ajusta o espaçamento superior */
+      }
+    
+      .ferramenta-anuncios img {
+        margin: 0; /* Remove a margem ao redor da imagem */
+        max-width: 80%; /* Reduz a largura máxima da imagem */
+        height: auto; /* Garante que a altura seja ajustada automaticamente */
+      }
+    
+      .ferramenta-anuncios .anuncios-texto {
+        text-align: center;
+        margin-top: 20px; /* Adiciona um espaçamento superior */
+      }
+
+  }
+  
+  /* Define estilos para a versão tablet do menu */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .cabecalho {
+      align-items: normal;
+    }
+  
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .menu {
+      list-style-type: none;
+      margin-top: 10px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
+    }
+  
+    .menu.active {
+      height: 450px;
+      min-height: 150px;
+    }
+  
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+  
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: left;
+      color: var(--cor0);
+    }
+  
+    .menu li a:hover {
+      color: var(--cor0);
+    }
+  
+    #Anunciar a,
+    #Cadastrar a
+    {
+        margin-top: 10px; /* Adiciona espaço entre os botões */
+        background-color: var(--cor4);
+        color: var(--cor0);
+        border: 0px;
+    }
+
+    #Anunciar a:hover,
+    #Cadastrar a:hover {
+        background-color: var(--cor3);
+    }
+
+    .ferramenta-anuncios {
+        margin-left: 40px; /* Retorna a margem à esquerda */
+        padding-top: 40px; /* Retorna o espaçamento superior */
+      }
+    
+      .ferramenta-anuncios img {
+        max-width: 300px; /* Retorna a largura máxima da imagem */
+        height: 300px; /* Retorna a altura da imagem */
+        margin: 0 200px 0 0; /* Retorna as margens da imagem */
+      }
+}
