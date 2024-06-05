@@ -1,0 +1,459 @@
+/* Define estilos globais para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define o tamanho da fonte para o elemento html */
+  html {
+    font-size: 1em;
+  }
+  
+  /* Define estilos para o corpo da página */
+  body {
+    height: 100%;
+    background-color: var(--cor0);
+    font-family: var(--fonte-destaque);
+  }
+  
+  /* Define variáveis de cores e fontes */
+  :root {
+    --cor0: #f9f9fa;
+    --cor1: #cdfff2;
+    --cor2: #cffaef;
+    --cor3: #8acfbe;
+    --cor4: #287a66;
+    --cor5: #285046;
+    --cor6: #2e3132;
+    --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
+    --fonte-destaque: "Baloo Bhai 2", sans-serif;
+  }
+  
+  /* Define estilos para o cabeçalho */
+  .cabecalho {
+    color: var(--cor6);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor0);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
+    margin-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Define estilos para o logotipo */
+  .logo {
+    color: var(--cor4);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 50px;
+    white-space: nowrap;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+  }
+  
+  .logo:hover {
+    color: var(--cor3);
+  }
+  /* Define estilos para o menu */
+  .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Define estilos para os itens do menu no cabeçalho */
+  .cabecalho .menu li {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Define estilos para os links no menu do cabeçalho quando hover */
+  .cabecalho .menu li a:hover {
+    color: var(--cor3);
+  }
+  
+  /* Define estilos para os links no menu do cabeçalho */
+  .cabecalho .menu li a {
+    text-decoration: none;
+  }
+  
+  /* Define estilos para os itens do menu */
+  .menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  /* Define estilos para os links no menu */
+  .menu li a {
+    color: var(--cor6);
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  
+  /* Define estilos para os botões "Anunciar" e "Cadastrar" */
+  #Anunciar a,
+  #Cadastrar a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+  }
+  
+  /* Define estilos para o botão "Anunciar" */
+  #Anunciar a {
+    background-color: var(--cor4);
+    color: var(--cor0);
+  }
+  
+  /* Define estilos para o botão "Anunciar" quando hover */
+  #Anunciar a:hover {
+    background-color: var(--cor5);
+  }
+  
+  /* Define estilos para o botão "Anunciar" quando ativo */
+  #Anunciar a:active {
+    background-color: var(--cor6);
+  }
+  
+  /* Define estilos para o botão "Cadastrar" */
+  #Cadastrar a {
+    color: var(--cor4);
+    border: 2px solid var(--cor4);
+  }
+  
+  /* Define estilos para o botão "Cadastrar" quando hover */
+  #Cadastrar a:hover {
+    background-color: var(--cor3);
+  }
+  
+  /* Define estilos para o botão "Cadastrar" quando ativo */
+  #Cadastrar a:active {
+    background-color: var(--cor6);
+  }
+  
+  /* Define estilos para o ícone do menu mobile */
+  .mobile-menu-icon {
+    display: none;
+  }
+  .mobile-menu-icon button {
+    background-color: transparent;
+  }
+.banner {
+    background-color: #fff;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adicionando espaçamento entre os elementos */
+}
+
+.image-container {
+    max-width: 50%; /* Limitando a largura da imagem para ocupar metade do espaço */
+    flex: 0 0 auto; /* Fazendo com que a largura da imagem não se estenda */
+    margin-right: 20px; /* Adicionando margem entre a imagem e o texto */
+}
+
+.banner img {
+    width: 100%; /* Fazendo a imagem ocupar todo o espaço disponível dentro do contêiner */
+    height: auto; /* Tornando a altura automática */
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 1; 
+    padding-right: 30px;/* Fazendo com que o container de texto ocupe o espaço restante */
+}
+
+.banner h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.banner .button {
+    display: flex;
+}
+
+.banner .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+    background-color: var(--cor4);
+    color: var(--cor0);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.banner .btn:hover {
+    background-color: var(--cor3);
+}
+
+.banner .btn:active {
+    background-color: var(--cor5);
+}
+
+
+/* Define estilos para o rodapé */
+.rodape {
+    color: var(--cor0);
+    padding: 40px 0;
+}
+
+/* Define estilos para o contêiner do rodapé */
+.container-rodape {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Define estilos para as informações no rodapé */
+.informacoes,
+.links-uteis,
+.redes-sociais {
+    flex-basis: 30%;
+    text-align: center;
+    color: var(--cor6);
+}
+
+/* Define estilos para os parágrafos e títulos no rodapé */
+.rodape p,
+.rodape h4 {
+    color: var(--cor6);
+    margin-bottom: 20px;
+}
+
+/* Define estilos para as listas no rodapé */
+.rodape ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Define estilos para os itens da lista no rodapé */
+.rodape li {
+    margin-bottom: 10px;
+}
+
+/* Define estilos para os links no rodapé */
+.rodape a {
+    color: var(--cor6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Define estilos para os links no rodapé quando hover */
+.rodape a:hover {
+    color: var(--cor3);
+}
+
+/* Define estilos para a linha horizontal no rodapé */
+.rodape hr {
+    margin: 20px 0;
+    border: 1px solid var(--cor6);
+}
+
+/* Define estilos para o texto de direitos autorais no rodapé */
+.direitos-autorais {
+    text-align: center;
+    font-size: 12px;
+}
+ 
+  /* Define estilos para a versão mobile do menu */
+  @media screen and (max-width: 768px) {
+    .cabecalho {
+      align-items: normal;
+    }
+  
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+  .menu {
+      list-style-type: none;
+      margin-top: 0; 
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
+    }
+  
+  
+    .menu.active {
+      height: 450px;
+      min-height: 150px;
+    }
+  
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+  
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: left;
+      color: var(--cor0);
+    }
+  
+    .menu li a:hover {
+      color: var(--cor0);
+    }
+  
+    #Anunciar a,
+    #Cadastrar a {
+      margin-top: 10px;
+      background-color: var(--cor4);
+      color: var(--cor0);
+      border: 0px;
+    }
+  
+    #Anunciar a:hover,
+    #Cadastrar a:hover {
+      background-color: var(--cor3);
+    }
+
+  
+    .mobile-menu-icon {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  
+    .mobile-menu-icon i {
+      color: var(--cor4);
+    }
+
+    .banner {
+        padding: 20px 0; /* Ajuste de padding para telas menores */
+    }
+    
+    .banner .container {
+        flex-direction: column; /* Altera a direção dos elementos para empilhados verticalmente */
+    }
+
+    .image-container {
+        max-width: 100%; /* A imagem ocupará toda a largura disponível */
+        margin-right: 0; /* Removendo a margem direita */
+        margin-bottom: 20px; /* Adicionando margem inferior */
+    }
+
+    .text-container {
+        padding-right: 0; /* Removendo o padding direito */
+    }
+  }
+  
+  /* Define estilos para a versão tablet do menu */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .cabecalho {
+      align-items: normal;
+    }
+  
+    .logo {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .menu {
+      list-style-type: none;
+      margin-top: 10px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
+    }
+  
+    .menu.active {
+      height: 450px;
+      min-height: 150px;
+    }
+  
+    .menu li {
+      display: block;
+      margin-left: 0;
+    }
+  
+    .menu li a {
+      display: block;
+      padding: 10px 0;
+      text-align: left;
+      color: var(--cor0);
+    }
+  
+    .menu li a:hover {
+      color: var(--cor0);
+    }
+  
+    #Anunciar a,
+    #Cadastrar a
+    {
+        margin-top: 10px; /* Adiciona espaço entre os botões */
+        background-color: var(--cor4);
+        color: var(--cor0);
+        border: 0px;
+    }
+
+    #Anunciar a:hover,
+    #Cadastrar a:hover {
+        background-color: var(--cor3);
+    }
+
+    .banner {
+        padding: 30px 0; /* Ajuste de padding para telas de tablets */
+    }
+    
+    .image-container {
+        max-width: 40%; /* Ajuste da largura máxima da imagem */
+    }
+
+    .text-container {
+        padding-right: 20px; /* Ajuste do padding direito */
+    }
+
+    .banner h2 {
+        font-size: 28px; /* Ajuste do tamanho da fonte do título */
+    }
+
+    .banner p {
+        font-size: 14px; /* Ajuste do tamanho da fonte do texto */
+    }
+
+    .banner .btn {
+        font-size: 18px; /* Ajuste do tamanho da fonte do botão */
+    }
+}
