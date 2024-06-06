@@ -36,6 +36,23 @@ function login()
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");

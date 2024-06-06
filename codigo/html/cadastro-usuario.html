@@ -37,18 +37,50 @@
       </ul>
     </nav>
   </header>
-    </header>
+    
+
+
+
+
+
+
+
+  
     <section id="cadastro">
       <div class="cadastro-box">
         <h2>Cadastro</h2>
-        <input type="text" id="nome-cadastro" name="nome-cadastro" placeholder="Nome">
-        <input type="email" id="email-cadastro" name="email-cadastro" placeholder="Email">
-        <input type="password" id="senha-cadastro" name="senha-cadastro" placeholder="senha">
-        <button type="submit" onclick="cadastro()"class="Cadastrar">Cadastrar</button>
-        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+        <form id="form-contato">
+        <label for="inputId">Id</label>
+        <input type="text" id="inputId" placeholder="ID" disabled>
+
+        <label for="inputNome">Nome (*)</label>
+        <input type="text"  id="inputNome" required placeholder="Nome">
+   
+
+        <label for="inputEmail">E-mail (*)</label>
+        <input type="email"  id="inputEmail" required placeholder="e-mail">
+
+        <label for="inputSenha">Senha</label>
+        <input type="password" id="inputSenha" placeholder="senha">
+
+        <div class="form-group row">
+          <div class="col-sm-4">
+              <small>(*) Campos obrigatórios</small>
+          </div>
       </div>
+      <div class="form-group row">
+          <div class="col-sm-12">
+              <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+              <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+              <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+              <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+              <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+          </div>
+      </div>
+  </form>
+
     </section>
-    <script src="../javascript/login.js"></script>
+    <script src="../ja"></script>
     <footer class="rodape">
         <hr />
         <div class="container-rodape">
