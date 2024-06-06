@@ -45,7 +45,7 @@
   
   /* Define estilos para o logotipo */
   .logo {
-    color: var(--cor4);
+    color: var(--cor5);
     text-decoration: none;
     font-size: 25px;
     padding: 5px 10px;
@@ -58,7 +58,7 @@
   }
   
   .logo:hover {
-    color: var(--cor3);
+    color: var(--cor5);
   }
   /* Define estilos para o menu */
   .menu {
