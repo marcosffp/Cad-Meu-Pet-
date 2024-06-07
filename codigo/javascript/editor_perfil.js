@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/animais_perdidos";
+const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
 
 $(document).ready(function () {
   const table = $("#animalsTable").DataTable({
