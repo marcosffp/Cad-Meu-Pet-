@@ -43,20 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 imagemUrl: imagemUrl
             };
 
-            const postResponse = await fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(animal)
-            });
-
-            if (postResponse.ok) {
-                alert("Animal cadastrado com sucesso!");
-                document.getElementById("petForm").reset();
-            } else {
-                alert("Erro ao cadastrar o animal");
+            if(localStorage.getItem("Logado")== "true"){
+                const postResponse = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(animal)
+                });
+    
+                if (postResponse.ok) {
+                    alert("Animal cadastrado com sucesso!");
+                    document.getElementById("petForm").reset();
+                } else {
+                    alert("Erro ao cadastrar o animal");
+                }
+            
+                
+            }else{
+                window.alert("Usuario nao foi encontrado")
             }
+
         } catch (error) {
             console.error('Erro:', error);
             alert("Erro ao cadastrar o animal");
