@@ -209,6 +209,8 @@ main {
   background-color: #cde0d8;
   border-radius: 10px;
   overflow: hidden;
+  margin-left: 10px;
+  position: relative; /* Adicionado para posicionamento absoluto do status */
 }
 
 .pet-card img {
@@ -229,46 +231,27 @@ main {
   font-size: 20px;
 }
 
-.pet-info h3 span {
-  font-weight: normal;
+.pet-info strong {
+  font-weight: bold;
 }
 
 .pet-info p {
   margin-bottom: 5px;
 }
 
-.pet-info p strong {
-  font-weight: bold;
-}
-
-.pet-name {
-position: relative;
-}
-
-.pet-name .status {
-position: absolute;
-top: 0;
-right: 0;
-background-color: #fff; /* Cor de fundo para destacar o status */
-padding: 5px 10px;
-border-radius: 5px;
-font-size: 14px;
-font-weight: bold;
-}
-
-.pet-name span {
-font-weight: normal;
-}
-
 .pet-info p.species {
-color: #888; /* Tom de cinza claro para a espécie */
+  color: #888; /* Tom de cinza claro para a espécie */
 }
 
 .status {
-position: absolute;
-top: 10px;
-right: 10px;
-font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff; /* Cor de fundo para destacar o status */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
