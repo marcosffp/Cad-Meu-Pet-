@@ -1,64 +1,82 @@
-// URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
+const apiUrl = "http://localhost:3000/animais_perdidos";
 
-//função do navbar mobile
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".mobile-menu-icon button");
-    const menu = document.querySelector(".menu");
+  const menuIcon = document.querySelector(".mobile-menu-icon button");
+  const menu = document.querySelector(".menu");
 
-    menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("active");
-    });
+  menuIcon.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
 
-    // Função para carregar os dados da API JSONServer
-    document.getElementById("submit").addEventListener("click", async (event) => {
-        event.preventDefault();
+  document.getElementById("submit").addEventListener("click", async (event) => {
+    event.preventDefault();
 
-        const status = document.getElementById("status").value;
-        const especie = document.getElementById("especie").value;
-        const genero = document.getElementById("genero").value;
-        const nome = document.getElementById("nome").value;
-        const endereco = document.getElementById("endereco").value;
-        const descricao = document.getElementById("descricao").value;
-        const imagemUrl = document.getElementById("imagemUrl").value;
+    const status = document.getElementById("status").value;
+    const especie = document.getElementById("especie").value;
+    const genero = document.getElementById("genero").value;
+    const nome = document.getElementById("nome").value;
+    const endereco = document.getElementById("endereco").value;
+    const descricao = document.getElementById("descricao").value;
+    const imagemUrl = document.getElementById("imagemUrl").value;
 
-        if (!status || !especie || !genero || !nome || !endereco || !descricao || !imagemUrl) {
-            return alert("Por favor, preencha todos os campos");
-        }
+    if (
+      !status ||
+      !especie ||
+      !genero ||
+      !nome ||
+      !endereco ||
+      !descricao ||
+      !imagemUrl
+    ) {
+      return alert("Por favor, preencha todos os campos");
+    }
 
-        try {
-            // Busca os dados da API
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-            const nextId = data.length ? Math.max(...data.map(animal => animal.id)) + 1 : 1;
-            const animal = {
-                id: nextId,
-                status: status,
-                especie: especie,
-                genero: genero,
-                nome: nome,
-                endereco: endereco,
-                descricao: descricao,
-                imagemUrl: imagemUrl
-            };
+    try {
+      // Fetch existing data to determine the next ID
+      const response = await fetch(apiUrl);
+      const data = await response.json();
 
-            const postResponse = await fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(animal)
-            });
+      // Calculate the next ID as string
+      const nextId = (
+        data.length
+          ? Math.max(...data.map((animal) => parseInt(animal.id))) + 1
+          : 1
+      ).toString();
 
-            if (postResponse.ok) {
-                alert("Animal cadastrado com sucesso!");
-                document.getElementById("petForm").reset();
-            } else {
-                alert("Erro ao cadastrar o animal");
-            }
-        } catch (error) {
-            console.error('Erro:', error);
-            alert("Erro ao cadastrar o animal");
-        }
-    });
+      const animal = {
+        id: nextId,
+        status: status,
+        especie: especie,
+        genero: genero,
+        nome: nome,
+        endereco: endereco,
+        descricao: descricao,
+        imagemUrl: imagemUrl,
+      };
+
+      // Save the data
+      const postResponse = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(animal),
+      });
+
+      if (postResponse.ok) {
+        console.log("Animal saved in db.json");
+        // Dispatch custom event to notify other parts of the application
+        document.dispatchEvent(
+          new CustomEvent("animalAdded", { detail: animal })
+        );
+      } else {
+        console.error("Failed to save animal in db.json");
+      }
+
+      document.getElementById("petForm").reset();
+    } catch (error) {
+      console.error("Erro:", error);
+      alert("Erro ao cadastrar o animal");
+    }
+  });
 });

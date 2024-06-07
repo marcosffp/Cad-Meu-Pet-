@@ -145,7 +145,6 @@ body {
 .mobile-menu-icon {
   display: none;
 }
-
 .mobile-menu-icon button {
   background-color: transparent;
 }
@@ -223,7 +222,6 @@ h1 {
   font-size: 12px;
 }
 
-
 /* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
 @media screen and (max-width: 768px) {
   .cabecalho {
@@ -249,7 +247,6 @@ h1 {
     height: 0;
     min-height: 0;
   }
-
 
   .menu.active {
     height: 450px;
@@ -353,8 +350,7 @@ h1 {
   #Anunciar a,
   #Cadastrar a,
   .butao-achei button {
-    margin-top: 10px;
-    /* Adiciona espaço entre os botões */
+    margin-top: 10px; /* Adiciona espaço entre os botões */
     background-color: var(--cor4);
     color: var(--cor0);
     border: 0px;
@@ -369,8 +365,7 @@ h1 {
     color: var(--cor4);
     background-color: var(--cor0);
     border: 2px solid var(--cor4);
-    margin-top: 10px;
-    /* Adiciona espaço entre os botões */
+    margin-top: 10px; /* Adiciona espaço entre os botões */
   }
 }
 
@@ -441,5 +436,135 @@ h1 {
 }
 
 .botao:hover {
+  background-color: var(--cor5);
+}
+
+/* Estilos específicos para a página editor_perfil.html */
+#editor {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#animalsTable_wrapper {
+  width: 100%;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  float: left;
+}
+
+.dataTables_wrapper .dataTables_length {
+  float: right;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+}
+
+.dataTables_wrapper .dataTables_info {
+  float: left;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  margin-left: 0.5em;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  margin-left: 0.5em;
+}
+
+.edit-btn,
+.delete-btn {
+  color: var(--cor0);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: var(--cor4);
+}
+
+.delete-btn {
+  background-color: #f00;
+}
+
+.edit-btn:hover {
+  background-color: var(--cor5);
+}
+
+.delete-btn:hover {
+  background-color: #f33;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--cor4);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
   background-color: var(--cor5);
 }
