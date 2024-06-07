@@ -1,6 +1,7 @@
 // URL da API JSONServer - Substitua pela URL correta da sua API
 const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
 
+//função do navbar mobile
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("active");
     });
 
+    // Função para carregar os dados da API JSONServer
     document.getElementById("submit").addEventListener("click", async (event) => {
         event.preventDefault();
 
@@ -25,13 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            // Fetch existing data to determine the next ID
+            // Busca os dados da API
             const response = await fetch(apiUrl);
             const data = await response.json();
-
-            // Calculate the next ID
             const nextId = data.length ? Math.max(...data.map(animal => animal.id)) + 1 : 1;
-
             const animal = {
                 id: nextId,
                 status: status,
@@ -43,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 imagemUrl: imagemUrl
             };
 
+            // Envia os dados para a API
             const postResponse = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {

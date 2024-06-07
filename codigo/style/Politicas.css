@@ -1,71 +1,70 @@
 /* General Styles */
 body {
-    font-family: 'Baloo Bhaijaan 2', cursive;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-  
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header Styles */
-  .header {
-    background-color: #f2f2f2;
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  .header h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
-  }
-  
-  .header p {
-    font-size: 1.2em;
-    color: #666;
-  }
-  
-  /* Main Content Styles */
-  .main {
-    padding-bottom: 50px;
-  }
-  
-  .section {
-    margin-bottom: 30px;
-  }
-  
-  .section h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .section p {
-    line-height: 1.5;
-  }
-  
-  .section ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-  
-  /* Footer Styles */
-  .footer {
-    color: #666;
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .footer hr {
-    margin: 20px 0;
-    border: 1px solid #ccc;
-  }
-  
-  .direitos-autorais {
-    font-size: 12px;
-  }
-  
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Main Content Styles */
+.main {
+  padding-bottom: 50px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.section p {
+  line-height: 1.5;
+}
+
+.section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Footer Styles */
+.footer {
+  color: #666;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer hr {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+.direitos-autorais {
+  font-size: 12px;
+}

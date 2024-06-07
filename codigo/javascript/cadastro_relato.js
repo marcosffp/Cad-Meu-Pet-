@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data: campoData,
             localizacao: campoLocalizacao,
             descricao: campoDescricao,
-            imagemUrl: campoImagemUrl 
+            imagemUrl: campoImagemUrl
         };
 
         // Cria o relato no banco de dados
@@ -76,20 +76,20 @@ function createRelato(relato, refreshFunction) {
         },
         body: JSON.stringify(relato),
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao inserir relato');
-        }
-        return response.json();
-    })
-    .then(data => {
-        displayMessage("Relato inserido com sucesso");
-        if (refreshFunction) refreshFunction();
-    })
-    .catch(error => {
-        console.error('Erro ao inserir Relato via API JSONServer:', error);
-        displayMessage("Erro ao inserir Relato");
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao inserir relato');
+            }
+            return response.json();
+        })
+        .then(data => {
+            displayMessage("Relato inserido com sucesso");
+            if (refreshFunction) refreshFunction();
+        })
+        .catch(error => {
+            console.error('Erro ao inserir Relato via API JSONServer:', error);
+            displayMessage("Erro ao inserir Relato");
+        });
 }
 
 

@@ -59,6 +59,7 @@ body {
 .logo:hover {
   color: var(--cor5);
 }
+
 /* Define estilos para o menu */
 .menu {
   list-style-type: none;
@@ -144,6 +145,7 @@ body {
 .mobile-menu-icon {
   display: none;
 }
+
 .mobile-menu-icon button {
   background-color: transparent;
 }
@@ -155,8 +157,8 @@ h1 {
   margin-left: 30px;
 }
 
- /* Define estilos para o rodapé */
- .rodape {
+/* Define estilos para o rodapé */
+.rodape {
   color: var(--cor0);
   padding: 40px 0;
 }
@@ -232,9 +234,9 @@ h1 {
     margin-bottom: 20px;
   }
 
-.menu {
+  .menu {
     list-style-type: none;
-    margin-top: 0; 
+    margin-top: 0;
     position: absolute;
     top: 80px;
     left: 0;
@@ -307,11 +309,13 @@ h1 {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .login-box h2 {
   margin-bottom: 20px;
   text-align: center;
   color: #287A65;
 }
+
 .login-box input[type="email"],
 .login-box input[type="password"] {
   width: calc(100% - 20px);
@@ -333,6 +337,7 @@ h1 {
   cursor: pointer;
   font-size: 16px;
 }
+
 .login-box input[type="submit"],
 .login-box .Entrar {
   width: 100%;
@@ -345,36 +350,44 @@ h1 {
   cursor: pointer;
   font-size: 16px;
 }
+
 .login-box .register-button {
   background-color: #287A65;
   text-align: center;
 }
+
 .login-box p {
   font-size: 12px;
   text-align: center;
   color: #666;
   margin-top: 10px;
 }
+
 .login-box a {
   color: #287A65;
   text-decoration: none;
 }
+
 .login-box a:hover {
   text-decoration: underline;
 }
+
 #login p {
   font-size: 12px;
   text-align: center;
   color: #666;
   margin-top: 10px;
 }
+
 #login a {
   color: #287A65;
   text-decoration: none;
 }
+
 #login a:hover {
   text-decoration: underline;
 }
+
 #cadastro .cadastro-box {
   border: 2px solid #287A65;
   border-radius: 8px;
@@ -382,11 +395,13 @@ h1 {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 #cadastro h2 {
   margin-bottom: 20px;
   text-align: center;
   color: #287A65;
 }
+
 #cadastro input[type="text"],
 #cadastro input[type="email"],
 #cadastro input[type="password"] {
@@ -396,6 +411,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 #cadastro button[type="submit"] {
   width: 100%;
   padding: 10px;
@@ -407,22 +423,25 @@ h1 {
   cursor: pointer;
   font-size: 16px;
 }
+
 #cadastro p {
   font-size: 12px;
   text-align: center;
   color: #666;
   margin-top: 10px;
 }
+
 #cadastro a {
   color: #287A65;
   text-decoration: none;
 }
+
 #cadastro a:hover {
   text-decoration: underline;
 }
 
- /* Define estilos para a versão tablet do menu */
- @media screen and (min-width: 769px) and (max-width: 1024px) {
+/* Define estilos para a versão tablet do menu */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .cabecalho {
     align-items: normal;
   }
@@ -471,15 +490,16 @@ h1 {
   #Anunciar a,
   #Cadastrar a,
   .butao-achei button {
-      margin-top: 10px; /* Adiciona espaço entre os botões */
-      background-color: var(--cor4);
-      color: var(--cor0);
-      border: 0px;
+    margin-top: 10px;
+    /* Adiciona espaço entre os botões */
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border: 0px;
   }
 
   #Anunciar a:hover,
   #Cadastrar a:hover {
-      background-color: var(--cor3);
+    background-color: var(--cor3);
   }
 
 }

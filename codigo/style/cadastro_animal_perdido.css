@@ -59,6 +59,7 @@ body {
 .logo:hover {
   color: var(--cor5);
 }
+
 /* Define estilos para o menu */
 .menu {
   list-style-type: none;
@@ -144,9 +145,11 @@ body {
 .mobile-menu-icon {
   display: none;
 }
+
 .mobile-menu-icon button {
   background-color: transparent;
 }
+
 /* Define estilos para o título h1 */
 h1 {
   font-weight: bolder;
@@ -166,7 +169,7 @@ main {
   width: 100%;
   background-color: #fff;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: center;
 }
@@ -220,8 +223,8 @@ form h3 {
   color: #333;
 }
 
-.form-group input, 
-.form-group select, 
+.form-group input,
+.form-group select,
 .form-group textarea {
   width: 100%;
   padding: 10px;
@@ -320,6 +323,7 @@ button[type="submit"]:hover {
   form {
     max-width: 100%;
   }
+
   .cabecalho {
     align-items: normal;
   }
@@ -329,9 +333,9 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
   }
 
-.menu {
+  .menu {
     list-style-type: none;
-    margin-top: 0; 
+    margin-top: 0;
     position: absolute;
     top: 80px;
     left: 0;

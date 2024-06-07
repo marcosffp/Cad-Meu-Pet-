@@ -1,5 +1,7 @@
+//url do jsonserver
 const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/cadastros';
 
+//função do navbar mobile
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
@@ -8,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("active");
     });
 
+    // Define uma variável para o formulário de cadastro
     const formCadastro = document.getElementById("form-contato");
-
     const btnInsert = document.getElementById("btnInsert");
     btnInsert.addEventListener('click', function () {
         if (!formCadastro.checkValidity()) {
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Oculta a mensagem de aviso após alguns 5 segundos
 function displayMessage(mensagem) {
     const msg = document.getElementById('msg');
     msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
@@ -41,6 +44,7 @@ function displayMessage(mensagem) {
     }, 5000);
 }
 
+// Cria um novo usuário no banco de dados
 function createUsuario(usuario) {
     console.log('Tentando cadastrar usuário:', usuario);
 
@@ -51,22 +55,20 @@ function createUsuario(usuario) {
         },
         body: JSON.stringify(usuario),
     })
-    .then(response => {
-        console.log('Resposta recebida:', response);
-        if (!response.ok) {
-            throw new Error('Erro ao cadastrar usuário');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Dados recebidos:', data);
-        // displayMessage("Usuário cadastrado com sucesso");
-        alert("Usuário cadastrado com sucesso");
-        window.location.href = "../html/Home.html";
-    })
-    .catch(error => {
-        console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-        // displayMessage("Erro ao cadastrar usuário");
-        alert("Erro ao cadastrar usuário");
-    });
+        .then(response => {
+            console.log('Resposta recebida:', response);
+            if (!response.ok) {
+                throw new Error('Erro ao cadastrar usuário');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Dados recebidos:', data);
+            alert("Usuário cadastrado com sucesso");
+            window.location.href = "../html/Home.html";
+        })
+        .catch(error => {
+            console.error('Erro ao cadastrar usuário via API JSONServer:', error);
+            alert("Erro ao cadastrar usuário");
+        });
 }

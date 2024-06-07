@@ -59,6 +59,7 @@ body {
 .logo:hover {
   color: var(--cor5);
 }
+
 /* Define estilos para o menu */
 .menu {
   list-style-type: none;
@@ -144,6 +145,7 @@ body {
 .mobile-menu-icon {
   display: none;
 }
+
 .mobile-menu-icon button {
   background-color: transparent;
 }
@@ -155,72 +157,72 @@ h1 {
   margin-left: 30px;
 }
 
-  /* Define estilos para o rodapé */
-  .rodape {
-    color: var(--cor0);
-    padding: 40px 0;
-  }
-  
-  /* Define estilos para o contêiner do rodapé */
-  .container-rodape {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  /* Define estilos para as informações no rodapé */
-  .informacoes,
-  .links-uteis,
-  .redes-sociais {
-    flex-basis: 30%;
-    text-align: center;
-    color: var(--cor6);
-  }
-  
-  /* Define estilos para os parágrafos e títulos no rodapé */
-  .rodape p,
-  .rodape h4 {
-    color: var(--cor6);
-    margin-bottom: 20px;
-  }
-  
-  /* Define estilos para as listas no rodapé */
-  .rodape ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Define estilos para os itens da lista no rodapé */
-  .rodape li {
-    margin-bottom: 10px;
-  }
-  
-  /* Define estilos para os links no rodapé */
-  .rodape a {
-    color: var(--cor6);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  /* Define estilos para os links no rodapé quando hover */
-  .rodape a:hover {
-    color: var(--cor3);
-  }
-  
-  /* Define estilos para a linha horizontal no rodapé */
-  .rodape hr {
-    margin: 20px 0;
-    border: 1px solid var(--cor6);
-  }
-  
-  /* Define estilos para o texto de direitos autorais no rodapé */
-  .direitos-autorais {
-    text-align: center;
-    font-size: 12px;
-  }
-  
+/* Define estilos para o rodapé */
+.rodape {
+  color: var(--cor0);
+  padding: 40px 0;
+}
+
+/* Define estilos para o contêiner do rodapé */
+.container-rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Define estilos para as informações no rodapé */
+.informacoes,
+.links-uteis,
+.redes-sociais {
+  flex-basis: 30%;
+  text-align: center;
+  color: var(--cor6);
+}
+
+/* Define estilos para os parágrafos e títulos no rodapé */
+.rodape p,
+.rodape h4 {
+  color: var(--cor6);
+  margin-bottom: 20px;
+}
+
+/* Define estilos para as listas no rodapé */
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Define estilos para os itens da lista no rodapé */
+.rodape li {
+  margin-bottom: 10px;
+}
+
+/* Define estilos para os links no rodapé */
+.rodape a {
+  color: var(--cor6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Define estilos para os links no rodapé quando hover */
+.rodape a:hover {
+  color: var(--cor3);
+}
+
+/* Define estilos para a linha horizontal no rodapé */
+.rodape hr {
+  margin: 20px 0;
+  border: 1px solid var(--cor6);
+}
+
+/* Define estilos para o texto de direitos autorais no rodapé */
+.direitos-autorais {
+  text-align: center;
+  font-size: 12px;
+}
+
 
 /* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
 @media screen and (max-width: 768px) {
@@ -233,9 +235,9 @@ h1 {
     margin-bottom: 20px;
   }
 
-.menu {
+  .menu {
     list-style-type: none;
-    margin-top: 0; 
+    margin-top: 0;
     position: absolute;
     top: 80px;
     left: 0;
@@ -300,74 +302,78 @@ h1 {
     color: var(--cor4);
   }
 }
-  /* Define estilos para a versão tablet do menu */
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .cabecalho {
-      align-items: normal;
-    }
-  
-    .logo {
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
-  
-    .menu {
-      list-style-type: none;
-      margin-top: 10px;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      background: #285046;
-      transition: height 0.2s;
-      overflow: hidden;
-      height: 0;
-      min-height: 0;
-    }
-  
-    .menu.active {
-      height: 450px;
-      min-height: 150px;
-    }
-  
-    .menu li {
-      display: block;
-      margin-left: 0;
-    }
-  
-    .menu li a {
-      display: block;
-      padding: 10px 0;
-      text-align: left;
-      color: var(--cor0);
-    }
-  
-    .menu li a:hover {
-      color: var(--cor0);
-    }
-  
-    #Anunciar a,
-    #Cadastrar a,
-    .butao-achei button {
-        margin-top: 10px; /* Adiciona espaço entre os botões */
-        background-color: var(--cor4);
-        color: var(--cor0);
-        border: 0px;
-    }
 
-    #Anunciar a:hover,
-    #Cadastrar a:hover {
-        background-color: var(--cor3);
-    }
-
-    .butao-achei button {
-        color: var(--cor4);
-        background-color: var(--cor0);
-        border: 2px solid var(--cor4);
-        margin-top: 10px; /* Adiciona espaço entre os botões */
-    }
+/* Define estilos para a versão tablet do menu */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cabecalho {
+    align-items: normal;
   }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin-top: 10px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #285046;
+    transition: height 0.2s;
+    overflow: hidden;
+    height: 0;
+    min-height: 0;
+  }
+
+  .menu.active {
+    height: 450px;
+    min-height: 150px;
+  }
+
+  .menu li {
+    display: block;
+    margin-left: 0;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+    text-align: left;
+    color: var(--cor0);
+  }
+
+  .menu li a:hover {
+    color: var(--cor0);
+  }
+
+  #Anunciar a,
+  #Cadastrar a,
+  .butao-achei button {
+    margin-top: 10px;
+    /* Adiciona espaço entre os botões */
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border: 0px;
+  }
+
+  #Anunciar a:hover,
+  #Cadastrar a:hover {
+    background-color: var(--cor3);
+  }
+
+  .butao-achei button {
+    color: var(--cor4);
+    background-color: var(--cor0);
+    border: 2px solid var(--cor4);
+    margin-top: 10px;
+    /* Adiciona espaço entre os botões */
+  }
+}
+
 .profile-card {
   max-width: 300px;
   margin: 40px auto;
@@ -416,7 +422,8 @@ h1 {
   margin-bottom: 10px;
 }
 
-.profile-details input, .profile-details textarea {
+.profile-details input,
+.profile-details textarea {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;

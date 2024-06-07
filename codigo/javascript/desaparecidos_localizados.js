@@ -115,9 +115,6 @@ function showAllPets() {
 // Chamar a função para mostrar todos os animais perdidos inicialmente
 showAllPets();
 
-
-
-
 // Event listener para o botão de filtragem
 document.getElementById("btnFiltrar").addEventListener("click", loadJSON);
 
