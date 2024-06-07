@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 imagemUrl: imagemUrl
             };
 
-            // Envia os dados para a API
             const postResponse = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {

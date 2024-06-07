@@ -130,3 +130,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostra todos os animais perdidos inicialmente ao carregar a página
   showAllPets();
 });
+function verificarLogado(){
+  if(localStorage.getItem("Logado")== "true"){
+    window.alert("Usuario logado")
+  }
+  else{
+    window.alert("Usuario nao foi encontrado")
+  }
+}
