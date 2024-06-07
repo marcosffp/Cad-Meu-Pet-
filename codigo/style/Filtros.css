@@ -204,42 +204,73 @@ main {
 }
 
 .pet-card {
-    display: flex;
-    margin-bottom: 20px;
-    background-color: #cde0d8;
-    border-radius: 10px;
-    overflow: hidden;
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #cde0d8;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .pet-card img {
-    width: 150px;
-    height: auto;
-    object-fit: cover;
+  width: 150px;
+  height: auto;
+  object-fit: cover;
 }
 
 .pet-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pet-info h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .pet-info h3 span {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .pet-info p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .pet-info p strong {
-    font-weight: bold;
+  font-weight: bold;
 }
+
+.pet-name {
+position: relative;
+}
+
+.pet-name .status {
+position: absolute;
+top: 0;
+right: 0;
+background-color: #fff; /* Cor de fundo para destacar o status */
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 14px;
+font-weight: bold;
+}
+
+.pet-name span {
+font-weight: normal;
+}
+
+.pet-info p.species {
+color: #888; /* Tom de cinza claro para a espécie */
+}
+
+.status {
+position: absolute;
+top: 10px;
+right: 10px;
+font-weight: bold;
+}
+
 
 
   /* Define estilos para o rodapé */

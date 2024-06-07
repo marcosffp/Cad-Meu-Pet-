@@ -1,4 +1,3 @@
-// URL da API JSONServer - Substitua pela URL correta da sua API
 const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/cadastros';
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -32,20 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         formCadastro.reset();
     });
-
-    const msg = document.getElementById('msg');
-    msg.addEventListener("DOMSubtreeModified", function (e) {
-        if (e.target.innerHTML == "") return;
-        setTimeout(function () {
-            const alert = msg.getElementsByClassName("alert");
-            if (alert[0]) alert[0].remove();
-        }, 5000);
-    });
 });
 
 function displayMessage(mensagem) {
     const msg = document.getElementById('msg');
     msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
+    setTimeout(function () {
+        msg.innerHTML = '';
+    }, 5000);
 }
 
 function createUsuario(usuario) {
@@ -67,37 +60,13 @@ function createUsuario(usuario) {
     })
     .then(data => {
         console.log('Dados recebidos:', data);
-        alert("Cadastro efetivo: Usuário cadastrado com sucesso");
+        // displayMessage("Usuário cadastrado com sucesso");
+        alert("Usuário cadastrado com sucesso");
+        window.location.href = "../html/Home.html";
     })
     .catch(error => {
         console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-        displayMessage("Erro ao cadastrar usuário");
+        // displayMessage("Erro ao cadastrar usuário");
+        alert("Erro ao cadastrar usuário");
     });
 }
-
-
-
-
-
-// Evento de clique do botão "Inserir"
-const btnInsert = document.getElementById("btnInsert");
-btnInsert.addEventListener('click', function () {
-    if (!formCadastro.checkValidity()) {
-        displayMessage("Preencha o formulário corretamente.");
-        return;
-    }
-
-    const campoNome = document.getElementById('inputNome').value;
-    const campoEmail = document.getElementById('inputEmail').value;
-    const campoSenha = document.getElementById('inputSenha').value;
-
-    const usuario = {
-        nome: campoNome,
-        email: campoEmail,
-        senha: campoSenha
-    };
-
-    createUsuario(usuario);
-
-    formCadastro.reset();
-});
