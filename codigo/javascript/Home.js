@@ -1,8 +1,7 @@
 const RelatosApp = (function() {
     // Variáveis privadas
-    let petsReunidos = 3; // Número inicial de animais de estimação reunidos
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
-    const apiPetsEncontradosUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/pets_encontrados/1';
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos'; 
+    const apiPetReunidos = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
     let db = [];
 
     // Função privada para exibir mensagens
@@ -123,46 +122,18 @@ const RelatosApp = (function() {
         });
     }
 
-    // Função privada para aumentar o número de animais de estimação reunidos em 1
-    function aumentarReunidos() {
-        petsReunidos++;
-        document.getElementById("pets-reunidos").innerText = petsReunidos;
-        atualizarPetsReunidos(petsReunidos);
-    }
-
-    // Função privada para diminuir o número de animais de estimação reunidos em 1
-    function diminuirReunidos() {
-        if (petsReunidos > 0) {
-            petsReunidos--;
-            document.getElementById("pets-reunidos").innerText = petsReunidos;
-            atualizarPetsReunidos(petsReunidos);
-        }
-    }
-
-    // Função privada para atualizar o número de animais de estimação reunidos na API JSONServer
-    function atualizarPetsReunidos(numero) {
-        const novoNumero = {"pets_reunidos": numero};
-
-        fetch(apiPetsEncontradosUrl, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(novoNumero),
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao atualizar o número de animais reunidos. Código de status: ' + response.status);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Número de animais reunidos atualizado com sucesso:', data);
-        })
-        .catch(error => {
-            console.error('Erro ao atualizar o número de animais reunidos:', error);
-            displayMessage("Erro ao atualizar o número de animais reunidos: " + error.message);
-        });
+    // Função privada para contar os animais encontrados
+    function contarAnimaisEncontrados() {
+        fetch(apiPetReunidos)
+            .then(response => response.json())
+            .then(data => {
+                const animaisEncontrados = data.filter(animal => animal.status === 'encontrado').length;
+                document.getElementById('pets-reunidos').textContent = animaisEncontrados;
+            })
+            .catch(error => {
+                console.error('Erro ao contar animais encontrados via API JSONServer:', error);
+                displayMessage("Erro ao contar animais encontrados");
+            });
     }
 
     // Inicializa o módulo
@@ -171,6 +142,7 @@ const RelatosApp = (function() {
             db = dados;
             ListaRelatos();
         });
+        contarAnimaisEncontrados();
     }
 
     // Espera o DOM ser carregado para garantir que todos os elementos estão disponíveis
@@ -187,9 +159,7 @@ const RelatosApp = (function() {
 
     // Retorna funções públicas
     return {
-        handleLike,
-        aumentarReunidos,
-        diminuirReunidos
+        handleLike
     };
 })();
 

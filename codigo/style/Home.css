@@ -267,9 +267,10 @@ main {
 
 /* Define estilos para os números dentro do elemento com classe "estatistica" */
 .estatistica .number {
-  font-size: 24px;
+  font-size: 60px;
   font-weight: bold;
   color: var(--cor0);
+  padding: 0px;
 }
 
 
