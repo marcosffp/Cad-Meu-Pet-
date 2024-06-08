@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("active");
   });
 
-  // Mostra todos os animais perdidos inicialmente ao carregar a página
   loadAndDisplayPets();
 });
 
@@ -19,16 +18,12 @@ function loadAndDisplayPets(filterStatus = null, filterTipo = null) {
       const resultsSection = document.getElementById("results");
       resultsSection.innerHTML = "";
 
-      // Filtra os animais perdidos com base nos filtros fornecidos
       const filteredPets = data.filter(
         (pet) =>
-          (!filterStatus ||
-            pet.status.toLowerCase() === filterStatus.toLowerCase()) &&
-          (!filterTipo ||
-            pet.especie.toLowerCase() === filterTipo.toLowerCase())
+          (!filterStatus || pet.status.toLowerCase() === filterStatus.toLowerCase()) &&
+          (!filterTipo || pet.especie.toLowerCase() === filterTipo.toLowerCase())
       );
 
-      // Exibe os animais perdidos filtrados
       filteredPets.forEach((pet) => {
         const content = document.createElement("div");
         content.classList.add("pet-card");
@@ -55,21 +50,45 @@ function loadAndDisplayPets(filterStatus = null, filterTipo = null) {
         status.classList.add("status");
         status.textContent = pet.status;
 
+        const contacts = document.createElement("strong");
+        contacts.textContent = "Contatos: " + pet.contatos;
+
+        const editButton = document.createElement("button");
+        editButton.setAttribute("type", "button");
+        editButton.classList.add("btn", "btn-primary");
+        editButton.setAttribute("data-bs-toggle", "modal");
+        editButton.setAttribute("data-bs-target", "#editModal");
+        editButton.textContent = "Editar";
+
+        editButton.addEventListener("click", function () {
+          document.getElementById("editId").value = pet.id;
+          document.getElementById("status").value = pet.status;
+          document.getElementById("especie").value = pet.especie;
+          document.getElementById("genero").value = pet.genero;
+          document.getElementById("nome").value = pet.nome;
+          document.getElementById("endereco").value = pet.endereco;
+          document.getElementById("contatoDonoPet").value = pet.contatos;
+          document.getElementById("descricao").value = pet.descricao;
+          document.getElementById("imagemUrl").value = pet.imagemUrl;
+        });
+
         content.appendChild(petImage);
         content.appendChild(box);
-        box.appendChild(h3); // Adicionando o nome no elemento "h3"
-        box.appendChild(species); // Adicionando a espécie no elemento "box"
+        box.appendChild(h3);
+        box.appendChild(species);
         box.appendChild(address);
         box.appendChild(description);
-        content.appendChild(status); // Movendo o status para fora do box, dentro do content
+        box.appendChild(contacts);
+        box.appendChild(status);
+        box.appendChild(editButton);
 
         resultsSection.appendChild(content);
       });
+
     })
     .catch((error) => console.error("Erro ao carregar os dados:", error));
 }
 
-// Event listener para o botão de filtragem
 document.getElementById("btnFiltrar").addEventListener("click", () => {
   const selectedStatus = document.querySelector(
     'input[name="status"]:checked'
@@ -80,7 +99,6 @@ document.getElementById("btnFiltrar").addEventListener("click", () => {
   loadAndDisplayPets(selectedStatus, selectedTipo);
 });
 
-// Event listener para o botão de resetar filtros
 document.getElementById("btnResetar").addEventListener("click", () => {
   document
     .querySelectorAll('input[name="status"]')
@@ -90,3 +108,48 @@ document.getElementById("btnResetar").addEventListener("click", () => {
     .forEach((input) => (input.checked = false));
   loadAndDisplayPets();
 });
+
+document.getElementById("editForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const id = document.getElementById("editId").value;
+  const relato = {
+    status: document.getElementById("status").value,
+    especie: document.getElementById("especie").value,
+    genero: document.getElementById("genero").value,
+    nome: document.getElementById("nome").value,
+    endereco: document.getElementById("endereco").value,
+    contatos: document.getElementById("contatoDonoPet").value,
+    descricao: document.getElementById("descricao").value,
+    imagemUrl: document.getElementById("imagemUrl").value
+  };
+
+  updatePet(id, relato, loadAndDisplayPets);
+});
+
+function updatePet(id, pet, refreshFunction) {
+  fetch(`${apiUrl}/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(pet),
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log("Anúncio alterado com sucesso:", data);
+      displayMessage("Anúncio alterado com sucesso");
+      if (refreshFunction)
+        refreshFunction();
+      $('#editModal').modal('hide');
+    })
+    .catch(error => {
+      console.error('Erro ao atualizar Anúncio via API JSONServer:', error);
+      displayMessage("Erro ao atualizar Anúncio");
+    });
+}
+
+function displayMessage(message) {
+  // Implemente sua lógica para exibir mensagens para o usuário, como um alerta ou uma área dedicada na página.
+  console.log(message);
+}
