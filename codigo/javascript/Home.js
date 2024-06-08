@@ -123,12 +123,12 @@ const RelatosApp = (function() {
     }
 
     // Função privada para contar os animais encontrados
-    function contarAnimaisEncontrados() {
+    function contarAnimaisencontrados() {
         fetch(apiPetReunidos)
             .then(response => response.json())
             .then(data => {
-                const animaisEncontrados = data.filter(animal => animal.status === 'encontrado').length;
-                document.getElementById('pets-reunidos').textContent = animaisEncontrados;
+                const animaisencontrados = data.filter(animal => animal.status === 'encontrado').length;
+                document.getElementById('pets-reunidos').textContent = animaisencontrados;
             })
             .catch(error => {
                 console.error('Erro ao contar animais encontrados via API JSONServer:', error);
@@ -142,7 +142,7 @@ const RelatosApp = (function() {
             db = dados;
             ListaRelatos();
         });
-        contarAnimaisEncontrados();
+        contarAnimaisencontrados();
     }
 
     // Espera o DOM ser carregado para garantir que todos os elementos estão disponíveis

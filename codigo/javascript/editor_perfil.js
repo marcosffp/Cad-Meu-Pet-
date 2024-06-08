@@ -111,7 +111,7 @@ $(document).ready(function () {
             <label for="editStatus">Status:</label>
             <select id="editStatus" class="form-control">
               <option value="Desaparecido">Desaparecido</option>
-              <option value="Encontrado">Encontrado</option>
+              <option value="encontrado">encontrado</option>
             </select>
           </div>
           <div class="form-group">

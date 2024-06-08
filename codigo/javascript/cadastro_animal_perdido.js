@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("active");
   });
 
-  document.getElementById("submit").addEventListener("click", async (event) => {
+  document.getElementById("petForm").addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const status = document.getElementById("status").value;
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const endereco = document.getElementById("endereco").value;
     const descricao = document.getElementById("descricao").value;
     const imagemUrl = document.getElementById("imagemUrl").value;
+    const contato = document.getElementById("contatos").value;
 
     if (
       !status ||
@@ -26,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       !nome ||
       !endereco ||
       !descricao ||
-      !imagemUrl
+      !imagemUrl ||
+      !contato
     ) {
       return alert("Por favor, preencha todos os campos");
     }
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         endereco: endereco,
         descricao: descricao,
         imagemUrl: imagemUrl,
+        contatos: contato,
       };
 
       // Save the data

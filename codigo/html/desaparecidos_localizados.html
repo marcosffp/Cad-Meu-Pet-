@@ -1,248 +1,202 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    />
-    <title>Filtro-Cadê Meu Pet?</title>
-    <link rel="stylesheet" href="../style/desaparecidos_localizados.css" />
-  </head>
-  <body>
-    <!-- Cabeçalho do site -->
-    <header class="cabecalho">
-      <a href="../html/home.html" class="logo">
-        <img src="../img/logo_cade_meu_pet.png" alt="Cadê meu pet?" />
-        cadê meu pet?
-      </a>
-      <div class="mobile-menu-icon">
-        <button><i class="fa-solid fa-bars"></i></button>
-      </div>
 
-      <!-- Navegação do site -->
-      <nav class="menu">
-        <ul>
-          <li><a href="../html/home.html">Início</a></li>
-          <li>
-            <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
-          </li>
-          <li><a href="../html/ferramentas.html">Ferramentas</a></li>
-          <li><a href="../html/blog.html">Blog</a></li>
-          <li><a href="../html/faq.html">FAQ</a></li>
-          <li id="Anunciar">
-            <a href="../html/cadastro_animal_perdido.html">Anunciar</a>
-          </li>
-          <li id="Cadastrar"><a href="../html/cadastro_usuario.html">Cadastrar</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <title>Filtro-Cadê Meu Pet?</title>
+  <link rel="stylesheet" href="../style/desaparecidos_localizados.css" />
+</head>
 
-    <main>
-
-
-<!-- Modal de edição -->
-<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Editar Relato</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form id="editForm">
-        <div class="modal-body">
-          <input type="hidden" id="editId">
-          <div class="form-group">
-            <label for="status">Status</label>
-            <select id="status" name="status" class="form-control" required>
-              <option value="Desaparecido">Desaparecido</option>
-              <option value="Encontrado">Encontrado</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="especie">Espécie</label>
-            <select id="especie" name="especie" class="form-control" required>
-              <option value="" disabled selected>
-                Selecione uma espécie
-              </option>
-              <option value="Cachorro">Cachorro</option>
-              <option value="Gato">Gato</option>
-              <option value="Passaro">Pássaro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="genero">Gênero</label>
-            <select id="genero" name="genero" class="form-control" required>
-              <option value="" disabled selected>Selecione um gênero</option>
-              <option value="Macho">Macho</option>
-              <option value="Femea">Fêmea</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="nome">Nome do Pet</label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              class="form-control"
-              placeholder="Nome do Pet"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="endereco">Endereço visto pela última vez</label>
-            <input
-              type="text"
-              id="endereco"
-              name="endereco"
-              class="form-control"
-              placeholder="Endereço"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="contatoDonoPet">Contato</label>
-            <input
-              type="text"
-              id="contatoDonoPet"
-              name="contatoDonoPet"
-              class="form-control"
-              placeholder="Telefone ou Email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="descricao">Descrição</label>
-            <textarea
-              id="descricao"
-              name="descricao"
-              class="form-control"
-              placeholder="Informações que diferenciam o pet"
-              required
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="imagemUrl">URL da Imagem do Pet</label>
-            <input
-              type="url"
-              id="imagemUrl"
-              name="imagemUrl"
-              class="form-control"
-              placeholder="https://example.com/image.jpg"
-              required
-            />
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
-        </div>
-      </form>
+<body>
+  <!-- Cabeçalho do site -->
+  <header class="cabecalho">
+    <a href="../html/home.html" class="logo">
+      <img src="../img/logo_cade_meu_pet.png" alt="Cadê meu pet?" />
+      cadê meu pet?
+    </a>
+    <div class="mobile-menu-icon">
+      <button><i class="fa-solid fa-bars"></i></button>
     </div>
-  </div>
-</div>
+
+    <!-- Navegação do site -->
+    <nav class="menu">
+      <ul>
+        <li><a href="../html/home.html">Início</a></li>
+        <li>
+          <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
+        </li>
+        <li><a href="../html/ferramentas.html">Ferramentas</a></li>
+        <li><a href="../html/blog.html">Blog</a></li>
+        <li><a href="../html/faq.html">FAQ</a></li>
+        <li id="Anunciar">
+          <a href="../html/cadastro_animal_perdido.html">Anunciar</a>
+        </li>
+        <li id="Cadastrar"><a href="../html/cadastro_usuario.html">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
 
 
-
-
-
-      <aside class="filters">
-        <h2>Filtros</h2>
-        <div class="filter-group">
-          <h3>Status</h3>
-          <label
-            ><input type="radio" name="status" value="Desaparecido" />
-            Desaparecido</label
-          >
-          <label
-            ><input type="radio" name="status" value="Encontrado" />
-            Encontrado</label
-          >
-        </div>
-        <div class="filter-group">
-          <h3>Localização</h3>
-          <input type="text" placeholder="CEP ou endereço" />
-        </div>
-        <div class="filter-group">
-          <h3>Tipo</h3>
-          <label><input type="radio" name="tipo" value="Gato" /> Gato</label>
-          <label
-            ><input type="radio" name="tipo" value="Cachorro" /> Cachorro</label
-          >
-          <label
-            ><input type="radio" name="tipo" value="Passsaro" /> Pássaro</label
-          >
-        </div>
-        <div class="filter-buttons">
-          <button id="btnFiltrar" class="btnFiltrar">FILTRAR</button>
-          <button id="btnResetar" class="btnResetar">RESETAR</button>
-        </div>
-      </aside>
-
-      <section id="results"></section>
-    </main>
-
-    <!--Rodapé-->
-    <footer class="rodape">
-      <hr />
-      <div class="container-rodape">
-        <div class="informacoes">
-          <h4>Contato</h4>
-          <p>
-            Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
-            MG
-          </p>
-          <p>Telefone: (33) 99950-3571</p>
-          <p>Email: mafpinto@sga.pucminas.br</p>
-        </div>
-
-        <div class="links-uteis">
-          <h4>Links Úteis</h4>
-          <ul>
-            <li>
-              <a href="../html/politicas.html" target="_blank"
-                >Políticas de Privacidade</a
-              >
-            </li>
-            <li>
-              <a href="../html/termos.html" target="_blank">Termos de Uso</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Seção de redes sociais -->
-        <div class="redes-sociais">
-          <h4>Redes Sociais</h4>
-          <ul>
-            <li>
-              <a href="https://www.instagram.com/" target="_blank"
-                ><i class="fab fa-instagram"></i> Instagram</a
-              >
-            </li>
-            <li>
-              <a href="https://twitter.com/" target="_blank"
-                ><i class="fab fa-twitter"></i> Twitter</a
-              >
-            </li>
-          </ul>
+    <!-- Modal de edição -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Editar Relato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="editForm">
+            <div class="modal-body">
+              <input type="hidden" id="editId">
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control" required>
+                  <option value="Desaparecido">Desaparecido</option>
+                  <option value="encontrado">encontrado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="especie">Espécie</label>
+                <select id="especie" name="especie" class="form-control" required>
+                  <option value="" disabled selected>
+                    Selecione uma espécie
+                  </option>
+                  <option value="Cachorro">Cachorro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Passaro">Pássaro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="genero">Gênero</label>
+                <select id="genero" name="genero" class="form-control" required>
+                  <option value="" disabled selected>Selecione um gênero</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Femea">Fêmea</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="nome">Nome do Pet</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Pet" required />
+              </div>
+              <div class="form-group">
+                <label for="endereco">Endereço visto pela última vez</label>
+                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço" required />
+              </div>
+              <div class="form-group">
+                <label for="contatos">Contato</label>
+                <input type="text" id="contatos" name="contatos" class="form-control"
+                  placeholder="Telefone ou Email" required />
+              </div>
+              <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" class="form-control"
+                  placeholder="Informações que diferenciam o pet" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="imagemUrl">URL da Imagem do Pet</label>
+                <input type="url" id="imagemUrl" name="imagemUrl" class="form-control"
+                  placeholder="https://example.com/image.jpg" required />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
+            </div>
+          </form>
         </div>
       </div>
-      <p class="direitos-autorais">
-        &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
-      </p>
-    </footer>
+    </div>
 
-    <script src="../javascript/desaparecidos_localizados.js"></script>
-  </body>
+
+
+
+
+    <aside class="filters">
+      <h2>Filtros</h2>
+      <div class="filter-group">
+        <h3>Status</h3>
+        <label><input type="radio" name="status" value="desaparecido" />
+          desaparecido</label>
+        <label><input type="radio" name="status" value="encontrado" />
+          encontrado</label>
+      </div>
+      <div class="filter-group">
+        <h3>Localização</h3>
+        <input type="text" placeholder="CEP ou endereço" />
+      </div>
+      <div class="filter-group">
+        <h3>Tipo</h3>
+        <label><input type="radio" name="tipo" value="Gato" /> Gato</label>
+        <label><input type="radio" name="tipo" value="Cachorro" /> Cachorro</label>
+        <label><input type="radio" name="tipo" value="Passsaro" /> Pássaro</label>
+      </div>
+      <div class="filter-buttons">
+        <button id="btnFiltrar" class="btnFiltrar">FILTRAR</button>
+        <button id="btnResetar" class="btnResetar">RESETAR</button>
+      </div>
+    </aside>
+
+    <section id="results"></section>
+  </main>
+
+  <!--Rodapé-->
+  <footer class="rodape">
+    <hr />
+    <div class="container-rodape">
+      <div class="informacoes">
+        <h4>Contato</h4>
+        <p>
+          Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+          MG
+        </p>
+        <p>Telefone: (33) 99950-3571</p>
+        <p>Email: mafpinto@sga.pucminas.br</p>
+      </div>
+
+      <div class="links-uteis">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li>
+            <a href="../html/politicas.html" target="_blank">Políticas de Privacidade</a>
+          </li>
+          <li>
+            <a href="../html/termos.html" target="_blank">Termos de Uso</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Seção de redes sociais -->
+      <div class="redes-sociais">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="direitos-autorais">
+      &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- Adicione isso no final do body do seu HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script src="../javascript/desaparecidos_localizados.js"></script>
+</body>
+
 </html>

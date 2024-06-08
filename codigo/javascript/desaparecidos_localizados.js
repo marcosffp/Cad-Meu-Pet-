@@ -1,5 +1,4 @@
 const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".mobile-menu-icon button");
   const menu = document.querySelector(".menu");
@@ -67,7 +66,7 @@ function loadAndDisplayPets(filterStatus = null, filterTipo = null) {
           document.getElementById("genero").value = pet.genero;
           document.getElementById("nome").value = pet.nome;
           document.getElementById("endereco").value = pet.endereco;
-          document.getElementById("contatoDonoPet").value = pet.contatos;
+          document.getElementById("contatos").value = pet.contatos;
           document.getElementById("descricao").value = pet.descricao;
           document.getElementById("imagemUrl").value = pet.imagemUrl;
         });
@@ -119,7 +118,7 @@ document.getElementById("editForm").addEventListener("submit", function (event) 
     genero: document.getElementById("genero").value,
     nome: document.getElementById("nome").value,
     endereco: document.getElementById("endereco").value,
-    contatos: document.getElementById("contatoDonoPet").value,
+    contatos: document.getElementById("contatos").value,
     descricao: document.getElementById("descricao").value,
     imagemUrl: document.getElementById("imagemUrl").value
   };
@@ -139,9 +138,10 @@ function updatePet(id, pet, refreshFunction) {
     .then(data => {
       console.log("Anúncio alterado com sucesso:", data);
       displayMessage("Anúncio alterado com sucesso");
-      if (refreshFunction)
+      if (refreshFunction) {
         refreshFunction();
-      $('#editModal').modal('hide');
+      }
+      $('#editModal').modal('hide');  // Fechar o modal após salvar as alterações
     })
     .catch(error => {
       console.error('Erro ao atualizar Anúncio via API JSONServer:', error);

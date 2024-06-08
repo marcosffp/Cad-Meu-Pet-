@@ -230,7 +230,8 @@ main {
 /* Define estilos para o elemento com classe "carrosel" */
 .carrosel {
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 50px;
+  
 }
 
 /* Define estilos para as imagens no carrossel */
@@ -249,7 +250,6 @@ main {
 .estatistica {
   margin-top: 30px;
   text-align: center;
-  padding-bottom: 30px;
   background-color: var(--cor4);
   border-radius: 10px;
   margin-left: auto;
@@ -267,10 +267,11 @@ main {
 
 /* Define estilos para os números dentro do elemento com classe "estatistica" */
 .estatistica .number {
-  font-size: 30px;
+  font-size: 50px; /* Aumente o tamanho do número */
   font-weight: bold;
   color: var(--cor0);
 }
+
 
 
 /* Define estilos para o elemento com classe "relatos" */
