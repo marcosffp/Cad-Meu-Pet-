@@ -1,18 +1,14 @@
 //url do jsonserver
-
+const fs = require('node:fs')
 
 function readUsersFile(callback) {
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler o arquivo:', err);
-            return callback(err);
-        }
+    fs.readFile(filePath, 'utf8', (data, err) => {
+        if (err) return console.error('Erro ao ler o arquivo:', err);
         try {
             const users = JSON.parse(data);
-            callback(null, users);
+            return data
         } catch (jsonErr) {
-            console.error('Erro ao parsear o JSON:', jsonErr);
-            callback(jsonErr);
+            return console.error('Erro ao parsear o JSON:', jsonErr);
         }
     });
 }
