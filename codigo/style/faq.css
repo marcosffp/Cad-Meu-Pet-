@@ -153,7 +153,6 @@ body {
 
 /* Adiciona borda de cor cor4 em cada section */
 section.faq {
-  border: 2px solid var(--cor4);
   border-radius: 10px;
 }
 
@@ -170,6 +169,28 @@ main {
   /* Espaçamento entre as sections */
 }
 
+.toggle-btn {
+  background-color: var(--cor4);
+  color: var(--cor0);
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Estilo para o conteúdo expandido/colapsado */
+.faq-content {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Adicione estilos para o cabeçalho da FAQ */
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .faq h2 {
   font-size: 24px;
