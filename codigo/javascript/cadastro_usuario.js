@@ -1,20 +1,6 @@
-//url do jsonserver
-const fs = require('node:fs')
+// URL da API JSONServer - Substitua pela URL correta da sua API
+const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/cadastros';
 
-function readUsersFile(callback) {
-    fs.readFile(filePath, 'utf8', (data, err) => {
-        if (err) return console.error('Erro ao ler o arquivo:', err);
-        try {
-            const users = JSON.parse(data);
-            return data
-        } catch (jsonErr) {
-            return console.error('Erro ao parsear o JSON:', jsonErr);
-        }
-    });
-}
-
-
-//função do navbar mobile
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
@@ -22,55 +8,73 @@ document.addEventListener("DOMContentLoaded", function () {
     menuIcon.addEventListener("click", function () {
         menu.classList.toggle("active");
     });
-});
 
+    // Define uma variável para o formulário de cadastro de usuário
+    const formCadastro = document.getElementById("form-contato");
 
-document.getElementById("btnInsert").addEventListener("click", () => {
-    const nome = document.getElementById("inputNome").value;
-    const email = document.getElementById("inputEmail").value;
-    const senha = document.getElementById("inputSenha").value;
-
-    if (nome === "" || email === "" || senha === "") {
-        alert("Todos os campos são obrigatórios!");
-        return;
-    }
-
-    const usuario = { nome, email, senha };
-
-    const fs = require('fs');
-    const path = require('path');
-    const filePath = path.join(__dirname, 'users.json');
-
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler o arquivo:', err);
+    // Adiciona funções para tratar os eventos 
+    const btnInsert = document.getElementById("btnInsert");
+    btnInsert.addEventListener('click', function () {
+        // Verifica se o formulário está preenchido corretamente
+        if (!formCadastro.checkValidity()) {
+            displayMessage("Preencha o formulário corretamente.");
             return;
         }
 
-        let users = [];
-        if (data) {
-            users = JSON.parse(data);
-        }
+        // Obtem os valores dos campos do formulário
+        const nome = document.getElementById('inputNome').value;
+        const email = document.getElementById('inputEmail').value;
+        const senha = document.getElementById('inputSenha').value;
 
-        users.push(usuario);
+        // Cria um objeto com os dados do usuário
+        const usuario = {
+            nome: nome,
+            email: email,
+            senha: senha
+        };
 
-        fs.writeFile(filePath, JSON.stringify(users, null, 2), 'utf8', (err) => {
-            if (err) {
-                console.error('Erro ao salvar o arquivo:', err);
-                return;
-            }
+        // Cria o usuário no banco de dados
+        createUsuario(usuario);
 
-            alert('Usuário salvo com sucesso!');
-            document.getElementById("formCadastro").reset();
-        });
+        // Limpa o formulário
+        formCadastro.reset();
+    });
+
+    // Oculta a mensagem de aviso após alguns 5 segundos
+    const msg = document.getElementById('msg');
+    msg.addEventListener("DOMSubtreeModified", function (e) {
+        if (e.target.innerHTML == "") return;
+        setTimeout(function () {
+            const alert = msg.getElementsByClassName("alert");
+            if (alert[0]) alert[0].remove();
+        }, 5000);
     });
 });
 
-// Oculta a mensagem de aviso após alguns 5 segundos
 function displayMessage(mensagem) {
     const msg = document.getElementById('msg');
     msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
-    setTimeout(function () {
-        msg.innerHTML = '';
-    }, 5000);
+}
+
+function createUsuario(usuario) {
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(usuario),
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao cadastrar usuário');
+            }
+            return response.json();
+        })
+        .then(data => {
+            displayMessage("Usuário cadastrado com sucesso");
+        })
+        .catch(error => {
+            console.error('Erro ao cadastrar usuário via API JSONServer:', error);
+            displayMessage("Erro ao cadastrar usuário");
+        });
 }
