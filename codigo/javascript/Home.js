@@ -105,7 +105,7 @@ const RelatosApp = (function() {
         db.forEach(relato => {
             DivRelatos.innerHTML += `
             <div class="col">
-                <div class="card h-100 d-flex flex-column">
+                <div class="card h-100 d-flex flex-column" style="background-color: #cde0d8;">
                     <img src=${relato.imagemUrl} class="card-img-top" alt="imagem do relato">
                     <div class="card-body d-flex flex-column align-items-stretch">
                         <div class="d-flex justify-content-between mb-2">

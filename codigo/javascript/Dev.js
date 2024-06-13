@@ -2,6 +2,10 @@
 const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
 var db = [];
 
+function reloadPage() {
+    location.reload();
+}
+
 function ListaRelatos() {
     const DivRelatos = document.getElementById("relatos-container");
     DivRelatos.innerHTML = "";
@@ -11,7 +15,7 @@ function ListaRelatos() {
 
         DivRelatos.innerHTML += `
             <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card h-100 d-flex flex-column" style="background-color: #cde0d8;">
                     <img src=${relato.imagemUrl} class="card-img-top" alt="imagem do relato">
                     <div class="d-flex justify-content-between">
                         <h5 class="card-title mb-3">${relato.nome}</h5>
@@ -80,15 +84,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const localizacao = document.getElementById('editLocalizacao').value;
         const descricao = document.getElementById('editDescricao').value;
         const imagemUrl = document.getElementById('editImagemUrl').value;
-
+    
         const relato = db.find(r => r.id == id);
         const updatedRelato = { ...relato, nome, data, localizacao, descricao, imagemUrl }; // Preserva likes e liked
+    
         updateRelato(id, updatedRelato, () => {
-            reloadPage();
-            const editModal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
-            editModal.hide();
+            const editModal = new bootstrap.Modal(document.getElementById('editModal'));
+            editModal.hide(); // Fecha a modal após salvar
+            location.reload(); // Recarrega a página
         });
     });
+    
+    
 });
 
 // Função para ler os relatos via API JSONServer
@@ -224,6 +231,3 @@ function handleLike(id, liked, likes, refreshFunction) {
     toggleLike(id, liked, likes, refreshFunction);
 }
 
-function reloadPage() {
-    location.reload();
-}
