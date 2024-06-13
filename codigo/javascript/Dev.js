@@ -20,10 +20,8 @@ function ListaRelatos() {
                     <p class="card-text mb-2">${relato.localizacao}</p>
                     <p class="card-text flex-grow-1">${relato.descricao}</p>
                     <div class="like-section">
-                        <div class="like-section">
-                            <i id="like-icon-${relato.id}" class="fas fa-thumbs-up like-icon" style="color: ${relato.liked ? '#287a66' : '#6c757d'}" onclick="handleLike(${relato.id}, ${relato.liked}, ${relato.likes})"></i>
-                            <span id="likes-${relato.id}">${relato.likes}</span>
-                        </div>
+                        <i id="like-icon-${relato.id}" class="fas fa-thumbs-up like-icon" style="color: ${relato.liked ? '#287a66' : '#6c757d'}" onclick="handleLike(${relato.id}, ${relato.liked}, ${relato.likes})"></i>
+                        <span id="likes-${relato.id}">${relato.likes}</span>
                     </div>
                     <button class="btn btn-danger mt-3" onclick="handleDelete(${relato.id})">Excluir</button>
                     <button class="btn btn-warning mt-3" onclick="handleEdit(${relato.id})">Alterar</button>
@@ -36,8 +34,7 @@ function ListaRelatos() {
 function handleDelete(id) {
     if (confirm('Tem certeza que deseja excluir este relato?')) {
         deleteRelato(id, () => {
-            ListaRelatos();
-            displayMessage("Relato removido com sucesso");
+            reloadPage();
         });
     }
 }
@@ -87,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const relato = db.find(r => r.id == id);
         const updatedRelato = { ...relato, nome, data, localizacao, descricao, imagemUrl }; // Preserva likes e liked
         updateRelato(id, updatedRelato, () => {
-            ListaRelatos();
+            reloadPage();
             const editModal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
             editModal.hide();
         });
@@ -128,6 +125,7 @@ function createRelato(relato, refreshFunction) {
         .then(data => {
             displayMessage("Relato inserido com sucesso");
             if (refreshFunction) refreshFunction();
+            reloadPage();
         })
         .catch(error => {
             console.error('Erro ao inserir Relato via API JSONServer:', error);
@@ -147,8 +145,8 @@ function updateRelato(id, relato, refreshFunction) {
         .then(response => response.json())
         .then(data => {
             displayMessage("Relato alterado com sucesso");
-            if (refreshFunction)
-                refreshFunction();
+            if (refreshFunction) refreshFunction();
+            reloadPage();
         })
         .catch(error => {
             console.error('Erro ao atualizar Relato via API JSONServer:', error);
@@ -164,8 +162,8 @@ function deleteRelato(id, refreshFunction) {
         .then(response => response.json())
         .then(data => {
             displayMessage("Relato removido com sucesso");
-            if (refreshFunction)
-                refreshFunction();
+            if (refreshFunction) refreshFunction();
+            reloadPage();
         })
         .catch(error => {
             console.error('Erro ao remover Relato via API JSONServer:', error);
@@ -213,6 +211,7 @@ function toggleLike(id, currentLiked, currentLikes, refreshFunction) {
 
             console.log("Resposta do servidor:", data);
             if (refreshFunction) refreshFunction();
+            reloadPage();
         })
         .catch(error => {
             console.error('Erro ao atualizar curtidas via API JSONServer:', error);

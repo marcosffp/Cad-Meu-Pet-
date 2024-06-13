@@ -1,4 +1,4 @@
-/* Define estilos globais para todos os elementos */
+/* Reset de estilos globais */
 * {
   padding: 0;
   margin: 0;
@@ -6,19 +6,7 @@
   box-sizing: border-box;
 }
 
-/* Define o tamanho da fonte para o elemento html */
-html {
-  font-size: 1em;
-}
-
-/* Define estilos para o corpo da página */
-body {
-  height: 100%;
-  background-color: var(--cor0);
-  font-family: var(--fonte-destaque);
-}
-
-/* Define variáveis de cores e fontes */
+/* Variáveis de cores e fontes */
 :root {
   --cor0: #f9f9fa;
   --cor1: #cdfff2;
@@ -31,7 +19,18 @@ body {
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-/* Define estilos para o cabeçalho */
+/* Estilos globais */
+html {
+  font-size: 1em;
+}
+
+body {
+  height: 100%;
+  background-color: var(--cor0);
+  font-family: var(--fonte-destaque);
+}
+
+/* Cabeçalho */
 .cabecalho {
   color: var(--cor6);
   display: flex;
@@ -42,7 +41,6 @@ body {
   padding-bottom: 20px;
 }
 
-/* Define estilos para o logotipo */
 .logo {
   color: var(--cor5);
   text-decoration: none;
@@ -60,44 +58,37 @@ body {
   color: var(--cor5);
 }
 
-/* Define estilos para o menu */
 .menu {
   list-style-type: none;
   display: flex;
   align-items: center;
 }
 
-/* Define estilos para os itens do menu no cabeçalho */
 .cabecalho .menu li {
   margin-left: 20px;
   margin-right: 10px;
   font-size: 20px;
 }
 
-/* Define estilos para os links no menu do cabeçalho quando hover */
 .cabecalho .menu li a:hover {
   color: var(--cor3);
 }
 
-/* Define estilos para os links no menu do cabeçalho */
 .cabecalho .menu li a {
   text-decoration: none;
 }
 
-/* Define estilos para os itens do menu */
 .menu li {
   display: inline-block;
   margin-left: 20px;
 }
 
-/* Define estilos para os links no menu */
 .menu li a {
   color: var(--cor6);
   text-decoration: none;
   vertical-align: middle;
 }
 
-/* Define estilos para os botões "Anunciar" e "Cadastrar" */
 #Anunciar a,
 #Cadastrar a {
   padding: 10px 20px;
@@ -109,39 +100,32 @@ body {
   font-weight: bolder;
 }
 
-/* Define estilos para o botão "Anunciar" */
 #Anunciar a {
   background-color: var(--cor4);
   color: var(--cor0);
 }
 
-/* Define estilos para o botão "Anunciar" quando hover */
 #Anunciar a:hover {
   background-color: var(--cor5);
 }
 
-/* Define estilos para o botão "Anunciar" quando ativo */
 #Anunciar a:active {
   background-color: var(--cor6);
 }
 
-/* Define estilos para o botão "Cadastrar" */
 #Cadastrar a {
   color: var(--cor4);
   border: 2px solid var(--cor4);
 }
 
-/* Define estilos para o botão "Cadastrar" quando hover */
 #Cadastrar a:hover {
   background-color: var(--cor3);
 }
 
-/* Define estilos para o botão "Cadastrar" quando ativo */
 #Cadastrar a:active {
   background-color: var(--cor6);
 }
 
-/* Define estilos para o ícone do menu mobile */
 .mobile-menu-icon {
   display: none;
 }
@@ -149,7 +133,6 @@ body {
 .mobile-menu-icon button {
   background-color: transparent;
 }
-
 /* Define estilos para o título h1 */
 h1 {
   font-weight: bolder;
@@ -441,65 +424,3 @@ h1 {
 }
 
 /* Define estilos para a versão tablet do menu */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .cabecalho {
-    align-items: normal;
-  }
-
-  .logo {
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
-
-  .menu {
-    list-style-type: none;
-    margin-top: 10px;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background: #285046;
-    transition: height 0.2s;
-    overflow: hidden;
-    height: 0;
-    min-height: 0;
-  }
-
-  .menu.active {
-    height: 450px;
-    min-height: 150px;
-  }
-
-  .menu li {
-    display: block;
-    margin-left: 0;
-  }
-
-  .menu li a {
-    display: block;
-    padding: 10px 0;
-    text-align: left;
-    color: var(--cor0);
-  }
-
-  .menu li a:hover {
-    color: var(--cor0);
-  }
-
-  #Anunciar a,
-  #Cadastrar a,
-  .butao-achei button {
-    margin-top: 10px;
-    /* Adiciona espaço entre os botões */
-    background-color: var(--cor4);
-    color: var(--cor0);
-    border: 0px;
-  }
-
-  #Anunciar a:hover,
-  #Cadastrar a:hover {
-    background-color: var(--cor3);
-  }
-
-}

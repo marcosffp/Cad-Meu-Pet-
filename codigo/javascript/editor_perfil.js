@@ -48,9 +48,14 @@ function atualizarPerfil(perfil) {
   })
   .then(data => {
     alert('Perfil atualizado com sucesso!');
+    reloadPage(); // Reload the page after successful update
   })
   .catch(error => {
     console.error('Erro ao atualizar perfil:', error);
     alert('Erro ao atualizar perfil. Por favor, tente novamente mais tarde.');
   });
+}
+
+function reloadPage() {
+  location.reload();
 }

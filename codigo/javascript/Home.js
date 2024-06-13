@@ -4,6 +4,10 @@ const RelatosApp = (function() {
     const apiPetReunidos = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
     let db = [];
 
+    function reloadPage() {
+        location.reload();
+    }
+
     // Função privada para exibir mensagens
     function displayMessage(message) {
         alert(message);
@@ -43,6 +47,7 @@ const RelatosApp = (function() {
         .then(data => {
             displayMessage("Relato inserido com sucesso");
             if (refreshFunction) refreshFunction();
+            reloadPage(); // Recarrega a página após inserir o relato
         })
         .catch(error => {
             console.error('Erro ao inserir Relato via API JSONServer:', error);
@@ -78,6 +83,7 @@ const RelatosApp = (function() {
             } else {
                 console.error(`Elemento com id likes-${id} não foi encontrado.`);
             }
+            reloadPage(); // Recarrega a página após atualizar as curtidas
             if (refreshFunction) refreshFunction();
         })
         .catch(error => {

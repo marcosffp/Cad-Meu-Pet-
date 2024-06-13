@@ -112,7 +112,7 @@ document.getElementById("editForm").addEventListener("submit", function (event) 
   event.preventDefault();
 
   const id = document.getElementById("editId").value;
-  const relato = {
+  const pet = {
     status: document.getElementById("status").value,
     especie: document.getElementById("especie").value,
     genero: document.getElementById("genero").value,
@@ -123,7 +123,7 @@ document.getElementById("editForm").addEventListener("submit", function (event) 
     imagemUrl: document.getElementById("imagemUrl").value
   };
 
-  updatePet(id, relato, loadAndDisplayPets);
+  updatePet(id, pet, loadAndDisplayPets);
 });
 
 function updatePet(id, pet, refreshFunction) {
@@ -134,13 +134,19 @@ function updatePet(id, pet, refreshFunction) {
     },
     body: JSON.stringify(pet),
   })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Erro ao atualizar o pet');
+      }
+      return response.json();
+    })
     .then(data => {
       console.log("Anúncio alterado com sucesso:", data);
       displayMessage("Anúncio alterado com sucesso");
       if (refreshFunction) {
         refreshFunction();
       }
+      reloadPage(); // Recarrega a página após salvar as alterações do pet
       $('#editModal').modal('hide');  // Fechar o modal após salvar as alterações
     })
     .catch(error => {
@@ -152,4 +158,8 @@ function updatePet(id, pet, refreshFunction) {
 function displayMessage(message) {
   // Implemente sua lógica para exibir mensagens para o usuário, como um alerta ou uma área dedicada na página.
   console.log(message);
+}
+
+function reloadPage() {
+  location.reload();
 }
