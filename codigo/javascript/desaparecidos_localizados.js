@@ -140,10 +140,10 @@ document.getElementById("editForm").addEventListener("submit", function (event) 
     imagemUrl: document.getElementById("imagemUrl").value
   };
 
-  updatePet(id, relato, loadAndDisplayPets);
+  updatePet(id, relato);
 });
 
-function updatePet(id, pet, refreshFunction) {
+function updatePet(id, pet) {
   fetch(`${apiUrl}/${id}`, {
     method: 'PUT',
     headers: {
@@ -155,10 +155,8 @@ function updatePet(id, pet, refreshFunction) {
     .then(data => {
       console.log("Anúncio alterado com sucesso:", data);
       displayMessage("Anúncio alterado com sucesso");
-      if (refreshFunction) {
-        refreshFunction();
-      }
-      $('#editModal').modal('hide');  // Fechar o modal após salvar as alterações
+      window.location.reload();  // Recarregar a página após salvar as alterações
+      (document.getElementById('editModal')).modal('hide');  // Fechar o modal após salvar as alterações
     })
     .catch(error => {
       console.error('Erro ao atualizar Anúncio via API JSONServer:', error);

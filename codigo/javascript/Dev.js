@@ -141,7 +141,7 @@ function createRelato(relato, refreshFunction) {
 }
 
 // Função para atualizar um relato via API JSONServer
-function updateRelato(id, relato, refreshFunction) {
+function updateRelato(id, relato) {
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
@@ -152,7 +152,6 @@ function updateRelato(id, relato, refreshFunction) {
         .then(response => response.json())
         .then(data => {
             displayMessage("Relato alterado com sucesso");
-            if (refreshFunction) refreshFunction();
             reloadPage();
         })
         .catch(error => {
@@ -231,3 +230,7 @@ function handleLike(id, liked, likes, refreshFunction) {
     toggleLike(id, liked, likes, refreshFunction);
 }
 
+function displayMessage(message) {
+    // Implemente sua lógica para exibir mensagens para o usuário, como um alerta ou uma área dedicada na página.
+    console.log(message);
+  }
