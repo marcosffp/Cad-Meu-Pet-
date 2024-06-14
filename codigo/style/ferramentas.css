@@ -179,8 +179,8 @@ body {
   height: auto;
   /* Tornando a altura automática */
   border-radius: 10px;
-  margin-right: 20px;
-  /* Reduzindo a margem direita */
+  margin-right: 30px;
+  /* Aumentando a margem direita */
 }
 
 .ferramenta-anuncio .anuncio-texto,
@@ -191,18 +191,16 @@ body {
 .ferramenta-anuncio h2,
 .ferramenta-anuncios h2 {
   margin-bottom: 0.5em;
-  font-size: 1.5em;
+  font-size: 1.8em; /* Aumentar o tamanho da fonte */
   color: var(--cor4);
 }
 
 .ferramenta-anuncio p,
 .ferramenta-anuncios p {
   margin-bottom: 1em;
-  font-size: 1em;
+  font-size: 1.2em; /* Aumentar o tamanho da fonte */
   color: var(--cor6);
 }
-
-
 
 /* Define estilos para o rodapé */
 .rodape {
@@ -296,7 +294,6 @@ body {
     min-height: 0;
   }
 
-
   .menu.active {
     height: 450px;
     min-height: 150px;
@@ -356,58 +353,6 @@ body {
 
   .ferramenta-anuncio img,
   .ferramenta-anuncios img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 0;
-  }
-
-  .ferramenta-anuncio .anuncio-texto,
-  .ferramenta-anuncios .anuncios-texto {
-    text-align: center;
-  }
-
-  .ferramenta-anuncios {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    /* Remove a margem à esquerda */
-    padding-top: 20px;
-    /* Ajusta o espaçamento superior */
-  }
-
-  .ferramenta-anuncios img {
-    margin: 0;
-    /* Remove a margem ao redor da imagem */
-    max-width: 80%;
-    /* Reduz a largura máxima da imagem */
-    height: auto;
-    /* Garante que a altura seja ajustada automaticamente */
-  }
-
-  .ferramenta-anuncios .anuncios-texto {
-    text-align: center;
-    margin-top: 20px;
-    /* Adiciona um espaçamento superior */
-  }
-
-}
-
-/* Define estilos para a versão tablet do menu */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .ferramenta-anuncios {
-    margin-left: 40px;
-    /* Retorna a margem à esquerda */
-    padding-top: 40px;
-    /* Retorna o espaçamento superior */
-  }
-
-  .ferramenta-anuncios img {
-    max-width: 300px;
-    /* Retorna a largura máxima da imagem */
-    height: 300px;
-    /* Retorna a altura da imagem */
-    margin: 0 200px 0 0;
-    /* Retorna as margens da imagem */
+    margin-bottom: 10px;
   }
 }
