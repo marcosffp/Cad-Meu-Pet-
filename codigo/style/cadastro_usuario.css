@@ -26,7 +26,7 @@ html {
 
 body {
   height: 100%;
-  background-color: var(--cor0);
+  background: linear-gradient(135deg, var(--cor1), var(--cor2));
   font-family: var(--fonte-destaque);
 }
 
@@ -115,337 +115,153 @@ body {
 
 #Cadastrar a {
   color: var(--cor4);
-  border: 2px solid var(--cor4);
+  border: 3px solid var(--cor4);
 }
 
 #Cadastrar a:hover {
-  background-color: var(--cor3);
+  color: var(--cor5);
+  border: 3px solid var(--cor5);
 }
 
 #Cadastrar a:active {
-  background-color: var(--cor6);
+  color: var(--cor6);
+  border: 3px solid var(--cor6);
 }
 
+/* Mobile menu icon */
 .mobile-menu-icon {
   display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.mobile-menu-icon button {
-  background-color: transparent;
-}
-
-/* Define estilos para o título h1 */
-h1 {
-  font-weight: bolder;
-  color: var(--cor4);
-  margin-left: 30px;
-}
-
-#form-contato {
+/* Formulário */
+.form-box {
+  background-color: var(--cor0);
   padding: 30px;
-  border: 3px solid var(--cor5);
-  /* Adiciona a borda cor5 */
-  border-radius: 8px;
-  background-color: transparent;
-  /* Remove a cor de fundo */
-  box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
-}
-
-/* Define estilos para o título no formulário de contato */
-#form-contato h2 {
-  color: var(--cor4);
-  margin-bottom: 30px;
-}
-
-#btnInsert {
-  background-color: var(--cor4);
-}
-
-#btnInsert:hover {
-  background-color: var(--cor3);
-}
-
-/* Define estilos para o rodapé */
-.rodape {
-  color: var(--cor0);
-  padding: 40px 0;
-}
-
-/* Define estilos para o contêiner do rodapé */
-.container-rodape {
-  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 20%);
+  max-width: 500px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-/* Define estilos para as informações no rodapé */
-.informacoes,
-.links-uteis,
-.redes-sociais {
-  flex-basis: 30%;
-  text-align: center;
-  color: var(--cor6);
+.input-group-text {
+  background-color: var(--cor4);
+  border: none;
+  color: var(--cor0);
 }
 
-/* Define estilos para os parágrafos e títulos no rodapé */
-.rodape p,
-.rodape h4 {
-  color: var(--cor6);
-  margin-bottom: 20px;
+.input-group input {
+  border: 2px solid var(--cor4);
 }
 
-/* Define estilos para as listas no rodapé */
-.rodape ul {
-  list-style: none;
-  padding: 0;
+.input-group input:focus {
+  border-color: var(--cor3);
+  box-shadow: 0 0 5px var(--cor3);
 }
 
-/* Define estilos para os itens da lista no rodapé */
-.rodape li {
-  margin-bottom: 10px;
+.btn-success {
+  background-color: var(--cor4);
+  border-color: var(--cor4);
 }
 
-/* Define estilos para os links no rodapé */
-.rodape a {
-  color: var(--cor6);
-  text-decoration: none;
-  transition: color 0.3s ease;
+.btn-success:hover {
+  background-color: var(--cor5);
+  border-color: var(--cor5);
 }
 
-/* Define estilos para os links no rodapé quando hover */
-.rodape a:hover {
+.btn-secondary {
+  background-color: var(--cor3);
+  border-color: var(--cor3);
+}
+
+.btn-secondary:hover {
+  background-color: var(--cor2);
+  border-color: var(--cor2);
+}
+
+.text-center a {
+  color: var(--cor4);
+}
+
+.text-center a:hover {
   color: var(--cor3);
 }
 
-/* Define estilos para a linha horizontal no rodapé */
-.rodape hr {
-  margin: 20px 0;
-  border: 1px solid var(--cor6);
+/* Rodapé */
+.rodape {
+  background-color: var(--cor0);
+  color: var(--cor6);
+  text-align: center;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
 }
 
-/* Define estilos para o texto de direitos autorais no rodapé */
+.rodape .container-rodape {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.rodape .container-rodape div {
+  margin: 10px 0;
+}
+
+.rodape h4 {
+  margin-bottom: 10px;
+}
+
+.rodape ul {
+  list-style-type: none;
+}
+
+.rodape ul li {
+  margin-bottom: 10px;
+}
+
+.rodape a {
+  color: var(--cor6);
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  color: var(--cor4);
+}
+
 .direitos-autorais {
-  text-align: center;
-  font-size: 12px;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
-/* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
-@media screen and (max-width: 768px) {
-  @media screen and (max-width: 768px) {
-    .cabecalho {
-      align-items: normal;
-    }
-  
-    .logo {
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
-  
-    .menu {
-      list-style-type: none;
-      margin-top: 0;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      background: #285046;
-      transition: height 0.2s;
-      overflow: hidden;
-      height: 0;
-      min-height: 0;
-    }
-  
-  
-    .menu.active {
-      height: 450px;
-      min-height: 150px;
-    }
-  
-    .menu li {
-      display: block;
-      margin-left: 0;
-    }
-  
-    .menu li a {
-      display: block;
-      padding: 10px 0;
-      text-align: left;
-      color: var(--cor0);
-    }
-  
-    .menu li a:hover {
-      color: var(--cor0);
-    }
-  
-    #Anunciar a,
-    #Cadastrar a {
-      margin-top: 10px;
-      background-color: var(--cor4);
-      color: var(--cor0);
-      border: 0px;
-    }
-  
-    #Anunciar a:hover,
-    #Cadastrar a:hover {
-      background-color: var(--cor3);
-    }
-  
-    .butao-achei button {
-      color: var(--cor4);
-      background-color: var(--cor0);
-      border: 2px solid var(--cor4);
-    }
-  
-    .mobile-menu-icon {
-      display: block;
-      font-size: 30px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-  
-    .mobile-menu-icon i {
-      color: var(--cor4);
-    }
+/* Ajustes de layout para dispositivos móveis */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-.login-box {
-  border: 2px solid #287A65;
-  border-radius: 8px;
-  padding: 40px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
 
-.login-box h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #287A65;
-}
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
 
-.login-box input[type="email"],
-.login-box input[type="password"] {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  .menu.mobile-menu-visible {
+    display: flex;
+  }
 
-.login-box input[type="submit"],
-.login-box .register-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #287A65;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
+  .mobile-menu-icon {
+    display: block;
+    margin-right: 20px;
+  }
 
-.login-box input[type="submit"],
-.login-box .Entrar {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #287A65;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.login-box .register-button {
-  background-color: #287A65;
-  text-align: center;
-}
-
-.login-box p {
-  font-size: 12px;
-  text-align: center;
-  color: #666;
-  margin-top: 10px;
-}
-
-.login-box a {
-  color: #287A65;
-  text-decoration: none;
-}
-
-.login-box a:hover {
-  text-decoration: underline;
-}
-
-#login p {
-  font-size: 12px;
-  text-align: center;
-  color: #666;
-  margin-top: 10px;
-}
-
-#login a {
-  color: #287A65;
-  text-decoration: none;
-}
-
-#login a:hover {
-  text-decoration: underline;
-}
-
-#cadastro .cadastro-box {
-  border: 2px solid #287A65;
-  border-radius: 8px;
-  padding: 40px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#cadastro h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #287A65;
-}
-
-#cadastro input[type="text"],
-#cadastro input[type="email"],
-#cadastro input[type="password"] {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#cadastro button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #287A65;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#cadastro p {
-  font-size: 12px;
-  text-align: center;
-  color: #666;
-  margin-top: 10px;
-}
-
-#cadastro a {
-  color: #287A65;
-  text-decoration: none;
-}
-
-#cadastro a:hover {
-  text-decoration: underline;
+  .rodape .container-rodape {
+    flex-direction: column;
+    align-items: center;
+  }
 }

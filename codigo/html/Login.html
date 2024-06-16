@@ -43,15 +43,24 @@
     </nav>
   </header>
   <section id="login">
-    <div class="login-box">
-      <h2>Login</h2>
-      <input type="email" id="email-login" name="email-login" placeholder="Email">
-      <input type="password" id="senha-login" name="senha-login" placeholder="senha">
-      <button onclick="login()" class="Entrar">Entrar</button>
-      <p>Não tem uma conta? <a href="cadastro_usuario.html">cadastre-se</a></p>
+    <div class="form-box login-box">
+      <h2> Login </h2>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+        </div>
+        <input type="email" id="email-login" name="email-login" class="form-control" placeholder="Email" required>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+        </div>
+        <input type="password" id="senha-login" name="senha-login" class="form-control" placeholder="Senha" required>
+      </div>
+      <button onclick="login()" class="btn btn-success btn-block">Entrar</button>
+      <p class="text-center mt-3">Não tem uma conta? <a href="cadastro_usuario.html">Cadastre-se</a></p>
     </div>
   </section>
-  <script src="../javascript/login.js"></script>
   <footer class="rodape">
     <hr />
     <div class="container-rodape">
