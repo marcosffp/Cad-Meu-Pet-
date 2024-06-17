@@ -99,23 +99,49 @@ function createUsuario(usuario) {
         },
         body: JSON.stringify(usuario),
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao cadastrar usuário');
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Após o cadastro bem-sucedido, redireciona para a página home com o ID do usuário
-        const userId = data.id; // Obtém o ID do usuário recém-criado
-        alert("Usuário cadastrado com sucesso");
-        window.location.href = `home.html?id=${userId}`; // Redireciona para a página inicial com o ID do usuário
-    })
-    .catch(error => {
-        console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-        displayMessage("Erro ao cadastrar usuário");
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao cadastrar usuário');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Após salvar o ID do usuário no localStorage
+            localStorage.setItem('userId', data.id);
+
+            // Atualiza a URL do site com o ID do usuário
+            // Atualiza a URL do site com o ID do usuário
+            // Após salvar o ID do usuário no localStorage
+            localStorage.setItem('userId', data.id);
+
+            // Atualiza a URL do site com o ID do usuário
+            const currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set('userId', data.id);
+            history.pushState({}, '', currentUrl);
+
+
+
+            // Obtém a lista de usuários cadastrados do localStorage
+            let usuariosCadastrados = JSON.parse(localStorage.getItem('javascript/usuario_cadastrado')) || [];
+
+            // Cria o objeto com os dados do usuário cadastrado
+            const usuarioCadastrado = { userId: data.id };
+
+            // Adiciona o novo usuário à lista
+            usuariosCadastrados.push(usuarioCadastrado);
+
+            // Salva a lista atualizada de usuários cadastrados de volta no localStorage
+            localStorage.setItem('javascript/usuario_cadastrado', JSON.stringify(usuariosCadastrados));
+
+            displayMessage("Usuário cadastrado com sucesso");
+        })
+        .catch(error => {
+            console.error('Erro ao cadastrar usuário via API JSONServer:', error);
+            displayMessage("Erro ao cadastrar usuário");
+        });
 }
+
+
 
 // Função para validar o nome
 function validateName(name) {
@@ -134,3 +160,4 @@ function validatePassword(password) {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return passwordRegex.test(password);
 }
+
