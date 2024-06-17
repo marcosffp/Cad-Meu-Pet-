@@ -78,12 +78,3 @@ function createUsuario(usuario) {
             displayMessage("Erro ao cadastrar usuário");
         });
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".mobile-menu-icon button");
-    const menu = document.querySelector(".menu");
-
-    menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("mobile-menu-visible");
-    });
-});
