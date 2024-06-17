@@ -59,3 +59,5 @@ function atualizarPerfil(perfil) {
 function reloadPage() {
   location.reload();
 }
+
+

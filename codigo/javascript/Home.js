@@ -1,6 +1,6 @@
 const RelatosApp = (function() {
     // Variáveis privadas
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos'; 
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
     const apiPetReunidos = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
     let db = [];
 
@@ -14,8 +14,8 @@ const RelatosApp = (function() {
     }
 
     // Função privada para ler os relatos via API JSONServer
-    function readRelato(processaDados) {
-        fetch(apiUrl)
+    function readRelato(userId, processaDados) {
+        fetch(`${apiUrl}?userId=${userId}`)
             .then(response => response.json())
             .then(data => {
                 processaDados(data);
@@ -140,16 +140,8 @@ const RelatosApp = (function() {
                 console.error('Erro ao contar animais encontrados via API JSONServer:', error);
                 displayMessage("Erro ao contar animais encontrados");
             });
-    }
-
-    // Inicializa o módulo
-    function init() {
-        readRelato(dados => {
-            db = dados;
-            ListaRelatos();
-        });
-        contarAnimaisencontrados();
-    }
+    }    
+    
 
     // Espera o DOM ser carregado para garantir que todos os elementos estão disponíveis
     document.addEventListener("DOMContentLoaded", function () {
@@ -171,3 +163,4 @@ const RelatosApp = (function() {
 
 // Inicializa a aplicação
 document.addEventListener("DOMContentLoaded", RelatosApp.init);
+

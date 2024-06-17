@@ -234,3 +234,5 @@ function displayMessage(message) {
     // Implemente sua lógica para exibir mensagens para o usuário, como um alerta ou uma área dedicada na página.
     console.log(message);
   }
+
+  
