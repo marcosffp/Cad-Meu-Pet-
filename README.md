@@ -6,7 +6,6 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 * Alexandre Ottoni Righas
 * Carlos José Gomes Batista Figueiredo
-* Henrique Ferreira Sales
 * Henrique Lima Volponi
 * ⁠João Gabriel Silva Custódio
 * Marcos Alberto Ferreira Pinto
