@@ -13,6 +13,20 @@ const RelatosApp = (function() {
         alert(message);
     }
 
+    function updateCadastroButton() {
+        const btnCadastrar = document.getElementById('btn-cadastrar');
+
+        // Verifica se há usuário logado na sessão
+        const user = sessionStorage.getItem('user');
+        if (user) {
+            btnCadastrar.textContent = 'Logado';
+            btnCadastrar.href = '#'; // Pode adicionar a lógica de redirecionamento desejada aqui
+        } else {
+            btnCadastrar.textContent = 'Cadastrar';
+            btnCadastrar.href = '../html/cadastro_usuario.html';
+        }
+    }
+
     // Função privada para ler os relatos via API JSONServer
     function readRelato(userId, processaDados) {
         fetch(`${apiUrl}?userId=${userId}`)
@@ -142,6 +156,12 @@ const RelatosApp = (function() {
             });
     }    
     
+        // Função para inicializar a aplicação
+    function init() {
+        ListaRelatos();
+        contarAnimaisencontrados();
+        updateCadastroButton(); // Chama a função para atualizar o botão de cadastro
+    }
 
     // Espera o DOM ser carregado para garantir que todos os elementos estão disponíveis
     document.addEventListener("DOMContentLoaded", function () {
