@@ -236,6 +236,7 @@ button[type="submit"]:hover {
   color: var(--cor4);
 }
 
+/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
@@ -252,9 +253,10 @@ button[type="submit"]:hover {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 30%;
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
   text-align: center;
   color: var(--cor6);
+  margin-bottom: 30px; /* Espaço entre os elementos */
 }
 
 .rodape p,
@@ -292,26 +294,18 @@ button[type="submit"]:hover {
   font-size: 12px;
 }
 
-@media screen and (max-width: 1024px) {
-  main {
-    padding: 20px;
+@media screen and (min-width: 768px) {
+  .container-rodape {
+    flex-wrap: nowrap;
   }
 
-  .create-ad {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-container,
-  .form {
-    width: 100%;
-  }
-
-  form {
-    max-width: 100%;
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+    margin-bottom: 0; /* Remover o espaço extra entre elementos */
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .cabecalho {

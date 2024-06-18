@@ -189,14 +189,6 @@ body {
 }
 
 /* Rodapé */
-.rodape {
-  background-color: var(--cor0);
-  color: var(--cor6);
-  text-align: center;
-  padding: 20px;
-  box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
-}
-
 /* Rodapé */
 .rodape {
   color: var(--cor0);
@@ -214,9 +206,10 @@ body {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 30%;
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
   text-align: center;
   color: var(--cor6);
+  margin-bottom: 30px; /* Espaço entre os elementos */
 }
 
 .rodape p,
@@ -253,71 +246,94 @@ body {
   text-align: center;
   font-size: 12px;
 }
-.rodape .container-rodape {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+
+@media screen and (min-width: 768px) {
+  .container-rodape {
+    flex-wrap: nowrap;
+  }
+
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+  }
 }
 
-.rodape .container-rodape div {
-  margin: 10px 0;
-}
-
-.rodape h4 {
-  margin-bottom: 10px;
-}
-
-.rodape ul {
-  list-style-type: none;
-}
-
-.rodape ul li {
-  margin-bottom: 10px;
-}
-
-.rodape a {
-  color: var(--cor6);
-  text-decoration: none;
-}
-
-.rodape a:hover {
-  color: var(--cor4);
-}
-
-.direitos-autorais {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-/* Ajustes de layout para dispositivos móveis */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .cabecalho {
-    flex-direction: column;
-    align-items: center;
+    align-items: normal;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 
   .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
+    list-style-type: none;
+    margin-top: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #285046;
+    transition: height 0.2s;
+    overflow: hidden;
+    height: 0;
+    min-height: 0;
+  }
+
+
+  .menu.active {
+    height: 450px;
+    min-height: 150px;
   }
 
   .menu li {
-    margin: 10px 0;
-    text-align: center;
+    display: block;
+    margin-left: 0;
   }
 
-  .menu.mobile-menu-visible {
-    display: flex;
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+    text-align: left;
+    color: var(--cor0);
+  }
+
+  .menu li a:hover {
+    color: var(--cor0);
+  }
+
+  #Anunciar a,
+  #Cadastrar a {
+    margin-top: 10px;
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border: 0px;
+  }
+
+  #Anunciar a:hover,
+  #Cadastrar a:hover {
+    background-color: var(--cor3);
+  }
+
+  .butao-achei button {
+    color: var(--cor4);
+    background-color: var(--cor0);
+    border: 2px solid var(--cor4);
   }
 
   .mobile-menu-icon {
     display: block;
-    margin-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
   }
 
-  .rodape .container-rodape {
-    flex-direction: column;
-    align-items: center;
+  .mobile-menu-icon i {
+    color: var(--cor4);
   }
 }

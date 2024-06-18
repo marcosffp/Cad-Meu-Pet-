@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function atualizarPerfil(perfil) {
-  const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/cadastros/' + perfil.id;
+  const apiUrl = 'https://c75b6410-fffa-4b73-b82c-d1c21ec77f4a-00-3360t4cd2jp1v.picard.replit.dev/cadastros/' + perfil.id;
 
   fetch(apiUrl, {
     method: 'PUT', // Usar o método PUT para atualizar o perfil

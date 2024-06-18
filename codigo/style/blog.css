@@ -207,13 +207,12 @@ body {
 }
 
 
-/* Define estilos para o rodapé */
+/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
 }
 
-/* Define estilos para o contêiner do rodapé */
 .container-rodape {
   max-width: 1000px;
   margin: 0 auto;
@@ -222,58 +221,63 @@ body {
   flex-wrap: wrap;
 }
 
-/* Define estilos para as informações no rodapé */
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 30%;
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
   text-align: center;
   color: var(--cor6);
+  margin-bottom: 30px; /* Espaço entre os elementos */
 }
 
-/* Define estilos para os parágrafos e títulos no rodapé */
 .rodape p,
 .rodape h4 {
   color: var(--cor6);
   margin-bottom: 20px;
 }
 
-/* Define estilos para as listas no rodapé */
 .rodape ul {
   list-style: none;
   padding: 0;
 }
 
-/* Define estilos para os itens da lista no rodapé */
 .rodape li {
   margin-bottom: 10px;
 }
 
-/* Define estilos para os links no rodapé */
 .rodape a {
   color: var(--cor6);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Define estilos para os links no rodapé quando hover */
 .rodape a:hover {
   color: var(--cor3);
 }
 
-/* Define estilos para a linha horizontal no rodapé */
 .rodape hr {
   margin: 20px 0;
   border: 1px solid var(--cor6);
 }
 
-/* Define estilos para o texto de direitos autorais no rodapé */
 .direitos-autorais {
   text-align: center;
   font-size: 12px;
 }
 
-/* Define estilos para a versão mobile do menu */
+@media screen and (min-width: 768px) {
+  .container-rodape {
+    flex-wrap: nowrap;
+  }
+
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cabecalho {
     align-items: normal;
@@ -349,63 +353,5 @@ body {
 
   .mobile-menu-icon i {
     color: var(--cor4);
-  }
-
-  .banner {
-    padding: 20px 0;
-    /* Ajuste de padding para telas menores */
-  }
-
-  .banner .container {
-    flex-direction: column;
-    /* Altera a direção dos elementos para empilhados verticalmente */
-  }
-
-  .image-container {
-    max-width: 100%;
-    /* A imagem ocupará toda a largura disponível */
-    margin-right: 0;
-    /* Removendo a margem direita */
-    margin-bottom: 20px;
-    /* Adicionando margem inferior */
-  }
-
-  .text-container {
-    padding-right: 0;
-    /* Removendo o padding direito */
-  }
-}
-
-
-/* Define estilos para a versão tablet do menu */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .banner {
-    padding: 30px 0;
-    /* Ajuste de padding para telas de tablets */
-  }
-
-  .image-container {
-    max-width: 40%;
-    /* Ajuste da largura máxima da imagem */
-  }
-
-  .text-container {
-    padding-right: 20px;
-    /* Ajuste do padding direito */
-  }
-
-  .banner h2 {
-    font-size: 28px;
-    /* Ajuste do tamanho da fonte do título */
-  }
-
-  .banner p {
-    font-size: 14px;
-    /* Ajuste do tamanho da fonte do texto */
-  }
-
-  .banner .btn {
-    font-size: 18px;
-    /* Ajuste do tamanho da fonte do botão */
   }
 }

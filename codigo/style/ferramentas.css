@@ -203,12 +203,12 @@ body {
 }
 
 /* Define estilos para o rodapé */
+/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
 }
 
-/* Define estilos para o contêiner do rodapé */
 .container-rodape {
   max-width: 1000px;
   margin: 0 auto;
@@ -217,58 +217,63 @@ body {
   flex-wrap: wrap;
 }
 
-/* Define estilos para as informações no rodapé */
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 30%;
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
   text-align: center;
   color: var(--cor6);
+  margin-bottom: 30px; /* Espaço entre os elementos */
 }
 
-/* Define estilos para os parágrafos e títulos no rodapé */
 .rodape p,
 .rodape h4 {
   color: var(--cor6);
   margin-bottom: 20px;
 }
 
-/* Define estilos para as listas no rodapé */
 .rodape ul {
   list-style: none;
   padding: 0;
 }
 
-/* Define estilos para os itens da lista no rodapé */
 .rodape li {
   margin-bottom: 10px;
 }
 
-/* Define estilos para os links no rodapé */
 .rodape a {
   color: var(--cor6);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Define estilos para os links no rodapé quando hover */
 .rodape a:hover {
   color: var(--cor3);
 }
 
-/* Define estilos para a linha horizontal no rodapé */
 .rodape hr {
   margin: 20px 0;
   border: 1px solid var(--cor6);
 }
 
-/* Define estilos para o texto de direitos autorais no rodapé */
 .direitos-autorais {
   text-align: center;
   font-size: 12px;
 }
 
-/* Define estilos para a versão mobile do menu */
+@media screen and (min-width: 768px) {
+  .container-rodape {
+    flex-wrap: nowrap;
+  }
+
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cabecalho {
     align-items: normal;
@@ -293,6 +298,7 @@ body {
     height: 0;
     min-height: 0;
   }
+
 
   .menu.active {
     height: 450px;
@@ -343,16 +349,5 @@ body {
 
   .mobile-menu-icon i {
     color: var(--cor4);
-  }
-
-  .ferramenta-anuncio,
-  .ferramenta-anuncios {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .ferramenta-anuncio img,
-  .ferramenta-anuncios img {
-    margin-bottom: 10px;
   }
 }

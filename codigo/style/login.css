@@ -179,12 +179,6 @@ body {
 }
 
 /* Rodapé */
-.rodape {
-  margin-top: 60px;
-  background-color: white;
-  padding: 30px 0;
-  text-align: center;
-}
 /* Rodapé */
 .rodape {
   color: var(--cor0);
@@ -202,9 +196,10 @@ body {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 30%;
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
   text-align: center;
   color: var(--cor6);
+  margin-bottom: 30px; /* Espaço entre os elementos */
 }
 
 .rodape p,
@@ -242,54 +237,93 @@ body {
   font-size: 12px;
 }
 
-.container-rodape {
-  display: flex;
-  justify-content: space-around;
-}
-
-.informacoes,
-.links-uteis,
-.redes-sociais {
-  flex: 1;
-  padding: 10px;
-}
-
-.informacoes p,
-.links-uteis ul,
-.redes-sociais ul {
-  list-style: none;
-  margin: 5px 0;
-}
-
-.informacoes p,
-.links-uteis a,
-.redes-sociais a {
-  text-decoration: none;
-  color: var(--cor6);
-}
-
-.links-uteis a:hover,
-.redes-sociais a:hover {
-  color: var(--cor4);
-}
-
-.direitos-autorais {
-  margin-top: 20px;
-  font-size: 14px;
-  color: var(--cor6);
-}
-
-@media (max-width: 768px) {
-  .cabecalho .menu {
-    display: none;
+@media screen and (min-width: 768px) {
+  .container-rodape {
+    flex-wrap: nowrap;
   }
 
-  .mobile-menu-icon {
-    display: block;
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    align-items: normal;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin-top: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #285046;
+    transition: height 0.2s;
+    overflow: hidden;
+    height: 0;
+    min-height: 0;
+  }
+
+
+  .menu.active {
+    height: 450px;
+    min-height: 150px;
   }
 
   .menu li {
     display: block;
-    margin: 10px 0;
+    margin-left: 0;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+    text-align: left;
+    color: var(--cor0);
+  }
+
+  .menu li a:hover {
+    color: var(--cor0);
+  }
+
+  #Anunciar a,
+  #Cadastrar a {
+    margin-top: 10px;
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border: 0px;
+  }
+
+  #Anunciar a:hover,
+  #Cadastrar a:hover {
+    background-color: var(--cor3);
+  }
+
+  .butao-achei button {
+    color: var(--cor4);
+    background-color: var(--cor0);
+    border: 2px solid var(--cor4);
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .mobile-menu-icon i {
+    color: var(--cor4);
   }
 }
