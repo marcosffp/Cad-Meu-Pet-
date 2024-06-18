@@ -1,5 +1,4 @@
 const RelatosApp = (function() {
-    // Variáveis privadas
     const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
     const apiPetReunidos = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
     let db = [];
@@ -8,31 +7,28 @@ const RelatosApp = (function() {
         location.reload();
     }
 
-    // Função privada para exibir mensagens
     function displayMessage(message) {
         alert(message);
     }
 
     function updateCadastroButton() {
         const btnCadastrar = document.getElementById('btn-cadastrar');
-
-        // Verifica se há usuário logado na sessão
         const user = sessionStorage.getItem('user');
         if (user) {
             btnCadastrar.textContent = 'Logado';
-            btnCadastrar.href = '#'; // Pode adicionar a lógica de redirecionamento desejada aqui
+            btnCadastrar.href = '#';
         } else {
             btnCadastrar.textContent = 'Cadastrar';
             btnCadastrar.href = '../html/cadastro_usuario.html';
         }
     }
 
-    // Função privada para ler os relatos via API JSONServer
     function readRelato(userId, processaDados) {
-        fetch(`${apiUrl}?userId=${userId}`)
+        fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
-                processaDados(data);
+                db = data;
+                processaDados();
             })
             .catch(error => {
                 console.error('Erro ao ler Relatos via API JSONServer:', error);
@@ -40,7 +36,6 @@ const RelatosApp = (function() {
             });
     }
 
-    // Função privada para criar um relato via API JSONServer
     function createRelato(relato, refreshFunction) {
         relato.liked = relato.liked !== undefined ? relato.liked : false;
         relato.likes = relato.likes !== undefined ? relato.likes : 0;
@@ -61,7 +56,7 @@ const RelatosApp = (function() {
         .then(data => {
             displayMessage("Relato inserido com sucesso");
             if (refreshFunction) refreshFunction();
-            reloadPage(); // Recarrega a página após inserir o relato
+            reloadPage();
         })
         .catch(error => {
             console.error('Erro ao inserir Relato via API JSONServer:', error);
@@ -69,7 +64,6 @@ const RelatosApp = (function() {
         });
     }
 
-    // Função privada para atualizar curtidas de um relato
     function toggleLike(id, currentLiked, currentLikes, refreshFunction) {
         const newLikes = currentLiked ? Math.max(0, currentLikes - 1) : currentLikes + 1;
         const relato = {
@@ -97,7 +91,7 @@ const RelatosApp = (function() {
             } else {
                 console.error(`Elemento com id likes-${id} não foi encontrado.`);
             }
-            reloadPage(); // Recarrega a página após atualizar as curtidas
+            reloadPage();
             if (refreshFunction) refreshFunction();
         })
         .catch(error => {
@@ -106,12 +100,10 @@ const RelatosApp = (function() {
         });
     }
 
-    // Função privada para curtir um relato
     function handleLike(id, liked, likes, refreshFunction) {
         toggleLike(id, liked, likes, refreshFunction);
     }
 
-    // Função privada para listar os relatos na interface
     function ListaRelatos() {
         const DivRelatos = document.getElementById("relatos-container");
         DivRelatos.innerHTML = "";
@@ -142,7 +134,6 @@ const RelatosApp = (function() {
         });
     }
 
-    // Função privada para contar os animais encontrados
     function contarAnimaisencontrados() {
         fetch(apiPetReunidos)
             .then(response => response.json())
@@ -155,15 +146,13 @@ const RelatosApp = (function() {
                 displayMessage("Erro ao contar animais encontrados");
             });
     }    
-    
-        // Função para inicializar a aplicação
+
     function init() {
-        ListaRelatos();
+        readRelato(null, ListaRelatos);
         contarAnimaisencontrados();
-        updateCadastroButton(); // Chama a função para atualizar o botão de cadastro
+        updateCadastroButton();
     }
 
-    // Espera o DOM ser carregado para garantir que todos os elementos estão disponíveis
     document.addEventListener("DOMContentLoaded", function () {
         const menuIcon = document.querySelector(".mobile-menu-icon button");
         const menu = document.querySelector(".menu");
@@ -175,12 +164,9 @@ const RelatosApp = (function() {
         init();
     });
 
-    // Retorna funções públicas
     return {
         handleLike
     };
 })();
 
-// Inicializa a aplicação
 document.addEventListener("DOMContentLoaded", RelatosApp.init);
-
