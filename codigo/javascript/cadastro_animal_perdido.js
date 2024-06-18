@@ -1,4 +1,5 @@
-const apiUrl = "https://c75b6410-fffa-4b73-b82c-d1c21ec77f4a-00-3360t4cd2jp1v.picard.replit.dev/animais_perdidos";
+const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
+const usersApiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users";
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".mobile-menu-icon button");
@@ -20,16 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imagemUrl = document.getElementById("imagemUrl").value;
     const contato = document.getElementById("contatos").value;
 
-    if (
-      !status ||
-      !especie ||
-      !genero ||
-      !nome ||
-      !endereco ||
-      !descricao ||
-      !imagemUrl ||
-      !contato
-    ) {
+    if (!status || !especie || !genero || !nome || !endereco || !descricao || !imagemUrl || !contato) {
       return alert("Por favor, preencha todos os campos");
     }
 
@@ -38,12 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const response = await fetch(apiUrl);
       const data = await response.json();
 
-      // Calculate the next ID as string
-      const nextId = (
-        data.length
-          ? Math.max(...data.map((animal) => parseInt(animal.id))) + 1
-          : 1
-      ).toString();
+      // Calculate the next ID as a number
+      const nextId = data.length ? Math.max(...data.map((animal) => animal.id)) + 1 : 1;
+
+      // Obter o ID do usuário logado
+      const userId = localStorage.getItem('userId');
+      if (!userId) {
+        return alert("Usuário não está logado");
+      }
 
       const animal = {
         id: nextId,
@@ -55,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descricao: descricao,
         imagemUrl: imagemUrl,
         contatos: contato,
+        userId: parseInt(userId) // Adiciona o ID do usuário logado ao objeto do animal perdido e o trata como número
       };
 
       // Save the data
@@ -68,10 +63,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (postResponse.ok) {
         console.log("Animal saved in db.json");
+
+        // Atualizar o usuário logado para incluir o ID do novo anúncio na lista de animais_perdidos
+        const userResponse = await fetch(`${usersApiUrl}/${userId}`);
+        const userData = await userResponse.json();
+        userData.animais_perdidos.push(nextId);
+
+        const updateResponse = await fetch(`${usersApiUrl}/${userId}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        });
+
+        if (updateResponse.ok) {
+          console.log("User updated with new animal ID");
+        } else {
+          console.error("Failed to update user with new animal ID");
+        }
+
         // Dispatch custom event to notify other parts of the application
-        document.dispatchEvent(
-          new CustomEvent("animalAdded", { detail: animal })
-        );
+        document.dispatchEvent(new CustomEvent("animalAdded", { detail: animal }));
       } else {
         console.error("Failed to save animal in db.json");
       }

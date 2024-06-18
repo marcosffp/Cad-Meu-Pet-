@@ -1,7 +1,5 @@
-
-
-// URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'https://c75b6410-fffa-4b73-b82c-d1c21ec77f4a-00-3360t4cd2jp1v.picard.replit.dev/relatos';
+const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
+const usersApiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
@@ -11,26 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("active");
     });
 
-    // Define uma variável para o formulário de relato
     const formRelato = document.getElementById("form-relato");
 
-    // Adiciona funções para tratar os eventos 
     const btnInsert = document.getElementById("btnInsert");
     btnInsert.addEventListener('click', function () {
-        // Verifica se o formulário está preenchido corretamente
         if (!formRelato.checkValidity()) {
             displayMessage("Preencha o formulário corretamente.");
             return;
         }
 
-        // Obtem os valores dos campos do formulário
         const campoNome = document.getElementById('inputNome').value;
         const campoData = document.getElementById('inputData').value;
         const campoLocalizacao = document.getElementById('inputLocalizacao').value;
         const campoDescricao = document.getElementById('inputDescricao').value;
         const campoImagemUrl = document.getElementById('inputImagemUrl').value;
 
-        // Cria um objeto com os dados do relato
         const relato = {
             nome: campoNome,
             data: campoData,
@@ -39,14 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
             imagemUrl: campoImagemUrl
         };
 
-        // Cria o relato no banco de dados
         createRelato(relato);
-
-        // Limpa o formulario
         formRelato.reset();
     });
 
-    // Oculta a mensagem de aviso após alguns 5 segundos
     const msg = document.getElementById('msg');
     msg.addEventListener("DOMSubtreeModified", function (e) {
         if (e.target.innerHTML == "") return;
@@ -62,10 +51,7 @@ function displayMessage(mensagem) {
     msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
 }
 
-
-
 function createRelato(relato, refreshFunction) {
-    // Garante que os campos liked e likes sejam definidos corretamente
     relato.liked = relato.liked !== undefined ? relato.liked : false;
     relato.likes = relato.likes !== undefined ? relato.likes : 0;
 
@@ -76,21 +62,61 @@ function createRelato(relato, refreshFunction) {
         },
         body: JSON.stringify(relato),
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao inserir relato');
-            }
-            return response.json();
-        })
-        .then(data => {
-            displayMessage("Relato inserido com sucesso");
-            if (refreshFunction) refreshFunction();
-        })
-        .catch(error => {
-            console.error('Erro ao inserir Relato via API JSONServer:', error);
-            displayMessage("Erro ao inserir Relato");
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao inserir relato');
+        }
+        return response.json();
+    })
+    .then(data => {
+        displayMessage("Relato inserido com sucesso");
+        linkRelatoToUser(data.id);
+        if (refreshFunction) refreshFunction();
+    })
+    .catch(error => {
+        console.error('Erro ao inserir Relato via API JSONServer:', error);
+        displayMessage("Erro ao inserir Relato");
+    });
 }
 
+function linkRelatoToUser(relatoId) {
+    const userId = localStorage.getItem('userId');
+    if (!userId) {
+        console.error('Usuário não está logado');
+        return;
+    }
 
+    fetch(`${usersApiUrl}/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao buscar usuário');
+        }
+        return response.json();
+    })
+    .then(user => {
+        user.relatos.push(relatoId);
 
+        return fetch(`${usersApiUrl}/${userId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user)
+        });
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao atualizar usuário');
+        }
+        console.log('Usuário atualizado com sucesso');
+    })
+    .catch(error => {
+        console.error('Erro ao atualizar usuário:', error);
+    });
+}

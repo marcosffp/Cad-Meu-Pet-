@@ -1,6 +1,7 @@
-// URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'https://c75b6410-fffa-4b73-b82c-d1c21ec77f4a-00-3360t4cd2jp1v.picard.replit.dev/relatos';
+const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
+const usersApiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
 var db = [];
+var userRelatos = [];
 
 function reloadPage() {
     location.reload();
@@ -13,6 +14,9 @@ function ListaRelatos() {
     for (let index = 0; index < db.length; index++) {
         const relato = db[index];
 
+        // Verifica se o relato pertence ao usuário logado
+        if (!userRelatos.includes(relato.id)) continue;
+
         DivRelatos.innerHTML += `
             <div class="card h-100">
                 <div class="card h-100 d-flex flex-column" style="background-color: #cde0d8;">
@@ -23,10 +27,6 @@ function ListaRelatos() {
                     </div>
                     <p class="card-text mb-2">${relato.localizacao}</p>
                     <p class="card-text flex-grow-1">${relato.descricao}</p>
-                    <div class="like-section">
-                        <i id="like-icon-${relato.id}" class="fas fa-thumbs-up like-icon" style="color: ${relato.liked ? '#287a66' : '#6c757d'}" onclick="handleLike(${relato.id}, ${relato.liked}, ${relato.likes})"></i>
-                        <span id="likes-${relato.id}">${relato.likes}</span>
-                    </div>
                     <button class="btn btn-danger mt-3" onclick="handleDelete(${relato.id})">Excluir</button>
                     <button class="btn btn-warning mt-3" onclick="handleEdit(${relato.id})">Alterar</button>
                     <button class="btn btn-info mt-3" onclick="handleView(${relato.id})">Visualizar</button>
@@ -71,10 +71,24 @@ function handleView(id) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    readRelato(dados => {
-        db = dados;
-        ListaRelatos();
-    });
+    // Obter dados do usuário logado
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+        fetch(`${usersApiUrl}/${userId}`)
+            .then(response => response.json())
+            .then(user => {
+                userRelatos = user.relatos || [];
+                readRelato(dados => {
+                    db = dados;
+                    ListaRelatos();
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao obter dados do usuário:', error);
+            });
+    } else {
+        console.error('Usuário não está logado');
+    }
 
     document.getElementById('editForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -84,18 +98,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const localizacao = document.getElementById('editLocalizacao').value;
         const descricao = document.getElementById('editDescricao').value;
         const imagemUrl = document.getElementById('editImagemUrl').value;
-    
+
         const relato = db.find(r => r.id == id);
         const updatedRelato = { ...relato, nome, data, localizacao, descricao, imagemUrl }; // Preserva likes e liked
-    
+
         updateRelato(id, updatedRelato, () => {
             const editModal = new bootstrap.Modal(document.getElementById('editModal'));
             editModal.hide(); // Fecha a modal após salvar
             location.reload(); // Recarrega a página
         });
     });
-    
-    
 });
 
 // Função para ler os relatos via API JSONServer
@@ -177,62 +189,18 @@ function deleteRelato(id, refreshFunction) {
         });
 }
 
-function toggleLike(id, currentLiked, currentLikes, refreshFunction) {
-    console.log("ID:", id);
-    console.log("Curtido atualmente:", currentLiked);
-    console.log("Número de likes atual:", currentLikes);
-
-    // Ajuste para garantir que os likes não sejam negativos
-    const newLikes = currentLiked ? Math.max(0, currentLikes - 1) : currentLikes + 1;
-    console.log("Novo número de likes:", newLikes);
-
-    const relato = {
-        liked: !currentLiked,
-        likes: newLikes
-    };
-
-    console.log("Novo objeto de relato:", relato);
-
-    fetch(`${apiUrl}/${id}`, {
-        method: 'PATCH',  // Usando PATCH para atualizar parcialmente o objeto
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(relato),
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao atualizar curtidas');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Atualiza o conteúdo da tag <span> com o novo número de likes
-            const likesCountElement = document.getElementById(`likes-${id}`);
-            if (likesCountElement) {
-                likesCountElement.textContent = relato.likes;
-            } else {
-                console.error(`Elemento com id likes-${id} não foi encontrado.`);
-            }
-
-            console.log("Resposta do servidor:", data);
-            if (refreshFunction) refreshFunction();
-            reloadPage();
-        })
-        .catch(error => {
-            console.error('Erro ao atualizar curtidas via API JSONServer:', error);
-            displayMessage("Erro ao atualizar curtidas");
-        });
-}
-
-// Função para curtir um relato
-function handleLike(id, liked, likes, refreshFunction) {
-    toggleLike(id, liked, likes, refreshFunction);
-}
-
 function displayMessage(message) {
     // Implemente sua lógica para exibir mensagens para o usuário, como um alerta ou uma área dedicada na página.
     console.log(message);
-  }
+}
 
-  
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".mobile-menu-icon button");
+    const menu = document.querySelector(".menu");
+
+    menuIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+
+    init();
+});

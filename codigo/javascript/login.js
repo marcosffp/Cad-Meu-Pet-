@@ -3,7 +3,7 @@ async function login() {
   const email = document.getElementById('email-login').value;
 
   try {
-    const res = await fetch("https://c75b6410-fffa-4b73-b82c-d1c21ec77f4a-00-3360t4cd2jp1v.picard.replit.dev/users", {
+    const res = await fetch("https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users", {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -17,14 +17,14 @@ async function login() {
 
     const users = await res.json();
     const usuario = users.find((user) => user.email === email);
-    
+
     if (!usuario) {
       window.alert("Usuário não encontrado");
       return;
     }
 
     if (usuario.senha === senha) {
-      localStorage.setItem('email', email);
+      localStorage.setItem('userId', usuario.id);  // Armazena o ID do usuário
       window.location.href = "../html/home.html";
     } else {
       window.alert("Senha incorreta");
