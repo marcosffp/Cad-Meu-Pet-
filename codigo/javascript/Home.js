@@ -13,7 +13,7 @@ const RelatosApp = (function() {
 
     function updateCadastroButton() {
         const btnCadastrar = document.getElementById('btn-cadastrar');
-        const user = sessionStorage.getItem('user');
+        const user = sessionStorage.getItem('user') || localStorage.getItem('user'); // Verifica em sessionStorage ou localStorage
         if (user) {
             btnCadastrar.textContent = 'Logado';
             btnCadastrar.href = '#';
@@ -151,17 +151,27 @@ const RelatosApp = (function() {
         readRelato(null, ListaRelatos);
         contarAnimaisencontrados();
         updateCadastroButton();
-    }
 
-    document.addEventListener("DOMContentLoaded", function () {
         const menuIcon = document.querySelector(".mobile-menu-icon button");
         const menu = document.querySelector(".menu");
-
         menuIcon.addEventListener("click", function () {
             menu.classList.toggle("active");
         });
+    }
 
+    document.addEventListener("DOMContentLoaded", function () {
         init();
+
+        // Atualizar botão de cadastro ao carregar a página
+        updateCadastroButton();
+
+        // Verificar login ao clicar nos links importantes
+        document.getElementById('Anunciar').addEventListener('click', verificarLogin);
+        document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
+        document.querySelector('.butao-perdi a').addEventListener('click', verificarLogin);
+        document.querySelector('.butao-achei a').addEventListener('click', verificarLogin);
+        document.querySelector('.criar-relato a').addEventListener('click', verificarLogin);
+        document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
     });
 
     return {
@@ -169,4 +179,10 @@ const RelatosApp = (function() {
     };
 })();
 
-document.addEventListener("DOMContentLoaded", RelatosApp.init);
+function verificarLogin(event) {
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName'); // Verifica em sessionStorage ou localStorage
+    if (!user) {
+        event.preventDefault(); // Prevenir o comportamento padrão de navegação
+        window.location.href = '../html/cadastro_usuario.html'; // Redirecionar para a página de cadastro de usuário
+    }
+}

@@ -1,7 +1,7 @@
-const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
-const usersApiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users";
-
 document.addEventListener("DOMContentLoaded", function () {
+  const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
+  const usersApiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users";
+
   const menuIcon = document.querySelector(".mobile-menu-icon button");
   const menu = document.querySelector(".menu");
 
@@ -62,7 +62,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (postResponse.ok) {
-        console.log("Animal saved in db.json");
+        // Exibir alerta de sucesso
+        window.alert("Animal cadastrado com sucesso!");
+
+        // Redirecionar para a página desaparecidos_localizados.html
+        window.location.href = "../html/desaparecidos_localizados.html";
 
         // Atualizar o usuário logado para incluir o ID do novo anúncio na lista de animais_perdidos
         const userResponse = await fetch(`${usersApiUrl}/${userId}`);
