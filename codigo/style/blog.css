@@ -21,13 +21,14 @@
 
 /* Estilos globais */
 html {
-  font-size: 1em;
+  font-size: 18px; /* Aumenta a fonte do texto base */
 }
 
 body {
   height: 100%;
   background-color: var(--cor0);
   font-family: var(--fonte-destaque);
+  font-size: 1rem; /* Aumenta a fonte do texto no body */
 }
 
 /* Cabeçalho */
@@ -44,7 +45,7 @@ body {
 .logo {
   color: var(--cor5);
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5rem; /* Aumenta a fonte do logo */
   padding: 5px 10px;
   border-radius: 5px;
   margin-left: 10px;
@@ -67,7 +68,7 @@ body {
 .cabecalho .menu li {
   margin-left: 20px;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 1.2rem; /* Aumenta a fonte dos itens do menu */
 }
 
 .cabecalho .menu li a:hover {
@@ -93,7 +94,7 @@ body {
 #Cadastrar a {
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 1.2rem; /* Aumenta a fonte dos botões Anunciar e Cadastrar */
   text-decoration: none;
   display: inline-block;
   font-family: var(--fonte-padrao);
@@ -171,12 +172,12 @@ body {
 }
 
 .banner h2 {
-  font-size: 32px;
+  font-size: 2rem; /* Aumenta a fonte dos títulos */
   margin-bottom: 20px;
 }
 
 .banner p {
-  font-size: 16px;
+  font-size: 1.125rem; /* Aumenta a fonte dos parágrafos */
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -188,7 +189,7 @@ body {
 .banner .btn {
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 1.2rem; /* Aumenta a fonte dos botões */
   font-family: var(--fonte-padrao);
   font-weight: bolder;
   background-color: var(--cor4);
@@ -205,7 +206,6 @@ body {
 .banner .btn:active {
   background-color: var(--cor5);
 }
-
 
 /* Rodapé */
 .rodape {
@@ -262,96 +262,69 @@ body {
 
 .direitos-autorais {
   text-align: center;
-  font-size: 12px;
+  font-size: 1rem; /* Aumenta a fonte do texto de direitos autorais */
 }
 
 @media screen and (min-width: 768px) {
   .container-rodape {
-    flex-wrap: nowrap;
+      flex-wrap: nowrap;
   }
 
   .informacoes,
   .links-uteis,
   .redes-sociais {
-    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
-    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+      flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+      margin-bottom: 0; /* Remover o espaço extra entre elementos */
   }
 }
 
 @media screen and (max-width: 768px) {
   .cabecalho {
-    align-items: normal;
+      align-items: normal;
   }
 
   .logo {
-    margin-left: 0;
-    margin-bottom: 20px;
+      margin-left: 0;
+      margin-bottom: 20px;
   }
 
   .menu {
-    list-style-type: none;
-    margin-top: 0;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background: #285046;
-    transition: height 0.2s;
-    overflow: hidden;
-    height: 0;
-    min-height: 0;
+      list-style-type: none;
+      margin-top: 0;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #285046;
+      transition: height 0.2s;
+      overflow: hidden;
+      height: 0;
+      min-height: 0;
   }
 
-
   .menu.active {
-    height: 450px;
-    min-height: 150px;
+      height: 450px;
+      min-height: 150px;
   }
 
   .menu li {
-    display: block;
-    margin-left: 0;
+      padding: 20px;
+      text-align: center;
+      margin: 10px 0;
   }
 
   .menu li a {
-    display: block;
-    padding: 10px 0;
-    text-align: left;
-    color: var(--cor0);
+      color: var(--cor0);
+      font-size: 1.2rem; /* Aumenta a fonte dos links no menu móvel */
   }
 
   .menu li a:hover {
-    color: var(--cor0);
-  }
-
-  #Anunciar a,
-  #Cadastrar a {
-    margin-top: 10px;
-    background-color: var(--cor4);
-    color: var(--cor0);
-    border: 0px;
-  }
-
-  #Anunciar a:hover,
-  #Cadastrar a:hover {
-    background-color: var(--cor3);
-  }
-
-  .butao-achei button {
-    color: var(--cor4);
-    background-color: var(--cor0);
-    border: 2px solid var(--cor4);
+      color: var(--cor3);
   }
 
   .mobile-menu-icon {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-
-  .mobile-menu-icon i {
-    color: var(--cor4);
+      display: flex;
+      justify-content: flex-end;
   }
 }
