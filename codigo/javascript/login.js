@@ -24,8 +24,21 @@ async function login() {
     }
 
     if (usuario.senha === senha) {
-      localStorage.setItem('userId', usuario.id);  // Armazena o ID do usuário
-      window.location.href = "../html/home.html";
+      // Verifica se há dados no localStorage
+      const storedUserId = localStorage.getItem('userId');
+      if (storedUserId && storedUserId !== usuario.id) {
+        // Se já houver dados e o ID for diferente, substitui os dados
+        localStorage.setItem('userId', usuario.id);
+        localStorage.setItem('userName', usuario.nome);
+        localStorage.setItem('userEmail', usuario.email);
+        window.location.href = "../html/home.html";
+      } else {
+        // Se não houver dados ou o ID for o mesmo, apenas armazena os dados
+        localStorage.setItem('userId', usuario.id);
+        localStorage.setItem('userName', usuario.nome);
+        localStorage.setItem('userEmail', usuario.email);
+        window.location.href = "../html/home.html";
+      }
     } else {
       window.alert("Senha incorreta");
       return;

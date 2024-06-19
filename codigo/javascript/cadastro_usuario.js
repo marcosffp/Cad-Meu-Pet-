@@ -1,7 +1,5 @@
-// URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
-
 document.addEventListener("DOMContentLoaded", function () {
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
 
@@ -11,28 +9,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Função para exibir mensagens de aviso
     function displayMessage(mensagem) {
-        window.alert(mensagem)
+        window.alert(mensagem);
     }
 
     // Função para validar o nome
     function validateName(name) {
-        // Expressão regular que verifica se o nome possui apenas letras e espaços
         const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/;
         return nameRegex.test(name);
     }
 
     // Função para validar o e-mail
     function validateEmail(email) {
-        // Expressão regular para validar o formato do e-mail
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
 
     // Função para validar a senha
     function validatePassword(password) {
-        // Verifica se a senha possui pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        return passwordRegex.test(password);
+        // Verifica se a senha possui pelo menos 6 caracteres
+        return password.length >= 6;
     }
 
     // Define uma variável para o formulário de cadastro de usuário
@@ -68,21 +63,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Valida a senha
         if (!validatePassword(senha)) {
-            displayMessage("Senha fraca. A senha deve conter letras maiúsculas, minúsculas, números e símbolos.");
+            displayMessage("Senha fraca. A senha deve conter pelo menos 6 caracteres.");
             return;
         }
 
-        // Cria um objeto com os dados do usuário
-        const usuario = {
-            nome: nome,
-            email: email,
-            senha: senha,
-            relatos: [], // Inicializa o array de relatos
-            animais_perdidos: [] // Inicializa o array de animais perdidos
-        };
+        // Verifica se o e-mail já está cadastrado
+        fetch(`${apiUrl}?email=${email}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao verificar email');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.message === 'Email já cadastrado') {
+                    displayMessage("Email já cadastrado. Por favor, use outro email.");
+                } else {
+                    // Cria um objeto com os dados do usuário
+                    const usuario = {
+                        nome: nome,
+                        email: email,
+                        senha: senha,
+                        relatos: [], // Inicializa o array de relatos
+                        animais_perdidos: [] // Inicializa o array de animais perdidos
+                    };
 
-        // Cria o usuário na API JSONServer
-        createUsuario(usuario);
+                    // Cria o usuário na API JSONServer
+                    createUsuario(usuario);
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao verificar email via API JSONServer:', error);
+                displayMessage("Erro ao verificar email");
+            });
     });
 
     // Função para criar um novo usuário na API JSONServer
@@ -101,7 +114,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             })
             .then(data => {
+                // Substitui os dados no localStorage, se existirem
+                localStorage.setItem('userId', data.id);
+                localStorage.setItem('userName', data.nome);
+                localStorage.setItem('userEmail', data.email);
                 displayMessage("Usuário cadastrado com sucesso");
+                window.location.href = "../html/home.html"; // Redireciona para a página home.html
             })
             .catch(error => {
                 console.error('Erro ao cadastrar usuário via API JSONServer:', error);
