@@ -1,9 +1,153 @@
+/* Reset de estilos globais */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cores e fontes */
+:root {
+  --cor0: #f9f9fa;
+  --cor1: #cdfff2;
+  --cor2: #cffaef;
+  --cor3: #8acfbe;
+  --cor4: #11d114;
+  --cor5: #125518;
+  --cor6: #125518;
+  --cor7: #589cd6;
+  --cor8: #f06d10;
+  --cor9: #0E3B41;
+  --cor10:#07D181;
+
+  --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
+  --fonte-destaque: "Baloo Bhai 2", sans-serif;
+}
+
+/* Estilos globais */
+html {
+  font-size: 1em;
+}
+
+body {
+  height: 100%;
+  background-color: var(--cor0);
+  font-family: var(--fonte-destaque);
+}
+
+/* Cabeçalho */
+.cabecalho {
+  color: var(--cor6);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor0);
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.logo {
+  color: var(--cor9);
+  text-decoration: none;
+  font-size: 25px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 50px;
+  white-space: nowrap;
+  font-family: var(--fonte-padrao);
+  font-weight: bolder;
+}
+
+.logo:hover {
+  color: var(--cor5);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho .menu li {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.cabecalho .menu li a:hover {
+  color: var(--cor3);
+}
+
+.cabecalho .menu li a {
+  text-decoration: none;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: var(--cor6);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+#Anunciar a,
+#Cadastrar a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--fonte-padrao);
+  font-weight: bolder;
+}
+
+#Anunciar a {
+  background-color: #07D181;
+  color: var(--cor0);
+}
+
+#Anunciar a:hover {
+  background-color: var(--cor5);
+}
+
+#Anunciar a:active {
+  background-color: var(--cor6);
+}
+
+#Cadastrar a {
+  background-color: #0E3B41;
+  color: var(--cor0);
+  border: 2px solid #0E3B41;
+}
+
+#Cadastrar a:hover {
+  background-color: #203532;
+}
+
+#Cadastrar a:active {
+  background-color: var(--cor6);
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu-icon button {
+  background-color: transparent;
+}
 /* General Styles */
 body {
   font-family: 'Baloo Bhaijaan 2', cursive;
   margin: 0;
   padding: 0;
   color: #333;
+}
+
+.name1{
+  color: var(--cor10);
 }
 
 .container {
@@ -26,12 +170,14 @@ body {
 
 .header p {
   font-size: 1.2em;
-  color: #666;
+  color: var(--cor10);
+  font-size: 26px;
 }
 
 /* Main Content Styles */
 .main {
   padding-bottom: 50px;
+  font-size: 26px;
 }
 
 .section {
@@ -68,3 +214,152 @@ body {
 .direitos-autorais {
   font-size: 12px;
 }
+
+.rodape {
+  color: var(--cor0);
+  padding: 40px 0;
+}
+
+.container-rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.informacoes,
+.links-uteis,
+.redes-sociais {
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
+  text-align: center;
+  color: black;
+  margin-bottom: 30px; /* Espaço entre os elementos */
+}
+
+.rodape p,
+.rodape h4 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape li {
+  margin-bottom: 10px;
+}
+
+.rodape a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+  color: var(--cor3);
+}
+
+.rodape hr {
+  margin: 20px 0;
+  border: 1px solid black;
+}
+
+.direitos-autorais {
+  text-align: center;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-rodape {
+    flex-wrap: nowrap;
+  }
+
+  .informacoes,
+  .links-uteis,
+  .redes-sociais {
+    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
+    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    align-items: normal;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin-top: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #285046;
+    transition: height 0.2s;
+    overflow: hidden;
+    height: 0;
+    min-height: 0;
+  }
+
+
+  .menu.active {
+    height: 450px;
+    min-height: 150px;
+  }
+
+  .menu li {
+    display: block;
+    margin-left: 0;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+    text-align: left;
+    color: var(--cor0);
+  }
+
+  .menu li a:hover {
+    color: var(--cor0);
+  }
+
+  #Anunciar a,
+  #Cadastrar a {
+    margin-top: 10px;
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border: 0px;
+  }
+
+  #Anunciar a:hover,
+  #Cadastrar a:hover {
+    background-color: var(--cor3);
+  }
+
+  .butao-achei button {
+    color: var(--cor4);
+    background-color: var(--cor0);
+    border: 2px solid var(--cor4);
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .mobile-menu-icon i {
+    color: var(--cor4);
+  }
+}
+

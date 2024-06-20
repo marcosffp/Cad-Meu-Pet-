@@ -15,8 +15,32 @@
     <title>Quem somos</title>
 </head>
 <body>
+    <header class="cabecalho">
+        <a href="../html/home.html" class="logo">
+          <img src="../img/logo_cade_meu_pet.png" alt="Cadê meu pet??">
+          Cadê meu pet??
+        </a>
+        <div class="mobile-menu-icon">
+          <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+    
+        <!-- Navegação do site -->
+        <nav class="menu">
+          <ul>
+            <li><a href="../html/home.html">Início</a></li>
+            <li>
+              <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
+            </li>
+            <li><a href="../html/ferramentas.html">Ferramentas</a></li>
+            <li><a href="../html/blog.html">Blog</a></li>
+            <li><a href="../html/faq.html">FAQ</a></li>
+            <li id="Anunciar"><a href="../html/cadastro_animal_perdido.html">Anunciar</a></li>
+            <li id="Cadastrar"><a href="../html/cadastro_usuario.html" id="btn-cadastrar">Cadastrar</a></li>
+          </ul>
+        </nav>
+      </header>
     <header class="header">
-        <div class="container">
+        <div class="container1">
           <h1>Quem somos? </h1>
         </div>
     </header>
@@ -24,7 +48,7 @@
         <div class="container">
             <section class="section">
                 <h2>Nossa História</h2>
-                <p>Nós somos um grupo de estudantes da Pontifícia Universidade Católica de Minas Gerais (PUC Minas). Este grupo foi criado para a matéria Trabalho Interdisciplinar: Aplicações Web.</p>
+                <p>Nós somos um grupo de estudantes da Pontifícia Universidade Católica de Minas Gerais (PUC Minas), unidos pelo propósito de desenvolver soluções inovadoras. Este grupo foi criado especificamente para a matéria Trabalho Interdisciplinar: Aplicações Web. Nossa equipe é composta por alunos de diversas áreas do conhecimento, o que nos permite abordar os desafios de forma abrangente e multidisciplinar. Ao longo deste projeto, estamos aplicando teorias e práticas aprendidas em sala de aula para criar uma plataforma que possa realmente fazer a diferença. Nosso objetivo é não apenas cumprir os requisitos acadêmicos, mas também contribuir de maneira significativa para a comunidade, utilizando a tecnologia para resolver problemas reais.</p>
             </section>
         </div>
     </main>
@@ -32,14 +56,14 @@
         <div class="container">
             <section class="section">
                 <h2>Sobre o projeto</h2>
-                <p>No cade meu pet, nosso objetivo foi fazer um site para os tutores de pets que perderam seus animais poderem se reencontrar.</p>
+                <p>No "Cadê Meu Pet", nosso objetivo é criar uma plataforma dedicada a ajudar tutores a reencontrarem seus animais perdidos. Entendemos a angústia e a preocupação que acompanham a perda de um pet, por isso desenvolvemos um espaço onde você pode compartilhar informações e fotos do seu animal desaparecido. Nossa missão é facilitar a comunicação entre tutores e a comunidade, aumentando as chances de um reencontro feliz. Juntos, podemos transformar momentos de desespero em histórias de reencontro e alegria.</p>
             </section>
         </div>
     </main>
     <main class="main">
         <div class="container centered-text">
             <section class="section">
-                <h2>Nossa Equipe:</h2>
+                <h2 class="equipe">Nossa Equipe:</h2>
                 <div class="team-container">
                     <div class="team-member">
                         <img src="/codigo/img/alexandre.jpeg" alt="Alexandre" />
@@ -65,12 +89,45 @@
             </section>
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <hr>
-            <p class="direitos-autorais">&copy; 2024 Cadê meu pet?? Inc. Todos os direitos reservados.</p>
+    <footer class="rodape">
+        <hr />
+        <div class="container-rodape">
+          <div class="informacoes">
+            <h4>Contato</h4>
+            <p>
+              Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+              MG
+            </p>
+            <p>Telefone: (33) 99950-3571</p>
+            <p>Email: mafpinto@sga.pucminas.br</p>
+          </div>
+    
+          <div class="links-uteis">
+            <h4>Links Úteis</h4>
+            <ul>
+              <li><a href="../html/politicas.html" target="_blank">Políticas de Privacidade</a></li>
+              <li><a href="../html/termos.html" target="_blank">Termos de Uso</a></li>
+              <li><a href="/codigo/html/quem_somos.html" target="_blank">Quem somos?</a></li>
+            </ul>
+          </div>
+    
+          <!-- Seção de redes sociais -->
+          <div class="redes-sociais">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </footer>
+        <p class="direitos-autorais">
+          &copy; 2024 Cadê meu pet?? Inc. Todos os direitos reservados.
+        </p>
+      </footer>
 </body>
 </html>
 
