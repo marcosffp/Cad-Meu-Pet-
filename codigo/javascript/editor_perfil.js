@@ -1,25 +1,100 @@
-function validatePassword(password) {
-            // Verifica se a senha possui pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial
-            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            return passwordRegex.test(password);
+document.addEventListener("DOMContentLoaded", function () {
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users'; // Atualize a URL se necessário
+    const menuIcon = document.querySelector(".mobile-menu-icon button");
+    const menu = document.querySelector(".menu");
+
+    menuIcon.addEventListener("click", function () {
+        menu.classList.toggle("mobile-menu-visible");
+    });
+
+    function displayMessage(mensagem) {
+        window.alert(mensagem);
+    }
+
+    function validateName(name) {
+        const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/;
+        return nameRegex.test(name);
+    }
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function validatePassword(password) {
+        const passwordValidation = {
+            minLength: password.length >= 6,
+            hasNumber: /\d/.test(password),
+            hasSymbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+            hasUppercase: /[A-Z]/.test(password),
+            hasLowercase: /[a-z]/.test(password)
+        };
+
+        return passwordValidation;
+    }
+
+    const formCadastro = document.getElementById("form-perfil");
+
+    const usuarioEmail = localStorage.getItem('userEmail');
+    if (usuarioEmail) {
+        document.getElementById('inputEmail').value = usuarioEmail;
+        fetch(`${apiUrl}?email=${usuarioEmail}`)
+            .then(res => res.json())
+            .then(users => {
+                const user = users.find(user => user.email === usuarioEmail);
+                if (user) {
+                    document.getElementById('inputNome').value = user.nome;
+                    document.getElementById('inputSenha').value = user.senha;
+                    localStorage.setItem('usuarioLogado', JSON.stringify(user));
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar usuário:', error);
+            });
+    }
+
+    formCadastro.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('inputNome').value;
+        const email = document.getElementById('inputEmail').value;
+        const senha = document.getElementById('inputSenha').value;
+
+        if (!validateName(nome)) {
+            displayMessage("Nome inválido. Por favor, insira um nome válido.");
+            return;
         }
 
-        function atualizarPerfil(perfil) {
-            // Validar a senha antes de continuar
-            if (!validatePassword(perfil.senha)) {
-                alert('A senha deve ter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial.');
-                return;
-            }
+        if (!validateEmail(email)) {
+            displayMessage("Email inválido. Por favor, insira um email válido.");
+            return;
+        }
 
-            const apiUrl = 'https://c75b6410-fffa-4b73-b82c-d1c21ec77f4a-00-3360t4cd2jp1v.picard.replit.dev/cadastros/' + perfil.id;
+        const passwordValidation = validatePassword(senha);
+        if (!passwordValidation.minLength || !passwordValidation.hasNumber || !passwordValidation.hasSymbol || !passwordValidation.hasUppercase || !passwordValidation.hasLowercase) {
+            displayMessage("Senha inválida. Por favor, siga os requisitos de senha.");
+            return;
+        }
 
-            fetch(apiUrl, {
-                method: 'PUT', // Usar o método PUT para atualizar o perfil
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(perfil),
-            })
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+        const perfil = {
+            id: usuarioLogado.id,
+            nome: nome,
+            email: email,
+            senha: senha
+        };
+
+        atualizarPerfil(perfil);
+    });
+
+    function atualizarPerfil(perfil) {
+        fetch(`${apiUrl}/${perfil.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(perfil),
+        })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro ao atualizar perfil');
@@ -27,79 +102,52 @@ function validatePassword(password) {
                 return response.json();
             })
             .then(data => {
-                // Atualizar os dados no LocalStorage
                 localStorage.setItem('usuarioLogado', JSON.stringify(perfil));
-
                 alert('Perfil atualizado com sucesso!');
-                reloadPage(); // Reload the page after successful update
+                reloadPage();
             })
             .catch(error => {
                 console.error('Erro ao atualizar perfil:', error);
                 alert('Erro ao atualizar perfil. Por favor, tente novamente mais tarde.');
             });
+    }
+
+    function reloadPage() {
+        location.reload();
+    }
+
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordField = document.getElementById('inputSenha');
+    const passwordValidation = document.getElementById('passwordValidation');
+
+    togglePassword.addEventListener('click', function (e) {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        this.querySelector('i').classList.toggle('fa-eye');
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+
+    passwordField.addEventListener('input', function () {
+        const senha = passwordField.value;
+        const validation = validatePassword(senha);
+
+        let validationMessage = "";
+        if (!validation.minLength) {
+            validationMessage += "A senha deve ter pelo menos 6 caracteres.<br>";
+        }
+        if (!validation.hasNumber) {
+            validationMessage += "A senha deve conter pelo menos um número.<br>";
+        }
+        if (!validation.hasSymbol) {
+            validationMessage += "A senha deve conter pelo menos um símbolo.<br>";
+        }
+        if (!validation.hasUppercase) {
+            validationMessage += "A senha deve conter pelo menos uma letra maiúscula.<br>";
+        }
+        if (!validation.hasLowercase) {
+            validationMessage += "A senha deve conter pelo menos uma letra minúscula.<br>";
         }
 
-        function reloadPage() {
-            location.reload();
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const formPerfil = document.getElementById("form-perfil");
-
-            formPerfil.addEventListener('submit', function (event) {
-                event.preventDefault(); // Evita o envio padrão do formulário
-
-                // Obter os valores dos campos do formulário
-                const id = document.getElementById('inputId').value;
-                const nome = document.getElementById('inputNome').value;
-                const email = document.getElementById('inputEmail').value;
-                const senha = document.getElementById('inputSenha').value;
-
-                // Criar um objeto com os dados do perfil do usuário
-                const perfil = {
-                    id: id,
-                    nome: nome,
-                    email: email,
-                    senha: senha
-                };
-
-                // Chamar a função para atualizar o perfil do usuário
-                atualizarPerfil(perfil);
-            });
-        });
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            init(); // Função init() a ser definida conforme necessidade
-        
-            // Atualizar botão de cadastro ao carregar a página
-            updateCadastroButton();
-        
-            // Verificar login ao clicar nos links importantes
-            document.getElementById('Anunciar').addEventListener('click', verificarLogin);
-            document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
-            document.querySelector('.butao-perdi a').addEventListener('click', verificarLogin);
-            document.querySelector('.butao-achei a').addEventListener('click', verificarLogin);
-            document.querySelector('.criar-relato a').addEventListener('click', verificarLogin);
-            document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
-        });
-        
-        async function verificarLogin(event) {
-            const user = sessionStorage.getItem('userName') || localStorage.getItem('userName'); // Verifica em sessionStorage ou localStorage
-            if (!user) {
-                event.preventDefault(); // Prevenir o comportamento padrão de navegação
-                window.location.href = '../html/cadastro_usuario.html'; // Redirecionar para a página de cadastro de usuário
-            }
-        }
-        
-        function updateCadastroButton() {
-            const btnCadastrar = document.getElementById('btn-cadastrar');
-            const user = sessionStorage.getItem('userName') || localStorage.getItem('userName'); // Verifica em sessionStorage ou localStorage
-            if (user) {
-                btnCadastrar.textContent = 'Logado';
-                btnCadastrar.href = '#';
-            } else {
-                btnCadastrar.textContent = 'Cadastrar';
-                btnCadastrar.href = '../html/cadastro_usuario.html';
-            }
-        }
+        passwordValidation.innerHTML = validationMessage;
+    });
+});
