@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users'; // Atualize a URL se necessário
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
+    const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
 
@@ -35,26 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const formCadastro = document.getElementById("form-perfil");
 
-    const usuarioEmail = localStorage.getItem('userEmail');
-    if (usuarioEmail) {
-        document.getElementById('inputEmail').value = usuarioEmail;
-        fetch(`${apiUrl}?email=${usuarioEmail}`)
-            .then(res => res.json())
-            .then(users => {
-                const user = users.find(user => user.email === usuarioEmail);
-                if (user) {
-                    document.getElementById('inputNome').value = user.nome;
-                    document.getElementById('inputSenha').value = user.senha;
-                    localStorage.setItem('usuarioLogado', JSON.stringify(user));
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao buscar usuário:', error);
-            });
-    }
-
-    formCadastro.addEventListener('submit', function (event) {
+    const btnInsert = document.getElementById("btnInsert");
+    btnInsert.addEventListener('click', function (event) {
         event.preventDefault();
+
+        if (!formCadastro.checkValidity()) {
+            displayMessage("Preencha o formulário corretamente.");
+            return;
+        }
 
         const nome = document.getElementById('inputNome').value;
         const email = document.getElementById('inputEmail').value;
@@ -76,48 +65,71 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
-        const perfil = {
-            id: usuarioLogado.id,
-            nome: nome,
-            email: email,
-            senha: senha
-        };
+        console.log(`Verificando email: ${email}`);
 
-        atualizarPerfil(perfil);
-    });
-
-    function atualizarPerfil(perfil) {
-        fetch(`${apiUrl}/${perfil.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(perfil),
-        })
+        fetch(`${checkEmailUrl}?email=${email}`)
             .then(response => {
+                if (response.status === 400) {
+                    return response.json().then(data => {
+                        throw new Error(data.message);
+                    });
+                }
                 if (!response.ok) {
-                    throw new Error('Erro ao atualizar perfil');
+                    throw new Error('Erro ao verificar email');
                 }
                 return response.json();
             })
             .then(data => {
-                localStorage.setItem('usuarioLogado', JSON.stringify(perfil));
-                alert('Perfil atualizado com sucesso!');
-                reloadPage();
+                console.log(`Resposta do servidor: ${JSON.stringify(data)}`);
+                if (data.length > 0) {
+                    const usuario = {
+                        nome: nome,
+                        email: email,
+                        senha: senha
+                    };
+
+                    updateUsuario(data[0].id, usuario);
+                } else {
+                    displayMessage("Usuário não encontrado");
+                }
             })
             .catch(error => {
-                console.error('Erro ao atualizar perfil:', error);
-                alert('Erro ao atualizar perfil. Por favor, tente novamente mais tarde.');
+                console.error('Erro ao verificar email via API JSONServer:', error.message);
+                displayMessage(error.message);
+            });
+    });
+
+    function updateUsuario(id, usuario) {
+        fetch(`${apiUrl}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(usuario),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao atualizar usuário');
+                }
+                return response.json();
+            })
+            .then(data => {
+                localStorage.setItem('userId', data.id);
+                localStorage.setItem('userName', data.nome);
+                localStorage.setItem('userEmail', data.email);
+                displayMessage("Usuário atualizado com sucesso");
+                window.location.href = "../html/home.html";
+            })
+            .catch(error => {
+                console.error('Erro ao atualizar usuário via API JSONServer:', error);
+                displayMessage("Erro ao atualizar usuário");
             });
     }
 
-    function reloadPage() {
-        location.reload();
-    }
-
+    // Toggle password visibility
     const togglePassword = document.getElementById('togglePassword');
     const passwordField = document.getElementById('inputSenha');
+    const passwordHelp = document.getElementById('passwordHelp');
     const passwordValidation = document.getElementById('passwordValidation');
 
     togglePassword.addEventListener('click', function (e) {
@@ -149,5 +161,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         passwordValidation.innerHTML = validationMessage;
+    });
+
+    const emailField = document.getElementById('inputEmail');
+    emailField.addEventListener('blur', function () {
+        const email = emailField.value;
+
+        if (validateEmail(email)) {
+            fetch(`${checkEmailUrl}?email=${email}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        const user = data[0];
+                        document.getElementById('inputNome').value = user.nome;
+                        // Note: Password should not be pre-filled for security reasons.
+                        localStorage.setItem('userId', user.id);
+                    } else {
+                        displayMessage("Usuário não encontrado.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar usuário por email:', error.message);
+                    displayMessage("Erro ao buscar usuário por email");
+                });
+        }
     });
 });
