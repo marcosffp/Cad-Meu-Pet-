@@ -12,9 +12,13 @@
   --cor1: #cdfff2;
   --cor2: #cffaef;
   --cor3: #8acfbe;
-  --cor4: #287a66;
-  --cor5: #285046;
-  --cor6: #2e3132;
+  --cor4: #11d114;
+  --cor5: #125518;
+  --cor6: #125518;
+  --cor7: #589cd6;
+  --cor8: #f06d10;
+  --cor9: #0E3B41;
+  --cor10:#07D181;
   --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
@@ -213,6 +217,15 @@ main {
   background-color: var(--cor3);
 }
 
+.col-sm-42{
+color: var(--cor9);
+height: 100%;
+}
+
+#form-relato{
+  height: 100%;
+  color: #0E3B41;
+}
 
 label {
   font-weight: bolder;

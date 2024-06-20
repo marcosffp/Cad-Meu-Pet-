@@ -12,9 +12,13 @@
   --cor1: #cdfff2;
   --cor2: #cffaef;
   --cor3: #8acfbe;
-  --cor4: #287a66;
-  --cor5: #285046;
-  --cor6: #2e3132;
+  --cor4: #11d114;
+  --cor5: #125518;
+  --cor6: #125518;
+  --cor7: #589cd6;
+  --cor8: #f06d10;
+  --cor9: #0E3B41;
+  --cor10:#07D181;
   --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
@@ -101,7 +105,7 @@ body {
 }
 
 #Anunciar a {
-  background-color: var(--cor4);
+  background-color: var(--cor10);
   color: var(--cor0);
 }
 
@@ -114,8 +118,9 @@ body {
 }
 
 #Cadastrar a {
-  color: var(--cor4);
-  border: 2px solid var(--cor4);
+  color: var(--cor0);
+  border: 2px solid var(--cor9);
+  background-color: var(--cor9);
 }
 
 #Cadastrar a:hover {
@@ -154,7 +159,7 @@ main {
   max-height: 580px; /* Altura máxima para telas maiores */
   overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
   padding: 20px;
-  background-color: #357a65;
+  background-color: var(--cor10);
   color: #fff;
   border-radius: 10px;
   display: flex;
@@ -196,7 +201,7 @@ main {
 /* Estilo para os botões de filtrar e resetar */
 .btnFiltrar,
 .btnResetar {
-  background-color: #357a65;
+  background-color: var(--cor9);
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -368,7 +373,7 @@ main {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #fff;
+  background-color: var(--cor0);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;

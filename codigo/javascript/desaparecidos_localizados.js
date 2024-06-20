@@ -1,5 +1,5 @@
-const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
-const usersApiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users";
+const apiUrl = "https://0e2df26b-b80d-4c55-84ac-ea0eb588235d-00-26quv083jkb6z.janeway.replit.dev/animais_perdidos";
+const usersApiUrl = "https://0e2df26b-b80d-4c55-84ac-ea0eb588235d-00-26quv083jkb6z.janeway.replit.dev/users";
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".mobile-menu-icon button");
