@@ -1,4 +1,4 @@
-/* Reset de estilos globais */
+/* Reset CSS */
 * {
   padding: 0;
   margin: 0;
@@ -6,20 +6,20 @@
   box-sizing: border-box;
 }
 
-/* Variáveis de cores e fontes */
+/* Variables */
 :root {
   --cor0: #f9f9fa;
-  --cor1: #cdfff2;
+  --cor1: #AED1D1;
   --cor2: #cffaef;
-  --cor3: #8acfbe;
-  --cor4: #287a66;
-  --cor5: #285046;
-  --cor6: #2e3132;
+  --cor3: #082A33;
+  --cor4: #03b46d;
+  --cor5: #0E3B41;
+  --cor6: #197370;
   --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-/* Estilos globais */
+/* Global Styles */
 html {
   font-size: 1em;
 }
@@ -30,15 +30,17 @@ body {
   font-family: var(--fonte-destaque);
 }
 
-/* Cabeçalho */
+/* Header Styles */
 .cabecalho {
-  color: var(--cor6);
+  color: var(--cor3);
   display: flex;
   justify-content: space-between;
   background-color: var(--cor0);
   box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
   margin-top: 10px;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -71,7 +73,7 @@ body {
 }
 
 .cabecalho .menu li a:hover {
-  color: var(--cor3);
+  color: var(--cor4);
 }
 
 .cabecalho .menu li a {
@@ -84,7 +86,7 @@ body {
 }
 
 .menu li a {
-  color: var(--cor6);
+  color: var(--cor3);
   text-decoration: none;
   vertical-align: middle;
 }
@@ -101,21 +103,21 @@ body {
 }
 
 #Anunciar a {
-  background-color: var(--cor4);
+  background-color: var(--cor5);
   color: var(--cor0);
 }
 
 #Anunciar a:hover {
-  background-color: var(--cor5);
+  background-color: var(--cor4);
 }
 
 #Anunciar a:active {
-  background-color: var(--cor6);
+  background-color: var(--cor1);
 }
 
 #Cadastrar a {
-  color: var(--cor4);
-  border: 2px solid var(--cor4);
+  color: var(--cor0);
+  background-color: var(--cor4);
 }
 
 #Cadastrar a:hover {
@@ -123,7 +125,7 @@ body {
 }
 
 #Cadastrar a:active {
-  background-color: var(--cor6);
+  background-color: var(--cor1);
 }
 
 .mobile-menu-icon {
@@ -134,20 +136,61 @@ body {
   background-color: transparent;
 }
 
-/* Define estilos para o título h1 */
+/* Form Styles */
 h1 {
   font-weight: bolder;
   color: var(--cor4);
   margin-left: 30px;
 }
 
-/* Define estilos para o rodapé */
+.form-box {
+  background-color: var(--cor0);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-group-text {
+  background-color: var(--cor4);
+  border: none;
+  color: var(--cor0);
+}
+
+.input-group input {
+  border: 2px solid var(--cor4);
+}
+
+.input-group input:focus {
+  border-color: var(--cor3);
+  box-shadow: 0 0 5px var(--cor3);
+}
+
+.btn-primary {
+  background-color: var(--cor4);
+  border-color: var(--cor4);
+}
+
+.btn-primary:hover {
+  background-color: var(--cor5);
+  border-color: var(--cor5);
+}
+
+.text-center a {
+  color: var(--cor4);
+}
+
+.text-center a:hover {
+  color: var(--cor3);
+}
+
+/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
 }
 
-/* Define estilos para o contêiner do rodapé */
 .container-rodape {
   max-width: 1000px;
   margin: 0 auto;
@@ -156,255 +199,118 @@ h1 {
   flex-wrap: wrap;
 }
 
-/* Define estilos para as informações no rodapé */
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 30%;
+  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
   text-align: center;
   color: var(--cor6);
+  margin-bottom: 30px; /* Espaço entre os elementos */
 }
 
-/* Define estilos para os parágrafos e títulos no rodapé */
 .rodape p,
 .rodape h4 {
-  color: var(--cor6);
+  color: var(--cor5);
   margin-bottom: 20px;
 }
 
-/* Define estilos para as listas no rodapé */
 .rodape ul {
   list-style: none;
   padding: 0;
 }
 
-/* Define estilos para os itens da lista no rodapé */
 .rodape li {
   margin-bottom: 10px;
 }
 
-/* Define estilos para os links no rodapé */
 .rodape a {
   color: var(--cor6);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Define estilos para os links no rodapé quando hover */
 .rodape a:hover {
-  color: var(--cor3);
+  color: var(--cor4);
 }
 
-/* Define estilos para a linha horizontal no rodapé */
 .rodape hr {
   margin: 20px 0;
   border: 1px solid var(--cor6);
 }
 
-/* Define estilos para o texto de direitos autorais no rodapé */
 .direitos-autorais {
   text-align: center;
   font-size: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    align-items: normal;
+  }
 
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 
-.profile-card {
-  max-width: 300px;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  .menu {
+    list-style-type: none;
+    margin-top: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: var(--cor5);
+    transition: height 0.2s;
+    overflow: hidden;
+    height: 0;
+    min-height: 0;
+    z-index: 20;
+  }
 
-.profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-}
+  #Anunciar a {
+    margin-bottom: 5px;
+    background-color: var(--cor4);
+  }
 
-.profile-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
+  .menu.active {
+    height: 450px;
+    min-height: 150px;
+  }
 
-.profile-info {
-  text-align: center;
-  margin-top: -15%;
-}
+  .menu li {
+    display: block;
+    margin-left: 0;
+  }
 
-.profile-info h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+    text-align: left;
+    color: var(--cor0);
+  }
 
-.profile-info p {
-  font-size: 16px;
-  color: #666;
-}
+  .menu li a:hover {
+    color: var(--cor0);
+  }
 
-.profile-details {
-  margin-top: 20px;
-}
+  .mobile-menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
 
-.profile-details label {
-  display: block;
-  margin-bottom: 10px;
-}
+  .mobile-menu-icon i {
+    color: var(--cor4);
+  }
 
-.profile-details input,
-.profile-details textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.botao {
-  background-color: var(--cor4);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.botao:hover {
-  background-color: var(--cor5);
-}
-
-/* Estilos específicos para a página editor_perfil.html */
-#editor {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#animalsTable_wrapper {
-  width: 100%;
-}
-
-.dataTables_wrapper .dataTables_filter {
-  float: left;
-}
-
-.dataTables_wrapper .dataTables_length {
-  float: right;
-}
-
-.dataTables_wrapper .dataTables_paginate {
-  float: right;
-}
-
-.dataTables_wrapper .dataTables_info {
-  float: left;
-}
-
-.dataTables_wrapper .dataTables_filter input {
-  margin-left: 0.5em;
-}
-
-.dataTables_wrapper .dataTables_length select {
-  margin-left: 0.5em;
-}
-
-.edit-btn,
-.delete-btn {
-  color: var(--cor0);
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.edit-btn {
-  background-color: var(--cor4);
-}
-
-.delete-btn {
-  background-color: #f00;
-}
-
-.edit-btn:hover {
-  background-color: var(--cor5);
-}
-
-.delete-btn:hover {
-  background-color: #f33;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  background-color: var(--cor4);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: var(--cor5);
+  .form-box {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
 }

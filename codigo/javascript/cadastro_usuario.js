@@ -1,41 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = 'https://0e2df26b-b80d-4c55-84ac-ea0eb588235d-00-26quv083jkb6z.janeway.replit.dev/users';
-    const checkEmailUrl = 'https://0e2df26b-b80d-4c55-84ac-ea0eb588235d-00-26quv083jkb6z.janeway.replit.dev/check-email';
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
+    const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
 
+    // Função para inicializar o menu mobile
     menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("mobile-menu-visible");
+        menu.classList.toggle("active");
     });
 
-    function displayMessage(mensagem) {
-        window.alert(mensagem);
+    // Chamar a função init() após o carregamento do DOM
+    init();
+
+    // Adicionar evento aos botões de toggle do FAQ
+    const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const contentId = this.getAttribute("data-toggle");
+            const content = document.getElementById(contentId);
+
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                this.textContent = "-";
+            } else {
+                content.style.display = "none";
+                this.textContent = "+";
+            }
+        });
+    });
+
+    // Atualizar botão de cadastro ao carregar a página
+    updateCadastroButton();
+
+    // Verificar login ao clicar nos links importantes
+    const anunciarLink = document.getElementById('Anunciar');
+    const cadastrarLink = document.getElementById('Cadastrar');
+
+    if (anunciarLink) {
+        anunciarLink.addEventListener('click', verificarLogin);
     }
 
-    function validateName(name) {
-        const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/;
-        return nameRegex.test(name);
+    if (cadastrarLink) {
+        cadastrarLink.addEventListener('click', verificarLogin);
     }
 
-    function validateEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    function validatePassword(password) {
-        const passwordValidation = {
-            minLength: password.length >= 6,
-            hasNumber: /\d/.test(password),
-            hasSymbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
-            hasUppercase: /[A-Z]/.test(password),
-            hasLowercase: /[a-z]/.test(password)
-        };
-
-        return passwordValidation;
-    }
-
-    const formCadastro = document.getElementById("form-contato");
-
+    // Evento do botão de inserção
     const btnInsert = document.getElementById("btnInsert");
     btnInsert.addEventListener('click', function (event) {
         event.preventDefault();
@@ -97,45 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-    function createUsuario(usuario) {
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(usuario),
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao cadastrar usuário');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Sobrescreve os dados no localStorage, independentemente dos dados existentes
-                localStorage.setItem('userId', data.id);
-                localStorage.setItem('userName', data.nome);
-                localStorage.setItem('userEmail', data.email);
-                displayMessage("Usuário cadastrado com sucesso");
-                window.location.href = "../html/home.html";
-            })
-            .catch(error => {
-                console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-                displayMessage("Erro ao cadastrar usuário");
-            });
-    }
-
     // Toggle password visibility
     const togglePassword = document.getElementById('togglePassword');
     const passwordField = document.getElementById('inputSenha');
-    const passwordHelp = document.getElementById('passwordHelp');
     const passwordValidation = document.getElementById('passwordValidation');
 
     togglePassword.addEventListener('click', function (e) {
-        // Toggle the type attribute
         const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordField.setAttribute('type', type);
-        // Toggle the eye icon
         this.querySelector('i').classList.toggle('fa-eye');
         this.querySelector('i').classList.toggle('fa-eye-slash');
     });
@@ -146,21 +125,112 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let validationMessage = "";
         if (!validation.minLength) {
-            validationMessage += "A senha deve ter pelo menos 6 caracteres.<br>";
+            validationMessage += "<span style='color:red'>A senha deve ter pelo menos 6 caracteres.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha tem pelo menos 6 caracteres.</span><br>";
         }
         if (!validation.hasNumber) {
-            validationMessage += "A senha deve conter pelo menos um número.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos um número.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos um número.</span><br>";
         }
         if (!validation.hasSymbol) {
-            validationMessage += "A senha deve conter pelo menos um símbolo.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos um símbolo.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos um símbolo.</span><br>";
         }
         if (!validation.hasUppercase) {
-            validationMessage += "A senha deve conter pelo menos uma letra maiúscula.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra maiúscula.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra maiúscula.</span><br>";
         }
         if (!validation.hasLowercase) {
-            validationMessage += "A senha deve conter pelo menos uma letra minúscula.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra minúscula.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra minúscula.</span><br>";
         }
 
         passwordValidation.innerHTML = validationMessage;
     });
 });
+
+function init() {
+    // Implementação da função init(), se houver
+}
+
+async function verificarLogin(event) {
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
+
+    if (!user) {
+        event.preventDefault();
+        window.location.href = '../html/cadastro_usuario.html';
+    }
+}
+
+function updateCadastroButton() {
+    const btnCadastrar = document.getElementById('Cadastrar').querySelector('a');
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
+
+    if (btnCadastrar) {
+        if (user) {
+            btnCadastrar.textContent = 'Logado';
+            btnCadastrar.href = '../html/editor_perfil.html'; // Link de exemplo, você pode ajustar conforme necessário
+        } else {
+            btnCadastrar.textContent = 'Cadastrar';
+            btnCadastrar.href = '../html/cadastro_usuario.html'; // Link de exemplo, você pode ajustar conforme necessário
+        }
+    }
+}
+
+function displayMessage(mensagem) {
+    window.alert(mensagem);
+}
+
+function validateName(name) {
+    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/;
+    return nameRegex.test(name);
+}
+
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function validatePassword(password) {
+    const passwordValidation = {
+        minLength: password.length >= 6,
+        hasNumber: /\d/.test(password),
+        hasSymbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+        hasUppercase: /[A-Z]/.test(password),
+        hasLowercase: /[a-z]/.test(password)
+    };
+
+    return passwordValidation;
+}
+
+function createUsuario(usuario) {
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(usuario),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao cadastrar usuário');
+        }
+        return response.json();
+    })
+    .then(data => {
+        localStorage.setItem('userId', data.id);
+        localStorage.setItem('userName', data.nome);
+        localStorage.setItem('userEmail', data.email);
+        displayMessage("Usuário cadastrado com sucesso");
+        window.location.href = "../html/home.html";
+    })
+    .catch(error => {
+        console.error('Erro ao cadastrar usuário via API JSONServer:', error);
+        displayMessage("Erro ao cadastrar usuário");
+    });
+}

@@ -1,12 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
     const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
-    const menuIcon = document.querySelector(".mobile-menu-icon button");
-    const menu = document.querySelector(".menu");
-
-    menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("mobile-menu-visible");
-    });
+    const formPerfil = document.getElementById("form-perfil");
 
     function displayMessage(mensagem) {
         window.alert(mensagem);
@@ -34,108 +29,110 @@ document.addEventListener("DOMContentLoaded", function () {
         return passwordValidation;
     }
 
-    const formCadastro = document.getElementById("form-perfil");
-
-    const btnInsert = document.getElementById("btnInsert");
-    btnInsert.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        if (!formCadastro.checkValidity()) {
-            displayMessage("Preencha o formulário corretamente.");
-            return;
+    async function fetchUserByEmail(email) {
+        try {
+            const response = await fetch(`${checkEmailUrl}?email=${email}`);
+            if (!response.ok) {
+                throw new Error('Erro ao buscar usuário pelo email');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Erro ao buscar usuário pelo email:', error);
+            displayMessage('Erro ao buscar usuário pelo email');
         }
-
-        const nome = document.getElementById('inputNome').value;
-        const email = document.getElementById('inputEmail').value;
-        const senha = document.getElementById('inputSenha').value;
-
-        if (!validateName(nome)) {
-            displayMessage("Nome inválido. Por favor, insira um nome válido.");
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            displayMessage("Email inválido. Por favor, insira um email válido.");
-            return;
-        }
-
-        const passwordValidation = validatePassword(senha);
-        if (!passwordValidation.minLength || !passwordValidation.hasNumber || !passwordValidation.hasSymbol || !passwordValidation.hasUppercase || !passwordValidation.hasLowercase) {
-            displayMessage("Senha inválida. Por favor, siga os requisitos de senha.");
-            return;
-        }
-
-        console.log(`Verificando email: ${email}`);
-
-        fetch(`${checkEmailUrl}?email=${email}`)
-            .then(response => {
-                if (response.status === 400) {
-                    return response.json().then(data => {
-                        throw new Error(data.message);
-                    });
-                }
-                if (!response.ok) {
-                    throw new Error('Erro ao verificar email');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(`Resposta do servidor: ${JSON.stringify(data)}`);
-                if (data.length > 0) {
-                    const usuario = {
-                        nome: nome,
-                        email: email,
-                        senha: senha
-                    };
-
-                    updateUsuario(data[0].id, usuario);
-                } else {
-                    displayMessage("Usuário não encontrado");
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao verificar email via API JSONServer:', error.message);
-                displayMessage(error.message);
-            });
-    });
-
-    function updateUsuario(id, usuario) {
-        fetch(`${apiUrl}/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(usuario),
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao atualizar usuário');
-                }
-                return response.json();
-            })
-            .then(data => {
-                localStorage.setItem('userId', data.id);
-                localStorage.setItem('userName', data.nome);
-                localStorage.setItem('userEmail', data.email);
-                displayMessage("Usuário atualizado com sucesso");
-                window.location.href = "../html/home.html";
-            })
-            .catch(error => {
-                console.error('Erro ao atualizar usuário via API JSONServer:', error);
-                displayMessage("Erro ao atualizar usuário");
-            });
     }
 
+    async function atualizarPerfil(perfil) {
+        if (!validatePassword(perfil.senha).minLength) {
+            alert('A senha deve ter pelo menos 6 caracteres.');
+            return;
+        }
+
+        const updateUrl = `${apiUrl}/${perfil.id}`;
+
+        try {
+            const response = await fetch(updateUrl, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(perfil),
+            });
+            if (!response.ok) {
+                throw new Error('Erro ao atualizar perfil');
+            }
+            const data = await response.json();
+            // Atualizar os dados no LocalStorage
+            localStorage.setItem('userName', perfil.nome);
+            localStorage.setItem('userEmail', perfil.email);
+
+            alert('Perfil atualizado com sucesso!');
+            reloadPage(); // Recarregar a página após a atualização bem-sucedida
+        } catch (error) {
+            console.error('Erro ao atualizar perfil:', error);
+            alert('Erro ao atualizar perfil. Por favor, tente novamente mais tarde.');
+        }
+    }
+
+    function reloadPage() {
+        location.reload();
+    }
+
+    formPerfil.addEventListener('submit', async function (event) {
+        event.preventDefault(); // Evitar o envio padrão do formulário
+
+        // Obter os valores dos campos do formulário
+        const nome = document.getElementById('inputNome').value;
+        const email = document.getElementById('inputEmail').value;
+        let senha = document.getElementById('inputSenha').value;
+
+        // Verificar se a senha está vazia e preenchê-la com o valor do localStorage, se disponível
+        if (!senha) {
+            senha = localStorage.getItem('userSenha') || '';
+        }
+
+        // Criar um objeto com os dados do perfil do usuário
+        const perfil = {
+            id: localStorage.getItem('userId'), // Obter o ID do usuário do localStorage
+            nome: nome,
+            email: email,
+            senha: senha
+        };
+
+        // Chamar a função para atualizar o perfil do usuário
+        atualizarPerfil(perfil);
+    });
+
+    // Função para verificar se o usuário está logado ao carregar a página
+    function checkLoggedInUser() {
+        const userName = localStorage.getItem('userName');
+        const userEmail = localStorage.getItem('userEmail');
+        if (userName && userEmail) {
+            // Preencher os campos do formulário com os dados do localStorage
+            document.getElementById('inputNome').value = userName;
+            document.getElementById('inputEmail').value = userEmail;
+        } else {
+            // Redirecionar para a página de login ou outra página de sua escolha
+            window.location.href = '../html/cadastro_usuario.html';
+        }
+    }
+
+    // Verificar se o usuário está logado ao carregar a página
+    checkLoggedInUser();
+
     // Toggle password visibility
-    const togglePassword = document.getElementById('togglePassword');
+    const togglePassword = document.createElement('button');
+    togglePassword.innerHTML = '<i class="fa fa-eye"></i>';
+    togglePassword.classList.add('btn', 'btn-light', 'input-group-text', 'toggle-password');
     const passwordField = document.getElementById('inputSenha');
-    const passwordHelp = document.getElementById('passwordHelp');
     const passwordValidation = document.getElementById('passwordValidation');
 
-    togglePassword.addEventListener('click', function (e) {
+    passwordField.insertAdjacentElement('afterend', togglePassword);
+
+    togglePassword.addEventListener('click', function () {
         const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordField.setAttribute('type', type);
-        this.querySelector('i').classList.toggle('fa-eye');
         this.querySelector('i').classList.toggle('fa-eye-slash');
     });
 
@@ -145,45 +142,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let validationMessage = "";
         if (!validation.minLength) {
-            validationMessage += "A senha deve ter pelo menos 6 caracteres.<br>";
+            validationMessage += "<span style='color:red'>A senha deve ter pelo menos 6 caracteres.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha tem pelo menos 6 caracteres.</span><br>";
         }
         if (!validation.hasNumber) {
-            validationMessage += "A senha deve conter pelo menos um número.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos um número.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos um número.</span><br>";
         }
         if (!validation.hasSymbol) {
-            validationMessage += "A senha deve conter pelo menos um símbolo.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos um símbolo.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos um símbolo.</span><br>";
         }
         if (!validation.hasUppercase) {
-            validationMessage += "A senha deve conter pelo menos uma letra maiúscula.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra maiúscula.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra maiúscula.</span><br>";
         }
         if (!validation.hasLowercase) {
-            validationMessage += "A senha deve conter pelo menos uma letra minúscula.<br>";
+            validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra minúscula.</span><br>";
+        } else {
+            validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra minúscula.</span><br>";
         }
 
         passwordValidation.innerHTML = validationMessage;
     });
 
-    const emailField = document.getElementById('inputEmail');
-    emailField.addEventListener('blur', function () {
-        const email = emailField.value;
+    // Menu Icon functionality
+    const menuIcon = document.querySelector(".mobile-menu-icon button");
+    const menu = document.querySelector(".menu");
 
-        if (validateEmail(email)) {
-            fetch(`${checkEmailUrl}?email=${email}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.length > 0) {
-                        const user = data[0];
-                        document.getElementById('inputNome').value = user.nome;
-                        // Note: Password should not be pre-filled for security reasons.
-                        localStorage.setItem('userId', user.id);
-                    } else {
-                        displayMessage("Usuário não encontrado.");
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao buscar usuário por email:', error.message);
-                    displayMessage("Erro ao buscar usuário por email");
-                });
-        }
+    menuIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
     });
+
+    // Update 'Cadastrar' button text and link based on login status
+    updateCadastroButton();
 });
+
+function updateCadastroButton() {
+    const btnCadastrar = document.getElementById('btn-cadastrar');
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
+    if (user) {
+        btnCadastrar.textContent = 'Logado';
+        btnCadastrar.href = '../html/editor_perfil.html';
+    } else {
+        btnCadastrar.textContent = 'Cadastrar';
+        btnCadastrar.href = '../html/cadastro_usuario.html';
+    }
+}

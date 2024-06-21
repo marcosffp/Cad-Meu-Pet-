@@ -8,6 +8,136 @@ function reloadPage() {
     location.reload();
 }
 
+// Função para exibir mensagens na interface do usuário
+function displayMessage(message) {
+    console.log(message);
+}
+
+// Função para atualizar o botão de cadastro dependendo do login do usuário
+function updateCadastroButton() {
+    const btnCadastrar = document.getElementById('Cadastrar').querySelector('a');
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
+
+    if (btnCadastrar) {
+        if (user) {
+            btnCadastrar.textContent = 'Logado';
+            btnCadastrar.href = '../html/editor_perfil.html';// Link de exemplo, você pode ajustar conforme necessário
+        } else {
+            btnCadastrar.textContent = 'Cadastrar';
+            btnCadastrar.href = '../html/cadastro_usuario.html'; // Link de exemplo, você pode ajustar conforme necessário
+        }
+    }
+}
+
+// Função para ler os relatos via API JSONServer
+async function readRelato(processaDados) {
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Erro ao ler Relatos via API JSONServer');
+        }
+        const data = await response.json();
+        processaDados(data);
+    } catch (error) {
+        console.error('Erro ao ler Relatos via API JSONServer:', error);
+        displayMessage("Erro ao ler Relatos");
+    }
+}
+
+// Função para criar um relato via API JSONServer
+function createRelato(relato, refreshFunction) {
+    relato.liked = relato.liked !== undefined ? relato.liked : false;
+    relato.likes = relato.likes !== undefined ? relato.likes : 0;
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(relato),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao inserir relato');
+        }
+        return response.json();
+    })
+    .then(data => {
+        displayMessage("Relato inserido com sucesso");
+        if (refreshFunction) refreshFunction();
+        reloadPage();
+    })
+    .catch(error => {
+        console.error('Erro ao inserir Relato via API JSONServer:', error);
+        displayMessage("Erro ao inserir Relato");
+    });
+}
+
+// Função para atualizar um relato via API JSONServer
+function updateRelato(id, relato) {
+    fetch(`${apiUrl}/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(relato),
+    })
+    .then(response => response.json())
+    .then(data => {
+        displayMessage("Relato alterado com sucesso");
+        reloadPage();
+    })
+    .catch(error => {
+        console.error('Erro ao atualizar Relato via API JSONServer:', error);
+        displayMessage("Erro ao atualizar Relato");
+    });
+}
+
+// Função para remover um relato via API JSONServer
+async function deleteRelato(id, refreshFunction) {
+    try {
+        const response = await fetch(`${apiUrl}/${id}`, {
+            method: 'DELETE',
+        });
+        if (!response.ok) {
+            throw new Error('Erro ao remover Relato via API JSONServer');
+        }
+        const data = await response.json();
+
+        // Atualizar array de relatos do usuário após a exclusão
+        const userId = localStorage.getItem('userId');
+        if (userId) {
+            const userResponse = await fetch(`${usersApiUrl}/${userId}`);
+            if (!userResponse.ok) {
+                throw new Error('Erro ao obter usuário após remover relato');
+            }
+            const user = await userResponse.json();
+            const updatedRelatos = user.relatos.filter(r => r !== id);
+            const updatedUser = { ...user, relatos: updatedRelatos };
+
+            // Atualizar usuário na API
+            const updateUserResponse = await fetch(`${usersApiUrl}/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(updatedUser),
+            });
+            if (!updateUserResponse.ok) {
+                throw new Error('Erro ao atualizar relatos do usuário via API JSONServer');
+            }
+            const updatedUserData = await updateUserResponse.json();
+        }
+
+        displayMessage("Relato removido com sucesso");
+        if (refreshFunction) refreshFunction();
+        reloadPage();
+    } catch (error) {
+        console.error('Erro ao remover Relato via API JSONServer:', error);
+        displayMessage("Erro ao remover Relato");
+    }
+}
+
 // Função para listar relatos na interface
 function ListaRelatos() {
     const DivRelatos = document.getElementById("relatos-container");
@@ -81,27 +211,28 @@ function handleView(id) {
 }
 
 // Função para inicializar a página
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     const userId = localStorage.getItem('userId');
     if (userId) {
-        // Obter dados do usuário logado
-        fetch(`${usersApiUrl}/${userId}`)
-            .then(response => response.json())
-            .then(user => {
-                userRelatos = user.relatos || [];
-                // Ler os relatos após obter o usuário
-                readRelato(data => {
-                    db = data;
-                    ListaRelatos();
-                });
-            })
-            .catch(error => {
-                console.error('Erro ao obter dados do usuário:', error);
+        try {
+            const userResponse = await fetch(`${usersApiUrl}/${userId}`);
+            if (!userResponse.ok) {
+                throw new Error('Erro ao obter dados do usuário');
+            }
+            const user = await userResponse.json();
+            userRelatos = user.relatos || [];
+            
+            // Ler os relatos após obter o usuário
+            await readRelato(data => {
+                db = data;
+                ListaRelatos();
             });
+        } catch (error) {
+            console.error('Erro ao obter dados do usuário:', error);
+        }
     } else {
         console.error('Usuário não está logado');
     }
-
     // Event listener para o formulário de edição
     document.getElementById('editForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -124,144 +255,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Função para ler os relatos via API JSONServer
-function readRelato(processaDados) {
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            processaDados(data);
-        })
-        .catch(error => {
-            console.error('Erro ao ler Relatos via API JSONServer:', error);
-            displayMessage("Erro ao ler Relatos");
-        });
-}
-
-// Função para criar um relato via API JSONServer
-function createRelato(relato, refreshFunction) {
-    relato.liked = relato.liked !== undefined ? relato.liked : false;
-    relato.likes = relato.likes !== undefined ? relato.likes : 0;
-
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(relato),
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao inserir relato');
-        }
-        return response.json();
-    })
-    .then(data => {
-        displayMessage("Relato inserido com sucesso");
-        if (refreshFunction) refreshFunction();
-        reloadPage();
-    })
-    .catch(error => {
-        console.error('Erro ao inserir Relato via API JSONServer:', error);
-        displayMessage("Erro ao inserir Relato");
-    });
-}
-
-// Função para atualizar um relato via API JSONServer
-function updateRelato(id, relato) {
-    fetch(`${apiUrl}/${id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(relato),
-    })
-    .then(response => response.json())
-    .then(data => {
-        displayMessage("Relato alterado com sucesso");
-        reloadPage();
-    })
-    .catch(error => {
-        console.error('Erro ao atualizar Relato via API JSONServer:', error);
-        displayMessage("Erro ao atualizar Relato");
-    });
-}
-
-// Função para remover um relato via API JSONServer
-function deleteRelato(id, refreshFunction) {
-    fetch(`${apiUrl}/${id}`, {
-        method: 'DELETE',
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao remover Relato via API JSONServer');
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Atualizar array de relatos do usuário após a exclusão
-        const userId = localStorage.getItem('userId');
-        if (userId) {
-            fetch(`${usersApiUrl}/${userId}`)
-                .then(response => response.json())
-                .then(user => {
-                    const updatedRelatos = user.relatos.filter(r => r !== id);
-                    const updatedUser = { ...user, relatos: updatedRelatos };
-
-                    // Atualizar usuário na API
-                    fetch(`${usersApiUrl}/${userId}`, {
-                        method: 'PUT',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(updatedUser),
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Erro ao atualizar relatos do usuário via API JSONServer');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        displayMessage("Relato removido com sucesso");
-                        if (refreshFunction) refreshFunction();
-                        reloadPage();
-                    })
-                    .catch(error => {
-                        console.error('Erro ao atualizar relatos do usuário:', error);
-                        displayMessage("Erro ao remover Relato");
-                    });
-                })
-                .catch(error => {
-                    console.error('Erro ao obter usuário após remover relato:', error);
-                    displayMessage("Erro ao remover Relato");
-                });
-        } else {
-            console.error('Usuário não está logado');
-            displayMessage("Erro ao remover Relato");
-        }
-    })
-    .catch(error => {
-        console.error('Erro ao remover Relato via API JSONServer:', error);
-        displayMessage("Erro ao remover Relato");
-    });
-}
-
-// Função para exibir mensagens na interface do usuário
-function displayMessage(message) {
-    console.log(message);
-}
-
-// Event listener para o ícone de menu mobile
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
-    const menu = document.querySelector(".menu");
+    if (menuIcon) {
+        menuIcon.addEventListener("click", function () {
+            const menu = document.querySelector(".menu");
+            if (menu) {
+                menu.classList.toggle("active");
+            }
+        });
+    } else {
+        console.error("Ícone do menu mobile não encontrado.");
+    }
 
-    menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("active");
-    });
+    // Event listeners para verificação de login
+    const anunciarLink = document.getElementById('Anunciar');
+    if (anunciarLink) {
+        anunciarLink.addEventListener('click', verificarLogin);
+    }
 
-    init(); // Função init() a ser definida conforme necessidade
+    const cadastrarLink = document.getElementById('Cadastrar');
+    if (cadastrarLink) {
+        cadastrarLink.addEventListener('click', verificarLogin);
+    }
 });
+
+function verificarLogin(event) {
+    const user = sessionStorage.getItem('userName') || null;
+    if (!user) {
+        event.preventDefault();
+        window.location.href = '../html/cadastro_usuario.html';
+    }
+}
+
 
 // Event listener para verificar login ao clicar em links importantes
 document.addEventListener("DOMContentLoaded", function () {
@@ -269,30 +295,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById('Anunciar').addEventListener('click', verificarLogin);
     document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
-    document.querySelector('.butao-perdi a').addEventListener('click', verificarLogin);
-    document.querySelector('.butao-achei a').addEventListener('click', verificarLogin);
-    document.querySelector('.criar-relato a').addEventListener('click', verificarLogin);
-    document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
 });
 
-// Função assíncrona para verificar se o usuário está logado
-async function verificarLogin(event) {
-    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
-    if (!user) {
-        event.preventDefault(); // Prevenir o comportamento padrão de navegação
-        window.location.href = '../html/cadastro_usuario.html'; // Redirecionar para a página de cadastro de usuário
-    }
-}
 
-// Função para atualizar o botão de cadastro dependendo do login do usuário
-function updateCadastroButton() {
-    const btnCadastrar = document.getElementById('btn-cadastrar');
-    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
-    if (user) {
-        btnCadastrar.textContent = 'Logado';
-        btnCadastrar.href = '#';
-    } else {
-        btnCadastrar.textContent = 'Cadastrar';
-        btnCadastrar.href = '../html/cadastro_usuario.html';
-    }
-}

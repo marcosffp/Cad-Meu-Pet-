@@ -1,6 +1,6 @@
 const RelatosApp = (function() {
-    const apiUrl = 'https://0e2df26b-b80d-4c55-84ac-ea0eb588235d-00-26quv083jkb6z.janeway.replit.dev/relatos';
-    const apiPetReunidos = 'https://0e2df26b-b80d-4c55-84ac-ea0eb588235d-00-26quv083jkb6z.janeway.replit.dev/animais_perdidos';
+    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
+    const apiPetReunidos = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
     let db = [];
 
     function reloadPage() {
@@ -13,15 +13,16 @@ const RelatosApp = (function() {
 
     function updateCadastroButton() {
         const btnCadastrar = document.getElementById('btn-cadastrar');
-        const user = sessionStorage.getItem('user') || localStorage.getItem('user'); // Verifica em sessionStorage ou localStorage
+        const user = sessionStorage.getItem('userName') || localStorage.getItem('userName'); // Verifica em sessionStorage ou localStorage
         if (user) {
             btnCadastrar.textContent = 'Logado';
-            btnCadastrar.href = '#';
+            btnCadastrar.href = '../html/editor_perfil.html'; // Remove o atributo href para desativar o link
         } else {
             btnCadastrar.textContent = 'Cadastrar';
             btnCadastrar.href = '../html/cadastro_usuario.html';
         }
     }
+    
 
     function readRelato(userId, processaDados) {
         fetch(apiUrl)
@@ -111,7 +112,7 @@ const RelatosApp = (function() {
         db.forEach(relato => {
             DivRelatos.innerHTML += `
             <div class="col">
-                <div class="card h-100 d-flex flex-column" style="background-color: #cde0d8;">
+                <div class="card h-100 d-flex flex-column" style="background-color: #AED1D1;">
                     <img src=${relato.imagemUrl} class="card-img-top" alt="imagem do relato">
                     <div class="card-body d-flex flex-column align-items-stretch">
                         <div class="d-flex justify-content-between mb-2">
@@ -123,7 +124,7 @@ const RelatosApp = (function() {
                         <div class="mt-auto">
                             <div class="like-section">
                                 <span id="like-icon-${relato.id}" class="like-icon" onclick="RelatosApp.handleLike(${relato.id}, ${relato.liked}, ${relato.likes})">
-                                    <i class="fas fa-thumbs-up" style="color: ${relato.liked ? '#287a66' : '#6c757d'};"></i>
+                                    <i class="fas fa-thumbs-up" style="color: ${relato.liked ? '#0E3B41' : '#6c757d'};"></i>
                                 </span>
                                 <span id="likes-${relato.id}" style="margin-right: 5px;">${relato.likes}</span>
                             </div>
@@ -172,6 +173,7 @@ const RelatosApp = (function() {
         document.querySelector('.butao-achei a').addEventListener('click', verificarLogin);
         document.querySelector('.criar-relato a').addEventListener('click', verificarLogin);
         document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
+        document.queryElementById('like-icon').addEventListener('click', verificarLogin);
     });
 
     return {

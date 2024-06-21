@@ -1,4 +1,4 @@
-/* Reset de estilos globais */
+/* Reset CSS */
 * {
   padding: 0;
   margin: 0;
@@ -6,20 +6,20 @@
   box-sizing: border-box;
 }
 
-/* Variáveis de cores e fontes */
+/* Variables */
 :root {
   --cor0: #f9f9fa;
-  --cor1: #cdfff2;
+  --cor1: #AED1D1;
   --cor2: #cffaef;
-  --cor3: #8acfbe;
-  --cor4: #287a66;
-  --cor5: #285046;
-  --cor6: #2e3132;
+  --cor3: #082A33;
+  --cor4: #03b46d;
+  --cor5: #0E3B41;
+  --cor6: #197370;
   --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-/* Estilos globais */
+/* Global Styles */
 html {
   font-size: 1em;
 }
@@ -30,15 +30,17 @@ body {
   font-family: var(--fonte-destaque);
 }
 
-/* Cabeçalho */
+/* Header Styles */
 .cabecalho {
-  color: var(--cor6);
+  color: var(--cor3);
   display: flex;
   justify-content: space-between;
   background-color: var(--cor0);
   box-shadow: 5px 5px 5px rgb(0 0 0 / 12%);
   margin-top: 10px;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -71,7 +73,7 @@ body {
 }
 
 .cabecalho .menu li a:hover {
-  color: var(--cor3);
+  color: var(--cor4);
 }
 
 .cabecalho .menu li a {
@@ -84,7 +86,7 @@ body {
 }
 
 .menu li a {
-  color: var(--cor6);
+  color: var(--cor3);
   text-decoration: none;
   vertical-align: middle;
 }
@@ -101,21 +103,21 @@ body {
 }
 
 #Anunciar a {
-  background-color: var(--cor4);
+  background-color: var(--cor5);
   color: var(--cor0);
 }
 
 #Anunciar a:hover {
-  background-color: var(--cor5);
+  background-color: var(--cor4);
 }
 
 #Anunciar a:active {
-  background-color: var(--cor6);
+  background-color: var(--cor1);
 }
 
 #Cadastrar a {
-  color: var(--cor4);
-  border: 2px solid var(--cor4);
+  color: var(--cor0);
+  background-color: var(--cor4);
 }
 
 #Cadastrar a:hover {
@@ -123,23 +125,24 @@ body {
 }
 
 #Cadastrar a:active {
-  background-color: var(--cor6);
+  background-color: var(--cor1);
 }
 
-/* Mobile menu icon */
 .mobile-menu-icon {
   display: none;
-  font-size: 24px;
-  cursor: pointer;
 }
 
-/* Login Section */
-#login {
-  background-color: var(--cor1);
-  padding: 50px 0;
+.mobile-menu-icon button {
+  background-color: transparent;
 }
 
-/* Login Box */
+/* Form Styles */
+h1 {
+  font-weight: bolder;
+  color: var(--cor4);
+  margin-left: 30px;
+}
+
 .form-box {
   background-color: var(--cor0);
   padding: 30px;
@@ -156,29 +159,42 @@ body {
 }
 
 .input-group input {
-  border: none;
-  border-bottom: 2px solid var(--cor4);
+  border: 2px solid var(--cor4);
 }
 
 .input-group input:focus {
-  box-shadow: none;
-  border-bottom: 2px solid var(--cor5);
+  border-color: var(--cor3);
+  box-shadow: 0 0 5px var(--cor3);
 }
 
 .btn-success {
   background-color: var(--cor4);
-  border: none;
+  border-color: var(--cor4);
 }
 
 .btn-success:hover {
   background-color: var(--cor5);
+  border-color: var(--cor5);
 }
 
-.btn-success:active {
-  background-color: var(--cor6);
+.btn-secondary {
+  background-color: var(--cor3);
+  border-color: var(--cor3);
 }
 
-/* Rodapé */
+.btn-secondary:hover {
+  background-color: var(--cor2);
+  border-color: var(--cor2);
+}
+
+.text-center a {
+  color: var(--cor4);
+}
+
+.text-center a:hover {
+  color: var(--cor3);
+}
+
 /* Rodapé */
 .rodape {
   color: var(--cor0);
@@ -204,7 +220,7 @@ body {
 
 .rodape p,
 .rodape h4 {
-  color: var(--cor6);
+  color: var(--cor5);
   margin-bottom: 20px;
 }
 
@@ -224,7 +240,7 @@ body {
 }
 
 .rodape a:hover {
-  color: var(--cor3);
+  color: var(--cor4);
 }
 
 .rodape hr {
@@ -235,19 +251,6 @@ body {
 .direitos-autorais {
   text-align: center;
   font-size: 12px;
-}
-
-@media screen and (min-width: 768px) {
-  .container-rodape {
-    flex-wrap: nowrap;
-  }
-
-  .informacoes,
-  .links-uteis,
-  .redes-sociais {
-    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
-    margin-bottom: 0; /* Remover o espaço extra entre elementos */
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -268,13 +271,19 @@ body {
     left: 0;
     right: 0;
     width: 100vw;
-    background: #285046;
+    background: var(--cor5);
     transition: height 0.2s;
     overflow: hidden;
     height: 0;
     min-height: 0;
+    z-index: 20;
   }
 
+  #Anunciar a {
+    margin-bottom: 5px;
+    background-color: var(--cor4);
+    border-right: 20px;
+  }
 
   .menu.active {
     height: 450px;
@@ -297,23 +306,10 @@ body {
     color: var(--cor0);
   }
 
-  #Anunciar a,
-  #Cadastrar a {
-    margin-top: 10px;
-    background-color: var(--cor4);
-    color: var(--cor0);
-    border: 0px;
-  }
-
-  #Anunciar a:hover,
-  #Cadastrar a:hover {
-    background-color: var(--cor3);
-  }
-
-  .butao-achei button {
-    color: var(--cor4);
-    background-color: var(--cor0);
-    border: 2px solid var(--cor4);
+  .carrosel {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
   }
 
   .mobile-menu-icon {
@@ -325,5 +321,13 @@ body {
 
   .mobile-menu-icon i {
     color: var(--cor4);
+  }
+
+  .form-box {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
   }
 }

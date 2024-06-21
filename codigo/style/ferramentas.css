@@ -1,4 +1,3 @@
-/* Reset de estilos globais */
 * {
   padding: 0;
   margin: 0;
@@ -6,20 +5,22 @@
   box-sizing: border-box;
 }
 
-/* Variáveis de cores e fontes */
+
+
 :root {
   --cor0: #f9f9fa;
-  --cor1: #cdfff2;
+  --cor1: #AED1D1;
   --cor2: #cffaef;
-  --cor3: #8acfbe;
-  --cor4: #287a66;
-  --cor5: #285046;
-  --cor6: #2e3132;
+  --cor3: #082A33;
+  --cor4: #03b46d;
+  --cor5: #0E3B41;
+  --cor6: #197370;
   --fonte-padrao: "Baloo Bhaijaan 2", sans-serif;
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-/* Estilos globais */
+
+
 html {
   font-size: 1em;
 }
@@ -30,9 +31,10 @@ body {
   font-family: var(--fonte-destaque);
 }
 
-/* Cabeçalho */
+
+
 .cabecalho {
-  color: var(--cor6);
+  color: var(--cor3);
   display: flex;
   justify-content: space-between;
   background-color: var(--cor0);
@@ -71,7 +73,7 @@ body {
 }
 
 .cabecalho .menu li a:hover {
-  color: var(--cor3);
+  color: var(--cor4);
 }
 
 .cabecalho .menu li a {
@@ -84,7 +86,7 @@ body {
 }
 
 .menu li a {
-  color: var(--cor6);
+  color: var(--cor3);
   text-decoration: none;
   vertical-align: middle;
 }
@@ -101,21 +103,21 @@ body {
 }
 
 #Anunciar a {
-  background-color: var(--cor4);
+  background-color: var(--cor5);
   color: var(--cor0);
 }
 
 #Anunciar a:hover {
-  background-color: var(--cor5);
+  background-color: var(--cor4);
 }
 
 #Anunciar a:active {
-  background-color: var(--cor6);
+  background-color: var(--cor1);
 }
 
 #Cadastrar a {
-  color: var(--cor4);
-  border: 2px solid var(--cor4);
+  color: var(--cor0);
+  background-color: var(--cor4);
 }
 
 #Cadastrar a:hover {
@@ -123,7 +125,7 @@ body {
 }
 
 #Cadastrar a:active {
-  background-color: var(--cor6);
+  background-color: var(--cor1);
 }
 
 .mobile-menu-icon {
@@ -132,6 +134,13 @@ body {
 
 .mobile-menu-icon button {
   background-color: transparent;
+}
+
+
+h1 {
+  font-weight: bolder;
+  color: var(--cor4);
+  margin-left: 30px;
 }
 
 /* Define estilos para a seção de ferramentas */
@@ -202,77 +211,65 @@ body {
   color: var(--cor6);
 }
 
-/* Define estilos para o rodapé */
-/* Rodapé */
-.rodape {
-  color: var(--cor0);
-  padding: 40px 0;
-}
+  /* Rodapé */
+  .rodape {
+    color: var(--cor0);
+    padding: 40px 0;
+  }
 
-.container-rodape {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.informacoes,
-.links-uteis,
-.redes-sociais {
-  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
-  text-align: center;
-  color: var(--cor6);
-  margin-bottom: 30px; /* Espaço entre os elementos */
-}
-
-.rodape p,
-.rodape h4 {
-  color: var(--cor6);
-  margin-bottom: 20px;
-}
-
-.rodape ul {
-  list-style: none;
-  padding: 0;
-}
-
-.rodape li {
-  margin-bottom: 10px;
-}
-
-.rodape a {
-  color: var(--cor6);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.rodape a:hover {
-  color: var(--cor3);
-}
-
-.rodape hr {
-  margin: 20px 0;
-  border: 1px solid var(--cor6);
-}
-
-.direitos-autorais {
-  text-align: center;
-  font-size: 12px;
-}
-
-@media screen and (min-width: 768px) {
   .container-rodape {
-    flex-wrap: nowrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .informacoes,
   .links-uteis,
   .redes-sociais {
-    flex-basis: 30%; /* Retornar ao tamanho original para telas maiores */
-    margin-bottom: 0; /* Remover o espaço extra entre elementos */
+    flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
+    text-align: center;
+    color: var(--cor6);
+    margin-bottom: 30px; /* Espaço entre os elementos */
   }
-}
+
+  .rodape p,
+  .rodape h4 {
+    color: var(--cor5);
+    margin-bottom: 20px;
+  }
+
+  .rodape ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .rodape li {
+    margin-bottom: 10px;
+  }
+
+  .rodape a {
+    color: var(--cor6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .rodape a:hover {
+    color: var(--cor4);
+  }
+
+  .rodape hr {
+    margin: 20px 0;
+    border: 1px solid var(--cor6);
+  }
+
+  .direitos-autorais {
+    text-align: center;
+    font-size: 12px;
+  }
+
+
 
 @media screen and (max-width: 768px) {
   .cabecalho {
@@ -292,11 +289,17 @@ body {
     left: 0;
     right: 0;
     width: 100vw;
-    background: #285046;
+    background: var(--cor5);
     transition: height 0.2s;
     overflow: hidden;
     height: 0;
     min-height: 0;
+  }
+
+  #Anunciar a{
+    margin-bottom: 5px;
+    background-color: var(--cor4);
+    border-right: 20px;
   }
 
 
@@ -321,25 +324,11 @@ body {
     color: var(--cor0);
   }
 
-  #Anunciar a,
-  #Cadastrar a {
-    margin-top: 10px;
-    background-color: var(--cor4);
-    color: var(--cor0);
-    border: 0px;
-  }
-
-  #Anunciar a:hover,
-  #Cadastrar a:hover {
-    background-color: var(--cor3);
-  }
-
-  .butao-achei button {
-    color: var(--cor4);
-    background-color: var(--cor0);
-    border: 2px solid var(--cor4);
-  }
-
+ .carrosel{
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+ }
   .mobile-menu-icon {
     display: block;
     font-size: 30px;
@@ -350,4 +339,53 @@ body {
   .mobile-menu-icon i {
     color: var(--cor4);
   }
+
+  .section-busca {
+    padding: 1em; /* Adjusted padding for smaller screens */
+  }
+
+  .section-busca h1 {
+    font-size: 1.5em; /* Decreased font size for smaller screens */
+    margin-left: 20px; /* Adjusted margin for smaller screens */
+  }
+
+  .section-busca p {
+    font-size: 1em; /* Decreased font size for smaller screens */
+    margin-bottom: 1.5em; /* Adjusted margin for smaller screens */
+  }
+
+  .ferramenta-anuncio,
+  .ferramenta-anuncios {
+    flex-direction: column; /* Stacking items vertically on smaller screens */
+  }
+
+  .ferramenta-anuncio img,
+  .ferramenta-anuncios img {
+    width: 100%; /* Full width for images on smaller screens */
+    margin-right: 0; /* No right margin on smaller screens */
+    margin-bottom: 1em; /* Added bottom margin between image and text */
+    border-radius: 0; /* Removed border-radius for images on smaller screens */
+  }
+
+  .ferramenta-anuncios {
+    margin-left: 0; /* Adjusted margin for smaller screens */
+    padding-top: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .ferramenta-anuncio .anuncio-texto,
+  .ferramenta-anuncios .anuncios-texto {
+    text-align: center; /* Centered text on smaller screens */
+    margin-top: 1em; /* Added top margin for text on smaller screens */
+  }
+
+  .ferramenta-anuncio h2,
+  .ferramenta-anuncios h2 {
+    font-size: 1.5em; /* Decreased font size for headings on smaller screens */
+  }
+
+  .ferramenta-anuncio p,
+  .ferramenta-anuncios p {
+    font-size: 0.9em; /* Decreased font size for paragraph text on smaller screens */
+  }
 }
+
