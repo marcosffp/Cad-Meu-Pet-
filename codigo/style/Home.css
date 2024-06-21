@@ -279,6 +279,7 @@ color: var(--cor0);
 .card {
   background-color: #AED1D1;
   margin-bottom: 15px; /* Espaçamento entre os cards */
+  height: 100%; /* Ajuste a altura conforme necessário */
 }
 
 .card-title {
@@ -286,6 +287,14 @@ color: var(--cor0);
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.show-more {
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 5px;
+  text-decoration: underline;
+  display: inline-block;
 }
 
 .date {
@@ -307,6 +316,7 @@ color: var(--cor0);
   cursor: pointer;
   margin-right: 5px;
 }
+
 
 .criar-relato button {
   padding: 12px 24px;

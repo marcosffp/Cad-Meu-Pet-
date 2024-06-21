@@ -13,16 +13,15 @@ const RelatosApp = (function() {
 
     function updateCadastroButton() {
         const btnCadastrar = document.getElementById('btn-cadastrar');
-        const user = sessionStorage.getItem('userName') || localStorage.getItem('userName'); // Verifica em sessionStorage ou localStorage
+        const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
         if (user) {
             btnCadastrar.textContent = 'Logado';
-            btnCadastrar.href = '../html/editor_perfil.html'; // Remove o atributo href para desativar o link
+            btnCadastrar.href = '../html/editor_perfil.html';
         } else {
             btnCadastrar.textContent = 'Cadastrar';
             btnCadastrar.href = '../html/cadastro_usuario.html';
         }
     }
-    
 
     function readRelato(userId, processaDados) {
         fetch(apiUrl)
@@ -108,31 +107,59 @@ const RelatosApp = (function() {
     function ListaRelatos() {
         const DivRelatos = document.getElementById("relatos-container");
         DivRelatos.innerHTML = "";
-
         db.forEach(relato => {
-            DivRelatos.innerHTML += `
-            <div class="col">
-                <div class="card h-100 d-flex flex-column" style="background-color: #AED1D1;">
-                    <img src=${relato.imagemUrl} class="card-img-top" alt="imagem do relato">
-                    <div class="card-body d-flex flex-column align-items-stretch">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h5 class="card-title">${relato.nome}</h5>
-                            <span class="date text-muted">${relato.data}</span>
-                        </div>
-                        <p class="card-text mb-2">${relato.localizacao}</p>
-                        <p class="card-text flex-grow-1">${relato.descricao}</p>
-                        <div class="mt-auto">
-                            <div class="like-section">
-                                <span id="like-icon-${relato.id}" class="like-icon" onclick="RelatosApp.handleLike(${relato.id}, ${relato.liked}, ${relato.likes})">
-                                    <i class="fas fa-thumbs-up" style="color: ${relato.liked ? '#0E3B41' : '#6c757d'};"></i>
-                                </span>
-                                <span id="likes-${relato.id}" style="margin-right: 5px;">${relato.likes}</span>
-                            </div>
+            const isTruncated = relato.descricao.length > 100;
+
+            const descricaoElement = document.createElement('p');
+            descricaoElement.classList.add('card-text');
+            descricaoElement.textContent = isTruncated ? relato.descricao.substring(0, 100) + '...' : relato.descricao;
+
+            if (isTruncated) {
+                const showMoreSpan = document.createElement('span');
+                showMoreSpan.classList.add('show-more');
+                showMoreSpan.textContent = 'Ver mais';
+                showMoreSpan.onclick = () => RelatosApp.showMore(relato.id); // Corrigido para chamar RelatosApp.showMore
+                descricaoElement.appendChild(showMoreSpan);
+            }
+
+            const cardElement = document.createElement('div');
+            cardElement.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-4');
+            cardElement.innerHTML = `
+                <div class="card">
+                    <img src="${relato.imagemUrl}" class="card-img-top" alt="imagem do relato">
+                    <div class="card-body">
+                        <h5 class="card-title">${relato.nome}</h5>
+                        <p class="card-text">${relato.localizacao}</p>
+                        <div id="descricao-${relato.id}" class="card-text">${descricaoElement.innerHTML}</div>
+                        <div class="like-section">
+                            <span id="like-icon-${relato.id}" class="like-icon" onclick="RelatosApp.handleLike(${relato.id}, ${relato.liked}, ${relato.likes})">
+                                <i class="fas fa-thumbs-up" style="color: ${relato.liked ? '#0E3B41' : '#6c757d'};"></i>
+                            </span>
+                            <span id="likes-${relato.id}">${relato.likes}</span>
                         </div>
                     </div>
-                </div>
-            </div>`;
+                </div>`;
+
+            DivRelatos.appendChild(cardElement);
         });
+    }
+
+    function showMore(id) {
+        const relato = db.find(r => r.id === id);
+        const descricaoElement = document.getElementById(`descricao-${id}`);
+
+        if (descricaoElement) {
+            descricaoElement.innerHTML = relato.descricao + ` <span class="show-more" onclick="RelatosApp.showLess(${id})">Ver menos</span>`;
+        }
+    }
+
+    function showLess(id) {
+        const relato = db.find(r => r.id === id);
+        const descricaoElement = document.getElementById(`descricao-${id}`);
+
+        if (descricaoElement) {
+            descricaoElement.innerHTML = relato.descricao.substring(0, 100) + `... <span class="show-more" onclick="RelatosApp.showMore(${id})">Ver mais</span>`;
+        }
     }
 
     function contarAnimaisencontrados() {
@@ -162,29 +189,39 @@ const RelatosApp = (function() {
 
     document.addEventListener("DOMContentLoaded", function () {
         init();
-
-        // Atualizar botão de cadastro ao carregar a página
         updateCadastroButton();
 
-        // Verificar login ao clicar nos links importantes
         document.getElementById('Anunciar').addEventListener('click', verificarLogin);
         document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
         document.querySelector('.butao-perdi a').addEventListener('click', verificarLogin);
         document.querySelector('.butao-achei a').addEventListener('click', verificarLogin);
         document.querySelector('.criar-relato a').addEventListener('click', verificarLogin);
         document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
-        document.queryElementById('like-icon').addEventListener('click', verificarLogin);
+
+        // Delegação de eventos para os botões Ver mais e Ver menos
+        document.getElementById("relatos-container").addEventListener('click', function(event) {
+            const target = event.target;
+            if (target.classList.contains('show-more')) {
+                const relatoId = parseInt(target.dataset.relatoId); // Converte para inteiro
+                showMore(relatoId);
+            } else if (target.classList.contains('show-less')) {
+                const relatoId = parseInt(target.dataset.relatoId); // Converte para inteiro
+                showLess(relatoId);
+            }
+        });
     });
 
     return {
-        handleLike
+        handleLike,
+        showMore,
+        showLess
     };
 })();
 
 function verificarLogin(event) {
-    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName'); // Verifica em sessionStorage ou localStorage
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
     if (!user) {
-        event.preventDefault(); // Prevenir o comportamento padrão de navegação
-        window.location.href = '../html/cadastro_usuario.html'; // Redirecionar para a página de cadastro de usuário
+        event.preventDefault();
+        window.location.href = '../html/cadastro_usuario.html';
     }
 }
