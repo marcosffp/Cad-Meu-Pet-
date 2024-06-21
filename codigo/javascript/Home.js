@@ -114,11 +114,12 @@ const RelatosApp = (function() {
             descricaoElement.classList.add('card-text');
             descricaoElement.textContent = isTruncated ? relato.descricao.substring(0, 100) + '...' : relato.descricao;
 
+            const relatoId = relato.id
             if (isTruncated) {
                 const showMoreSpan = document.createElement('span');
                 showMoreSpan.classList.add('show-more');
+                showMoreSpan.dataset.relatoId = relatoId; // Adiciona o ID do relato como um data-attribute
                 showMoreSpan.textContent = 'Ver mais';
-                showMoreSpan.onclick = () => RelatosApp.showMore(relato.id); // Corrigido para chamar RelatosApp.showMore
                 descricaoElement.appendChild(showMoreSpan);
             }
 
@@ -147,20 +148,27 @@ const RelatosApp = (function() {
     function showMore(id) {
         const relato = db.find(r => r.id === id);
         const descricaoElement = document.getElementById(`descricao-${id}`);
-
+    
         if (descricaoElement) {
-            descricaoElement.innerHTML = relato.descricao + ` <span class="show-more" onclick="RelatosApp.showLess(${id})">Ver menos</span>`;
+            descricaoElement.innerHTML = `
+                ${relato.descricao}
+                <span class="show-less" data-relato-id="${id}" onclick="RelatosApp.showLess(${id})">Ver menos</span>
+            `;
         }
     }
-
+    
     function showLess(id) {
         const relato = db.find(r => r.id === id);
         const descricaoElement = document.getElementById(`descricao-${id}`);
-
+    
         if (descricaoElement) {
-            descricaoElement.innerHTML = relato.descricao.substring(0, 100) + `... <span class="show-more" onclick="RelatosApp.showMore(${id})">Ver mais</span>`;
+            descricaoElement.innerHTML = `
+                ${relato.descricao.substring(0, 100)}...
+                <span class="show-more" data-relato-id="${id}" onclick="RelatosApp.showMore(${id})">Ver mais</span>
+            `;
         }
     }
+    
 
     function contarAnimaisencontrados() {
         fetch(apiPetReunidos)

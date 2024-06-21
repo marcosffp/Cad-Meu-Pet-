@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const togglePassword = document.getElementById('togglePassword');
-    const passwordField = document.getElementById('inputSenha');  // Corrigido aqui
+    const passwordField = document.getElementById('inputSenha');
 
     togglePassword.addEventListener('click', function () {
         const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -22,11 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('Anunciar').addEventListener('click', verificarLogin);
     document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
 
-    document.getElementById("btnLogin").addEventListener("click", login);
+    document.getElementById("btnLogin").addEventListener("click", function (event) {
+        event.preventDefault();
+        login();
+    });
 });
 
 async function login() {
-    const senha = document.getElementById('inputSenha').value;  // Corrigido aqui
+    const senha = document.getElementById('inputSenha').value;
     const email = document.getElementById('inputEmail').value;
 
     try {
@@ -64,7 +67,7 @@ async function login() {
     }
 }
 
-async function verificarLogin(event) {
+function verificarLogin(event) {
     const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
     if (!user) {
         event.preventDefault();

@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             const response = await fetch(updateUrl, {
-                method: 'PUT',
+                method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
                 },

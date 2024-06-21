@@ -289,7 +289,7 @@ color: var(--cor0);
   margin-bottom: 10px;
 }
 
-.show-more {
+.show-more, .show-less {
   color: #007bff;
   cursor: pointer;
   margin-left: 5px;
@@ -369,8 +369,9 @@ font-weight: normal;
 
 .card-text {
 margin-bottom: 15px; /* Espaçamento entre os parágrafos */
-overflow: hidden; /* Evita que o texto transborde */
-text-overflow: ellipsis; /* Adiciona reticências para texto longo */
+/* overflow: hidden; Evita que o texto transborde */
+word-break: break-all;
+word-wrap: break-word;
 display: -webkit-box;
 -webkit-line-clamp: 3; /* Mostra apenas 3 linhas de texto */
 -webkit-box-orient: vertical;
