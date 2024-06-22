@@ -165,6 +165,11 @@ main {
   border: 2px solid var(--cor4);
 }
 
+#inputDescricao:focus{
+  border-color: var(--cor3);
+  box-shadow: 0 0 5px var(--cor3);
+}
+
 .input-group input {
   border: 2px solid var(--cor4);
 }
@@ -179,7 +184,6 @@ main {
   border-radius: 5px;
   font-size: 20px;
   font-family: var(--fonte-padrao);
-  font-weight: bolder;
   background-color: var(--cor4);
   color: var(--cor0);
   border: none;
@@ -194,7 +198,6 @@ main {
   border-radius: 5px;
   font-size: 20px;
   font-family: var(--fonte-padrao);
-  font-weight: bolder;
   background-color: var(--cor3);
   color: var(--cor0);
   border: none;

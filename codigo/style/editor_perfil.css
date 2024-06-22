@@ -162,27 +162,32 @@ h2 {
   box-shadow: 0 0 5px var(--cor3);
 }
 
-.btn-primary {
+#btnSalvar {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
   background-color: var(--cor4);
-  border-color: var(--cor4);
-}
-
-.btn-primary:hover {
-  background-color: var(--cor5);
-  border-color: var(--cor5);
-}
-
-.btn-logout {
-  background-color: #dc3545;
-  color: white;
+  color: var(--cor0);
   border: none;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
 }
 
-.btn-logout:hover {
-  background-color: #c82333;
+#btnSalvar:hover {
+  background-color: var(--cor3);
+}
+
+#btnLogout {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
+  background-color: red;
+  color: var(--cor0);
+  border: none;
+}
+
+#btnLogout:hover {
+  background-color: rgb(194, 5, 5);
 }
 
 .text-center a {

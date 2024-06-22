@@ -183,34 +183,32 @@ main {
 
 .d-grid {
   margin-top: 20px;
-}
-
-.btn {
-  font-size: 18px;
-}
-
-.btn-success {
+}#btnInsert {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
   background-color: var(--cor4);
   color: var(--cor0);
   border: none;
 }
 
-.btn-success:hover {
+#btnInsert:hover {
   background-color: var(--cor3);
 }
 
-.btn-secondary {
+#btnClear {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
   background-color: var(--cor3);
   color: var(--cor0);
   border: none;
 }
 
-.btn-secondary:hover {
+#btnClear:hover {
   background-color: var(--cor4);
-}
-
-.text-center {
-  margin-top: 20px;
 }
 
 .text-center a {
@@ -220,7 +218,6 @@ main {
 .text-center a:hover {
   color: var(--cor3);
 }
-
 .rodape {
   color: var(--cor0);
   padding: 40px 0;

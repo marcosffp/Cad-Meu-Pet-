@@ -1,28 +1,13 @@
+const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
+const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
+
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
-    const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
 
-    menuIcon.addEventListener("click", function () {
-        menu.classList.toggle("active");
-    });
-    init();
-
-    updateCadastroButton();
-
-    const anunciarLink = document.getElementById('Anunciar');
-    const cadastrarLink = document.getElementById('Cadastrar');
-
-    if (anunciarLink) {
-        anunciarLink.addEventListener('click', verificarLogin);
-    }
-
-    if (cadastrarLink) {
-        cadastrarLink.addEventListener('click', verificarLogin);
-    }
-
     const btnInsert = document.getElementById("btnInsert");
+    const formCadastro = document.getElementById("form-contato"); // Definindo a variável formCadastro
+
     btnInsert.addEventListener('click', function (event) {
         event.preventDefault();
 
@@ -129,8 +114,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function init() {
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".mobile-menu-icon button");
+    const menu = document.querySelector(".menu");
+  
+    menuIcon.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  
+    init();
+});
+  
+document.addEventListener("DOMContentLoaded", function () {
+    init();
+  
+    updateCadastroButton();
+  
+    document.getElementById('Anunciar').addEventListener('click', verificarLogin);
+    document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
+});
+
+function init() {}
 
 async function verificarLogin(event) {
     const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
@@ -149,6 +153,7 @@ function updateCadastroButton() {
         if (user) {
             btnCadastrar.textContent = 'Logado';
             btnCadastrar.href = '../html/editor_perfil.html';
+        } else {
             btnCadastrar.textContent = 'Cadastrar';
             btnCadastrar.href = '../html/cadastro_usuario.html';
         }
@@ -181,8 +186,8 @@ function validatePassword(password) {
     return passwordValidation;
 }
 
-function createUsuario(usuario) {
-    fetch(apiUrl, {
+async function createUsuario(usuario) {
+    await fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

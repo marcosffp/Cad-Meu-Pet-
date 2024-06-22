@@ -132,10 +132,9 @@ body {
   background-color: transparent;
 }
 
-h1 {
+h2 {
   font-weight: bolder;
-  color: var(--cor4);
-  margin-left: 30px;
+  color: var(--cor3);
 }
 
 .form-box {
@@ -162,24 +161,32 @@ h1 {
   box-shadow: 0 0 5px var(--cor3);
 }
 
-.btn-success {
+#btnInsert {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
   background-color: var(--cor4);
-  border-color: var(--cor4);
+  color: var(--cor0);
+  border: none;
 }
 
-.btn-success:hover {
-  background-color: var(--cor5);
-  border-color: var(--cor5);
-}
-
-.btn-secondary {
+#btnInsert:hover {
   background-color: var(--cor3);
-  border-color: var(--cor3);
 }
 
-.btn-secondary:hover {
-  background-color: var(--cor2);
-  border-color: var(--cor2);
+#btnClear {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
+  background-color: var(--cor3);
+  color: var(--cor0);
+  border: none;
+}
+
+#btnClear:hover {
+  background-color: var(--cor4);
 }
 
 .text-center a {
@@ -189,6 +196,7 @@ h1 {
 .text-center a:hover {
   color: var(--cor3);
 }
+
 
 .rodape {
   color: var(--cor0);

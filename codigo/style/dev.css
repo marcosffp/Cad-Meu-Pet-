@@ -269,8 +269,12 @@ body {
 .relatos .btn-danger,
 .relatos .btn-warning,
 .relatos .btn-info {
-  padding: 8px 16px;
-  font-size: 14px;
+  font-family: var(--fonte-padrao);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: var(--cor0);
+  border: none;
 }
 
 .relatos .btn-danger:hover,
@@ -278,6 +282,19 @@ body {
 .relatos .btn-info:hover {
   opacity: 0.8;
 }
+
+.relatos .btn-danger:active {
+  background-color: rgb(194, 5, 5); /* Cor de fundo desejada quando clicado */
+}
+.relatos .btn-warning:active {
+  background-color: var(--cor3); /* Cor de fundo desejada quando clicado */
+}
+
+.relatos .btn-info:active {
+  background-color: var(--cor4); /* Cor de fundo desejada quando clicado */
+}
+
+
 
 .rodape {
   color: var(--cor0);

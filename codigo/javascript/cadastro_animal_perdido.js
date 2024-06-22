@@ -1,5 +1,4 @@
-function init() {
-}
+function init() {}
 
 document.addEventListener("DOMContentLoaded", async function () {
   const apiUrl = "https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos";
@@ -26,6 +25,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     if (!status || !especie || !genero || !nome || !endereco || !descricao || !imagemUrl || !contato) {
       return alert("Por favor, preencha todos os campos");
+    }
+
+    if (!validateContact(contato)) {
+      return alert("Por favor, insira um email ou número de telefone válido");
     }
 
     try {
@@ -100,6 +103,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   menuIcon.addEventListener("click", function () {
     menu.classList.toggle("active");
   });
+  
   updateCadastroButton();
 
   const anunciarLink = document.getElementById('Anunciar');
@@ -112,6 +116,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   if (cadastrarLink) {
     cadastrarLink.addEventListener('click', verificarLogin);
   }
+
+  addEditAndDeleteButtons();
 });
 
 async function verificarLogin(event) {
@@ -136,4 +142,35 @@ function updateCadastroButton() {
       btnCadastrar.href = '../html/cadastro_usuario.html';
     }
   }
+}
+
+function validateContact(contact) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\+?[1-9]\d{1,14}$/;
+
+  return emailRegex.test(contact) || phoneRegex.test(contact);
+}
+
+function addEditAndDeleteButtons() {
+  const userId = localStorage.getItem('userId');
+  if (!userId) {
+    return;
+  }
+
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    const cardUserId = card.getAttribute('data-user-id');
+    if (cardUserId === userId) {
+      const editButton = document.createElement("button");
+      editButton.textContent = "Editar";
+      editButton.classList.add("edit-button");
+
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Excluir";
+      deleteButton.classList.add("delete-button");
+
+      card.appendChild(editButton);
+      card.appendChild(deleteButton);
+    }
+  });
 }

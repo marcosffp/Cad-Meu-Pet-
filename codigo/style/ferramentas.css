@@ -86,7 +86,7 @@ body {
 }
 
 #Anunciar a,
-#Cadastrar a {
+#Cadastrar a, #CriarAnuncioPet a {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 20px;
@@ -96,12 +96,12 @@ body {
   font-weight: bolder;
 }
 
-#Anunciar a {
+#Anunciar a, #CriarAnuncioPet a{
   background-color: var(--cor5);
   color: var(--cor0);
 }
 
-#Anunciar a:hover {
+#Anunciar a:hover, #CriarAnuncioPet a:hover {
   background-color: var(--cor4);
 }
 
@@ -307,12 +307,6 @@ h1 {
 
   .menu li a:hover {
     color: var(--cor0);
-  }
-
-  .carrosel {
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
   }
 
   .mobile-menu-icon {

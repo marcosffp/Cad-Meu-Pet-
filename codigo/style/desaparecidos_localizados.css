@@ -170,7 +170,8 @@ main {
 }
 
 .btnFiltrar,
-.btnResetar {
+.btnResetar,
+.SeusAnuncios {
   background-color: var(--cor5);
   color: var(--cor0);
   padding: 10px 20px;
@@ -185,7 +186,8 @@ main {
 }
 
 .btnFiltrar:hover,
-.btnResetar:hover {
+.btnResetar:hover,
+.SeusAnuncios:hover {
   background-color: var(--cor6);
 }
 
@@ -394,12 +396,13 @@ main {
   .filters {
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 0;
+    border-radius: 5px;
     padding: 10px;
   }
 
   .btnFiltrar,
-  .btnResetar {
+  .btnResetar,
+  .SeusAnuncios {
     width: 100%;
     margin-right: 0;
     margin-top: 5px;
