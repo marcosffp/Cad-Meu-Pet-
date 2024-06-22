@@ -1,4 +1,3 @@
-/* Reset de estilos globais */
 * {
   padding: 0;
   margin: 0;
@@ -131,15 +130,11 @@ body {
   background-color: transparent;
 }
 
-
-/* Estilos gerais para o conteúdo principal */
 main {
   display: flex;
   padding: 20px;
 }
 
-
-/* Estilo para a barra de filtro */
 .filters {
   width: 250px;
   padding: 20px;
@@ -269,70 +264,67 @@ main {
   color: white;
 }
 
-/* Estilo específico para o botão Excluir */
 .pet-info .btn-danger {
   margin-left: auto;
 }
 
-  /* Rodapé */
-  .rodape {
-    color: var(--cor0);
-    padding: 40px 0;
-  }
+.rodape {
+  color: var(--cor0);
+  padding: 40px 0;
+}
 
-  .container-rodape {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+.container-rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  .informacoes,
-  .links-uteis,
-  .redes-sociais {
-    flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
-    text-align: center;
-    color: var(--cor6);
-    margin-bottom: 30px; /* Espaço entre os elementos */
-  }
+.informacoes,
+.links-uteis,
+.redes-sociais {
+  flex-basis: 100%;
+  text-align: center;
+  color: var(--cor6);
+  margin-bottom: 30px;
+}
 
-  .rodape p,
-  .rodape h4 {
-    color: var(--cor5);
-    margin-bottom: 20px;
-  }
+.rodape p,
+.rodape h4 {
+  color: var(--cor5);
+  margin-bottom: 20px;
+}
 
-  .rodape ul {
-    list-style: none;
-    padding: 0;
-  }
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .rodape li {
-    margin-bottom: 10px;
-  }
+.rodape li {
+  margin-bottom: 10px;
+}
 
-  .rodape a {
-    color: var(--cor6);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.rodape a {
+  color: var(--cor6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  .rodape a:hover {
-    color: var(--cor4);
-  }
+.rodape a:hover {
+  color: var(--cor4);
+}
 
-  .rodape hr {
-    margin: 20px 0;
-    border: 1px solid var(--cor6);
-  }
+.rodape hr {
+  margin: 20px 0;
+  border: 1px solid var(--cor6);
+}
 
-  .direitos-autorais {
-    text-align: center;
-    font-size: 12px;
-  }
+.direitos-autorais {
+  text-align: center;
+  font-size: 12px;
+}
 
-/* Estilos responsivos */
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
@@ -361,12 +353,11 @@ main {
     min-height: 0;
   }
 
-  #Anunciar a{
+  #Anunciar a {
     margin-bottom: 5px;
     background-color: var(--cor4);
     border-right: 20px;
   }
-
 
   .menu.active {
     height: 450px;

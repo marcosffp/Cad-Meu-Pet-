@@ -4,36 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
 
-    // Função para inicializar o menu mobile
     menuIcon.addEventListener("click", function () {
         menu.classList.toggle("active");
     });
-
-    // Chamar a função init() após o carregamento do DOM
     init();
 
-    // Adicionar evento aos botões de toggle do FAQ
-    const toggleButtons = document.querySelectorAll(".toggle-btn");
-
-    toggleButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const contentId = this.getAttribute("data-toggle");
-            const content = document.getElementById(contentId);
-
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-                this.textContent = "-";
-            } else {
-                content.style.display = "none";
-                this.textContent = "+";
-            }
-        });
-    });
-
-    // Atualizar botão de cadastro ao carregar a página
     updateCadastroButton();
 
-    // Verificar login ao clicar nos links importantes
     const anunciarLink = document.getElementById('Anunciar');
     const cadastrarLink = document.getElementById('Cadastrar');
 
@@ -45,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         cadastrarLink.addEventListener('click', verificarLogin);
     }
 
-    // Evento do botão de inserção
     const btnInsert = document.getElementById("btnInsert");
     btnInsert.addEventListener('click', function (event) {
         event.preventDefault();
@@ -107,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-    // Toggle password visibility
     const togglePassword = document.getElementById('togglePassword');
     const passwordField = document.getElementById('inputSenha');
     const passwordValidation = document.getElementById('passwordValidation');
@@ -155,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function init() {
-    // Implementação da função init(), se houver
 }
 
 async function verificarLogin(event) {
@@ -174,10 +148,9 @@ function updateCadastroButton() {
     if (btnCadastrar) {
         if (user) {
             btnCadastrar.textContent = 'Logado';
-            btnCadastrar.href = '../html/editor_perfil.html'; // Link de exemplo, você pode ajustar conforme necessário
-        } else {
+            btnCadastrar.href = '../html/editor_perfil.html';
             btnCadastrar.textContent = 'Cadastrar';
-            btnCadastrar.href = '../html/cadastro_usuario.html'; // Link de exemplo, você pode ajustar conforme necessário
+            btnCadastrar.href = '../html/cadastro_usuario.html';
         }
     }
 }
@@ -216,21 +189,21 @@ function createUsuario(usuario) {
         },
         body: JSON.stringify(usuario),
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao cadastrar usuário');
-        }
-        return response.json();
-    })
-    .then(data => {
-        localStorage.setItem('userId', data.id);
-        localStorage.setItem('userName', data.nome);
-        localStorage.setItem('userEmail', data.email);
-        displayMessage("Usuário cadastrado com sucesso");
-        window.location.href = "../html/home.html";
-    })
-    .catch(error => {
-        console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-        displayMessage("Erro ao cadastrar usuário");
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao cadastrar usuário');
+            }
+            return response.json();
+        })
+        .then(data => {
+            localStorage.setItem('userId', data.id);
+            localStorage.setItem('userName', data.nome);
+            localStorage.setItem('userEmail', data.email);
+            displayMessage("Usuário cadastrado com sucesso");
+            window.location.href = "../html/home.html";
+        })
+        .catch(error => {
+            console.error('Erro ao cadastrar usuário via API JSONServer:', error);
+            displayMessage("Erro ao cadastrar usuário");
+        });
 }

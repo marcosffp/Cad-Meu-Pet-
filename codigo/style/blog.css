@@ -5,8 +5,6 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   --cor0: #f9f9fa;
   --cor1: #AED1D1;
@@ -146,39 +144,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Adicionando espaçamento entre os elementos */
 }
 
 .image-container {
   max-width: 50%;
-  /* Limitando a largura da imagem para ocupar metade do espaço */
   flex: 0 0 auto;
-  /* Fazendo com que a largura da imagem não se estenda */
   margin-right: 20px;
-  /* Adicionando margem entre a imagem e o texto */
 }
 
 .banner img {
   width: 100%;
-  /* Fazendo a imagem ocupar todo o espaço disponível dentro do contêiner */
   height: auto;
-  /* Tornando a altura automática */
   border-radius: 10px;
 }
 
 .text-container {
   flex: 1;
   padding-right: 30px;
-  /* Fazendo com que o container de texto ocupe o espaço restante */
 }
 
 .banner h2 {
-  font-size: 2rem; /* Aumenta a fonte dos títulos */
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .banner p {
-  font-size: 1.125rem; /* Aumenta a fonte dos parágrafos */
+  font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -190,7 +181,7 @@ body {
 .banner .btn {
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 1.2rem; /* Aumenta a fonte dos botões */
+  font-size: 1.2rem;
   font-family: var(--fonte-padrao);
   font-weight: bolder;
   background-color: var(--cor4);
@@ -208,63 +199,62 @@ body {
   background-color: var(--cor5);
 }
 
-  /* Rodapé */
-  .rodape {
-    color: var(--cor0);
-    padding: 40px 0;
-  }
+.rodape {
+  color: var(--cor0);
+  padding: 40px 0;
+}
 
-  .container-rodape {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+.container-rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  .informacoes,
-  .links-uteis,
-  .redes-sociais {
-    flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
-    text-align: center;
-    color: var(--cor6);
-    margin-bottom: 30px; /* Espaço entre os elementos */
-  }
+.informacoes,
+.links-uteis,
+.redes-sociais {
+  flex-basis: 100%;
+  text-align: center;
+  color: var(--cor6);
+  margin-bottom: 30px;
+}
 
-  .rodape p,
-  .rodape h4 {
-    color: var(--cor5);
-    margin-bottom: 20px;
-  }
+.rodape p,
+.rodape h4 {
+  color: var(--cor5);
+  margin-bottom: 20px;
+}
 
-  .rodape ul {
-    list-style: none;
-    padding: 0;
-  }
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .rodape li {
-    margin-bottom: 10px;
-  }
+.rodape li {
+  margin-bottom: 10px;
+}
 
-  .rodape a {
-    color: var(--cor6);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.rodape a {
+  color: var(--cor6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  .rodape a:hover {
-    color: var(--cor4);
-  }
+.rodape a:hover {
+  color: var(--cor4);
+}
 
-  .rodape hr {
-    margin: 20px 0;
-    border: 1px solid var(--cor6);
-  }
+.rodape hr {
+  margin: 20px 0;
+  border: 1px solid var(--cor6);
+}
 
-  .direitos-autorais {
-    text-align: center;
-    font-size: 12px;
-  }
+.direitos-autorais {
+  text-align: center;
+  font-size: 12px;
+}
 
 @media screen and (max-width: 768px) {
   .cabecalho {
@@ -291,7 +281,7 @@ body {
     min-height: 0;
   }
 
-  #Anunciar a{
+  #Anunciar a {
     margin-bottom: 5px;
     background-color: var(--cor4);
     border-right: 20px;
@@ -332,7 +322,7 @@ body {
 
   .banner {
     flex-direction: column-reverse;
-    /* Alterna a direção da coluna em telas menores */
+
   }
 
   .banner .container {
@@ -357,6 +347,6 @@ body {
     font-size: 1rem;
     margin-bottom: 10px;
     margin-left: 100px;
-   
+
   }
 }

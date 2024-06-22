@@ -64,15 +64,14 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
         (!filterLocalizacao || pet.endereco.toLowerCase().includes(filterLocalizacao.toLowerCase()))
     );
     const userId = parseInt(localStorage.getItem('userId'));
-    // Restante do código para exibir os pets filtrados...
     filteredPets.forEach((pet) => {
       const content = document.createElement("div");
       content.classList.add("pet-card");
-      content.setAttribute("data-id", pet.id);  // Adicione o ID como um atributo
+      content.setAttribute("data-id", pet.id);
 
       const petImage = document.createElement("img");
       petImage.src = pet.imagemUrl;
-      petImage.alt = `Imagem de ${pet.nome}`; // Alt para acessibilidade
+      petImage.alt = `Imagem de ${pet.nome}`;
 
       const box = document.createElement("div");
       box.classList.add("pet-info");
@@ -103,7 +102,6 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
       box.appendChild(contacts);
       box.appendChild(status);
 
-      // Adicionando os botões de editar e excluir se o usuário for o dono do relato
       if (pet.userId === userId) {
         const editDeleteContainer = document.createElement("div");
         editDeleteContainer.classList.add("edit-delete-container");
@@ -137,7 +135,7 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
           }
         });
         editDeleteContainer.appendChild(deleteButton);
-        box.appendChild(editDeleteContainer); // Adicionando o container com os botões
+        box.appendChild(editDeleteContainer);
       }
 
       content.appendChild(petImage);
@@ -162,7 +160,7 @@ async function updatePet(id, pet) {
     const data = await response.json();
     console.log("Anúncio alterado com sucesso:", data);
     displayMessage("Anúncio alterado com sucesso");
-    updatePetCard(id, pet);  // Atualiza o card sem recarregar a página
+    updatePetCard(id, pet);
   } catch (error) {
     console.error('Erro ao atualizar Anúncio via API JSONServer:', error);
     displayMessage("Erro ao atualizar Anúncio");
@@ -183,7 +181,7 @@ async function deletePet(id, refreshFunction) {
     usersData.forEach(async (user) => {
       const index = user.animais_perdidos.indexOf(id);
       if (index !== -1) {
-        user.animais_perdidos.splice(index, 1); // Remove o ID da lista animais_perdidos
+        user.animais_perdidos.splice(index, 1);
         try {
           const updateUserResponse = await fetch(`${usersApiUrl}/${user.id}`, {
             method: 'PUT',
@@ -209,8 +207,8 @@ async function deletePet(id, refreshFunction) {
 async function verificarLogin(event) {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
   if (!user) {
-    event.preventDefault(); // Prevenir o comportamento padrão de navegação
-    window.location.href = '../html/cadastro_usuario.html'; // Redirecionar para a página de cadastro de usuário
+    event.preventDefault();
+    window.location.href = '../html/cadastro_usuario.html';
   }
 }
 
@@ -227,11 +225,10 @@ function updateCadastroButton() {
 }
 
 function displayMessage(message) {
-  console.log(message); // Lógica para exibir mensagens para o usuário, como um alerta ou uma área dedicada na página.
+  console.log(message);
 }
 
 function init() {
-  // Qualquer lógica de inicialização adicional pode ser adicionada aqui
 }
 
 function updatePetCard(id, updatedPet) {

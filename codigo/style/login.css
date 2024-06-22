@@ -1,4 +1,3 @@
-/* Reset CSS */
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Variables */
 :root {
   --cor0: #f9f9fa;
   --cor1: #AED1D1;
@@ -19,7 +17,6 @@
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-/* Global Styles */
 html {
   font-size: 1em;
 }
@@ -30,7 +27,6 @@ body {
   font-family: var(--fonte-destaque);
 }
 
-/* Header Styles */
 .cabecalho {
   color: var(--cor3);
   display: flex;
@@ -136,7 +132,6 @@ body {
   background-color: transparent;
 }
 
-/* Form Styles */
 h1 {
   font-weight: bolder;
   color: var(--cor4);
@@ -195,7 +190,6 @@ h1 {
   color: var(--cor3);
 }
 
-/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
@@ -212,10 +206,10 @@ h1 {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
+  flex-basis: 100%;
   text-align: center;
   color: var(--cor6);
-  margin-bottom: 30px; /* Espaço entre os elementos */
+  margin-bottom: 30px;
 }
 
 .rodape p,

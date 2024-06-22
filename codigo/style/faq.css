@@ -5,8 +5,6 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   --cor0: #f9f9fa;
   --cor1: #AED1D1;
@@ -19,8 +17,6 @@
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-
-
 html {
   font-size: 1em;
 }
@@ -30,8 +26,6 @@ body {
   background-color: var(--cor0);
   font-family: var(--fonte-destaque);
 }
-
-
 
 .cabecalho {
   color: var(--cor3);
@@ -135,22 +129,20 @@ body {
 .mobile-menu-icon button {
   background-color: transparent;
 }
-/* Adiciona borda de cor cor4 em cada section */
+
 section.faq {
   border-radius: 10px;
 }
 
-/* Organiza duas sections em cada linha */
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Espaçamento entre as sections */
+  justify-content: space-between;
 }
 
-/* Estilos para cada FAQ */
 .faq {
-  flex-basis: calc(50% - 20px); /* 50% de largura com espaço de 20px entre elas */
-  margin: 10px; /* Espaçamento entre as sections */
+  flex-basis: calc(50% - 20px);
+  margin: 10px;
 }
 
 .toggle-btn {
@@ -163,13 +155,11 @@ main {
   border-radius: 5px;
 }
 
-/* Estilo para o conteúdo expandido/colapsado */
 .faq-content {
   display: none;
   margin-top: 10px;
 }
 
-/* Adicione estilos para o cabeçalho da FAQ */
 .faq-header {
   display: flex;
   justify-content: space-between;
@@ -182,65 +172,62 @@ main {
   color: var(--cor4);
 }
 
+.rodape {
+  color: var(--cor0);
+  padding: 40px 0;
+}
 
+.container-rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  /* Rodapé */
-  .rodape {
-    color: var(--cor0);
-    padding: 40px 0;
-  }
+.informacoes,
+.links-uteis,
+.redes-sociais {
+  flex-basis: 100%;
+  text-align: center;
+  color: var(--cor6);
+  margin-bottom: 30px;
+}
 
-  .container-rodape {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+.rodape p,
+.rodape h4 {
+  color: var(--cor5);
+  margin-bottom: 20px;
+}
 
-  .informacoes,
-  .links-uteis,
-  .redes-sociais {
-    flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
-    text-align: center;
-    color: var(--cor6);
-    margin-bottom: 30px; /* Espaço entre os elementos */
-  }
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .rodape p,
-  .rodape h4 {
-    color: var(--cor5);
-    margin-bottom: 20px;
-  }
+.rodape li {
+  margin-bottom: 10px;
+}
 
-  .rodape ul {
-    list-style: none;
-    padding: 0;
-  }
+.rodape a {
+  color: var(--cor6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  .rodape li {
-    margin-bottom: 10px;
-  }
+.rodape a:hover {
+  color: var(--cor4);
+}
 
-  .rodape a {
-    color: var(--cor6);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.rodape hr {
+  margin: 20px 0;
+  border: 1px solid var(--cor6);
+}
 
-  .rodape a:hover {
-    color: var(--cor4);
-  }
-
-  .rodape hr {
-    margin: 20px 0;
-    border: 1px solid var(--cor6);
-  }
-
-  .direitos-autorais {
-    text-align: center;
-    font-size: 12px;
-  }
+.direitos-autorais {
+  text-align: center;
+  font-size: 12px;
+}
 
 @media screen and (max-width: 768px) {
   .cabecalho {
@@ -267,12 +254,11 @@ main {
     min-height: 0;
   }
 
-  #Anunciar a{
+  #Anunciar a {
     margin-bottom: 5px;
     background-color: var(--cor4);
     border-right: 20px;
   }
-
 
   .menu.active {
     height: 450px;
@@ -295,7 +281,6 @@ main {
     color: var(--cor0);
   }
 
-
   .mobile-menu-icon {
     display: block;
     font-size: 30px;
@@ -308,21 +293,20 @@ main {
   }
 
   main {
-    flex-direction: column; /* Empilhar as sections uma sobre a outra */
-    align-items: stretch; /* Esticar para ocupar a largura total */
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .faq {
-    flex-basis: calc(100% - 20px); /* Ocupa 100% da largura com espaço de 20px entre elas */
+    flex-basis: calc(100% - 20px);
   }
 
   .toggle-btn {
-    font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
-    padding: 5px 8px; /* Espaçamento menor nos botões */
+    font-size: 16px;
+    padding: 5px 8px;
   }
 
   .faq-content {
-    display: block; /* Mostra o conteúdo por padrão em telas menores */
+    display: block;
   }
-
 }

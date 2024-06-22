@@ -136,111 +136,93 @@ body {
   background-color: transparent;
 }
 
-
-/* Define estilos para o título h1 */
-.container h1 {
-  text-align: center;
-  /* Centraliza o texto */
-  margin-top: 20px;
+h2 {
   font-weight: bolder;
-  color: var(--cor4);
-  margin-left: 30px;
-  display: inline-block;
+  color: var(--cor3);
 }
 
-/* Define estilos para o elemento main */
 main {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Define estilos para os botões do formulário */
-#btnInsert,
-#btnUpdate,
-#btnDelete,
+.form-box {
+  background-color: var(--cor0);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 20%);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-group-text {
+  background-color: var(--cor4);
+  border: none;
+  color: var(--cor0);
+}
+
+#inputDescricao {
+  border: 2px solid var(--cor4);
+}
+
+.input-group input {
+  border: 2px solid var(--cor4);
+}
+
+.input-group input:focus {
+  border-color: var(--cor3);
+  box-shadow: 0 0 5px var(--cor3);
+}
+
+#btnInsert {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--fonte-padrao);
+  font-weight: bolder;
+  background-color: var(--cor4);
+  color: var(--cor0);
+  border: none;
+}
+
+#btnInsert:hover {
+  background-color: var(--cor3);
+}
+
 #btnClear {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 20px;
   font-family: var(--fonte-padrao);
   font-weight: bolder;
-}
-
-/* Define estilos para o botão Inserir */
-#btnInsert {
-  background-color: var(--cor4);
-  color: var(--cor0);
-  border: none;
-}
-
-/* Define estilos para o botão Inserir quando hover */
-#btnInsert:hover {
-  background-color: var(--cor5);
-}
-
-/* Define estilos para o botão Alterar */
-#btnUpdate {
   background-color: var(--cor3);
   color: var(--cor0);
   border: none;
 }
 
-/* Define estilos para o botão Alterar quando hover */
-#btnUpdate:hover {
-  background-color: var(--cor1);
-  color: var(--cor6);
-}
-
-/* Define estilos para o botão Excluir */
-#btnDelete {
-  background-color: var(--cor6);
-  color: var(--cor0);
-  border: none;
-}
-
-/* Define estilos para o botão Excluir quando hover */
-#btnDelete:hover {
-  background-color: var(--cor2);
-  color: var(--cor6);
-}
-
-/* Define estilos para o botão Limpar Form */
-#btnClear {
-  background-color: var(--cor0);
-  color: var(--cor4);
-  border: 2px solid var(--cor4);
-}
-
-/* Define estilos para o botão Limpar Form quando hover */
 #btnClear:hover {
-  background-color: var(--cor3);
+  background-color: var(--cor4);
 }
 
-
-label {
-  font-weight: bolder;
+.text-center a {
+  color: var(--cor4);
 }
+
+.text-center a:hover {
+  color: var(--cor3);
+}
+
 
 ::placeholder {
   color: var(--cor3);
-  opacity: 3;
+  opacity: 0.3;
 }
 
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: var(--cor3);
-}
-
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: var(--cor3);
-  opacity: 3;
-}
 
 #msg {
   height: 60px;
 }
-/* Rodapé */
+
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
@@ -257,10 +239,10 @@ label {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
+  flex-basis: 100%;
   text-align: center;
   color: var(--cor6);
-  margin-bottom: 30px; /* Espaço entre os elementos */
+  margin-bottom: 30px;
 }
 
 .rodape p,
@@ -321,9 +303,10 @@ label {
     overflow: hidden;
     height: 0;
     min-height: 0;
+    z-index: 20;
   }
 
-  #Anunciar a{
+  #Anunciar a {
     margin-bottom: 5px;
     background-color: var(--cor4);
     border-right: 20px;
@@ -351,11 +334,6 @@ label {
     color: var(--cor0);
   }
 
- .carrosel{
-  padding: 0px;
-  margin: 0px;
-  height: 100%;
- }
   .mobile-menu-icon {
     display: block;
     font-size: 30px;
@@ -366,35 +344,20 @@ label {
   .mobile-menu-icon i {
     color: var(--cor4);
   }
-  form .form-group.row {
-    flex-direction: column;
+
+  .form-box {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
   }
 
-  form .form-group.row .col-sm-4,
-  form .form-group.row .col-sm-5,
-  form .form-group.row .col-sm-6,
-  form .form-group.row .col-sm-8 {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  form .form-group.row .col-sm-4 {
-    margin-bottom: 10px;
-  }
-
-  form .form-group.row .col-sm-8 {
-    margin-bottom: 10px;
-  }
-
-  form #msg {
-    height: auto;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-
-  /* Estilo para o botão no formulário em telas menores */
-  form #btnInsert {
-    width: 100%;
-    margin-top: 10px;
+  .form-box #msg {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 40;
   }
 }

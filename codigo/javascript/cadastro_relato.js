@@ -1,6 +1,4 @@
-// Definir a função init() aqui, se necessário
 function init() {
-  // Implementação da função init(), se houver
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -17,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const formRelato = document.getElementById("form-relato");
 
   const btnInsert = document.getElementById("btnInsert");
-  btnInsert.addEventListener('click', function () {
+  btnInsert.addEventListener('click', function (event) {
+    event.preventDefault();
+
     if (!formRelato.checkValidity()) {
       displayMessage("Preencha o formulário corretamente.");
       return;
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
           const alert = msg.querySelector(".alert");
           if (alert) alert.remove();
-        }, 5000);
+        }, 3000);
       }
     });
   });
@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         displayMessage("Relato inserido com sucesso");
         linkRelatoToUser(data.id);
-        window.location.href = "../html/home.html";
       })
       .catch(error => {
         console.error('Erro ao inserir Relato via API JSONServer:', error);
@@ -108,6 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(async (user) => {
+
+        if (!user.relatos) {
+          user.relatos = [];
+        }
         user.relatos.push(relatoId);
 
         return await fetch(`${usersApiUrl}/${user.id}`, {
@@ -123,37 +126,19 @@ document.addEventListener("DOMContentLoaded", function () {
           throw new Error('Erro ao atualizar usuário');
         }
         console.log('Usuário atualizado com sucesso');
+        setTimeout(function () {
+          window.location.href = "../html/home.html";
+        }, 3000);
       })
       .catch(error => {
         console.error('Erro ao atualizar usuário:', error);
       });
   }
-
-  // Chamar a função init() após o carregamento do DOM
   init();
 
-  // Adicionar evento aos botões de toggle do FAQ
-  const toggleButtons = document.querySelectorAll(".toggle-btn");
 
-  toggleButtons.forEach(button => {
-    button.addEventListener("click", function () {
-      const contentId = this.getAttribute("data-toggle");
-      const content = document.getElementById(contentId);
-
-      if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        this.textContent = "-";
-      } else {
-        content.style.display = "none";
-        this.textContent = "+";
-      }
-    });
-  });
-
-  // Atualizar botão de cadastro ao carregar a página
   updateCadastroButton();
 
-  // Verificar login ao clicar nos links importantes
   const anunciarLink = document.getElementById('Anunciar');
   const cadastrarLink = document.getElementById('Cadastrar');
 
@@ -182,10 +167,10 @@ function updateCadastroButton() {
   if (btnCadastrar) {
     if (user) {
       btnCadastrar.textContent = 'Logado';
-      btnCadastrar.href = '../html/editor_perfil.html';// Link de exemplo, você pode ajustar conforme necessário
+      btnCadastrar.href = '../html/editor_perfil.html';
     } else {
       btnCadastrar.textContent = 'Cadastrar';
-      btnCadastrar.href = '../html/cadastro_usuario.html'; // Link de exemplo, você pode ajustar conforme necessário
+      btnCadastrar.href = '../html/cadastro_usuario.html';
     }
   }
 }

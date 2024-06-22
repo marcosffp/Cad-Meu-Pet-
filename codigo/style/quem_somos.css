@@ -5,8 +5,6 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   --cor0: #f9f9fa;
   --cor1: #AED1D1;
@@ -19,8 +17,6 @@
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-
-
 html {
   font-size: 1em;
 }
@@ -30,8 +26,6 @@ body {
   background-color: var(--cor0);
   font-family: var(--fonte-destaque);
 }
-
-
 
 .cabecalho {
   color: var(--cor3);
@@ -59,6 +53,7 @@ body {
 .logo:hover {
   color: var(--cor5);
 }
+
 .menu {
   list-style-type: none;
   display: flex;
@@ -135,7 +130,6 @@ body {
   background-color: transparent;
 }
 
-/* Main Content Styles */
 .main {
   padding-bottom: 50px;
 }
@@ -158,7 +152,6 @@ body {
   padding-left: 20px;
 }
 
-/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
@@ -175,10 +168,10 @@ body {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
+  flex-basis: 100%;
   text-align: center;
   color: var(--cor6);
-  margin-bottom: 30px; /* Espaço entre os elementos */
+  margin-bottom: 30px;
 }
 
 .rodape p,
@@ -216,8 +209,6 @@ body {
   font-size: 12px;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .cabecalho {
     align-items: normal;
@@ -243,12 +234,11 @@ body {
     min-height: 0;
   }
 
-  #Anunciar a{
+  #Anunciar a {
     margin-bottom: 5px;
     background-color: var(--cor4);
     border-right: 20px;
   }
-
 
   .menu.active {
     height: 450px;
@@ -282,37 +272,36 @@ body {
     color: var(--cor4);
   }
 }
-ody {
+
+body {
   font-family: 'Baloo Bhaijaan 2', cursive;
   margin: 0;
   padding: 0;
   color: #333;
 }
 
-
 .container1 {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   color: var(--cor10);
-  background-color: var(--cor9)
-  
+  background-color: var(--cor9);
 }
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.section{
-  color: var(--cor9)
+.section {
+  color: var(--cor9);
 }
 
-.equipe{
+.equipe {
   color: var(--cor10);
 }
 
-/* Header Styles */
 .header {
   background-color: #f2f2f2;
   padding: 10px 0;
@@ -324,7 +313,6 @@ ody {
   margin-bottom: 5px;
 }
 
-/* Main Content Styles */
 .main {
   padding-bottom: 50px;
 }
@@ -348,16 +336,14 @@ ody {
   padding-left: 20px;
 }
 
-/* Imagens responsivas e com dimensões fixas */
 .team-member img {
-  width: 150px; /* Largura fixa para as imagens */
-  height: 150px; /* Altura fixa para as imagens */
-  object-fit: cover; /* Mantém a proporção da imagem e corta se necessário */
-  border-radius: 5%; /* Arredonda as bordas das imagens para formato circular */
-  margin-bottom: 10px; /* Espaçamento abaixo das imagens dos membros da equipe */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5%;
+  margin-bottom: 10px;
 }
 
-/* Responsividade para a seção de equipe */
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -365,15 +351,14 @@ ody {
 }
 
 .team-member {
-  width: 200px; /* Largura dos membros da equipe */
+  width: 200px;
   text-align: center;
-  margin: 0 15px 30px; /* Espaçamento entre membros da equipe */
+  margin: 0 15px 30px;
 }
 
-/* Estilos para a seção de equipe em telas menores */
 @media (max-width: 768px) {
   .team-member {
-      width: 100%; /* Ocupa toda a largura em telas menores */
-      max-width: 250px; /* Limita a largura máxima em telas menores */
+    width: 100%;
+    max-width: 250px;
   }
 }

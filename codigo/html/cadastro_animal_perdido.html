@@ -1,145 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-    <link rel="shortcut icon" href="../img/nova_logo.png" type="image/x-icon">
-    <title>Cadastro do Anúncio</title>
-    <link rel="stylesheet" href="../style/cadastro_animal_perdido.css" />
-  </head>
-  <body>
-    <!-- Cabeçalho do site -->
-    <header class="cabecalho">
-      <a href="../html/home.html" class="logo">
-        <img src="../img/nova_logo.png" alt="Cadê meu pet?">
-        cadê meu pet?
-      </a>
-      <div class="mobile-menu-icon">
-        <button><i class="fa-solid fa-bars"></i></button>
-      </div>
-      <!-- Navegação do site -->
-      <nav class="menu">
-        <ul>
-          <li><a href="../html/home.html">Início</a></li>
-          <li>
-            <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
-          </li>
-          <li><a href="../html/ferramentas.html">Ferramentas</a></li>
-          <li><a href="../html/blog.html">Blog</a></li>
-          <li><a href="../html/faq.html">FAQ</a></li>
-          <li id="Anunciar">
-            <a href="../html/cadastro_animal_perdido.html">Anunciar</a>
-          </li>
-          <li id="Cadastrar"><a href="../html/cadastro_usuario.html">Cadastrar</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="create-ad">
-        <div class="form-container">
-          <h2>Criar anúncio de pet</h2>
-          <p>
-            Crie o anúncio para seu pet para acessar as melhores ferramentas de
-            busca para pets,
-          </p>
-          <p>com eficácia testada e comprovada em todo o Brasil.</p>
-          <img
-            src="../img/pet.jpg"
-            alt="Imagem de interrogação"
-            class="form-image"
-          />
-        </div>
-        <div class="form">
-          <form id="petForm">
-            <h3>Informações básicas sobre o pet</h3>
-            <div class="form-group">
-              <label for="status">Status</label>
-              <select id="status" name="status" required>
-                <option value="desaparecido">desaparecido</option>
-                <option value="encontrado">encontrado</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="especie">Espécie</label>
-              <select id="especie" name="especie" required>
-                <option value="" disabled selected>
-                  Selecione uma espécie
-                </option>
-                <option value="Cachorro">Cachorro</option>
-                <option value="Gato">Gato</option>
-                <option value="Passaro">Pássaro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="genero">Gênero</label>
-              <select id="genero" name="genero" required>
-                <option value="" disabled selected>Selecione um gênero</option>
-                <option value="Macho">Macho</option>
-                <option value="Femea">Fêmea</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="nome">Nome do Pet</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Nome do Pet"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="endereco">Endereço visto pela última vez</label>
-              <input
-                type="text"
-                id="endereco"
-                name="endereco"
-                placeholder="Endereço"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="contatos">Contato</label>
-              <input
-                type="text"
-                id="contatos"
-                name="contatos"
-                placeholder="Telefone ou Email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="descricao">Descrição</label>
-              <textarea
-                id="descricao"
-                name="descricao"
-                placeholder="Informações que diferenciam o pet"
-                required
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <label for="imagemUrl">URL da Imagem do Pet</label>
-              <input
-                type="url"
-                id="imagemUrl"
-                name="imagemUrl"
-                placeholder="https://example.com/image.jpg"
-                required
-              />
-            </div>
-            <button id="submit" type="submit">Crie seu anúncio</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <!-- Rodapé -->
 
-  <!--Rodapé-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="../img/nova_logo.png" type="image/x-icon">
+  <title>Cadastro do Anúncio</title>
+  <link rel="stylesheet" href="../style/cadastro_animal_perdido.css" />
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="../html/home.html" class="logo">
+      <img src="../img/nova_logo.png" alt="Cadê meu pet?">
+      cadê meu pet?
+    </a>
+    <div class="mobile-menu-icon">
+      <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="../html/home.html">Início</a></li>
+        <li>
+          <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
+        </li>
+        <li><a href="../html/ferramentas.html">Ferramentas</a></li>
+        <li><a href="../html/blog.html">Blog</a></li>
+        <li><a href="../html/faq.html">FAQ</a></li>
+        <li id="Anunciar">
+          <a href="../html/cadastro_animal_perdido.html">Anunciar</a>
+        </li>
+        <li id="Cadastrar"><a href="../html/cadastro_usuario.html">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="create-ad">
+      <div class="form">
+        <form id="form-relato" class="form-box">
+          <h2 class="text-center">Cadastro do Anúncio</h2>
+
+          <div class="row mb-3">
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-info-circle"></i></span>
+                <select id="status" name="status" class="form-select" required>
+                  <option value="" disabled selected>Selecione o status</option>
+                  <option value="desaparecido">Desaparecido</option>
+                  <option value="encontrado">Encontrado</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-paw"></i></span>
+                <select id="especie" name="especie" class="form-select" required>
+                  <option value="" disabled selected>Selecione uma espécie</option>
+                  <option value="Cachorro">Cachorro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Passaro">Pássaro</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                <select id="genero" name="genero" class="form-select" required>
+                  <option value="" disabled selected>Selecione um gênero</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Femea">Fêmea</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <input type="text" class="form-control" id="inputNome" name="nome" placeholder="Nome do Pet" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                <input type="text" class="form-control" id="inputEndereco" name="endereco"
+                  placeholder="Endereço visto pela última vez" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                <input type="text" class="form-control" id="inputContato" name="contatos"
+                  placeholder="Telefone ou Email" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-file-alt"></i></span>
+                <textarea class="form-control" id="inputDescricao" name="descricao" placeholder="Descrição"
+                  required></textarea>
+              </div>
+            </div>
+            <div class="col">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-image"></i></span>
+                <input type="url" class="form-control" id="inputImagemUrl" name="imagemUrl"
+                  placeholder="URL da Imagem do Pet" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+            <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
   <footer class="rodape">
     <hr />
     <div class="container-rodape">
@@ -162,7 +155,6 @@
         </ul>
       </div>
 
-      <!-- Seção de redes sociais -->
       <div class="redes-sociais">
         <h4>Redes Sociais</h4>
         <ul>
@@ -179,7 +171,8 @@
       &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
     </p>
   </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../javascript/cadastro_animal_perdido.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../javascript/cadastro_animal_perdido.js"></script>
+</body>
+
 </html>

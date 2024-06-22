@@ -1,3 +1,6 @@
+
+function init() {
+}
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
@@ -87,6 +90,3 @@ function updateCadastroButton() {
     }
 }
 
-function init() {
-    // Implementação da função init(), se houver
-}

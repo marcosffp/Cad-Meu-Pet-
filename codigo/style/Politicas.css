@@ -5,8 +5,6 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   --cor0: #f9f9fa;
   --cor1: #AED1D1;
@@ -19,8 +17,6 @@
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-
-
 html {
   font-size: 1em;
 }
@@ -31,8 +27,6 @@ body {
   font-family: var(--fonte-destaque);
 }
 
-
-
 .cabecalho {
   color: var(--cor3);
   display: flex;
@@ -42,9 +36,11 @@ body {
   margin-top: 10px;
   padding-bottom: 20px;
 }
+
 .logo:hover {
   color: var(--cor5);
 }
+
 .logo {
   color: var(--cor4);
   text-decoration: none;
@@ -134,7 +130,6 @@ body {
   background-color: transparent;
 }
 
-
 .header h1 {
   font-size: 2em;
   margin-bottom: 5px;
@@ -145,7 +140,6 @@ body {
   color: #666;
 }
 
-/* Main Content Styles */
 .main {
   margin-top: 10px;
   padding-bottom: 50px;
@@ -171,8 +165,6 @@ body {
   padding-left: 20px;
 }
 
-
-/* Rodapé */
 .rodape {
   color: var(--cor0);
   padding: 40px 0;
@@ -189,10 +181,10 @@ body {
 .informacoes,
 .links-uteis,
 .redes-sociais {
-  flex-basis: 100%; /* Para ocupar toda a largura em telas menores */
+  flex-basis: 100%;
   text-align: center;
   color: var(--cor6);
-  margin-bottom: 30px; /* Espaço entre os elementos */
+  margin-bottom: 30px;
 }
 
 .rodape p,
@@ -230,8 +222,6 @@ body {
   font-size: 12px;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .cabecalho {
     align-items: normal;
@@ -257,12 +247,11 @@ body {
     min-height: 0;
   }
 
-  #Anunciar a{
+  #Anunciar a {
     margin-bottom: 5px;
     background-color: var(--cor4);
     border-right: 20px;
   }
-
 
   .menu.active {
     height: 450px;
@@ -285,11 +274,12 @@ body {
     color: var(--cor0);
   }
 
- .carrosel{
-  padding: 0px;
-  margin: 0px;
-  height: 100%;
- }
+  .carrosel {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+  }
+
   .mobile-menu-icon {
     display: block;
     font-size: 30px;
@@ -301,8 +291,8 @@ body {
     color: var(--cor4);
   }
 
-  .row-cols-md-3 > .col {
-    flex: 0 0 100%; /* Cards ocupam 100% da largura em telas menores */
+  .row-cols-md-3>.col {
+    flex: 0 0 100%;
     max-width: 100%;
-}
+  }
 }
