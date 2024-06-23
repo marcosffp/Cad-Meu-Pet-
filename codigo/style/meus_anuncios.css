@@ -198,8 +198,15 @@
   
   #results {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This line is good for responsiveness */
     gap: 20px;
+  }
+  
+  /* Adjust grid for two cards per row */
+  @media (min-width: 600px) {
+    #results {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on larger screens */
+    }
   }
   
   .pet-card {
@@ -219,8 +226,6 @@
     border-bottom-left-radius: 10px; /* Canto inferior esquerdo arredondado */
     border-top-right-radius: 0; /* Remove o raio do canto superior direito */
   }
-  
-  
   
   .pet-info {
     padding: 20px;
@@ -274,7 +279,7 @@
     margin-left: auto;
   }
   
-  
+  /* Ensure consistent styling */
   .btn-custom-green {
     background-color: var(--cor4);
     color: white;
@@ -287,6 +292,58 @@
   
   .pet-info .btn-danger {
     margin-left: auto;
+  }
+  
+  section > h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--cor3);
+  }
+
+  .criar-anuncio {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .criar-anuncio button {
+    padding: 12px 24px;
+    font-weight: bold;
+    background-color: var(--cor3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor0);
+  }
+  
+  .criar-anuncio button:hover {
+    background-color: var(--cor4);
+  }
+  
+  .criar-anuncio button {
+    padding: 12px 24px;
+    font-weight: bold;
+    background-color: var(--cor3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 20px;
+    display: inline-block;
+  }
+  
+  .criar-anuncio a {
+    text-decoration: none;
+    color: var(--cor0);
+  }
+  
+  .criar-anuncio button:hover {
+    background-color: var(--cor4);
   }
   
   .rodape {
@@ -372,6 +429,7 @@
       overflow: hidden;
       height: 0;
       min-height: 0;
+      z-index: 20;
     }
   
     #Anunciar a {
@@ -440,6 +498,7 @@
       max-width: 100%;
       flex-direction: column;
       margin: 10px 0;
+      z-index: 10;
     }
   
     .pet-card img {

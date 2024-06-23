@@ -168,10 +168,14 @@ main {
   border: none;
   border-radius: 5px;
 }
+.criar-relato a{
+  text-decoration: none;
+  color: var(--cor0);
+}
 
 .btnFiltrar,
 .btnResetar,
-.SeusAnuncios {
+.criar-relato {
   background-color: var(--cor5);
   color: var(--cor0);
   padding: 10px 20px;
@@ -187,10 +191,10 @@ main {
 
 .btnFiltrar:hover,
 .btnResetar:hover,
-.SeusAnuncios:hover {
+.criar-relato:hover {
   background-color: var(--cor6);
 }
-
+ 
 .results {
   flex: 1;
   padding-left: 20px;
@@ -198,13 +202,20 @@ main {
 
 #results {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This line is good for responsiveness */
   gap: 20px;
+}
+
+/* Adjust grid for two cards per row */
+@media (min-width: 600px) {
+  #results {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row on larger screens */
+  }
 }
 
 .pet-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Define o layout em linha */
   background-color: var(--cor1);
   border-radius: 10px;
   overflow: hidden;
@@ -212,15 +223,17 @@ main {
 }
 
 .pet-card img {
-  width: 100%;
-  height: auto;
+  width: 40%; /* Define a largura da imagem */
+  height: auto; /* A altura será ajustada automaticamente */
   object-fit: cover;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px; /* Canto inferior esquerdo arredondado */
+  border-top-right-radius: 0; /* Remove o raio do canto superior direito */
 }
 
 .pet-info {
   padding: 20px;
+  flex: 1; /* Permite que a seção de informações ocupe o espaço restante */
 }
 
 .pet-info h3 {
@@ -269,6 +282,22 @@ main {
 .pet-info .btn-danger {
   margin-left: auto;
 }
+
+/* Ensure consistent styling */
+.btn-custom-green {
+  background-color: var(--cor4);
+  color: white;
+}
+
+.btn-custom-green:hover {
+  background-color: var(--cor5);
+  color: white;
+}
+
+.pet-info .btn-danger {
+  margin-left: auto;
+}
+
 
 .rodape {
   color: var(--cor0);

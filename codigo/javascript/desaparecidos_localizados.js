@@ -35,21 +35,6 @@ document.getElementById("btnResetar").addEventListener("click", () => {
   loadAndDisplayPets();
 });
 
-document.getElementById("editForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-  const id = document.getElementById("editId").value;
-  const relato = {
-    status: document.getElementById("status").value,
-    especie: document.getElementById("especie").value,
-    genero: document.getElementById("genero").value,
-    nome: document.getElementById("nome").value,
-    endereco: document.getElementById("endereco").value,
-    contatos: document.getElementById("contatos").value,
-    descricao: document.getElementById("descricao").value,
-    imagemUrl: document.getElementById("imagemUrl").value
-  };
-  updatePet(id, relato);
-});
 
 async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filterLocalizacao = null) {
   try {
@@ -101,43 +86,6 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
       box.appendChild(description);
       box.appendChild(contacts);
       box.appendChild(status);
-
-      if (pet.userId === userId) {
-        const editDeleteContainer = document.createElement("div");
-        editDeleteContainer.classList.add("edit-delete-container");
-
-        const editButton = document.createElement("button");
-        editButton.setAttribute("type", "button");
-        editButton.classList.add("btn", "btn-custom-green");
-        editButton.setAttribute("data-bs-toggle", "modal");
-        editButton.setAttribute("data-bs-target", "#editModal");
-        editButton.textContent = "Editar";
-        editButton.addEventListener("click", function () {
-          document.getElementById("editId").value = pet.id;
-          document.getElementById("status").value = pet.status;
-          document.getElementById("especie").value = pet.especie;
-          document.getElementById("genero").value = pet.genero;
-          document.getElementById("nome").value = pet.nome;
-          document.getElementById("endereco").value = pet.endereco;
-          document.getElementById("contatos").value = pet.contatos;
-          document.getElementById("descricao").value = pet.descricao;
-          document.getElementById("imagemUrl").value = pet.imagemUrl;
-        });
-        editDeleteContainer.appendChild(editButton);
-
-        const deleteButton = document.createElement("button");
-        deleteButton.setAttribute("type", "button");
-        deleteButton.classList.add("btn", "btn-danger", "mx-2");
-        deleteButton.textContent = "Excluir";
-        deleteButton.addEventListener("click", function () {
-          if (confirm("Tem certeza que deseja excluir este animal perdido?")) {
-            deletePet(pet.id, loadAndDisplayPets);
-          }
-        });
-        editDeleteContainer.appendChild(deleteButton);
-        box.appendChild(editDeleteContainer);
-      }
-
       content.appendChild(petImage);
       content.appendChild(box);
       resultsSection.appendChild(content);
@@ -148,79 +96,14 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
 }
 
 
-async function updatePet(id, pet) {
-  try {
-    const response = await fetch(`${apiUrl}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(pet),
-    });
-    const data = await response.json();
-    console.log("Anúncio alterado com sucesso:", data);
-    displayMessage("Anúncio alterado com sucesso");
-    updatePetCard(id, pet);
-  } catch (error) {
-    console.error('Erro ao atualizar Anúncio via API JSONServer:', error);
-    displayMessage("Erro ao atualizar Anúncio");
-  }
-}
 
-async function deletePet(id, refreshFunction) {
-  try {
-    const response = await fetch(`${apiUrl}/${id}`, {
-      method: 'DELETE',
-    });
-    const data = await response.json();
-    console.log("Anúncio removido com sucesso:", data);
-    displayMessage("Anúncio removido com sucesso");
 
-    const usersResponse = await fetch(usersApiUrl);
-    const usersData = await usersResponse.json();
-    usersData.forEach(async (user) => {
-      const index = user.animais_perdidos.indexOf(id);
-      if (index !== -1) {
-        user.animais_perdidos.splice(index, 1);
-        try {
-          const updateUserResponse = await fetch(`${usersApiUrl}/${user.id}`, {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(user),
-          });
-          const updateUserData = await updateUserResponse.json();
-          console.log(`ID ${id} removido da lista animais_perdidos do usuário ${user.id}`);
-        } catch (error) {
-          console.error(`Erro ao atualizar usuário ${user.id} na API:`, error);
-        }
-      }
-    });
-
-    if (refreshFunction) refreshFunction();
-  } catch (error) {
-    console.error('Erro ao remover Anúncio via API JSONServer:', error);
-  }
-}
 
 async function verificarLogin(event) {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
   if (!user) {
     event.preventDefault();
     window.location.href = '../html/cadastro_usuario.html';
-  }
-}
-
-function updateCadastroButton() {
-  const btnCadastrar = document.getElementById('btn-cadastrar');
-  const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
-  if (user) {
-    btnCadastrar.textContent = 'Logado';
-    btnCadastrar.href = '../html/editor_perfil.html';
-  } else {
-    btnCadastrar.textContent = 'Cadastrar';
-    btnCadastrar.href = '../html/cadastro_usuario.html';
   }
 }
 
@@ -231,15 +114,5 @@ function displayMessage(message) {
 function init() {
 }
 
-function updatePetCard(id, updatedPet) {
-  const card = document.querySelector(`.pet-card[data-id="${id}"]`);
-  if (card) {
-    card.querySelector('img').src = updatedPet.imagemUrl;
-    card.querySelector('h3').textContent = updatedPet.nome;
-    card.querySelector('.pet-info strong').textContent = updatedPet.especie;
-    card.querySelector('.pet-info p:nth-child(3)').textContent = updatedPet.endereco;
-    card.querySelector('.pet-info p:nth-child(4)').textContent = updatedPet.descricao;
-    card.querySelector('.pet-info strong:nth-child(5)').textContent = "Contatos: " + updatedPet.contatos;
-    card.querySelector('.status').textContent = updatedPet.status;
-  }
-}
+
+

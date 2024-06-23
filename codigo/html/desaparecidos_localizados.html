@@ -42,76 +42,6 @@
   </header>
 
   <main>
-
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Editar Relato</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <form id="editForm">
-            <div class="modal-body">
-              <input type="hidden" id="editId">
-              <div class="form-group">
-                <label for="status">Status</label>
-                <select id="status" name="status" class="form-control" required>
-                  <option value="Desaparecido">Desaparecido</option>
-                  <option value="encontrado">encontrado</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="especie">Espécie</label>
-                <select id="especie" name="especie" class="form-control" required>
-                  <option value="" disabled selected>
-                    Selecione uma espécie
-                  </option>
-                  <option value="Cachorro">Cachorro</option>
-                  <option value="Gato">Gato</option>
-                  <option value="Passaro">Pássaro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="genero">Gênero</label>
-                <select id="genero" name="genero" class="form-control" required>
-                  <option value="" disabled selected>Selecione um gênero</option>
-                  <option value="Macho">Macho</option>
-                  <option value="Femea">Fêmea</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="nome">Nome do Pet</label>
-                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Pet" required />
-              </div>
-              <div class="form-group">
-                <label for="endereco">Endereço visto pela última vez</label>
-                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço" required />
-              </div>
-              <div class="form-group">
-                <label for="contatos">Contato</label>
-                <input type="text" id="contatos" name="contatos" class="form-control" placeholder="Telefone ou Email"
-                  required />
-              </div>
-              <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <textarea id="descricao" name="descricao" class="form-control"
-                  placeholder="Informações que diferenciam o pet" required></textarea>
-              </div>
-              <div class="form-group">
-                <label for="imagemUrl">URL da Imagem do Pet</label>
-                <input type="url" id="imagemUrl" name="imagemUrl" class="form-control"
-                  placeholder="https://example.com/image.jpg" required />
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <aside class="filters">
       <h2>Filtros</h2>
       <div class="filter-group">
@@ -135,8 +65,7 @@
         <button id="btnFiltrar" class="btnFiltrar">FILTRAR</button>
         <button id="btnResetar" class="btnResetar">RESETAR</button>
       </div>
-    </aside>
-
+    </aside> 
     <section id="results"></section>
   </main>
 

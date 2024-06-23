@@ -1,5 +1,5 @@
-const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
-const usersApiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
+const apiUrlRelato = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
+const usersapiUrlRelato = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
 let db = [];
 let userRelatos = [];
 
@@ -30,7 +30,7 @@ function updateCadastroButton() {
 
 async function readRelato(processaDados) {
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiUrlRelato);
         if (!response.ok) {
             throw new Error('Erro ao ler Relatos via API JSONServer');
         }
@@ -46,7 +46,7 @@ function createRelato(relato, refreshFunction) {
     relato.liked = relato.liked !== undefined ? relato.liked : false;
     relato.likes = relato.likes !== undefined ? relato.likes : 0;
 
-    fetch(apiUrl, {
+    fetch(apiUrlRelato, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function createRelato(relato, refreshFunction) {
 }
 
 function updateRelato(id, relato) {
-    fetch(`${apiUrl}/${id}`, {
+    fetch(`${apiUrlRelato}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function updateRelato(id, relato) {
 
 async function deleteRelato(id, refreshFunction) {
     try {
-        const response = await fetch(`${apiUrl}/${id}`, {
+        const response = await fetch(`${apiUrlRelato}/${id}`, {
             method: 'DELETE',
         });
         if (!response.ok) {
@@ -101,14 +101,14 @@ async function deleteRelato(id, refreshFunction) {
 
         const userId = localStorage.getItem('userId');
         if (userId) {
-            const userResponse = await fetch(`${usersApiUrl}/${userId}`);
+            const userResponse = await fetch(`${usersapiUrlRelato}/${userId}`);
             if (!userResponse.ok) {
                 throw new Error('Erro ao obter usuário após remover relato');
             }
             const user = await userResponse.json();
             const updatedRelatos = user.relatos.filter(r => r !== id);
             const updatedUser = { ...user, relatos: updatedRelatos };
-            const updateUserResponse = await fetch(`${usersApiUrl}/${userId}`, {
+            const updateUserResponse = await fetch(`${usersapiUrlRelato}/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const userId = localStorage.getItem('userId');
     if (userId) {
         try {
-            const userResponse = await fetch(`${usersApiUrl}/${userId}`);
+            const userResponse = await fetch(`${usersapiUrlRelato}/${userId}`);
             if (!userResponse.ok) {
                 throw new Error('Erro ao obter dados do usuário');
             }

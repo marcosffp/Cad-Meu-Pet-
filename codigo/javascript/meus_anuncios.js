@@ -251,3 +251,7 @@ function updatePetCard(id, updatedPet) {
     card.querySelector('.status').textContent = updatedPet.status;
   }
 }
+
+
+
+
