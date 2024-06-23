@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="../img/nova_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../style/dev.css" />
+  <title>Seus Relatos - Cadê Meu Pet?</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="../html/home.html" class="logo">
+      <img src="../img/nova_logo.png" alt="Cadê meu pet?">
+      cadê meu pet?
+    </a>
+    <div class="mobile-menu-icon">
+      <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+
+    <nav class="menu">
+      <ul>
+        <li><a href="../html/home.html">Início</a></li>
+        <li>
+          <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
+        </li>
+        <li><a href="../html/ferramentas.html">Ferramentas</a></li>
+        <li><a href="../html/blog.html">Blog</a></li>
+        <li><a href="../html/faq.html">FAQ</a></li>
+        <li id="Anunciar">
+          <a href="../html/cadastro_animal_perdido.html">Anunciar</a>
+        </li>
+        <li id="Cadastrar"><a href="../html/cadastro_usuario.html" id="btn-cadastrar">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <div class="container">
+      <div class="row">
+        <div id="msg" class="col-sm-10 offset-sm-1 ">
+
+        </div>
+      </div>
+
+      <article id="relatos" class="relatos">
+        <h2>Relatos</h2>
+        <div class="cardss">
+          <div class="row row-cols-1 row-cols-md-3 g-3" id="relatos-container">
+          </div>
+        </div>
+        <div class="criar-relato">
+          <button><a href="../html/cadastro_relato.html">Criar relato</a></button>
+        </div>
+      </article>
+    </div>
+
+    <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="viewModalLabel">Detalhes do Relato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Nome:</strong> <span id="viewNome"></span></p>
+            <p><strong>Data:</strong> <span id="viewData"></span></p>
+            <p><strong>Localização:</strong> <span id="viewLocalizacao"></span></p>
+            <p><strong>Descrição:</strong> <span id="viewDescricao"></span></p>
+            <p><strong>Imagem:</strong><br><img id="viewImagemUrl" src="#" alt="Imagem do Relato" class="img-fluid"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Editar Relato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="editForm">
+            <div class="modal-body">
+              <input type="hidden" id="editId">
+              <div class="mb-3">
+                <label for="editNome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="editNome" required>
+              </div>
+              <div class="mb-3">
+                <label for="editData" class="form-label">Data</label>
+                <input type="date" class="form-control" id="editData" required>
+              </div>
+              <div class="mb-3">
+                <label for="editLocalizacao" class="form-label">Localização</label>
+                <input type="text" class="form-control" id="editLocalizacao" required>
+              </div>
+              <div class="mb-3">
+                <label for="editDescricao" class="form-label">Descrição</label>
+                <textarea class="form-control" id="editDescricao" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="editImagemUrl" class="form-label">URL da Imagem</label>
+                <input type="text" class="form-control" id="editImagemUrl" required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <hr />
+    <div class="container-rodape">
+      <div class="informacoes">
+        <h4>Contato</h4>
+        <p>
+          Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+          MG
+        </p>
+        <p>Telefone: (33) 99950-3571</p>
+        <p>Email: mafpinto@sga.pucminas.br</p>
+      </div>
+
+      <div class="links-uteis">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a href="../html/politicas.html" target="_blank">Políticas de Privacidade</a></li>
+          <li><a href="../html/termos.html" target="_blank">Termos de Uso</a></li>
+          <li><a href="../html/quem_somos.html" target="_blank">Quem somos?</a></li>
+        </ul>
+      </div>
+
+      <div class="redes-sociais">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="direitos-autorais">
+      &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
+    </p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../javascript/dev.js"></script>
+</body>
+
+</html>

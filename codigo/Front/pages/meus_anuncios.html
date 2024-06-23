@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="../img/nova_logo.png" type="image/x-icon">
+  <title>Meus Anúncios - Cadê Meu Pet?</title>
+  <link rel="stylesheet" href="../style/meus_anuncios.css" />
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="../html/home.html" class="logo">
+      <img src="../img/nova_logo.png" alt="Cadê meu pet?">
+      cadê meu pet?
+    </a>
+    <div class="mobile-menu-icon">
+      <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="../html/home.html">Início</a></li>
+        <li>
+          <a href="../html/desaparecidos_localizados.html">Desaparecidos e Localizados</a>
+        </li>
+        <li><a href="../html/ferramentas.html">Ferramentas</a></li>
+        <li><a href="../html/blog.html">Blog</a></li>
+        <li><a href="../html/faq.html">FAQ</a></li>
+        <li id="Anunciar"><a href="../html/cadastro_animal_perdido.html">Anunciar</a></li>
+        <li id="Cadastrar"><a href="../html/cadastro_usuario.html" id="btn-cadastrar">Cadastrar</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section>
+      <h2>Anúncios</h2>
+    </section>
+  <main>
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Editar Relato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="editForm">
+            <div class="modal-body">
+              <input type="hidden" id="editId">
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control" required>
+                  <option value="Desaparecido">Desaparecido</option>
+                  <option value="encontrado">encontrado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="especie">Espécie</label>
+                <select id="especie" name="especie" class="form-control" required>
+                  <option value="" disabled selected>
+                    Selecione uma espécie
+                  </option>
+                  <option value="Cachorro">Cachorro</option>
+                  <option value="Gato">Gato</option>
+                  <option value="Passaro">Pássaro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="genero">Gênero</label>
+                <select id="genero" name="genero" class="form-control" required>
+                  <option value="" disabled selected>Selecione um gênero</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Femea">Fêmea</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="nome">Nome do Pet</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do Pet" required />
+              </div>
+              <div class="form-group">
+                <label for="endereco">Endereço visto pela última vez</label>
+                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço" required />
+              </div>
+              <div class="form-group">
+                <label for="contatos">Contato</label>
+                <input type="text" id="contatos" name="contatos" class="form-control" placeholder="Telefone ou Email"
+                  required />
+              </div>
+              <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" class="form-control"
+                  placeholder="Informações que diferenciam o pet" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="imagemUrl">URL da Imagem do Pet</label>
+                <input type="url" id="imagemUrl" name="imagemUrl" class="form-control"
+                  placeholder="https://example.com/image.jpg" required />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>    
+    <section id="results"></section>
+  </main>
+  <section>
+    <div class="criar-anuncio">
+      <button><a href="../html/cadastro_animal_perdido.html">Criar Anúncio</a></button>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <hr />
+    <div class="container-rodape">
+      <div class="informacoes">
+        <h4>Contato</h4>
+        <p>
+          Endereço: Rua 7 de Setembro, 163 - Bairro Esplanada, Santa Luzia -
+          MG
+        </p>
+        <p>Telefone: (33) 99950-3571</p>
+        <p>Email: mafpinto@sga.pucminas.br</p>
+      </div>
+
+      <div class="links-uteis">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li>
+            <a href="../html/politicas.html" target="_blank">Políticas de Privacidade</a>
+          </li>
+          <li>
+            <a href="../html/termos.html" target="_blank">Termos de Uso</a>
+          </li>
+          <li><a href="../html/quem_somos.html" target="_blank">Quem somos?</a></li>
+        </ul>
+      </div>
+
+      <div class="redes-sociais">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="direitos-autorais">
+      &copy; 2024 Cadê meu pet? Inc. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script src="../javascript/seus_anuncios.js"></script>
+</body>
+
+</html>
