@@ -523,6 +523,30 @@ h1 {
     color: var(--cor0);
   }
 
+    .conteudo {
+    padding: 10px; 
+    text-align: center; 
+  }
+
+  .conteudo h1 {
+    text-align: center; 
+    margin-right:30px; 
+  }
+
+  .butoes {
+    flex-direction: column; 
+    gap: 10px; 
+  }
+
+  .butoes .butao-perdi button,
+  .butoes .butao-achei button {
+    width: 100%; 
+  }
+
+  .estatistica {
+    max-width: 100%;
+  }
+
   .carrosel {
     padding: 0px;
     margin: 0px;
