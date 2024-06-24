@@ -1,6 +1,8 @@
+import CONFIG from "../alterar_aqui_link_json_server.js";
+
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
-    const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
+    const apiUrl = CONFIG.baseUrl + 'users';
+    const checkEmailUrl = CONFIG.baseUrl + 'check-email';
     const formPerfil = document.getElementById("form-perfil");
 
     function displayMessage(mensagem) {

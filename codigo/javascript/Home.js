@@ -1,6 +1,9 @@
+
+import CONFIG from '../alterar_aqui_link_json_server.js';
+
 const RelatosApp = (function () {
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
-    const apiPetReunidos = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/animais_perdidos';
+    const apiUrl = CONFIG.baseUrl + 'relatos';
+    const apiPetReunidos = CONFIG.baseUrl + 'animais_perdidos';
     let db = [];
 
     function reloadPage() {
