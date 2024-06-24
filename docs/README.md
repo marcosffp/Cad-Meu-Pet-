@@ -29,9 +29,9 @@ O objetivo principal do projeto "Cadê meu pet?" é oferecer uma plataforma onli
 
 Este projeto foi concebido como uma resposta à necessidade de uma solução eficaz e acessível para ajudar a localizar animais perdidos. Ao fornecer uma plataforma centralizada e de fácil acesso, o "Cadê meu pet?" visa facilitar o processo de busca e reunificação de animais perdidos com seus donos, reduzindo assim o tempo de separação e minimizando o sofrimento tanto dos animais quanto de seus donos.
 
-  * # Solução do Problema
+# Solução do Problema
 
-    Para resolver o problema, desenvolvemos uma plataforma destinada aos tutores de animais perdidos. Nesta plataforma, os tutores podem publicar um anúncio com informações detalhadas sobre o pet desaparecido. Isso possibilita que diversos usuários da plataforma colaborem na busca, facilitando o reencontro entre o tutor e seu animal de estimação.
+   Para resolver o problema, desenvolvemos uma plataforma destinada aos tutores de animais perdidos. Nesta plataforma, os tutores podem publicar um anúncio com informações detalhadas sobre o pet desaparecido. Isso possibilita que diversos usuários da plataforma colaborem na busca, facilitando o reencontro entre o tutor e seu animal de estimação.
 
 
 ## Público-Alvo
