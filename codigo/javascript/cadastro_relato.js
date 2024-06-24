@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         console.log('Usuário atualizado com sucesso');
         setTimeout(function () {
-          window.location.href = "../html/home.html";
+          window.location.href = "../html/Home.html";
         }, 3000);
       })
       .catch(error => {
