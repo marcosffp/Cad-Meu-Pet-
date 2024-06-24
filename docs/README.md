@@ -96,8 +96,7 @@ Os requisitos de um projeto são classificados em dois grupos:
   * RF-006: O tutor deve ser cadastrado na plataforma. (Prioridade MÉDIA)
   * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA)
   * RF-008: O usuário e o tutor podem editar seu perfil na plataforma. (Prioridade MÉDIA)
-  * RF-009: O sistema enviará notificações aos usuários cadastrados sobre animais perdidos ou encontrados semelhantes aos seus próprios animais. (Prioridade MÉDIA)
-  * RF-010: Os usuários podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status e removendo-o das listagens de animais perdidos. (Prioridade MÉDIA)
+  * RF-009: Os usuários podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status e removendo-o das listagens de animais perdidos. (Prioridade MÉDIA)
   
 
 -Requisitos Não Funcionais (RNF):
