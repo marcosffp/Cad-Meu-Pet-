@@ -69,30 +69,30 @@ Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de le
 
 ## Histórias de Usuários
 
--Eu, como Heitor, quero buscar na lista de animais perdidos cadastrados no site para encontrar o seu pet perdido.
-
--Eu, como Heitor, quero cadastrar o meu pet para ajudar o animal a ser encontrado pelo usuário do site.
-
--Eu, como Heitor, quero atualizar as informações do animal para informar novos detalhes sobre os status (desaparecido ou encontrado) do pet conforme passa o tempo.
-
--Eu, como Pedro, quero verificar se o pet que encontrei abandonado pertence a alguém, caso tenha dono, para informar a situação atual do animal a esse proprietário.
-
--Eu, como Pedro, quero informar ao tutor do animal que encontrei o pet perdido para reunir o animal com seu tutor.
-
--Eu, como Ana, informar ao proprietário do pet que uma pessoa conhecida encontrou o animal para auxiliar na reunião do animal e seu tutor.
-
 -Eu, como Ana, sou tutora e quero cadastrar o meu animal perdido para encontrar ele.
+
 -Eu, como Ana, como usuária busco animais perdidos para auxiliar os tutores q perderam seus pets.
+
 -Eu, como Ana, quero filtrar os animais por tipo de espécie ou status para encontrar o animal do interesse.
+
 -Eu, como Ana, quero ver a quantidade de animais reencontrados os pets com seus tutores para ter entendimento melhor do site.
+
 -Eu, como Heitor, quero publicar no anúncio a imagem do meu pet para melhor compreensão do meu pet perdido.
+
 -Eu, como Heitor, quero entrar em contato com o tutor para informar do animal que encontrei dele.
+
 -Eu, como Heitor, quero editar os dados do meu perfil para atualizar os dados.
+
 -Eu, como Pedro, quero alterar os status do meu anúncio para atualizar as informações.
+
 -Eu, como Pedro, quero excluir o anúncio para ter opção de cancelar a postagem.
+
 -Eu, como Pedro, quero criar o relato para dizer o reencontro com o animal.
+
 -Eu, como Pedro, quero editar o relato para atualizar informações desse relato.
+
 -Eu, como Pedro, quero excluir o relato para ter opção de cancelar a postagem.
+
 
 ## Requisitos
 
@@ -101,16 +101,27 @@ Os requisitos de um projeto são classificados em dois grupos:
 -Requisitos Funcionais (RF):
   
   * RF-001: O tutor faz o cadastro do animal perdido. (Prioridade ALTA)
+    
   * RF-002: O usuário busca animais perdidos. (Prioridade MÉDIA)
+    
   * RF-003: O usuário e tutor filtra os animais por tipo e status. (Prioridade BAIXA)
+    
   * RF-004: O sistema fornecerá métricas sobre o número de animais reunidos com seus tutores.(Prioridade Alta)
+    
   * RF-005: O tutor deve publicar imagem sobre o pet para procura por meio url. (Prioridade MÉDIA)
+    
   * RF-006: Os usuários ou tutores podem excluir o anúncio (Prioridade Alta)
+    
   * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA)
+    
   * RF-008: O usuário e o tutor podem editar dados do seu perfil na plataforma. (Prioridade MÉDIA)
+    
   * RF-009: O tutor podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status. (Prioridade MÉDIA)
+    
   * RF-010: Os usuários ou tutores podem criar relatos sobre o reencontro de animais.(Prioridade MÉDIA)
+    
   * RF-011: Os usuários ou tutores podem editar relatos sobre o reencontro de animais.(Prioridade MÉDIA)
+    
   * RF-012: Os usuários ou tutores podem excluir relatos sobre o reencontros de animais.(Prioridade MÉDIA)
 
 
