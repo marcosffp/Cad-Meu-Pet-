@@ -215,7 +215,8 @@ Os requisitos de um projeto são classificados em dois grupos:
 ![paleta_de_cores](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/798e8187-6adc-488a-afde-b81e110cb94a)
 
 ***Fontes***
-![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f5be4455-144c-4017-9f5f-d1e3d9348a75)
+![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8b225605-6880-4475-8e0c-caa02b495efb)
+)
 
 ![fonte_secundaria](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/a35322fb-66d3-4bbc-9238-57d192d62494)
 
