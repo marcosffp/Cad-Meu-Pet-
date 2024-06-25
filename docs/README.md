@@ -294,7 +294,7 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 [Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
 
 -Node.js: Plataforma Replit
-[Link Documento](https://replit.com/@mafpinto/JSONServer-cade-meu-pet?)
+[Link Node.js](https://replit.com/@mafpinto/JSONServer-cade-meu-pet?)
 
 
 
