@@ -131,12 +131,19 @@ Os requisitos de um projeto são classificados em dois grupos:
 -Requisitos Não Funcionais (RNF):
   
   * RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA)
+    
   * RNF-002: Utilização de banco de dados Json server através do Node.js. (Prioridade MÉDIA)
+    
   * RNF-003: Suporte para todos os navegadores gerais. (Prioridade BAIXA)
+    
   * RNF-004: Site responsivo. (Prioridade MÉDIA)
+    
   * RNF-005: Suporte para múltiplos dispositivos. (Prioridade MÉDIA)
+    
   * RNF-006: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA)
+    
   * RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA)
+    
   * RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA)
 
 
