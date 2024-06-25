@@ -97,6 +97,8 @@ Os requisitos de um projeto são classificados em dois grupos:
   * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA)
   * RF-008: O usuário e o tutor podem editar seu perfil na plataforma. (Prioridade MÉDIA)
   * RF-009: Os usuários podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status e removendo-o das listagens de animais perdidos. (Prioridade MÉDIA)
+  * RF-010: Os usuarios podem criar relatos sobre os reencontros de animais com seus tutores.(Prioridade MÉDIA)
+
   
 
 -Requisitos Não Funcionais (RNF):
@@ -108,6 +110,9 @@ Os requisitos de um projeto são classificados em dois grupos:
   * RNF-005: Suporte para múltiplos dispositivos. (Prioridade MÉDIA)
   * RNF-006: Respostas rápidas. (Prioridade ALTA)
   * RNF-007: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA)
+  * RNF-008: Resposta imediata  para verificar se o email ja existe ou se ja esta cadastrado no site. (Prioridade MÉDIA)
+  * RNF-009: Rapida resposta pra validar senha do usuario.(Prioridade MÉDIA)
+  * RNF-010: O Usuario so vai conseguir usar certas funções como criar relatos e criar um anuncio se estiver logado no site. (Prioridade MÉDIA)
 
 ## User Flow
 ![user_flow](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/dcba3412-9358-4d5f-8c1e-6c3ea978d425)![user_flowM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/2c53d6b8-2a03-47a9-ae24-3934f9989da7)
