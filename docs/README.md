@@ -301,6 +301,8 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | Produção do protótipo das telas no Figma     |    Henrique Lima Volponi |
     | Documentação Inicial do Projeto     |    João Gabriel Silva Custódio |
 
+    ![quadro kanban sprint 1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/c414a6b6-c6e5-4029-9651-7b7ed37f304d)
+
   * Sprint 2: Começo da produção das telas em Html, Css e JavaScript.
 
     | Artefato| Responsável |
@@ -310,6 +312,8 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | O usuário busca animais perdidos e filtra os animais por tipo      |    Carlos José Gomes Batista Figueiredo |
     | O tutor faz o cadastro do animal perdido    |    Henrique Lima Volponi |
     | O usuário e o tutor podem editar seu perfil ou do pet na plataforma e o tutor deve atualizar os status do animal    |    João Gabriel Silva Custódio |
+
+    ![quadro kanban sprint 2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/3b37b2ed-e0ab-48d9-a1ba-649e0bcc6433)
 
   * Sprint 3: Continuação da produção das telas em Html, Css e JavaScript e implementação do Json server para banco de dados.
 
@@ -321,6 +325,8 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | Tela de alteração de cadastro     |    Henrique Lima Volponi |
     | O usuário pode alterar seu perfil     |    João Gabriel Silva Custódio |
 
+    ![quadro kanban sprint 3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d4ace2d6-6652-48da-8a81-6f6507c10651)
+
   * Sprint 4: Últimas tarefas para entrega final.
 
     | Tarefas| Responsável |
@@ -331,6 +337,9 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | Slide de apresentação      |    Carlos José Gomes Batista Figueiredo |
     | Hospedagem do site     |    Henrique Lima Volponi |
     | Produção do vídeo de apresentação (pitch)    |    João Gabriel Silva Custódio |
+
+    ![quadro kanban sprint 4](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/8327f70a-5e9b-4a24-8bfe-ab058d408a00)
+
 
 
 # Referências Bibliográficas
