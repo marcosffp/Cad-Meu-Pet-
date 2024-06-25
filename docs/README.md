@@ -268,7 +268,7 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 ## Gestão de Projetos
 
-### Metodologia
+### Ferramentas
 
 Detalhes sobre a organização do grupo e o ferramental empregado:
 
@@ -293,7 +293,8 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 -Documento do projeto: Plataforma Google Docs
 [Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
 
--Hospedagem do codigo:
+-Node.js: Plataforma Replit
+[Link Documento](https://replit.com/@mafpinto/JSONServer-cade-meu-pet?)
 
 
 
