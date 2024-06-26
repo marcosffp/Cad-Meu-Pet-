@@ -1,7 +1,7 @@
 
 const RelatosApp = (function () {
-    const apiUrl = 'http://localhost:3000/relatos';
-    const apiPetReunidos = 'http://localhost:3000/animais_perdidos';
+    const apiUrl = '/relatos';
+    const apiPetReunidos = '/animais_perdidos';
     let db = [];
 
     function reloadPage() {

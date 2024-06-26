@@ -33,23 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     
         const usuario = {
-            nome: nome,
-            email: email,
-            senha: senha,
-            relatos: [],
-            animais_perdidos: []
+            "nome": nome,
+            "email": email,
+            "senha": senha,
+            "relatos": [],
+            "animais_perdidos": []
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(usuario.email)}`);
-            const existingUsers = await response.json();
+            const response = await fetch('/users');
+            const data = await response.json();
+            const existingUsers = data.filter(x => x.email === email);
     
             if (existingUsers.length > 0) {
                  window.alert("Email já cadastrado. Por favor, use outro email.");
                 return;
             }
     
-            const createUserResponse = await fetch('http://localhost:3000/users', {
+            const createUserResponse = await fetch('/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,16 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
     
             const userData = await createUserResponse.json();
+            console.log(userData)
             localStorage.setItem('userId', userData.id);
             localStorage.setItem('userName', userData.nome);
             localStorage.setItem('userEmail', userData.email);
     
             window.alert("Usuário cadastrado com sucesso");
-            window.location.href = '../html/Home.html'; 
+            window.location.href = '../html/home.html'; 
 
         } catch (error) {
             console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-            displayMessage("Erro ao cadastrar usuário");
+            window.alert("Erro ao cadastrar usuário");
         }
     });
 
@@ -118,11 +120,11 @@ function updateCadastroButton() {
     }
 }
 
-function displayMessage(message) {
-    const messageElement = document.getElementById('message');
-    messageElement.innerHTML = message;
-    messageElement.style.display = 'block'; 
-}
+// function displayMessage(message) {
+//     const messageElement = document.getElementById('message');
+//     messageElement.innerHTML = message;
+//     messageElement.style.display = 'block'; 
+// }
 
 function validateName(name) {
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/;

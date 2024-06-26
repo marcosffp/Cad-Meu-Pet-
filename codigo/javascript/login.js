@@ -1,5 +1,5 @@
 
-    const apiUrl = 'http://localhost:3000/users';
+    const apiUrl = '/users';
 
 function init() {
 }

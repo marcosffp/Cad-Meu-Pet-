@@ -1,5 +1,5 @@
 
-const apiUrl = 'http://localhost:3000/animais_perdidos';
+const apiUrl = '/animais_perdidos';
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".mobile-menu-icon button");

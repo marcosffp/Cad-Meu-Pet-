@@ -1,5 +1,5 @@
-const apiUrlRelato = 'http://localhost:3000/relatos';
-const usersapiUrlRelato = 'http://localhost:3000/users';
+const apiUrlRelato = '/relatos';
+const usersapiUrlRelato = '/users';
 let db = [];
 let userRelatos = [];
 

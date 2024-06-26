@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = "http://localhost:3000/users";
-    const checkEmailUrl = "http://localhost:3000/check-email";
+    const apiUrl = "/users";
+    const checkEmailUrl = "/check-email";
     const formPerfil = document.getElementById("form-perfil");
 
     function displayMessage(mensagem) {

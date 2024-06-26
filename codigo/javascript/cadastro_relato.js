@@ -3,8 +3,8 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = 'http://localhost:3000/relatos';
-  const usersApiUrl = 'http://localhost:3000/users';
+  const apiUrl = '/relatos';
+  const usersApiUrl = '/users';
 
   const menuIcon = document.querySelector(".mobile-menu-icon button");
   const menu = document.querySelector(".menu");

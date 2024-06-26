@@ -1,10 +1,13 @@
 const jsonServer = require('json-server');
 const express = require('express');
+const path = require('path');
 const session = require('express-session');
 const server = jsonServer.create();
 const router = jsonServer.router('./db/db.json');
 const cors = require('cors');
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({
+  static: path.join(__dirname, 'codigo')
+});
 
 server.use(cors());
 server.use(middlewares);
@@ -60,23 +63,27 @@ server.post('/login', (req, res) => {
   }
 });
 
-server.post('/users', (req, res) => {
-  const { email, senha } = req.body;
-  const existingUser = db.get('users').find({ email }).value();
-  if (existingUser) {
-    return res.status(400).json({ message: 'E-mail already exists' });
-  }
+// server.post('/users', (req, res) => {
+//   const { email, senha } = req.body;
+//   const existingUser = db.get('users').find({ email }).value();
+//   if (existingUser) {
+//     return res.status(400).json({ message: 'E-mail already exists' });
+//   }
 
-  const newUser = { email, senha };
-  db.get('users').push(newUser).write();
+//   const newUser = { email, senha };
+//   db.get('users').push(newUser).write();
 
-  // Optional: You might want to set req.session.user here if you want to auto-login after registration.
+//   // Optional: You might want to set req.session.user here if you want to auto-login after registration.
 
-  res.status(201).json({ message: 'User created successfully', user: newUser });
-});
+//   res.status(201).json({ message: 'User created successfully', user: newUser });
+// });
 
 server.get('/me', authenticateUser, (req, res) => {
   res.json(req.session.user);
+});
+
+server.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'codigo/html/Home.html'));
 });
 
 server.use(router);

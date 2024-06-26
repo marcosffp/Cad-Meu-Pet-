@@ -1,5 +1,5 @@
-const apiUrl = 'http://localhost:3000/animais_perdidos';
-const usersApiUrl = 'http://localhost:3000/users';
+const apiUrl = '/animais_perdidos';
+const usersApiUrl = '/users';
 
 async function init() {
   document.addEventListener("DOMContentLoaded", async function () {
