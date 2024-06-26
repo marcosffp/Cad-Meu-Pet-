@@ -12,6 +12,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-session": "^1.18.0",
     "json-server": "^0.17.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }

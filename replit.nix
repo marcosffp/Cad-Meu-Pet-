@@ -1,8 +1,10 @@
-{ pkgs }: {
+{ pkgs }: 
+let
 	deps = [
-		pkgs.nodejs-12_x
+		pkgs.nodejs-14_x
 		pkgs.nodePackages.typescript-language-server
-		pkgs.yarn
-		pkgs.replitPackages.jest
 	];
+in pkgs.stdenv.mkDerivation {
+	name = "repl";
+	buildInputs = deps;
 }

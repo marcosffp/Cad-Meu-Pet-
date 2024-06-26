@@ -1,22 +1,14 @@
-entrypoint = "index.js"
 
 hidden = [".config"]
-
-[interpreter]
-command = [
-    "prybar-nodejs",
-    "-q",
-    "--ps1",
-    "\u0001\u001b[33m\u0002\u0001\u001b[00m\u0002 ",
-    "-i"
-]
+run = "npm run start"
+modules = ["web", "nodejs-20", "nix"]
 
 [[hints]]
 regex = "Error \\[ERR_REQUIRE_ESM\\]"
 message = "We see that you are using require(...) inside your code. We currently do not support this syntax. Please use 'import' instead when using external modules. (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)"
 
 [nix]
-channel = "stable-21_11"
+channel = "stable-23_11"
 
 [env]
 PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
@@ -86,3 +78,10 @@ support = true
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[deployment]
+run = ["sh", "-c", "npm run start"]
