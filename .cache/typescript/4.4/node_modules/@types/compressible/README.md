@@ -1,0 +1,16 @@
+# Installation
+> `npm install --save @types/compressible`
+
+# Summary
+This package contains type definitions for compressible (https://github.com/jshttp/compressible#readme).
+
+# Details
+Files were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/compressible
+
+Additional Details
+ * Last updated: Tue, 15 Aug 2017 18:11:20 GMT
+ * Dependencies: none
+ * Global values: none
+
+# Credits
+These definitions were written by BendingBender <https://github.com/BendingBender>.

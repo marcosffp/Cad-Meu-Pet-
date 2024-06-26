@@ -1,0 +1,146 @@
+{
+  "relatos": [
+    {
+      "nome": " Maxx",
+      "data": "2024-06-21",
+      "localizacao": "Rio de Janeiro, RJ",
+      "descricao": "Max é um gatinho de 2 anos, muito esperto e cheio de personalidade. Ele mora com sua dona, Ana, em um apartamento no centro da cidade. Max gosta de observar os pássaros pela janela e adora brincar com seus brinquedos favoritos. Ana adotou Max de um abrigo e eles são inseparáveis desde então.",
+      "imagemUrl": "https://img.freepik.com/fotos-gratis/colagem-de-animal-de-estimacao-bonito-isolada_23-2150007407.jpg?t=st=1718951380~exp=1718954980~hmac=7a05b39d7d8a6c05816583fa61f92e191c8f96450fe0498ea81985f1674d4ae2&w=740",
+      "liked": false,
+      "likes": 0,
+      "id": 1
+    },
+    {
+      "nome": "Thor",
+      "data": "2024-06-21",
+      "localizacao": "São Paulo, SP",
+      "descricao": "Thor é um Vira-Lata de 5 anos, cheio de energia e muito brincalhão. Ele vive com sua dona, Maria, que adora correr com ele nos parques de São Paulo. Thor tem um pelo exuberante e olhos azuis hipnotizantes. Ele é muito sociável e faz amigos por onde passa.",
+      "imagemUrl": "https://adotar.com.br/upload/2023-04/animais_imagem980839.jpg?w=700&format=webp",
+      "liked": true,
+      "likes": 1,
+      "id": 2
+    },
+    {
+      "nome": "Nina",
+      "data": "2024-06-21",
+      "localizacao": "Belo Horizonte, MG",
+      "descricao": "Nina é uma cachorra alerta e divertida, ama passear pela manhã. Sua energia contagiante torna cada caminhada uma aventura. Ela está sempre atenta a tudo ao seu redor, farejando novos cheiros e explorando cada cantinho. Nina é a companheira perfeita para começar o dia com disposição e alegria.",
+      "imagemUrl": "https://i.pinimg.com/564x/0b/f6/ce/0bf6cebf8bb35e57bee2bf7902ca0e6e.jpg",
+      "liked": true,
+      "likes": 1,
+      "id": 3
+    },
+    {
+      "nome": "nina",
+      "data": "2024-06-26",
+      "localizacao": "belo horizonte, mg",
+      "descricao": "cachorro",
+      "imagemUrl": "https://img.freepik.com/fotos-premium/cachorro-fofo-enquanto-levanta-o-pe_1000717-382.jpg",
+      "liked": false,
+      "likes": 0,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nome": "João Gabriel",
+      "email": "sharpayjg@gmail.com",
+      "senha": "Jg12!@sY",
+      "relatos": [
+        1
+      ],
+      "animais_perdidos": [
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Carlos José",
+      "email": "carlosjfigueiro@gmail.com",
+      "senha": "342432!As",
+      "relatos": [
+        2
+      ],
+      "animais_perdidos": [
+        2
+      ]
+    },
+    {
+      "nome": "Marcos Alberto",
+      "email": "marcosffalbe@gmail.com",
+      "senha": "Ma14#@mA",
+      "relatos": [
+        3
+      ],
+      "animais_perdidos": [
+        1
+      ],
+      "id": 3
+    },
+    {
+      "nome": "miwajdijn",
+      "email": "carlosjfigghbjnueiro@gmail.com",
+      "senha": "12!@fhH",
+      "relatos": [],
+      "animais_perdidos": [],
+      "id": 4
+    },
+    {
+      "nome": "miwajdijn",
+      "email": "carlosjfigghbjnueiro@gmail.com",
+      "senha": "12!@fhH",
+      "relatos": [],
+      "animais_perdidos": [],
+      "id": 5
+    },
+    {
+      "nome": "Marcos Alberto",
+      "email": "carlosjfiguGeiro@gmail.com",
+      "senha": "12!Mnd",
+      "relatos": [
+        4
+      ],
+      "animais_perdidos": [],
+      "id": 6
+    }
+  ],
+  "animais_perdidos": [
+    {
+      "status": "encontrado",
+      "especie": "Cachorro",
+      "genero": "Femea",
+      "nome": "Nina",
+      "endereco": "Belo Horizonte, MG",
+      "contatos": "vircilene@gmail.com",
+      "descricao": "Nina tem um porte pequeno, pelo curto e marrom, e usa uma coleira vermelha. É muito amigável, mas pode estar assustada. Foi vista pela última vez nas proximidades da Praça Liberdade. Se alguém a encontrar ou tiver informações sobre seu paradeiro",
+      "imagemUrl": "https://i.pinimg.com/564x/0b/f6/ce/0bf6cebf8bb35e57bee2bf7902ca0e6e.jpg",
+      "id": 1,
+      "userId": 3
+    },
+    {
+      "status": "Desaparecido",
+      "especie": "Cachorro",
+      "genero": "Macho",
+      "nome": "Thor",
+      "endereco": "São Paulo, SP",
+      "contatos": "samuelzenateli@gmail.com",
+      "descricao": "Muito sociável, Thor faz amigos por onde passa. Foi visto pela última vez perto no centro da cidade. Se alguém tiver informações sobre seu paradeiro, por favor, entre em contato ",
+      "imagemUrl": "https://adotar.com.br/upload/2023-04/animais_imagem980839.jpg?w=700&format=webp",
+      "id": 2,
+      "userId": 2
+    },
+    {
+      "status": "encontrado",
+      "especie": "Gato",
+      "genero": "Femea",
+      "nome": "Jix",
+      "endereco": "Santa Luzia, MG",
+      "contatos": "sharpayjg@gmail.com",
+      "descricao": "Perdeu-se uma gata chamada Jix em Santa Luzia, MG. Jix é uma gata muito dócil e carinhosa, com pelo cinza e olhos verdes brilhantes. Ela tem aproximadamente 3 anos e é muito apegada à sua família. Foi vista pela última vez na Rua das Flores, perto do número 123. Se alguém tiver informações sobre o paradeiro de Jix, por favor, entre em contato",
+      "imagemUrl": "https://img.olx.com.br/images/81/811492418312826.webp",
+      "id": 3,
+      "userId": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Installation
+> `npm install --save @types/require-directory`
+
+# Summary
+This package contains type definitions for require-directory (https://github.com/troygoode/node-require-directory/).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/require-directory.
+
+### Additional Details
+ * Last updated: Wed, 07 Jul 2021 18:02:24 GMT
+ * Dependencies: [@types/node](https://npmjs.com/package/@types/node)
+ * Global values: none
+
+# Credits
+These definitions were written by [Ihor Chulinda](https://github.com/Igmat).

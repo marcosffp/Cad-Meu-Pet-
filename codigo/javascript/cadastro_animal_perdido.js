@@ -1,126 +1,124 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
+const apiUrl = 'http://localhost:3000/animais_perdidos';
+const usersApiUrl = 'http://localhost:3000/users';
 
-function init() {}
+async function init() {
+  document.addEventListener("DOMContentLoaded", async function () {
+    const petForm = document.getElementById("form-relato");
 
-document.addEventListener("DOMContentLoaded", async function () {
-  const apiUrl = CONFIG.baseUrl + "animais_perdidos";
-  const usersApiUrl = CONFIG.baseUrl + "users";
-
-  const petForm = document.getElementById("form-relato");
-
-  if (!petForm) {
-    console.error("Elemento com ID 'form-relato' não encontrado.");
-    return;
-  }
-
-  petForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const status = document.getElementById("status").value;
-    const especie = document.getElementById("especie").value;
-    const genero = document.getElementById("genero").value;
-    const nome = document.getElementById("inputNome").value;
-    const endereco = document.getElementById("inputEndereco").value;
-    const descricao = document.getElementById("inputDescricao").value;
-    const imagemUrl = document.getElementById("inputImagemUrl").value;
-    const contato = document.getElementById("inputContato").value;
-
-    if (!status || !especie || !genero || !nome || !endereco || !descricao || !imagemUrl || !contato) {
-      return alert("Por favor, preencha todos os campos");
+    if (!petForm) {
+      console.error("Elemento com ID 'form-relato' não encontrado.");
+      return;
     }
 
-    if (!validateContact(contato)) {
-      return alert("Por favor, insira um email ou número de telefone válido");
-    }
+    petForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
+      const status = document.getElementById("status").value;
+      const especie = document.getElementById("especie").value;
+      const genero = document.getElementById("genero").value;
+      const nome = document.getElementById("inputNome").value;
+      const endereco = document.getElementById("inputEndereco").value;
+      const descricao = document.getElementById("inputDescricao").value;
+      const imagemUrl = document.getElementById("inputImagemUrl").value;
+      const contato = document.getElementById("inputContato").value;
 
-      const nextId = data.length ? Math.max(...data.map((animal) => animal.id)) + 1 : 1;
-
-      const userId = localStorage.getItem('userId');
-      if (!userId) {
-        return alert("Usuário não está logado");
+      if (!status || !especie || !genero || !nome || !endereco || !descricao || !imagemUrl || !contato) {
+        return alert("Por favor, preencha todos os campos");
       }
 
-      const animal = {
-        id: nextId,
-        status: status,
-        especie: especie,
-        genero: genero,
-        nome: nome,
-        endereco: endereco,
-        descricao: descricao,
-        imagemUrl: imagemUrl,
-        contatos: contato,
-        userId: parseInt(userId)
-      };
+      if (!validateContact(contato)) {
+        return alert("Por favor, insira um email ou número de telefone válido");
+      }
 
-      const postResponse = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(animal),
-      });
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
 
-      if (postResponse.ok) {
-        const userResponse = await fetch(`${usersApiUrl}/${userId}`);
-        const userData = await userResponse.json();
-        userData.animais_perdidos.push(nextId);
+        const nextId = data.length ? Math.max(...data.map((animal) => animal.id)) + 1 : 1;
 
-        const updateResponse = await fetch(`${usersApiUrl}/${userId}`, {
-          method: "PUT",
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+          return alert("Usuário não está logado");
+        }
+
+        const animal = {
+          id: nextId,
+          status: status,
+          especie: especie,
+          genero: genero,
+          nome: nome,
+          endereco: endereco,
+          descricao: descricao,
+          imagemUrl: imagemUrl,
+          contatos: contato,
+          userId: parseInt(userId)
+        };
+
+        const postResponse = await fetch(apiUrl, {
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(userData),
+          body: JSON.stringify(animal),
         });
 
-        window.alert("Animal cadastrado com sucesso!");
-        window.location.href = "../html/desaparecidos_localizados.html";
+        if (postResponse.ok) {
+          const userResponse = await fetch(`${usersApiUrl}/${userId}`);
+          const userData = await userResponse.json();
+          userData.animais_perdidos.push(nextId);
 
-        if (updateResponse.ok) {
-          console.log("Usuário atualizado com o novo ID de animal perdido");
+          const updateResponse = await fetch(`${usersApiUrl}/${userId}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          });
+
+          if (updateResponse.ok) {
+            console.log("Usuário atualizado com o novo ID de animal perdido");
+          } else {
+            console.error("Falha ao atualizar o usuário com o novo ID de animal perdido");
+          }
+
+          window.alert("Animal cadastrado com sucesso!");
+          window.location.href = "../html/desaparecidos_localizados.html";
+
+          document.dispatchEvent(new CustomEvent("animalAdded", { detail: animal }));
         } else {
-          console.error("Falha ao atualizar o usuário com o novo ID de animal perdido");
+          console.error("Falha ao salvar o animal no banco de dados");
         }
 
-        document.dispatchEvent(new CustomEvent("animalAdded", { detail: animal }));
-      } else {
-        console.error("Falha ao salvar o animal no banco de dados");
+        petForm.reset();
+      } catch (error) {
+        console.error("Erro:", error);
+        alert("Erro ao cadastrar o animal");
       }
+    });
 
-      petForm.reset();
-    } catch (error) {
-      console.error("Erro:", error);
-      alert("Erro ao cadastrar o animal");
+    const menuIcon = document.querySelector(".mobile-menu-icon button");
+    const menu = document.querySelector(".menu");
+
+    menuIcon.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+
+    updateCadastroButton();
+
+    const anunciarLink = document.getElementById('Anunciar');
+    const cadastrarLink = document.getElementById('Cadastrar');
+
+    if (anunciarLink) {
+      anunciarLink.addEventListener('click', verificarLogin);
     }
+
+    if (cadastrarLink) {
+      cadastrarLink.addEventListener('click', verificarLogin);
+    }
+
+    addEditAndDeleteButtons();
   });
-
-  const menuIcon = document.querySelector(".mobile-menu-icon button");
-  const menu = document.querySelector(".menu");
-
-  menuIcon.addEventListener("click", function () {
-    menu.classList.toggle("active");
-  });
-  
-  updateCadastroButton();
-
-  const anunciarLink = document.getElementById('Anunciar');
-  const cadastrarLink = document.getElementById('Cadastrar');
-
-  if (anunciarLink) {
-    anunciarLink.addEventListener('click', verificarLogin);
-  }
-
-  if (cadastrarLink) {
-    cadastrarLink.addEventListener('click', verificarLogin);
-  }
-
-  addEditAndDeleteButtons();
-});
+}
 
 async function verificarLogin(event) {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
@@ -176,3 +174,5 @@ function addEditAndDeleteButtons() {
     }
   });
 }
+
+init();

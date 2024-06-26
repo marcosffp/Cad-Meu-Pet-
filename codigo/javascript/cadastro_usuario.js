@@ -1,80 +1,83 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
-
-const apiUrl = CONFIG.baseUrl + 'users';
-const checkEmailUrl = CONFIG.baseUrl + 'check-email';
-
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".mobile-menu-icon button");
-    const menu = document.querySelector(".menu");
-
     const btnInsert = document.getElementById("btnInsert");
-    const formCadastro = document.getElementById("form-contato"); // Definindo a variável formCadastro
+    const formCadastro = document.getElementById("form-contato");
+    const passwordField = document.getElementById('inputSenha');
+    const passwordValidation = document.getElementById('passwordValidation');
 
-    btnInsert.addEventListener('click', function (event) {
+    btnInsert.addEventListener('click', async function (event) {
         event.preventDefault();
 
         if (!formCadastro.checkValidity()) {
             displayMessage("Preencha o formulário corretamente.");
             return;
         }
-
+    
         const nome = document.getElementById('inputNome').value;
         const email = document.getElementById('inputEmail').value;
-        const senha = document.getElementById('inputSenha').value;
-
+        const senha = passwordField.value;
+    
         if (!validateName(nome)) {
             displayMessage("Nome inválido. Por favor, insira um nome válido.");
             return;
         }
-
+    
         if (!validateEmail(email)) {
             displayMessage("Email inválido. Por favor, insira um email válido.");
             return;
         }
-
-        const passwordValidation = validatePassword(senha);
-        if (!passwordValidation.minLength || !passwordValidation.hasNumber || !passwordValidation.hasSymbol || !passwordValidation.hasUppercase || !passwordValidation.hasLowercase) {
+    
+        const passwordValidationResult = validatePassword(senha);
+        if (!passwordValidationResult.minLength || !passwordValidationResult.hasNumber || !passwordValidationResult.hasSymbol || !passwordValidationResult.hasUppercase || !passwordValidationResult.hasLowercase) {
             displayMessage("Senha inválida. Por favor, siga os requisitos de senha.");
             return;
         }
+    
+        const usuario = {
+            nome: nome,
+            email: email,
+            senha: senha,
+            relatos: [],
+            animais_perdidos: []
+        };
 
-        console.log(`Verificando email: ${email}`);
-
-        fetch(`${checkEmailUrl}?email=${email}`)
-            .then(response => {
-                if (response.status === 400) {
-                    return response.json().then(data => {
-                        throw new Error(data.message);
-                    });
-                }
-                if (!response.ok) {
-                    throw new Error('Erro ao verificar email');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(`Resposta do servidor: ${JSON.stringify(data)}`);
-                const usuario = {
-                    nome: nome,
-                    email: email,
-                    senha: senha,
-                    relatos: [],
-                    animais_perdidos: []
-                };
-
-                createUsuario(usuario);
-            })
-            .catch(error => {
-                console.error('Erro ao verificar email via API JSONServer:', error.message);
-                displayMessage(error.message);
+        try {
+            const response = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(usuario.email)}`);
+            const existingUsers = await response.json();
+    
+            if (existingUsers.length > 0) {
+                 window.alert("Email já cadastrado. Por favor, use outro email.");
+                return;
+            }
+    
+            const createUserResponse = await fetch('http://localhost:3000/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(usuario),
             });
+    
+            if (!createUserResponse.ok) {
+                throw new Error('Erro ao cadastrar usuário');
+            }
+    
+            const userData = await createUserResponse.json();
+            localStorage.setItem('userId', userData.id);
+            localStorage.setItem('userName', userData.nome);
+            localStorage.setItem('userEmail', userData.email);
+    
+            window.alert("Usuário cadastrado com sucesso");
+            window.location.href = '../html/Home.html'; 
+
+        } catch (error) {
+            console.error('Erro ao cadastrar usuário via API JSONServer:', error);
+            displayMessage("Erro ao cadastrar usuário");
+        }
     });
 
     const togglePassword = document.getElementById('togglePassword');
-    const passwordField = document.getElementById('inputSenha');
-    const passwordValidation = document.getElementById('passwordValidation');
 
-    togglePassword.addEventListener('click', function (e) {
+    togglePassword.addEventListener('click', function () {
         const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordField.setAttribute('type', type);
         this.querySelector('i').classList.toggle('fa-eye');
@@ -84,68 +87,21 @@ document.addEventListener("DOMContentLoaded", function () {
     passwordField.addEventListener('input', function () {
         const senha = passwordField.value;
         const validation = validatePassword(senha);
-
-        let validationMessage = "";
-        if (!validation.minLength) {
-            validationMessage += "<span style='color:red'>A senha deve ter pelo menos 6 caracteres.</span><br>";
-        } else {
-            validationMessage += "<span style='color:green'>A senha tem pelo menos 6 caracteres.</span><br>";
-        }
-        if (!validation.hasNumber) {
-            validationMessage += "<span style='color:red'>A senha deve conter pelo menos um número.</span><br>";
-        } else {
-            validationMessage += "<span style='color:green'>A senha contém pelo menos um número.</span><br>";
-        }
-        if (!validation.hasSymbol) {
-            validationMessage += "<span style='color:red'>A senha deve conter pelo menos um símbolo.</span><br>";
-        } else {
-            validationMessage += "<span style='color:green'>A senha contém pelo menos um símbolo.</span><br>";
-        }
-        if (!validation.hasUppercase) {
-            validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra maiúscula.</span><br>";
-        } else {
-            validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra maiúscula.</span><br>";
-        }
-        if (!validation.hasLowercase) {
-            validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra minúscula.</span><br>";
-        } else {
-            validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra minúscula.</span><br>";
-        }
-
-        passwordValidation.innerHTML = validationMessage;
+        updatePasswordValidationMessage(validation);
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
     const menu = document.querySelector(".menu");
-  
+
     menuIcon.addEventListener("click", function () {
-      menu.classList.toggle("active");
+        menu.classList.toggle("active");
     });
-  
-    init();
-});
-  
-document.addEventListener("DOMContentLoaded", function () {
-    init();
-  
+
     updateCadastroButton();
-  
+
     document.getElementById('Anunciar').addEventListener('click', verificarLogin);
     document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
 });
-
-function init() {}
-
-async function verificarLogin(event) {
-    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
-
-    if (!user) {
-        event.preventDefault();
-        window.location.href = '../html/cadastro_usuario.html';
-    }
-}
 
 function updateCadastroButton() {
     const btnCadastrar = document.getElementById('Cadastrar').querySelector('a');
@@ -162,8 +118,10 @@ function updateCadastroButton() {
     }
 }
 
-function displayMessage(mensagem) {
-    window.alert(mensagem);
+function displayMessage(message) {
+    const messageElement = document.getElementById('message');
+    messageElement.innerHTML = message;
+    messageElement.style.display = 'block'; 
 }
 
 function validateName(name) {
@@ -188,29 +146,42 @@ function validatePassword(password) {
     return passwordValidation;
 }
 
-async function createUsuario(usuario) {
-    await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(usuario),
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao cadastrar usuário');
-            }
-            return response.json();
-        })
-        .then(data => {
-            localStorage.setItem('userId', data.id);
-            localStorage.setItem('userName', data.nome);
-            localStorage.setItem('userEmail', data.email);
-            displayMessage("Usuário cadastrado com sucesso");
-            window.location.href = "../html/home.html";
-        })
-        .catch(error => {
-            console.error('Erro ao cadastrar usuário via API JSONServer:', error);
-            displayMessage("Erro ao cadastrar usuário");
-        });
+function updatePasswordValidationMessage(validation) {
+    let validationMessage = "";
+    if (!validation.minLength) {
+        validationMessage += "<span style='color:red'>A senha deve ter pelo menos 6 caracteres.</span><br>";
+    } else {
+        validationMessage += "<span style='color:green'>A senha tem pelo menos 6 caracteres.</span><br>";
+    }
+    if (!validation.hasNumber) {
+        validationMessage += "<span style='color:red'>A senha deve conter pelo menos um número.</span><br>";
+    } else {
+        validationMessage += "<span style='color:green'>A senha contém pelo menos um número.</span><br>";
+    }
+    if (!validation.hasSymbol) {
+        validationMessage += "<span style='color:red'>A senha deve conter pelo menos um símbolo.</span><br>";
+    } else {
+        validationMessage += "<span style='color:green'>A senha contém pelo menos um símbolo.</span><br>";
+    }
+    if (!validation.hasUppercase) {
+        validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra maiúscula.</span><br>";
+    } else {
+        validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra maiúscula.</span><br>";
+    }
+    if (!validation.hasLowercase) {
+        validationMessage += "<span style='color:red'>A senha deve conter pelo menos uma letra minúscula.</span><br>";
+    } else {
+        validationMessage += "<span style='color:green'>A senha contém pelo menos uma letra minúscula.</span><br>";
+    }
+
+    passwordValidation.innerHTML = validationMessage;
+}
+
+async function verificarLogin(event) {
+    const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
+
+    if (!user) {
+        event.preventDefault();
+        window.location.href = '../html/cadastro_usuario.html';
+    }
 }

@@ -1,12 +1,10 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
-
 
 function init() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = CONFIG.baseUrl + 'relatos';
-  const usersApiUrl = CONFIG.baseUrl + 'users';
+  const apiUrl = 'http://localhost:3000/relatos';
+  const usersApiUrl = 'http://localhost:3000/users';
 
   const menuIcon = document.querySelector(".mobile-menu-icon button");
   const menu = document.querySelector(".menu");

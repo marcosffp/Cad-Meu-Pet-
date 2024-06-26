@@ -1,9 +1,7 @@
 
-import CONFIG from '../alterar_aqui_link_json_server.js';
-
 const RelatosApp = (function () {
-    const apiUrl = CONFIG.baseUrl + 'relatos';
-    const apiPetReunidos = CONFIG.baseUrl + 'animais_perdidos';
+    const apiUrl = 'http://localhost:3000/relatos';
+    const apiPetReunidos = 'http://localhost:3000/animais_perdidos';
     let db = [];
 
     function reloadPage() {
@@ -248,3 +246,5 @@ function verificarLogin(event) {
         window.location.href = '../html/cadastro_usuario.html';
     }
 }
+
+window.RelatosApp = RelatosApp;

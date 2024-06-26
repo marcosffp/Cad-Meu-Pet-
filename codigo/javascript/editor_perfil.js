@@ -1,8 +1,7 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = CONFIG.baseUrl + 'users';
-    const checkEmailUrl = CONFIG.baseUrl + 'check-email';
+    const apiUrl = "http://localhost:3000/users";
+    const checkEmailUrl = "http://localhost:3000/check-email";
     const formPerfil = document.getElementById("form-perfil");
 
     function displayMessage(mensagem) {

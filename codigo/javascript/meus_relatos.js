@@ -1,7 +1,5 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
-
-const apiUrlRelato = CONFIG.baseUrl + 'relatos';
-const usersapiUrlRelato = CONFIG.baseUrl + 'users';
+const apiUrlRelato = 'http://localhost:3000/relatos';
+const usersapiUrlRelato = 'http://localhost:3000/users';
 let db = [];
 let userRelatos = [];
 

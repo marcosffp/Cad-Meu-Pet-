@@ -1,6 +1,5 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
 
-    const apiUrl = CONFIG.baseUrl + 'users';
+    const apiUrl = 'http://localhost:3000/users';
 
 function init() {
 }

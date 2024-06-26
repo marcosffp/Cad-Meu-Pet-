@@ -1,6 +1,5 @@
-import CONFIG from "../alterar_aqui_link_json_server.js";
 
-const apiUrl = CONFIG.baseUrl + 'animais_perdidos';
+const apiUrl = 'http://localhost:3000/animais_perdidos';
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".mobile-menu-icon button");
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector('.criar-relato a').addEventListener('click', verificarLogin);
   document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
 });
+
 
 document.getElementById("btnFiltrar").addEventListener("click", () => {
   const selectedStatus = document.querySelector('input[name="status"]:checked')?.value;
@@ -97,7 +97,17 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
 }
 
 
-
+function updateCadastroButton() {
+  const btnCadastrar = document.getElementById('btn-cadastrar');
+  const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
+  if (user) {
+      btnCadastrar.textContent = 'Logado';
+      btnCadastrar.href = '../html/editor_perfil.html';
+  } else {
+      btnCadastrar.textContent = 'Cadastrar';
+      btnCadastrar.href = '../html/cadastro_usuario.html';
+  }
+}
 
 
 async function verificarLogin(event) {
