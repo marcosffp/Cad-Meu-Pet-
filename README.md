@@ -1,4 +1,4 @@
-# Cadê meu pet??
+# Cadê meu pet?
 
 
 ## Alunos integrantes da equipe
@@ -54,40 +54,33 @@
 
   ![persona 3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d9f0e83f-a407-4f33-96fb-9eeedb0fd0a9)
 
-
-# Especificações do Projeto
-   | EU COMO...       | QUERO/PRECISO... | PARA...     |
-   |:-----------:|:------:|:-----------:|
-   |Voluntário|Buscar na lista|Facilitar minha busca|
-   | Tutor      |    Cadastrar o meu pet | Ajudar o animal a ser encontrado pelo Usuário |
-   | Tutor      |    Atualizar as informações do animal  | Detalhar sobre sua personalidade e comportamento do pet |
-   | Tutor      |   Encontrar um cachorro abandonado e decide adotá-lo  | Formalizar o processo e atualizar o status do animal |
-   | Tutor      |   Um animal com necessidades médicas especiais  | Garantir assistência adequada em caso de perda |
-   | Usuário      |   Filtrar os animais  | Facilitar a achar o anúncio do pet que o tutor perdeu |
-
 # Requisitos
   **Requisitos Funcionais**
   
-  * RF-001: O tutor faz o cadastro do animal perdido. Prioridade ALTA
-  * RF-002: O usuário busca animais perdidos. Prioridade MÉDIA
-  * RF-003: O usuário filtra os animais por tipo. Prioridade BAIXA
-  * RF-004: O usuário deve ser cadastrado na plataforma. Prioridade ALTA
-  * RF-005: O tutor deve publicar mídias sobre o pet para procura. Prioridade MÉDIA
-  * RF-006: O tutor deve ser cadastrado na plataforma. Prioridade MÉDIA
-  * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). Prioridade ALTA
-  * RF-008: O usuário e o tutor podem editar seu perfil na plataforma. Prioridade MÉDIA
-  * RF-009: O sistema enviará notificações aos usuários cadastrados sobre animais perdidos ou encontrados semelhantes aos seus próprios animais. Prioridade MÉDIA
-  * RF-010: Os usuários podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status e removendo-o das listagens de animais perdidos. Prioridade MÉDIA
+  * RF-001: O tutor faz o cadastro do animal perdido. (Prioridade ALTA)  
+  * RF-002: O usuário busca animais perdidos. (Prioridade MÉDIA) 
+  * RF-003: O usuário e tutor filtra os animais por tipo e status. (Prioridade BAIXA) 
+  * RF-004: O sistema fornecerá métricas sobre o número de animais reunidos com seus tutores.(Prioridade Alta) 
+  * RF-005: O tutor deve publicar imagem sobre o pet para procura por meio url. (Prioridade MÉDIA) 
+  * RF-006: Os usuários ou tutores podem excluir o anúncio (Prioridade Alta) 
+  * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA)  
+  * RF-008: O usuário e o tutor podem editar dados do seu perfil na plataforma. (Prioridade MÉDIA)  
+  * RF-009: O tutor podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status. (Prioridade MÉDIA) 
+  * RF-010: Os usuários ou tutores podem criar relatos sobre o reencontro de animais.(Prioridade MÉDIA)
+  * RF-011: Os usuários ou tutores podem editar relatos sobre o reencontro de animais.(Prioridade MÉDIA)  
+  * RF-012: Os usuários ou tutores podem excluir relatos sobre o reencontros de animais.(Prioridade MÉDIA)
+
 
   **Requisitos Não-Funcionais**
 
-  * RNF-001: Desenvolvimento do site usando HTML, CSS e JS. Prioridade ALTA
-  * RNF-002: Utilização de banco de dados Json server pelo Replit. Prioridade MÉDIA
-  * RNF-003: Suporte para todos os navegadores gerais. Prioridade BAIXA
-  * RNF-004: Site responsivo. Prioridade MÉDIA
-  * RNF-005: Suporte para múltiplos dispositivos. Prioridade MÉDIA
-  * RNF-006: Respostas rápidas. Prioridade ALTA
-  * RNF-007: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. Prioridade MÉDIA
+  * RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA)
+  * RNF-002: Utilização de banco de dados Json server através do Node.js. (Prioridade MÉDIA)
+  * RNF-003: Suporte para todos os navegadores gerais. (Prioridade BAIXA)
+  * RNF-004: Site responsivo. (Prioridade MÉDIA)
+  * RNF-005: Suporte para múltiplos dispositivos. (Prioridade MÉDIA)
+  * RNF-006: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA)
+  * RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA)
+  * RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA)
 
 
 # Projeto de interface
@@ -206,9 +199,19 @@
 
 
 # Referências Bibliográficas
-  * [www.sjsu.edu/people/burford.furman/docs/me120/ME120labreportguide.pdf](www.sjsu.edu/people/burford.furman/docs/me120/ME120labreportguide.pdf)
-  * [hive.utsc.utoronto.ca/public/psych/syllabi/20189/20189-NROD60-ArrudaCarvalho.pdf](hive.utsc.utoronto.ca/public/psych/syllabi/20189/20189-NROD60-ArrudaCarvalho.pdf)
-  * [www.studocu.com/en-us/document/binghamton-university/the-client-system-of-nursing/n-322-syllabus-20201/9417761](www.studocu.com/en-us/document/binghamton-university/the-client-system-of-nursing/n-322-syllabus-20201/9417761)
+- https://www.folhape.com.br/colunistas/tecnologia-e-games/o-scrum-e-o-github-projects-para-gerenciamento-de-projetos/41913/
+  
+- https://youtu.be/VvkT4I7WrmM?si=z3R0D500VgWt5IP1
+  
+- https://youtu.be/zh90BESE-W8?si=pxWiDT83ik0QQ7Ps
+  
+- https://youtu.be/7hZMGSamsYA?si=GMqDBDPjen7tT7vP
+  
+- https://youtu.be/NXm7Ms_1Qjk?si=ViLndsyMTlHZHO97
+  
+- https://www-petz-com-br.cdn.ampproject.org/v/s/www.petz.com.br/blog/cachorros/saude-e-cuidados-cachorros/saude-pet/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=17128701459291&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.petz.com.br%2Fblog%2Fcachorros%2Fsaude-e-cuidados-cachorros%2Fsaude-pet%2F
+  
+- https://www.petshopcontrol.com.br/blog/alimentacao-saudavel-para-pets-o-que-voce-precisa-saber/?gad_source=1&gclid=Cj0KCQjwlN6wBhCcARIsAKZvD5jczGXjbqHt2adG17Uurw_9QGyGkgb-4DXFi9w1G7Og-GYSTQUessAaAkQjEALw_wcB
 
 
   
