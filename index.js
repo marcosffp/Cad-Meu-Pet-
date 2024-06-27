@@ -83,7 +83,7 @@ server.get('/me', authenticateUser, (req, res) => {
 });
 
 server.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'codigo/html/Home.html'));
+  res.sendFile(path.join(__dirname, 'codigo/html/home.html'));
 });
 
 server.use(router);
