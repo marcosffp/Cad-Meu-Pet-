@@ -14,8 +14,11 @@
 * Gabriel Barbosa da Fonseca
 * Michelle Hanne Soares de Andrade
 
-# Contexto 
+# Informações gerais do projeto
 
+  * # Documentação completa na pasta "docs" no repositório
+
+ 
   * # Problema
 
     Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
@@ -37,22 +40,6 @@
       * Donos de animais de estimação que perderam seus animais e desejam recuperá-los.
       * Membros da comunidade que desejam ajudar na busca e localização de animais perdidos.
       * Organizações de resgate de animais e abrigos que lidam com casos de animais perdidos.
-
-# Concepção (Design Thinking)
-
-  ![Matriz de alinhamento](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/5ff21094-dec8-45e1-a66d-b24bb3418713)
-
-  ![Mapa de priorizacao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/5abfa52e-a097-476d-aa1e-dedd05b1872f)
-
-  ![Mural de possibilidades](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/e771d357-cf2d-4b93-acb7-8f7325776f2c)
-
-  ![Mapa de stakeholders](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/6c744fa5-d5cf-4c87-b1d9-75a361109aef)
-
-  ![Persona 1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/94d2f611-4098-4b02-9d10-deb08e009ee0)
-
-  ![Persona2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/22715515-7362-4128-aa42-8df6c0de2a07)
-
-  ![persona 3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d9f0e83f-a407-4f33-96fb-9eeedb0fd0a9)
 
 # Requisitos
   **Requisitos Funcionais**
