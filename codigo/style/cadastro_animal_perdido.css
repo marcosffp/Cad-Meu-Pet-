@@ -183,7 +183,9 @@ main {
 
 .d-grid {
   margin-top: 20px;
-}#btnInsert {
+}
+
+#btnInsert {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 20px;
@@ -218,6 +220,7 @@ main {
 .text-center a:hover {
   color: var(--cor3);
 }
+
 .rodape {
   color: var(--cor0);
   padding: 40px 0;

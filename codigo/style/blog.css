@@ -17,8 +17,6 @@
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-
-
 html {
   font-size: 1em;
 }
@@ -28,8 +26,6 @@ body {
   background-color: var(--cor0);
   font-family: var(--fonte-destaque);
 }
-
-
 
 .cabecalho {
   color: var(--cor3);

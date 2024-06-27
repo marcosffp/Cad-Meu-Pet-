@@ -284,17 +284,16 @@ body {
 }
 
 .relatos .btn-danger:active {
-  background-color: rgb(194, 5, 5); /* Cor de fundo desejada quando clicado */
+  background-color: rgb(194, 5, 5); 
 }
+
 .relatos .btn-warning:active {
-  background-color: var(--cor3); /* Cor de fundo desejada quando clicado */
+  background-color: var(--cor3); 
 }
 
 .relatos .btn-info:active {
-  background-color: var(--cor4); /* Cor de fundo desejada quando clicado */
+  background-color: var(--cor4); 
 }
-
-
 
 .rodape {
   color: var(--cor0);

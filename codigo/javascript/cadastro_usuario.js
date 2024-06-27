@@ -120,12 +120,6 @@ function updateCadastroButton() {
     }
 }
 
-// function displayMessage(message) {
-//     const messageElement = document.getElementById('message');
-//     messageElement.innerHTML = message;
-//     messageElement.style.display = 'block'; 
-// }
-
 function validateName(name) {
     const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s']+$/;
     return nameRegex.test(name);

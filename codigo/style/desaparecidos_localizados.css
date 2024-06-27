@@ -168,6 +168,7 @@ main {
   border: none;
   border-radius: 5px;
 }
+
 .criar-relato a{
   text-decoration: none;
   color: var(--cor0);
@@ -202,20 +203,20 @@ main {
 
 #results {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This line is good for responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px;
 }
 
-/* Adjust grid for two cards per row */
+
 @media (min-width: 600px) {
   #results {
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row on larger screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 .pet-card {
   display: flex;
-  flex-direction: row; /* Define o layout em linha */
+  flex-direction: row; 
   background-color: var(--cor1);
   border-radius: 10px;
   overflow: hidden;
@@ -223,17 +224,17 @@ main {
 }
 
 .pet-card img {
-  width: 40%; /* Define a largura da imagem */
-  height: auto; /* A altura será ajustada automaticamente */
+  width: 40%; 
+  height: auto;
   object-fit: cover;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; /* Canto inferior esquerdo arredondado */
-  border-top-right-radius: 0; /* Remove o raio do canto superior direito */
+  border-bottom-left-radius: 10px; 
+  border-top-right-radius: 0; 
 }
 
 .pet-info {
   padding: 20px;
-  flex: 1; /* Permite que a seção de informações ocupe o espaço restante */
+  flex: 1; 
 }
 
 .pet-info h3 {
@@ -283,7 +284,6 @@ main {
   margin-left: auto;
 }
 
-/* Ensure consistent styling */
 .btn-custom-green {
   background-color: var(--cor4);
   color: white;
@@ -297,7 +297,6 @@ main {
 .pet-info .btn-danger {
   margin-left: auto;
 }
-
 
 .rodape {
   color: var(--cor0);

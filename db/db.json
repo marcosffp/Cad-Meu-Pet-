@@ -29,16 +29,6 @@
       "liked": true,
       "likes": 1,
       "id": 3
-    },
-    {
-      "nome": "nina",
-      "data": "2024-06-26",
-      "localizacao": "belo horizonte, mg",
-      "descricao": "cachorro",
-      "imagemUrl": "https://img.freepik.com/fotos-premium/cachorro-fofo-enquanto-levanta-o-pe_1000717-382.jpg",
-      "liked": true,
-      "likes": 1,
-      "id": 4
     }
   ],
   "users": [
@@ -77,52 +67,6 @@
         1
       ],
       "id": 3
-    },
-    {
-      "nome": "miwajdijn",
-      "email": "carlosjfigghbjnueiro@gmail.com",
-      "senha": "12!@fhH",
-      "relatos": [],
-      "animais_perdidos": [],
-      "id": 4
-    },
-    {
-      "nome": "miwajdijn",
-      "email": "carlosjfigghbjnueiro@gmail.com",
-      "senha": "12!@fhH",
-      "relatos": [],
-      "animais_perdidos": [],
-      "id": 5
-    },
-    {
-      "nome": "Marcos Alberto",
-      "email": "carlosjfiguGeiro@gmail.com",
-      "senha": "12!Mnd",
-      "relatos": [
-        4
-      ],
-      "animais_perdidos": [],
-      "id": 6
-    },
-    {
-      "email": "donodaboca.123@gmail.com",
-      "senha": "123456$vbaushdQ"
-    },
-    {
-      "nome": "Álvaro Daniel",
-      "email": "alvarin@gnail.com.br",
-      "senha": "1234%Bhajsg",
-      "relatos": [],
-      "animais_perdidos": [],
-      "id": 7
-    },
-    {
-      "nome": "Álvaro Daniel",
-      "email": "l~kml.@ajbksd.com",
-      "senha": "37812@uiasbdD",
-      "relatos": [],
-      "animais_perdidos": [],
-      "id": 8
     }
   ],
   "animais_perdidos": [

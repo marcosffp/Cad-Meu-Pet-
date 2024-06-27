@@ -5,6 +5,7 @@ const session = require('express-session');
 const server = jsonServer.create();
 const router = jsonServer.router('./db/db.json');
 const cors = require('cors');
+
 const middlewares = jsonServer.defaults({
   static: path.join(__dirname, 'codigo')
 });
@@ -20,7 +21,6 @@ server.use(session({
 
 const db = router.db;
 
-// Middleware para manipular relatos
 server.use((req, res, next) => {
   if (req.method === 'POST' && req.path === '/relatos') {
     const novoRelato = req.body;
@@ -33,7 +33,6 @@ server.use((req, res, next) => {
   next();
 });
 
-// Middleware para verificar e-mail durante o cadastro de usuários
 server.use((req, res, next) => {
   if (req.method === 'POST' && req.path === '/users') {
     const { email } = req.body;
@@ -62,21 +61,6 @@ server.post('/login', (req, res) => {
     res.status(401).json({ message: 'Invalid credentials' });
   }
 });
-
-// server.post('/users', (req, res) => {
-//   const { email, senha } = req.body;
-//   const existingUser = db.get('users').find({ email }).value();
-//   if (existingUser) {
-//     return res.status(400).json({ message: 'E-mail already exists' });
-//   }
-
-//   const newUser = { email, senha };
-//   db.get('users').push(newUser).write();
-
-//   // Optional: You might want to set req.session.user here if you want to auto-login after registration.
-
-//   res.status(201).json({ message: 'User created successfully', user: newUser });
-// });
 
 server.get('/me', authenticateUser, (req, res) => {
   res.json(req.session.user);

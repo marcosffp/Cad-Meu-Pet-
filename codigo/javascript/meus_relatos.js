@@ -12,7 +12,6 @@ function displayMessage(message) {
     console.log(message);
 }
 
-
 function updateCadastroButton() {
     const btnCadastrar = document.getElementById('Cadastrar').querySelector('a');
     const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
@@ -163,7 +162,6 @@ function ListaRelatos() {
     }
 }
 
-
 function handleDelete(id) {
     if (confirm('Tem certeza que deseja excluir este relato?')) {
         deleteRelato(id, reloadPage);
@@ -279,12 +277,9 @@ function verificarLogin(event) {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
     updateCadastroButton();
 
     document.getElementById('Anunciar').addEventListener('click', verificarLogin);
     document.getElementById('Cadastrar').addEventListener('click', verificarLogin);
 });
-
-

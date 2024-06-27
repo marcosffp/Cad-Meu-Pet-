@@ -17,7 +17,6 @@
   --fonte-destaque: "Baloo Bhai 2", sans-serif;
 }
 
-
 html {
   font-size: 1em;
 }
@@ -131,13 +130,11 @@ body {
   background-color: transparent;
 }
 
-
 h1 {
   font-weight: bolder;
   color: var(--cor4);
   margin-left: 30px;
 }
-
 
 .main-container {
   display: flex;
@@ -278,7 +275,6 @@ h1 {
   transition: height 0.3s ease;
 }
 
-
 .card-title {
   display: flex;
   justify-content: space-between;
@@ -330,7 +326,6 @@ h1 {
   margin-right: 5px;
 }
 
-
 .criar-relato button {
   padding: 12px 24px;
   font-weight: bold;
@@ -347,7 +342,6 @@ h1 {
   color: var(--cor0);
 }
 
-
 .criar-relato button:hover {
   background-color: var(--cor4);
 }
@@ -361,7 +355,6 @@ h1 {
 .botoes-relato .criar-relato {
   margin-top: 20px;
 }
-
 
 .card {
   background-color: #AED1D1;
@@ -402,14 +395,12 @@ h1 {
   margin-right: 5px;
 }
 
-
 @media (max-width: 992px) {
   .row-cols-md-3>.col {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
-
 
 .rodape {
   color: var(--cor0);
@@ -467,8 +458,6 @@ h1 {
   text-align: center;
   font-size: 12px;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .cabecalho {

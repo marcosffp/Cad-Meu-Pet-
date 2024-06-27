@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector('.criar-relato:nth-child(2) a').addEventListener('click', verificarLogin);
 });
 
-
 document.getElementById("btnFiltrar").addEventListener("click", () => {
   const selectedStatus = document.querySelector('input[name="status"]:checked')?.value;
   const selectedTipo = document.querySelector('input[name="tipo"]:checked')?.value;
@@ -29,13 +28,11 @@ document.getElementById("btnFiltrar").addEventListener("click", () => {
   loadAndDisplayPets(selectedStatus, selectedTipo, localizacao);
 });
 
-
 document.getElementById("btnResetar").addEventListener("click", () => {
   document.querySelectorAll('input[name="status"]').forEach((input) => (input.checked = false));
   document.querySelectorAll('input[name="tipo"]').forEach((input) => (input.checked = false));
   loadAndDisplayPets();
 });
-
 
 async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filterLocalizacao = null) {
   try {
@@ -96,7 +93,6 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
   }
 }
 
-
 function updateCadastroButton() {
   const btnCadastrar = document.getElementById('btn-cadastrar');
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
@@ -108,7 +104,6 @@ function updateCadastroButton() {
       btnCadastrar.href = '../html/cadastro_usuario.html';
   }
 }
-
 
 async function verificarLogin(event) {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');

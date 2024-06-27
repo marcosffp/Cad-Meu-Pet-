@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   loadAndDisplayPets();
   updateCadastroButton();
 
-  // Verificações e adições de event listeners
   const anunciarButton = document.getElementById('Anunciar');
   const cadastrarButton = document.getElementById('Cadastrar');
   const buttonsPerdi = document.querySelectorAll('.butao-perdi a');
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonsRelato.forEach(button => button.addEventListener('click', verificarLogin));
   }
 
-  // Event listener para filtro
   const btnFiltrar = document.getElementById("btnFiltrar");
   if (btnFiltrar) {
     btnFiltrar.addEventListener("click", () => {
@@ -48,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Event listener para resetar filtros
   const btnResetar = document.getElementById("btnResetar");
   if (btnResetar) {
     btnResetar.addEventListener("click", () => {
@@ -58,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Event listener para formulário de edição
   const editForm = document.getElementById("editForm");
   if (editForm) {
     editForm.addEventListener("submit", function (event) {
@@ -79,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Função para carregar e exibir pets
 async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filterLocalizacao = null) {
   try {
     const response = await fetch(apiUrl);
@@ -87,7 +82,7 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
     const resultsSection = document.getElementById("results");
     const userId = parseInt(localStorage.getItem('userId'));
 
-    // Filtra os pets conforme os filtros fornecidos
+  
     let filteredPets = data;
     if (filterStatus) {
       filteredPets = filteredPets.filter(pet => pet.status === filterStatus);
@@ -99,10 +94,10 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
       filteredPets = filteredPets.filter(pet => pet.endereco.includes(filterLocalizacao));
     }
 
-    resultsSection.innerHTML = "";  // Limpa os resultados anteriores
+    resultsSection.innerHTML = "";  
 
     filteredPets.forEach((pet) => {
-      if (pet.userId === userId) {  // Verifica se o pet pertence ao usuário logado
+      if (pet.userId === userId) {  
         const content = document.createElement("div");
         content.classList.add("pet-card");
         content.setAttribute("data-id", pet.id);
@@ -184,7 +179,6 @@ async function loadAndDisplayPets(filterStatus = null, filterTipo = null, filter
   }
 }
 
-// Função para atualizar informações do pet
 async function updatePet(id, pet) {
   try {
     const response = await fetch(`${apiUrl}/${id}`, {
@@ -204,7 +198,6 @@ async function updatePet(id, pet) {
   }
 }
 
-// Função para excluir um pet
 async function deletePet(id, refreshFunction) {
   try {
     const response = await fetch(`${apiUrl}/${id}`, {
@@ -242,7 +235,6 @@ async function deletePet(id, refreshFunction) {
   }
 }
 
-// Função para verificar o login antes de permitir ação
 async function verificarLogin(event) {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
   if (!user) {
@@ -251,7 +243,6 @@ async function verificarLogin(event) {
   }
 }
 
-// Função para atualizar o texto e link do botão de cadastro
 function updateCadastroButton() {
   const btnCadastrar = document.getElementById('btn-cadastrar');
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
@@ -266,17 +257,13 @@ function updateCadastroButton() {
   }
 }
 
-// Função para exibir mensagens no console
 function displayMessage(message) {
   console.log(message);
 }
 
-// Função de inicialização
 function init() {
-  // Não implementado neste exemplo
 }
 
-// Função para atualizar o card do pet após edição
 function updatePetCard(id, updatedPet) {
   const card = document.querySelector(`.pet-card[data-id="${id}"]`);
   if (card) {
