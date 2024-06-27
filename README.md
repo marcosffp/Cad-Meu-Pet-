@@ -112,19 +112,39 @@
   * Editor de perfil:
     ![Editor de perfil novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/343506a0-e1f7-4abe-9a4a-efb1c5d4231e)
 
-# Metodologia
+# Ferramentas
   
-  * Processo de Design Thinking: [Link Figma](https://www.figma.com/file/kIKNbYDNAJAC2btmjOb3zP/Untitled?type=design&node-id=0%3A1&mode=design&t=G29XkvT0FDuKfEae-1)
-  * Hospedagem do código:
-  * Projeção inicial das telas: [Link Figma](https://www.figma.com/file/EfMkDajbdfXypWWp5nKzi7/Untitled?type=design&node-id=22%3A2&mode=design&t=dCy4fRDzNktwV2iW-1)
-  * Projeção Final das telas:
-  * Apresentação do projeto:
-  * Documentação do projeto: [Link Documentação](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit#heading=h.gjdgxs)
+-Processo de Design Thinking: Plataforma Figma 
+[Link Design Thinking](https://www.figma.com/file/kIKNbYDNAJAC2btmjOb3zP/Untitled?type=design&node-id=0%3A1&mode=design&t=A09p9qmoB4UIzsRM-1)
+
+-Repositório de código: Plataforma GitHub 
+[Link Repositório](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/)
+
+-Projeção inicial das telas: Plataforma Figma 
+[Link Telas](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design)
+
+-Projeção Final das telas: Plataforma Figma
+[Wireframe/User Flow Final](https://www.figma.com/design/mCIkWXsfOaR7kXdzdGCT5F/Untitled?node-id=0-1&t=BaHhOG1Ngoqo74p2-0)
+
+-Projeção User Flow: Plataforma Miro
+[Link User Flow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
+
+-Apresentação do projeto: Plataforma Canva
+[Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+-Apresentação do final projeto: Plataforma Canva
+[Link Apresentação](https://www.canva.com/design/DAGJC1dlcj4/jTF46fAZzt9mFX5HqhGiSg/edit?utm_content=DAGJC1dlcj4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+-Documento do projeto: Plataforma Google Docs
+[Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
+
+-Hospedagem: Plataforma Replit
+[Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet?s=app)
 
 
 # Gestão do Projeto
   
-  Para uma maior organização do projeto nós definimos uma organização por sprints.
+  Para uma maior organização do projeto nós definimos uma organização por sprints da metodologia scrum.
     
   * Sprint 1: Foi a primeira reunião do grupo em que colocamos as primeiras ideias em prática.
        
