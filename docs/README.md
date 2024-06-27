@@ -4,13 +4,12 @@ Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho 
 
 A documentação do projeto inclui as seguintes seções:
 
-1. Introdução
-2. Contexto
-3. Concepção
-4. Metodologia
-5. Solução
-6. FAQ (Questões frequentes)
-7. Referências Bibliográficas
+1. Orientações gerais
+2. Solução do Problema
+3. Wireframes
+4. Gestão de Projeto
+5. Metodologia Scrum
+6. Referências Bibliográficas
 
 O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
 
@@ -155,7 +154,7 @@ Os requisitos de um projeto são classificados em dois grupos:
 - [User Flow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
 
 
-## Wireframe Inicial
+# Wireframe Inicial
 
 ### Home
 ![home](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/49a97c85-ca32-47e7-b616-dd4b952ac413)
@@ -266,7 +265,7 @@ Os requisitos de um projeto são classificados em dois grupos:
   *Link:
   [Wireframe/User Flow Final](https://www.figma.com/design/mCIkWXsfOaR7kXdzdGCT5F/Untitled?node-id=0-1&t=BaHhOG1Ngoqo74p2-0)
 
-## Gestão de Projetos
+# Gestão de Projeto
 
 ### Ferramentas
 
@@ -293,8 +292,8 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 -Documento do projeto: Plataforma Google Docs
 [Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
 
--Node.js: Plataforma Replit
-[Link Node.js](https://replit.com/@mafpinto/JSONServer-cade-meu-pet?)
+-Hospedagem: Plataforma Replit
+[Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet?s=app)
 
 
 
@@ -313,7 +312,7 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 
 ![mapa_de_prorizacao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e4ccf493-47c8-4401-a96c-a0e05e46bb5f)
 
-### Scrum
+# Metodologia Scrum
 
 -Planejamento em Sprints:
 O projeto foi dividido em sprints curtos, cada um com metas e entregas específicas. A equipe planejava cada sprint em conjunto, definindo as tarefas e os critérios de aceitação.
