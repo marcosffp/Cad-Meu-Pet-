@@ -16,7 +16,7 @@
 
 # Informações gerais do projeto
 
-  * # Documentação completa na pasta "docs" no repositório
+## Documentação completa na pasta "docs" no repositório
 
  
   * # Problema
