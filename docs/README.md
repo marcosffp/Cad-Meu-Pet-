@@ -289,6 +289,9 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 -Apresentação do projeto: Plataforma Canva
 [Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+-Apresentação do final projeto: Plataforma Canva
+[Link Apresentação](https://www.canva.com/design/DAGJC1dlcj4/jTF46fAZzt9mFX5HqhGiSg/edit?utm_content=DAGJC1dlcj4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 -Documento do projeto: Plataforma Google Docs
 [Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
 
