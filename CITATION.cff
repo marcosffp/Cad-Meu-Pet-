@@ -1,65 +1,32 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Cadê meu Pet?
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Righas
+    given-names: Alexandre Ottoni 
+  - family-names: Gomes Batista Figueiredo
+    given-names: Carlos José
+  - family-names: Volponi
+    given-names: Henrique Lima
+  - family-names: Silva Custódio
+    given-names: ⁠João Gabriel
+  - family-names: Ferreira Pinto
+    given-names: Marcos Alberto
+
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: da Fonseca
+    given-names: Gabriel Barbosa 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Soares de Andrade
+    given-names: Michelle Hanne 
 keywords:
-  - 
-  - 
-repository-code: 
+  - Resgate de animal perdido
+  - Animais de estimação
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
-=======
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
-authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-06-30
 >>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
