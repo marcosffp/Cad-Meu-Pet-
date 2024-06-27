@@ -82,37 +82,7 @@
   * RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA)
   * RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA)
 
-
-# Projeto de interface
-  
-  * Página principal, visando chamar atenção do público-alvo e ser intuitivo ao que diz respeito da funcionalidade:
-    ![Home antigo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/76d6fa7a-4a8b-4f59-bc6c-a57138005128)
-
-  
-  * Página “Achados e Perdidos”, a qual mostra os animais que estão perdidos/procurando donos:
-    ![Achados e perdidos antigo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/fa84b7d8-662a-4768-b564-f9c5e1e93c44)
-
-  
-  * Página de log-in e criação de conta, bem básica e intuitiva:
-    ![login antigo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/91080eb1-d5e3-4f8a-8848-425bb1def1eb)
-
-  
-  * Página de criação do anúncio, com especificações para ajudar na busca do pet:
-    ![Anuncio de pet antigo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/969c94be-8643-4339-a329-6383a9b74f7b)
-
-
-  * Página de ferramentas de busca, feita para incluir todas as personas, tanto quem busca o pet quanto quem achou um:
-    ![Ferramentas antigo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/ba55e093-a9fa-4717-9eaf-9d6d35c0941d)
-
-  * Página de FAQ (Frequently Asked Questions), feita para sanar dúvidas dos usuários interessados no serviço do projeto “Cadê meu Pet?”:
-    ![FAQ antigo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/3261956b-c917-401f-a6ac-5877e7d83ee6)
-
-
-  * Páginas com suporte para mobile:
-    ![Paginas Mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/6e82b491-42b2-40e5-ad18-e02085358b02)
-
-
-# Interface Final
+# Interface 
   
   * Home:
     ![Home p1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/bf7e2e48-8816-4ea8-b1d0-c1ac30677fb7)
