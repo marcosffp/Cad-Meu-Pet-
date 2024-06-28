@@ -1,111 +1,68 @@
 # Código Fonte
 ```plaintext
-projeto/
+codigo/
+│ 
+├── html/  # Diretório contendo os arquivos HTML para as diferentes páginas do site
+│   ├── blog.html  # Página do blog
+│   ├── cadastro_animal_perdido.html  # Página de cadastro de animais perdidos
+│   ├── cadastro_relato.html  # Página de cadastro de relatos
+│   ├── cadastro_usuario.html  # Página de cadastro de novos usuários
+│   ├── desaparecidos_localizados.html  # Página para exibir animais desaparecidos e localizados
+│   ├── editor_perfil.html  # Página para edição de perfil do usuário
+│   ├── faq.html  # Página de perguntas frequentes (FAQ)
+│   ├── ferramentas.html  # Página com ferramentas úteis
+│   ├── home.html  # Página inicial do site
+│   ├── login.html  # Página de login
+│   ├── meus_anuncios.html  # Página para exibir os anúncios do usuário
+│   ├── meus_relatos.html  # Página para exibir os relatos do usuário
+│   ├── politica.html  # Página com a política do site
+│   ├── quem_somos.html  # Página "Quem Somos"
+│   └── termos.html  # Página de termos e condições
+│   
+├── img/  # Diretório contendo as imagens utilizadas no site
+│   ├── alexandre.jpeg  # Imagem de Alexandre
+│   ├── auncio_pet.png  # Imagem de anúncio de pet
+│   ├── carlos.jpeg  # Imagem de Carlos
+│   ├── gato.jpg  # Imagem de um gato
+│   ├── humberto-arellano-N_G2Sqdy9QY-unsplash.jpg  # Imagem de Humberto Arellano
+│   ├── joao.jpeg  # Imagem de João
+│   ├── joe-caione-qO-PIF84Vxg-unsplash.jpg  # Imagem de Joe Caione
+│   ├── marcos.jpeg  # Imagem de Marcos
+│   ├── matthew-henry-2Ts5HnA67k8-unsplash.jpg  # Imagem de Matthew Henry
+│   ├── nova_logo.png  # Nova logo do site
+│   ├── pet_tutora.jpg  # Imagem de um pet com a tutora
+│   ├── teste.png  # Imagem de teste
+│   └── volponi.jpeg  # Imagem de Volponi
+│   
+├── javascript/  # Diretório contendo os arquivos JavaScript para funcionalidades do site
+│   ├── blog_faq_ferramentas.js  # JavaScript para as páginas de blog, FAQ e ferramentas
+│   ├── cadastro_animal_perdido.js  # JavaScript para a página de cadastro de animais perdidos
+│   ├── cadastro_relato.js  # JavaScript para a página de cadastro de relatos
+│   ├── cadastro_usuario.js  # JavaScript para a página de cadastro de usuários
+│   ├── desaparecidos_localizados.js  # JavaScript para a página de animais desaparecidos e localizados
+│   ├── editor_perfil.js  # JavaScript para a página de edição de perfil
+│   ├── faq.js  # JavaScript para a página de FAQ
+│   ├── home.js  # JavaScript para a página inicial
+│   ├── login.js  # JavaScript para a página de login
+│   ├── meus_anuncios.js  # JavaScript para a página de anúncios do usuário
+│   └── meus_relatos.js  # JavaScript para a página de relatos do usuário
+│   
+├── style/  # Diretório contendo os arquivos CSS para estilização do site
+│   ├── blog.css  # CSS para a página do blog
+│   ├── cadastro_animal_perdido.css  # CSS para a página de cadastro de animais perdidos
+│   ├── cadastro_relato.css  # CSS para a página de cadastro de relatos
+│   ├── cadastro_usuario.css  # CSS para a página de cadastro de usuários
+│   ├── desaparecidos_localizados.css  # CSS para a página de animais desaparecidos e localizados
+│   ├── editor_perfil.css  # CSS para a página de edição de perfil
+│   ├── faq.css  # CSS para a página de FAQ
+│   ├── ferramentas.css  # CSS para a página de ferramentas
+│   ├── home.css  # CSS para a página inicial
+│   ├── login.css  # CSS para a página de login
+│   ├── meus_anuncios.css  # CSS para a página de anúncios do usuário
+│   ├── meus_relatos.css  # CSS para a página de relatos do usuário
+│   ├── politicas.css  # CSS para a página de políticas
+│   ├── quem_somos.css  # CSS para a página "Quem Somos"
+│   └── termos.css  # CSS para a página de termos e condições
 │
-├── .cache/
-│   ├── nix/
-│   ├── replit/
-│   └── typescript/4.4/
-│
-├── .upm/
-│   └── store.json
-│
-├── codigo/
-│   ├── html/
-│   │   ├── blog.html
-│   │   ├── cadastro_animal_perdido.html
-│   │   ├── cadastro_relato.html
-│   │   ├── cadastro_usuario.html
-│   │   ├── desaparecidos_localizados.html
-│   │   ├── editor_perfil.html
-│   │   ├── faq.html
-│   │   ├── ferramentas.html
-│   │   ├── home.html
-│   │   ├── login.html
-│   │   ├── meus_anuncios.html
-│   │   ├── meus_relatos.html
-│   │   ├── politica.html
-│   │   ├── quem_somos.html
-│   │   └── termos.html
-│   │ 
-│   ├── img/
-│   │   ├── alexandre.jpeg
-│   │   ├── auncio_pet.png
-│   │   ├── carlos.jpeg
-│   │   ├── gato.jpg
-│   │   ├── humberto-arellano-N_G2Sqdy9QY-unsplash.jpg
-│   │   ├── joao.jpeg
-│   │   ├── joe-caione-qO-PIF84Vxg-unsplash.jpg
-│   │   ├── marcos.jpeg
-│   │   ├── matthew-henry-2Ts5HnA67k8-unsplash.jpg
-│   │   ├── nova_logo.png
-│   │   ├── pet_tutora.jpg
-│   │   ├── teste.png
-│   │   └── volponi.jpeg
-│   │ 
-│   ├── javascript/
-│   │   ├── blog_faq_ferramentas.js
-│   │   ├── cadastro_animal_perdido.js
-│   │   ├── cadastro_relato.js
-│   │   ├── cadastro_usuario.js
-│   │   ├── desaparecidos_localizados.js
-│   │   ├── editor_perfil.js
-│   │   ├── faq.js
-│   │   ├── home.js
-│   │   ├── login.js
-│   │   ├── meus_anuncios.js
-│   │   └── meus_relatos.js
-│   │ 
-│   ├── style/
-│   │   ├── blog.css
-│   │   ├── cadastro_animal_perdido.css
-│   │   ├── cadastro_relato.css
-│   │   ├── cadastro_usuario.css
-│   │   ├── desaparecidos_localizados.css
-│   │   ├── editor_perfil.css
-│   │   ├── faq.css
-│   │   ├── ferramentas.css
-│   │   ├── home.css
-│   │   ├── login.css
-│   │   ├── meus_anuncios.css
-│   │   ├── meus_relatos.css
-│   │   ├── politicas.css
-│   │   ├── quem_somos.css
-│   │   └── termos.css
-│   │ 
-│   └── README.md
-│
-├── db/
-│   ├── db.json
-│   └── db_original.json
-│
-├── docs/
-│   ├── assets/
-│   ├── LICENSE
-│   ├── README.md
-│   └── index.html
-│
-├── node_modules/
-│
-├── templates/
-│
-├── .gitignore
-│
-├── .replit
-│
-├── CITATION.cff
-│
-├── LICENSE
-│
-├── README.md
-│
-├── index.js
-│
-├── package-lock.json
-│
-├── package.json
-│
-├── replit.nix
-│
-└── replit_zip_error_log.txt
+└── README.md  # Arquivo README contendo informações e instruções sobre o projeto
 ```
