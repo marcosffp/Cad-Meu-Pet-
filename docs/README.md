@@ -265,6 +265,31 @@ Os requisitos de um projeto são classificados em dois grupos:
   *Link:
   [Wireframe/User Flow Final](https://www.figma.com/design/mCIkWXsfOaR7kXdzdGCT5F/Untitled?node-id=0-1&t=BaHhOG1Ngoqo74p2-0)
 
+
+# Estrutura do projeto
+```plaintext
+codigo/ 
+│
+├── html/
+│   ├── assets/ (pasta de imagens, estilos e scripts)
+│   ├── services/ (pata para armazenar componentes de interação com o servidor)
+│   ├── pages/ (pasta para armazenar as páginas html)
+│   ├── index.html
+│   ├── index.js (script para habilitar o roteamento no navegador)
+│   └── vercel.json (arquivo de configuração para vercel quase igual ao do @profdiegoaugusto)
+│
+├── Back/
+│   ├── data/
+│   │   └── db.json (seus dados do trabalho, onde armazenamos usuários, posts, etc)
+│   ├── server.js
+│   └── vercel.json (arquivo de configuração para vercel igual ao do @profdiegoaugusto)
+│
+└── README.md
+```
+
+
+
+
 # Gestão de Projeto
 
 ### Ferramentas
