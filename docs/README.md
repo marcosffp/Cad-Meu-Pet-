@@ -17,12 +17,12 @@ A documentação do projeto inclui as seguintes seções:
 projeto/
 │
 ├── .cache/
-│   ├── nix/
-│   ├── replit/
-│   └── typescript/4.4/
+│   ├── nix/ (Sistema de gerenciamento de pacotes Nix)
+│   ├── replit/ (Cache específico da plataforma de desenvolvimento Replit)
+│   └── typescript/4.4/ (Compilador TypeScript na versão 4.4)
 │
 ├── .upm/
-│   └── store.json
+│   └── store.json (Sistema de gerenciamento de pacotes UPM)
 │
 ├── codigo/
 │   ├── html/ (Contém todas as páginas HTML do projeto)  
