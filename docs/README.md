@@ -301,6 +301,65 @@ codigo/
 │   └── vercel.json (arquivo de configuração para vercel igual ao do @profdiegoaugusto)
 │
 └── README.md
+
+
+projeto/
+│
+├── .cache/
+│
+├── .upm/
+│
+├── codigo/
+│
+├── db/
+│
+├── docs/
+│
+├── image/
+│
+├── node_modules/
+│
+├── templates/
+│
+├── .gitignore
+│
+├── .replit
+│
+├── CITATION.cff
+│
+├── LICENSE
+│
+├── README.md
+│
+├── index.js
+│
+├── package-lock.json
+│
+├── package.json
+│
+├── replit.nix
+│
+└── replit_zip_error_log.txt
+
+
+
+
+│   ├── services/ (pata para armazenar componentes de interação com o servidor)
+│   ├── pages/ (pasta para armazenar as páginas html)
+│   ├── index.html
+│   ├── index.js (script para habilitar o roteamento no navegador)
+│   └── vercel.json (arquivo de configuração para vercel quase igual ao do @profdiegoaugusto)
+│
+├── Back/
+│   ├── data/
+│   │   └── db.json (seus dados do trabalho, onde armazenamos usuários, posts, etc)
+│   ├── server.js
+│   └── vercel.json (arquivo de configuração para vercel igual ao do @profdiegoaugusto)
+│
+└── README.md
+
+
+
 ```
 
 
