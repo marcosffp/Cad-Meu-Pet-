@@ -11,7 +11,60 @@ A documentação do projeto inclui as seguintes seções:
 5. Metodologia Scrum
 6. Referências Bibliográficas
 
-O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
+
+# Organização do projeto
+```plaintext
+projeto/
+│
+├── .cache/
+│   ├── nix/
+│   ├── replit/
+│   └── typescript/4.4/
+│
+├── .upm/
+│   └── store.json
+│
+├── codigo/
+│   ├── html/ (Contém todas as páginas HTML do projeto)  
+│   ├── img/ (Imagens utilizadas no site)
+│   ├── javascript/ (Scripts das páginas)
+│   ├── style/ (Arquivos CSS responsáveis pelo estilo visual de cada página)
+│   └── README.md (Documentação específico do diretório "codigo")
+│
+├── db/
+│   ├── db.json (Banco de dados principal utilizado pelo projeto)
+│   └── db_original.json
+│
+├── docs/
+│   ├── assets/ (Diretório para recursos adicionais de documentação)
+│   ├── LICENSE (Licença da documentação do projeto)
+│   ├── README.md (Documentação do projeto)
+│   └── index.html (Página HTML principal para a documentação)
+│
+├── node_modules/ (Pacotes npm instalados são armazenados)
+│
+├── templates/ (Templates reutilizáveis do projeto)
+│
+├── .gitignore
+│
+├── .replit (Configurações específicas da plataforma Replit)
+│
+├── CITATION.cff (Arquivo de citação para o projeto)
+│
+├── LICENSE (Arquivo de licença do projeto)
+│
+├── README.md (Documento geral e instruções do projeto)
+│
+├── index.js (Ponto de entrada principal do código JavaScript do projeto)
+│
+├── package-lock.json (Dependências instaladas)
+│
+├── package.json (Metadados relevantes para o projeto)
+│
+├── replit.nix (Configuração do ambiente de desenvolvimento Nix para Replit)
+│
+└── replit_zip_error_log.txt (Log de erros relacionados à compressão/extração de arquivos no Replit)
+```
 
 # Orientações gerais
 ## Problema
