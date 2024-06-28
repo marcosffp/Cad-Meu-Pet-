@@ -41,6 +41,36 @@
       * Membros da comunidade que desejam ajudar na busca e localização de animais perdidos.
       * Organizações de resgate de animais e abrigos que lidam com casos de animais perdidos.
 
+   
+        
+# Instruções para Usar o Site
+
+ *#Acessando o Site:
+ 1. Entre pelo link do Replit.
+ 2. Clique em "Fork".
+ 3. Clique em "Run".
+    
+Navegando pelo Site:
+  *#Cabeçalho das páginas:
+    1. No cabeçalho, clique na logo com o nome do site para ser redirecionado à página inicial.
+    2. Clique em "Início" para voltar à página inicial a qualquer momento.
+    3. Clique em "Desaparecidos e Localizados" para ser direcionado à página com anúncios cadastrados pelos usuários.
+    4. Clique em "Ferramentas" para acessar as instruções das ferramentas disponíveis no site.
+    5. Clique em "Blog" para ver conteúdos interessantes e informativos para quem tem pets.
+    6. Clique em "FAQ" para encontrar respostas às perguntas frequentes sobre o site.
+    7. Clique em "Anunciar" para criar um anúncio e divulgar um pet perdido, por exemplo.
+    8. Clique em "Cadastrar" para se registrar no site, logo após ao cadastrar, o nome do botão será mudado para "logado".
+    9. Caso o botão estiver escrito "Logado", clique nele e será direcionado para a página "Editor de perfil".
+
+  *#Rodapé das páginas:
+     No rodapé da página, você encontrará:
+        1. Links sobre os Desenvolvedores do Site: Clique para ser direcionado à página sobre os desenvolvedores.
+        2. Termos e Políticas de Privacidade: Clique para ser direcionado às páginas respectivas de termos e políticas de privacidade.
+        3. Redes Sociais: Links para o Instagram e Twitter do site.
+        4. Informações de Contato: Caso queira entrar em contato com a equipe.
+
+
+
 # Requisitos
   **Requisitos Funcionais**
   
@@ -69,7 +99,7 @@
   * RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA)
   * RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA)
 
-# Interface 
+## Interface 
   
   * Home:
     ![Home p1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/bf7e2e48-8816-4ea8-b1d0-c1ac30677fb7)
@@ -129,7 +159,7 @@
 [Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet?s=app)
 
 
-# Gestão do Projeto
+## Gestão do Projeto
   
   Para uma maior organização do projeto nós definimos uma organização por sprints da metodologia scrum.
     
