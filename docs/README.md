@@ -270,8 +270,24 @@ Os requisitos de um projeto são classificados em dois grupos:
 ```plaintext
 codigo/ 
 │
-├── html/
-│   ├── assets/ (pasta de imagens, estilos e scripts)
+├── html/ (pasta para armazenar as páginas html)
+│   ├── blog.html (pasta de imagens, estilos e scripts)
+│   ├── cadastro_animal_perdido.html
+│   ├── cadastro_relato.html
+│   ├── cadastro_usuario.html
+│   ├── desaparecidos_localizados.html
+│   ├── editor_perfil.html
+│   ├── faq.html
+│   ├── ferramentas.html
+│   ├── home.html
+│   ├── login.html
+│   ├── meus_anuncios.html
+│   ├── meus_relatos.html
+│   ├── politica.html
+│   ├── quem_somos.html
+│   ├── termos.html
+
+
 │   ├── services/ (pata para armazenar componentes de interação com o servidor)
 │   ├── pages/ (pasta para armazenar as páginas html)
 │   ├── index.html
