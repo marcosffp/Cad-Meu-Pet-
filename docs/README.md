@@ -13,7 +13,8 @@ A documentação do projeto inclui as seguintes seções:
 7. Organização do Projeto
 8. Documentação Técnica
 9. Guia de Instalação e Uso
-10. Referências Bibliográficas
+10. Guia de Utilização do Site
+11. Referências Bibliográficas
 
 
 
@@ -738,8 +739,258 @@ Preparar para Executar:
 
 
 
+# 10. Guia de Utilização do Site
 
-# 10. Referências Bibliográficas
+Navegando pelo Site:
+
+  #obs.: A maioria das funcionalidades descritas estarão disponíveis apenas para usuários cadastrados no site. Caso um usuário não esteja cadastrado, ao tentar utilizar essas funcionalidades, ele será redirecionado para a página de cadastro de usuário. Todas as funcionalidades da página funcionam normalmente tanto em telas de desktop quanto em dispositivos móveis. A única diferença na versão mobile é a exibição do cabeçalho. Para acessá-lo, clique no ícone de três barras ("menu hambúrguer"). Ao clicar, o cabeçalho se expandirá, permitindo que o usuário escolha para qual página deseja navegar.
+  
+  #Cabeçalho das páginas:
+  
+    1. No cabeçalho, clique na logo com o nome do site para ser redirecionado à página inicial.
+    
+    2. Clique em "Início" para voltar à página inicial a qualquer momento.
+    
+    3. Clique em "Desaparecidos e Localizados" para ser direcionado à página com anúncios cadastrados pelos usuários.
+    
+    4. Clique em "Ferramentas" para acessar as instruções das ferramentas disponíveis no site.
+    
+    5. Clique em "Blog" para ver conteúdos interessantes e informativos para quem tem pets.
+    
+    6. Clique em "FAQ" para encontrar respostas às perguntas frequentes sobre o site.
+    
+    7. Clique em "Anunciar" para criar um anúncio e divulgar um pet perdido, por exemplo.
+    
+    8. Clique em "Cadastrar" para se registrar no site, logo após ao cadastrar, o nome do botão será mudado para "logado".
+    
+    9. Caso o botão estiver escrito "Logado", clique nele e será direcionado para a página "Editor de perfil".
+    
+
+   #Rodapé das páginas:
+  
+     No rodapé da página, você encontrará:
+     
+        1. Links sobre os Desenvolvedores do Site: Clique para ser direcionado à página sobre os desenvolvedores.
+        
+        2. Termos e Políticas de Privacidade: Clique para ser direcionado às páginas respectivas de termos e políticas de privacidade.
+        
+        3. Redes Sociais: Links para o Instagram e Twitter do site.
+        
+        4. Informações de Contato: Caso queira entrar em contato com a equipe.
+        
+
+   #Instruções para a Página Home:
+   
+      Na página Home, você encontrará as seguintes funcionalidades:
+
+        1. Clique no botão "Perdi Meu Pet", você será direcionado para a página de "Cadastro de Anúncio".
+
+        2. Clique no botão "Achei um Pet", você será direcionado para a página de "Desaparecidos e Localizados".
+
+        3. Contador de Animais Reunidos: Abaixo dos botões principais, há um contador que mostra o número de animais reunidos com seus donos. Este contador é atualizado conforme o status dos anúncios muda de "Desaparecido" para "Encontrado".
+
+        4. Carrossel de Fotos: Ao lado dos botões e do contador, há um carrossel de fotos que muda automaticamente. Você pode avançar ou retroceder entre as fotos clicando nas setas do carrossel.
+
+
+        5. Seção Relatos:
+        
+           5.1. Depoimentos dos Usuários: Nessa seção, você encontrará depoimentos dos usuários do site.
+          
+           5.2. Clique em "Ver Mais" para ler mais informações sobre os depoimentos.
+          
+           5.3. Cada card de depoimento possui botões para dar like ou dislike.
+          
+           5.4. Clique no botão "Criar Relatos" para cadastrar seu depoimento.
+          
+           5.5. Clique no botão "Seus Relatos" para ser direcionado à página dos seus relatos.
+
+
+   #Instruções para a Página "Desaparecidos e Localizados":
+   
+       Na página "Desaparecidos e Localizados", você encontrará as seguintes funcionalidades:
+
+          1. Coluna de Filtro (Canto Esquerdo):
+          
+             1.1. Seção "Status": Escolha entre "Desaparecido" ou "Encontrado" para filtrar os anúncios conforme o status do animal.
+
+             1.2. Seção "Localização": Digite um endereço preciso ou próximo para filtrar anúncios com base na localização.
+
+             1.3. Seção "Tipo": Selecione o tipo de animal: gato, cachorro, ou pássaro. 
+           
+             1.4. Após selecionar as opções desejadas, clique em "Filtrar" para aplicar os filtros.
+             
+             1.5. Clique em "Resetar" para limpar os campos e remover os filtros aplicados.
+
+          2. Anúncios dos Usuários: Nessa página, você verá os anúncios criados pelos usuários da plataforma.
+             
+             Cada card de anúncio incluirá:
+             
+             2.1. Imagem do Pet;
+             
+             2.2. Status do Animal;
+             
+             2.3. Tipo de Animal;
+             
+             2.4. Localização;
+             
+             2.5. Descrição;
+             
+             2.6. Contato do Dono do Pet,
+             
+             2.7. Gênero do animal.
+
+             
+
+   # Instruções para a Página "Ferramentas": Na página, você encontrará as seguintes funcionalidades:
+   
+         1. Informações sobre o Anúncio: Esta seção fornece detalhes sobre como criar e gerenciar anúncios de pets desaparecidos ou encontrados.
+         
+         2. Botão "Criar Anúncio": Clique no botão "Criar Anúncio" para ser direcionado à página de cadastro do anúncio.
+         
+
+   # Instruções para a Página "Blog":
+   
+         1. Informações sobre Conteúdos: Esta seção apresenta diversos conteúdos interessantes e informativos, especialmente para quem possui pets.
+
+         2. Links para Conteúdos: Cada conteúdo listado possui um botão que, ao ser clicado, direciona você para a página completa do conteúdo correspondente.
+
+   # Instruções para a Página "FAQ":
+
+         1. Dúvidas Frequentes: Esta seção contém perguntas frequentes sobre o site e seus serviços.
+         
+         2. Expandir e Recolher Respostas: 
+         
+            2.1. Clique no ícone "+" ao lado de uma pergunta para mostrar a resposta.
+            
+            2.2. Clique no ícone "-" para ocultar a resposta.
+            
+
+  # Instruções para a Página "Cadastro de Anúncio":
+  
+        1. Selecionar o Status: Escolha entre "Encontrado" ou "Desaparecido".
+
+        2. Selecionar o Tipo de Animal: Selecione "Gato", "Cachorro" ou "Pássaro".
+        
+        3. Selecionar o Gênero: Selecione "Macho" ou "Fêmea".
+
+        4. Campo do Nome do Pet: Insira o nome do pet.
+        
+        5. Campo Localização: Insira a localização onde o pet foi visto ou encontrado.
+
+        6. Campo Contato: Insira um e-mail ou número de telefone para contato. O sistema verificará se o e-mail foi escrito corretamente.
+
+        7. Campo Descrição do Animal: Forneça uma descrição detalhada do animal.
+        
+        8. Campo URL da Imagem: Insira o link (URL) da imagem do pet. (Não é possível anexar uma imagem, apenas colar o link da imagem).
+
+        9. Botões de Ação:
+
+           9.1. Cadastrar: Clique neste botão para cadastrar o anúncio.
+           
+           9.2. Limpar Formulário: Clique neste botão para limpar todos os campos do formulário.
+           
+           9.3. Ver Seus Anúncios: Clique neste botão para ser direcionado à página "Seus Anúncios".
+
+
+   # Instruções para a Página "Cadastro de Relato":
+   
+       1. Campo Nome do Pet: Insira o nome do pet relacionado ao relato.
+
+       2. Campo Data: Selecione a data do reencontro ou do evento que você está relatando.
+
+       3. Campo Localização: Insira a localização onde o evento ocorreu.
+
+       4. Campo Descrição do Relato: Forneça uma descrição detalhada do reencontro ou do evento.
+
+       5. Campo URL da Imagem: Insira o link (URL) da imagem do pet. (Não é possível anexar uma imagem diretamente, apenas colar o link da imagem).
+
+       6. Botões de Ação:
+          6.1 Cadastrar: Clique neste botão para cadastrar o relato.
+          6.2 Limpar Formulário: Clique neste botão para limpar todos os campos do formulário.
+
+
+  # Instruções para a Página "Meus Relatos":
+  
+      1. A página "Meus Relatos" exibirá todos os relatos cadastrados por você. Cada relato será exibido em um card com as seguintes funcionalidades:
+
+        1.1 Botão Excluir: Ao clicar neste botão, um alerta de confirmação será exibido. Se confirmar a exclusão, o relato será removido.
+        
+        1.2 Botão Alterar: Ao clicar neste botão, será aberta uma janela de edição onde você pode modificar os dados do relato. Após fazer as alterações, clique em "Salvar" para atualizar os dados. Para fechar a janela de edição, clique no "X" da janela.
+
+        1.3 Botão Visualizar: Ao clicar neste botão, uma janela será aberta mostrando todas as informações do relato.
+
+     2. Botão "Criar Relato": Este botão estará disponível na página e, ao clicar nele, você será direcionado para a página de "Cadastro de Relato".
+
+
+  # Instruções para a Página "Meus Anúncios":
+  
+      1. A página "Meus Anúncios" exibirá todos os anúncios cadastrados por você. Cada anúncio será exibido em um card com as seguintes funcionalidades:
+
+        1.1 Botão Excluir: Ao clicar neste botão, um alerta de confirmação será exibido. Se confirmar a exclusão, o anúncio será removido.
+
+        1.2 Botão Editar: Ao clicar neste botão, será aberta uma janela de edição onde você pode modificar os dados do anúncio. Após fazer as alterações, clique em "Salvar" para atualizar os dados. Para fechar a janela de edição, clique no "X" da janela.
+
+     2. Botão "Criar Anúncio": Este botão estará disponível na página e, ao clicar nele, você será direcionado para a página de "Cadastro de Anúncio".
+
+
+  # Instruções para a Página "Cadastro de Usuário"
+
+       1. Campo Nome: Insira seu nome completo.
+
+       2. Campo E-mail: Insira seu e-mail. Ao clicar em "Cadastrar", o sistema verificará se o e-mail já foi utilizado em outro cadastro.
+
+       3. Campo Senha: Insira sua senha. O campo possui um ícone que permite ver ou ocultar a senha enquanto você digita. A senha deve atender aos seguintes requisitos de validação:
+       
+          3.1. Pelo menos 1 número;
+          
+          3.2 Pelo menos 1 símbolo;
+          
+          3.3 Pelo menos 1 letra minúscula;
+          
+          3.4 Pelo menos 1 letra maiúscula;
+          
+          3.5 No mínimo 6 caracteres no total.
+
+       4. Botões de Ação:
+       
+          4.1. Cadastrar: Clique neste botão para concluir o cadastro.
+          
+          4.2. Limpar Formulário: Clique neste botão para limpar todos os campos do formulário.
+          
+          4.3. Faça Login: Se você já possui uma conta, clique em "Faça Login" para ser direcionado à página de login.
+
+
+  # Instruções para a Página "Login"
+
+      1. Campo E-mail: Insira o e-mail que você utilizou no cadastro.
+
+      2. Campo Senha: Insira sua senha.
+
+      3. Botão Login: Clique neste botão "Entrar" para acessar sua conta.
+
+      4. Link para Cadastro: Caso não tenha uma conta, haverá um link para a página de cadastro.
+
+      5. Link "Altere-se": Se você deseja alterar seus dados, clique no link "Altere-se" para ser direcionado à página de edição de perfil.
+
+  # Instruções para a Página "Editor de Perfil"
+
+     1. Campos Automáticos: Os campos de e-mail e nome serão preenchidos automaticamente com os dados atuais do seu perfil.
+
+     2. Alteração de Dados: Você pode alterar seu e-mail, nome e senha.
+
+     3. Para alterar a senha, ela deve atender aos mesmos requisitos do cadastro de usuário: pelo menos 1 número, 1 símbolo, 1 letra minúscula, 1 letra maiúscula e no mínimo 8 caracteres.
+     
+     4. Botões de Ação:
+     
+        4.1. Salvar: Clique neste botão para salvar as alterações feitas no perfil.
+        
+        4.2. Sair da Conta: Clique neste botão para sair da sua conta.
+
+
+
+
+
+# 11. Referências Bibliográficas
 
 - https://www.folhape.com.br/colunistas/tecnologia-e-games/o-scrum-e-o-github-projects-para-gerenciamento-de-projetos/41913/
   
