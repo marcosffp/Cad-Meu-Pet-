@@ -18,32 +18,245 @@
 
 ## Documentação completa na pasta "docs" no repositório
 
- 
-  * # Problema
 
-    Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
+A documentação geral do projeto inclui as seguintes seções:
 
-  * # Objetivos
+1. Introdução
+2. Solução do Problema
+3. Requisitos do Projeto
+4. Guia de Instalação e Uso
+5. Guia de Utilização do Site
 
-    O objetivo principal do projeto "Cadê meu pet?" é oferecer uma plataforma online onde os donos de animais perdidos possam registrar seus animais desaparecidos e onde membros da comunidade possam ajudar na busca e localização desses animais. Além disso, o projeto visa promover a conscientização sobre a importância da identificação e registro de animais de estimação, assim como a necessidade de colaboração da comunidade para reunir animais perdidos com seus donos.
+# 1. Introdução
 
-  * # Justificativa
 
-    Este projeto foi concebido como uma resposta à necessidade de uma solução eficaz e acessível para ajudar a localizar animais perdidos. Ao fornecer uma plataforma centralizada e de fácil acesso, o "Cadê meu pet?" visa facilitar o processo de busca e reunificação de animais perdidos com seus donos, reduzindo assim o tempo de separação e minimizando o sofrimento tanto dos animais quanto de seus donos.
+## 1.1 Sobre o Projeto
 
-  * # Solução do Problema
+   O "Cadê Meu Pet?" é uma plataforma online focada em auxiliar na busca por animais perdidos e na conexão de animais que precisam de adoção com novos lares.
 
-    Para resolver o problema, desenvolvemos uma plataforma destinada aos tutores de animais perdidos. Nesta plataforma, os tutores podem publicar um anúncio com informações detalhadas sobre o pet desaparecido. Isso possibilita que diversos usuários da plataforma colaborem na busca, facilitando o reencontro entre o tutor e seu animal de estimação.
 
-  * # Público-Alvo
-    O público-alvo do "Cadê meu pet?" inclui:
-      * Donos de animais de estimação que perderam seus animais e desejam recuperá-los.
-      * Membros da comunidade que desejam ajudar na busca e localização de animais perdidos.
-      * Organizações de resgate de animais e abrigos que lidam com casos de animais perdidos.
+ ## 1.2 Objetivos
 
+   O objetivo principal do projeto "Cadê meu pet?" é oferecer uma plataforma online onde os donos de animais perdidos possam registrar seus animais desaparecidos e onde membros da comunidade possam ajudar na busca e localização desses animais. Além disso, o projeto visa promover a conscientização sobre a importância da identificação e registro de animais de estimação, assim como a necessidade de colaboração da comunidade para reunir animais perdidos com seus donos.
+
+
+ ## 1.3 Justificativa
+
+   Este projeto foi concebido como uma resposta à necessidade de uma solução eficaz e acessível para ajudar a localizar animais perdidos. Ao fornecer uma plataforma centralizada e de fácil acesso, o "Cadê meu pet?" visa facilitar o processo de busca e reunificação de animais perdidos com seus donos, reduzindo assim o tempo de separação e minimizando o sofrimento tanto dos animais quanto de seus donos.
+
+
+ ## 1.4 Público-Alvo
+
+**Donos de Animais Perdidos:**
+
+   O público-alvo deste perfil é diversificado, abrangendo homens e mulheres de todas as faixas etárias, com variados níveis de renda e educação. Seu conhecimento prévio inclui habilidades básicas de navegação na web, e alguns podem ter alguma experiência anterior em lidar com animais perdidos. Em relação à tecnologia, são tanto usuários iniciantes quanto experientes, desde que capazes de usar um smartphone ou tablet ou desktop e navegar na internet. São receptivos a aprender novas ferramentas para auxiliar na busca por seus companheiros pets, valorizando a simplicidade e a acessibilidade do site. No contexto hierárquico, são os próprios donos dos animais que lideram a decisão de utilizar o site, embora possam buscar auxílio de familiares, amigos e vizinhos para utilizar e divulgar a busca.
+
+
+**Membros da Comunidade:**
+
+   O público-alvo deste perfil é formado por pessoas de todas as idades interessadas em auxiliar animais vulneráveis, podendo ser parte de grupos de proteção animal, voluntários em abrigos ou indivíduos preocupados. Seu conhecimento prévio abrange familiaridade com a comunidade local, experiência em busca de animais perdidos e consciência dos recursos disponíveis. Em termos de tecnologia, são usuários de smartphone ou tablet ou desktop e navegar na internet, dispostos a utilizar o site para compartilhar informações e ajudar na busca. Valorizam a eficiência do site para essa causa e atuam de forma autônoma, colaborando entre si e com organizações de resgate.
+
+
+**Organizações de Resgate de Animais e Abrigos:**
+
+   Organizações sem fins lucrativos e abrigos especializados em resgate, cuidado e reabilitação de animais perdidos e abandonados buscam parcerias e ferramentas tecnológicas para ampliar seu alcance e aumentar as chances de encontrar lares para os animais sob seus cuidados. Em termos de tecnologia, capacidade de integrar o site em seus sistemas de gestão e comunicação, buscando ferramentas que otimizem seus processos, aumentem a eficiência e ampliem o alcance de suas ações. Com vasta experiência no manejo de animais perdidos e conhecimento dos recursos disponíveis na comunidade, essas organizações valorizam a segurança, confiabilidade e integração de aplicativos em seus sistemas de gestão e comunicação. Autônomas em suas operações, elas podem colaborar entre si e com a comunidade para expandir suas ações de busca e resgate.
    
-        
+
+ ## 1.5 Personas
+
+**Pedro**
+
+   Pedro, o Entusiasta da Comunidade, é um jovem de 22 anos apaixonado por jogar futebol e estudante com o sonho de atuar na área de seu interesse acadêmico. Ele desempenha um papel crucial na comunidade, utilizando uma variedade de ferramentas físicas e digitais, como cartazes, smartphones e redes sociais, para compartilhar informações e auxiliar na localização e devolução de animais perdidos. Seus objetivos principais ao utilizar serviços são encontrar o animal perdido, informar o tutor do animal e contribuir para a comunidade compartilhando informações sobre animais encontrados. Para Pedro, é essencial que o site ofereça facilidade de uso e comunicação eficaz, além de demonstrar empatia e compreensão em relação à sua situação emocional. Qualquer falha na comunicação sobre o progresso da busca ou falta de suporte pode deixá-lo furioso, então é crucial garantir uma experiência positiva para ele, reconhecendo e valorizando suas contribuições para a comunidade.
+
+
+**Heitor**
+
+   Heitor, aos 27 anos, é um vendedor de eletrodomésticos com um hobby de boxe. Sua personalidade observadora o leva a utilizar uma variedade de objetos físicos e digitais, como cartazes, flyers, smartphone, computador, mapas online e câmera, tanto em casa quanto durante buscas na vizinhança, parques ou outros locais onde o animal possa ter sido visto. Seus objetivos principais ao utilizar o serviço são encontrar seu animal perdido, aumentando as chances de localizá-lo, e receber apoio da comunidade. Heitor espera divulgar informações sobre seu pet, como fotos e detalhes do desaparecimento, para receber ajuda de outros usuários. Para ele, o site é essencial, oferecendo uma plataforma especializada que conecta tutores em busca de seus animais de estimação, fornecendo suporte emocional e recursos práticos durante esse momento estressante. No mapa de empatia, é crucial facilitar a navegação no site, tornando-o intuitivo e claro. Manter Heitor informado sobre o progresso das buscas é fundamental, enquanto a falta de comunicação e a dificuldade no uso do site são situações que o deixariam furioso. Ele valoriza a transparência e o suporte durante todo o processo de busca por seu animal de estimação perdido.
+
+
+**Ana**
+
+   Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de ler livros. Sua personalidade simpática e seu sonho de conhecer lugares turísticos pelo mundo refletem sua disposição para ajudar os outros e sua curiosidade sobre o mundo. Ela utiliza uma variedade de objetos físicos, como cartazes e flyers, e digitais, como smartphone, computador, mapas online e câmera. Como voluntária, Ana acessa o site "Cade Meu Pet" pelo seu smartphone para anunciar informações adicionais sobre os animais perdidos. Para tratá-la bem, é fundamental manter uma comunicação clara e transparente, reconhecendo seu esforço e acolhendo suas contribuições. Ana valoriza ser mantida informada sobre as atividades e ações do site, e não suportaria a desvalorização de seu trabalho e esforço como voluntária, a falta de reconhecimento de seus feedbacks e sugestões, ou a criação de dificuldades no uso do site.
+
+
+
+# 2. Solução do Problema
+
+
+## 2.1 Problema
+
+   Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
+
+
+ ## 2.2 Descrição da Solução
+
+   Para resolver o problema, desenvolvemos uma plataforma destinada aos tutores de animais perdidos. Nesta plataforma, os tutores podem publicar um anúncio com informações detalhadas sobre o pet desaparecido. Isso possibilita que diversos usuários da plataforma colaborem na busca, facilitando o reencontro entre o tutor e seu animal de estimação. 
+
+
+ ## 2.3 Histórias de Usuários
+
+      -Eu, como Ana, sou tutora e quero cadastrar o meu animal perdido para encontrar ele.
+
+      -Eu, como Ana, como usuária busco animais perdidos para auxiliar os tutores q perderam seus pets.
+
+      -Eu, como Ana, quero filtrar os animais por tipo de espécie ou status para encontrar o animal do interesse.
+
+      -Eu, como Ana, quero ver a quantidade de animais reencontrados os pets com seus tutores para ter entendimento melhor do site.
+
+      -Eu, como Heitor, quero publicar no anúncio a imagem do meu pet para melhor compreensão do meu pet perdido.
+
+      -Eu, como Heitor, quero entrar em contato com o tutor para informar do animal que encontrei dele.
+
+      -Eu, como Heitor, quero editar os dados do meu perfil para atualizar os dados.
+
+      -Eu, como Pedro, quero alterar os status do meu anúncio para atualizar as informações.
+
+      -Eu, como Pedro, quero excluir o anúncio para ter opção de cancelar a postagem.
+
+      -Eu, como Pedro, quero criar o relato para dizer o reencontro com o animal.
+
+      -Eu, como Pedro, quero editar o relato para atualizar informações desse relato.
+
+      -Eu, como Pedro, quero excluir o relato para ter opção de cancelar a postagem. 
+
+
+
+# 3. Requisitos do Projeto
+
+
+## 3.1 Requisitos Funcionais (RF)
+
+      RF-001: O tutor faz o cadastro do animal perdido. (Prioridade ALTA);
+
+      RF-002: O usuário busca animais perdidos. (Prioridade MÉDIA);
+
+      RF-003: O usuário e tutor filtra os animais por tipo e status. (Prioridade BAIXA);
+
+      RF-004: O sistema fornecerá métricas sobre o número de animais reunidos com seus tutores.(Prioridade Alta);
+
+      RF-005: O tutor deve publicar imagem sobre o pet para procura por meio url. (Prioridade MÉDIA);
+
+      RF-006: Os usuários ou tutores podem excluir o anúncio (Prioridade Alta);
+
+      RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA);
+
+      RF-008: O usuário e o tutor podem editar dados do seu perfil na plataforma. (Prioridade MÉDIA);
+
+      RF-009: O tutor podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status. (Prioridade MÉDIA);
+
+      RF-010: Os usuários ou tutores podem criar relatos sobre o reencontro de animais.(Prioridade MÉDIA);
+
+      RF-011: Os usuários ou tutores podem editar relatos sobre o reencontro de animais.(Prioridade MÉDIA);
+
+      RF-012: Os usuários ou tutores podem excluir relatos sobre o reencontros de animais.(Prioridade MÉDIA).
+
+
+## 3.2 Requisitos Funcionais (RF)
+
+      RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA);
     
+      RNF-002: Utilização de banco de dados Json server através do Node.js. (Prioridade MÉDIA);
+    
+      RNF-003: Suporte para todos os navegadores gerais. (Prioridade BAIXA);
+    
+      RNF-004: Site responsivo. (Prioridade MÉDIA);
+    
+      RNF-005: Suporte para múltiplos dispositivos. (Prioridade MÉDIA);
+     
+      RNF-006: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA);
+    
+      RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA);
+    
+      RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA).
+
+
+
+
+
+# 4. Guia de Instalação e Uso
+
+
+## 4.1 Pré-requisitos
+
+- **Conta no Replit**: Para acessar e executar o projeto, é necessário ter uma conta na plataforma Replit. Caso ainda não tenha, você pode se cadastrar gratuitamente no site oficial do [Replit](https://replit.com/).
+
+## 4.2 Instalação
+
+1. **Acessar o Link do Projeto**:
+   - Clique no link fornecido para acessar o projeto no Replit.
+   - Exemplo: [Link do Projeto no Replit]([https://replit.com/@SeuProjetoLink](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet))
+
+2. **Dar um Fork no Projeto**:
+   - No canto superior direito da página do projeto no Replit, clique no botão "Fork".
+   - Isso criará uma cópia do projeto na sua conta para que você possa editá-lo e executá-lo.
+
+
+## 4.3 Configuração
+
+1. **Abrir o Projeto Forked**:
+   - Após dar o fork, o projeto será aberto automaticamente na interface do Replit.
+
+2. **Configurações Iniciais**:
+   - Verifique se todos os arquivos e dependências estão presentes.
+   - O Replit deve configurar o ambiente automaticamente, mas caso contrário, você pode executar comandos de instalação de dependências no terminal integrado.
+   - Verificar Arquivos e Dependências:
+
+   Passo 1: Após abrir o projeto forked, dê uma olhada na estrutura de arquivos no painel lateral esquerdo do Replit. Certifique-se de que todos os diretórios e arquivos mencionados na estrutura do projeto estão presentes.
+
+   Passo 2: No arquivo package.json, localize a seção "dependencies" para verificar quais pacotes são necessários para o projeto. Exemplo de dependências:
+
+json
+```plaintext
+"dependencies": {
+  "express": "^4.17.1",
+  "mongoose": "^5.10.9",
+  "react": "^17.0.1"
+}
+```
+
+   Passo 3: O Replit geralmente detecta automaticamente o arquivo package.json e instala todas as dependências listadas. Você pode ver a saída da instalação automática no console do Replit.
+Instalação Manual de Dependências (se necessário):
+
+   Passo 4: Se por algum motivo as dependências não forem instaladas automaticamente, você pode instalar manualmente utilizando o terminal integrado do Replit. Abrir o Terminal: Clique no ícone do terminal na parte inferior da interface do Replit para abrir o terminal integrado. Comando de Instalação: No terminal, digite o comando a seguir para instalar todas as dependências listadas no 
+   
+package.json:
+
+bash
+```plaintext
+npm install
+```
+
+Isso garantirá que todos os pacotes necessários sejam baixados e instalados corretamente no diretório node_modules/.
+Verificar a Instalação das Dependências:
+
+   Passo 5: Após a instalação, verifique se o diretório node_modules/ contém os pacotes necessários. Se tudo estiver correto, você deve ver várias pastas de pacotes dentro deste diretório.
+Preparar para Executar:
+
+   Passo 6: Após garantir que todas as dependências e arquivos estão corretamente configurados, você pode proceder para a execução do projeto clicando no botão "Run".
+
+
+## 4.4 Uso
+
+1. **Executar o Projeto**:
+   - Clique no botão "Run" localizado na parte superior central da interface do Replit.
+   - O Replit iniciará o servidor do projeto e abrirá a aplicação na aba "Webview".
+
+2. **Melhorar a Visualização**:
+   - Para uma visualização otimizada, clique em "New Tab" na aba "Webview". Isso abrirá o site em uma nova guia do navegador, proporcionando uma visualização mais clara das informações.
+   - Se preferir, você pode visualizar diretamente na "Webview", mas, por padrão, provavelmente a visualização estará ajustada para dispositivos móveis.
+
+3. **Interação com a Aplicação**:
+   - Navegue pelo site e interaja com os recursos disponíveis para testar e utilizar o projeto.
+
+
+#### Observações
+
+- **Errores e Logs**: Caso encontre algum erro durante a execução, verifique o log de erros na interface do Replit (geralmente localizado na parte inferior) para diagnosticar e resolver possíveis problemas.
+
+
+
+# 5. Guia de Utilização do Site
+
 Navegando pelo Site:
 
   #obs.: A maioria das funcionalidades descritas estarão disponíveis apenas para usuários cadastrados no site. Caso um usuário não esteja cadastrado, ao tentar utilizar essas funcionalidades, ele será redirecionado para a página de cadastro de usuário. Todas as funcionalidades da página funcionam normalmente tanto em telas de desktop quanto em dispositivos móveis. A única diferença na versão mobile é a exibição do cabeçalho. Para acessá-lo, clique no ícone de três barras ("menu hambúrguer"). Ao clicar, o cabeçalho se expandirá, permitindo que o usuário escolha para qual página deseja navegar.
@@ -288,204 +501,5 @@ Navegando pelo Site:
         4.1. Salvar: Clique neste botão para salvar as alterações feitas no perfil.
         
         4.2. Sair da Conta: Clique neste botão para sair da sua conta.
-
-# Requisitos
-  **Requisitos Funcionais**
-  
-  * RF-001: O tutor faz o cadastro do animal perdido. (Prioridade ALTA)  
-  * RF-002: O usuário busca animais perdidos. (Prioridade MÉDIA) 
-  * RF-003: O usuário e tutor filtra os animais por tipo e status. (Prioridade BAIXA) 
-  * RF-004: O sistema fornecerá métricas sobre o número de animais reunidos com seus tutores.(Prioridade Alta) 
-  * RF-005: O tutor deve publicar imagem sobre o pet para procura por meio url. (Prioridade MÉDIA) 
-  * RF-006: Os usuários ou tutores podem excluir o anúncio (Prioridade Alta) 
-  * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA)  
-  * RF-008: O usuário e o tutor podem editar dados do seu perfil na plataforma. (Prioridade MÉDIA)  
-  * RF-009: O tutor podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status. (Prioridade MÉDIA) 
-  * RF-010: Os usuários ou tutores podem criar relatos sobre o reencontro de animais.(Prioridade MÉDIA)
-  * RF-011: Os usuários ou tutores podem editar relatos sobre o reencontro de animais.(Prioridade MÉDIA)  
-  * RF-012: Os usuários ou tutores podem excluir relatos sobre o reencontros de animais.(Prioridade MÉDIA)
-
-
-  **Requisitos Não-Funcionais**
-
-  * RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA)
-  * RNF-002: Utilização de banco de dados Json server através do Node.js. (Prioridade MÉDIA)
-  * RNF-003: Suporte para todos os navegadores gerais. (Prioridade BAIXA)
-  * RNF-004: Site responsivo. (Prioridade MÉDIA)
-  * RNF-005: Suporte para múltiplos dispositivos. (Prioridade MÉDIA)
-  * RNF-006: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA)
-  * RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA)
-  * RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA)
-
-## Interface 
-  
-  * Home:
-    ![Home p1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/bf7e2e48-8816-4ea8-b1d0-c1ac30677fb7)
-    ![Home p2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/a1f198d1-985d-4fe9-9daf-c8b0b1bb6e6a)
-
-  * Desaparecidos e localizados:
-    ![Desaparecidos e localizados novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/ae2932f0-d38c-4c1a-a2eb-a963bf1be12f)
-
-  * Ferramentas:
-    ![Ferramentas novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d51cce43-365f-4644-a7a4-b88cf7845e55)
-
-  * Blog:
-    ![Blog novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/f4cca130-f943-443f-8c95-9e2dc3ffc8c9)
-
-  * FAQ:
-    ![FAQ novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/156dcadf-3324-45c8-b906-e3cc983fffba)
-
-  * Cadastro do Anúncio:
-    ![Cadastro do anuncio novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/6ee951ad-97b8-410b-bce8-775882d8e170)
-
-  * Cadastro de Usuário:
-    ![Cadastro de usuario novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/e2fbda82-36f0-4761-b9d7-b2d7942e1ff2)
-
-  * Login:
-    ![Login novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/1959f491-0864-400e-acba-415844ccc089)
-
-  * Editor de perfil:
-    ![Editor de perfil novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/343506a0-e1f7-4abe-9a4a-efb1c5d4231e)
-
-# Ferramentas
-  
--Processo de Design Thinking: Plataforma Figma 
-[Link Design Thinking](https://www.figma.com/file/kIKNbYDNAJAC2btmjOb3zP/Untitled?type=design&node-id=0%3A1&mode=design&t=A09p9qmoB4UIzsRM-1)
-
--Repositório de código: Plataforma GitHub 
-[Link Repositório](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/)
-
--Projeção inicial das telas: Plataforma Figma 
-[Link Telas](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design)
-
--Projeção Final das telas: Plataforma Figma
-[Wireframe/User Flow Final](https://www.figma.com/design/mCIkWXsfOaR7kXdzdGCT5F/Untitled?node-id=0-1&t=BaHhOG1Ngoqo74p2-0)
-
--Projeção User Flow: Plataforma Miro
-[Link User Flow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
-
--Apresentação do projeto: Plataforma Canva
-[Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
--Apresentação do final projeto: Plataforma Canva
-[Link Apresentação](https://www.canva.com/design/DAGJC1dlcj4/jTF46fAZzt9mFX5HqhGiSg/edit?utm_content=DAGJC1dlcj4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
--Documento do projeto: Plataforma Google Docs
-[Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
-
--Hospedagem: Plataforma Replit
-[Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet?s=app)
-
-
-## Gestão do Projeto
-  
-  Para uma maior organização do projeto nós definimos uma organização por sprints da metodologia scrum.
-    
-  * Sprint 1: Foi a primeira reunião do grupo em que colocamos as primeiras ideias em prática.
-       
-    | Tarefas| Responsável |
-    |:-----------:|:------:|
-    | Produção do protótipo das telas no Figma     |    Marcos Alberto Ferreira Pinto |
-    | Produção do protótipo das telas no Figma     |    Alexandre Ottoni Righas       |
-    | Produção do protótipo das telas no Figma     |    Carlos José Gomes Batista Figueiredo |
-    | Produção do protótipo das telas no Figma     |    Henrique Lima Volponi |
-    | Documentação Inicial do Projeto     |    João Gabriel Silva Custódio |
-
-  * Sprint 2: Começo da produção das telas em Html, Css e JavaScript.
-
-    | Artefato| Responsável |
-    |:-----------:|:------:|
-    | O sistema fornecerá métricas sobre o número de animais reunidos com seus tutores     |    Marcos Alberto Ferreira Pinto |
-    | O usuário e o tutor devem ser cadastrados na plataforma     |    Alexandre Ottoni Righas       |
-    | O usuário busca animais perdidos e filtra os animais por tipo      |    Carlos José Gomes Batista Figueiredo |
-    | O tutor faz o cadastro do animal perdido    |    Henrique Lima Volponi |
-    | O usuário e o tutor podem editar seu perfil ou do pet na plataforma e o tutor deve atualizar os status do animal    |    João Gabriel Silva Custódio |
-
-  * Sprint 3: Continuação da produção das telas em Html, Css e JavaScript e implementação do Json server para banco de dados.
-
-    | Artefato| Responsável |
-    |:-----------:|:------:|
-    | Integração das páginas a tela inicial e vinculação com outras páginas nela inseridas no site      |    Marcos Alberto Ferreira Pinto |
-    | A integração das funcionalidades requer que apenas usuários cadastrados possam utilizá-las     |    Alexandre Ottoni Righas       |
-    | O tutor ou usuário poderá entrar em contato com o criador do anúncio     |    Carlos José Gomes Batista Figueiredo |
-    | Tela de alteração de cadastro     |    Henrique Lima Volponi |
-    | O usuário pode alterar seu perfil     |    João Gabriel Silva Custódio |
-
-  * Sprint 4: Últimas tarefas para entrega final.
-
-    | Tarefas| Responsável |
-    |:-----------:|:------:|
-    | Hospedagem do site     |    Marcos Alberto Ferreira Pinto |
-    | Documentação final    |    Alexandre Ottoni Righas       |
-    | Produção do vídeo de apresentação (pitch)     |    Carlos José Gomes Batista Figueiredo |
-    | Slide de apresentação      |    Carlos José Gomes Batista Figueiredo |
-    | Hospedagem do site     |    Henrique Lima Volponi |
-    | Produção do vídeo de apresentação (pitch)    |    João Gabriel Silva Custódio |
-
-
-# Referências Bibliográficas
-- https://www.folhape.com.br/colunistas/tecnologia-e-games/o-scrum-e-o-github-projects-para-gerenciamento-de-projetos/41913/
-  
-- https://youtu.be/VvkT4I7WrmM?si=z3R0D500VgWt5IP1
-  
-- https://youtu.be/zh90BESE-W8?si=pxWiDT83ik0QQ7Ps
-  
-- https://youtu.be/7hZMGSamsYA?si=GMqDBDPjen7tT7vP
-  
-- https://youtu.be/NXm7Ms_1Qjk?si=ViLndsyMTlHZHO97
-  
-- https://www-petz-com-br.cdn.ampproject.org/v/s/www.petz.com.br/blog/cachorros/saude-e-cuidados-cachorros/saude-pet/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=17128701459291&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.petz.com.br%2Fblog%2Fcachorros%2Fsaude-e-cuidados-cachorros%2Fsaude-pet%2F
-  
-- https://www.petshopcontrol.com.br/blog/alimentacao-saudavel-para-pets-o-que-voce-precisa-saber/?gad_source=1&gclid=Cj0KCQjwlN6wBhCcARIsAKZvD5jczGXjbqHt2adG17Uurw_9QGyGkgb-4DXFi9w1G7Og-GYSTQUessAaAkQjEALw_wcB
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
 
 
