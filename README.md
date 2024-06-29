@@ -43,16 +43,10 @@
 
    
         
-# Instruções para Usar o Site
-
- *#Acessando o Site:
- 1. Entre pelo link do Replit.
- 2. Clique em "Fork".
- 3. Clique em "Run".
     
 Navegando pelo Site:
 
-  #obs.: Grande parte das funcionalidades funcionaram se o usuário estiver cadastrado no site, ou seja caso o usuário não estiver cadastrado, na tentativa de usar as funcionalidades ele será direcionado para a pagina de cadastro de usuario.
+  #obs.: A maioria das funcionalidades descritas estarão disponíveis apenas para usuários cadastrados no site. Caso um usuário não esteja cadastrado, ao tentar utilizar essas funcionalidades, ele será redirecionado para a página de cadastro de usuário. Todas as funcionalidades da página funcionam normalmente tanto em telas de desktop quanto em dispositivos móveis. A única diferença na versão mobile é a exibição do cabeçalho. Para acessá-lo, clique no ícone de três barras ("menu hambúrguer"). Ao clicar, o cabeçalho se expandirá, permitindo que o usuário escolha para qual página deseja navegar.
   
   #Cabeçalho das páginas:
   
@@ -202,6 +196,7 @@ Navegando pelo Site:
 
 
    # Instruções para a Página "Cadastro de Relato":
+   
        1. Campo Nome do Pet: Insira o nome do pet relacionado ao relato.
 
        2. Campo Data: Selecione a data do reencontro ou do evento que você está relatando.
@@ -216,6 +211,29 @@ Navegando pelo Site:
           6.1 Cadastrar: Clique neste botão para cadastrar o relato.
           6.2 Limpar Formulário: Clique neste botão para limpar todos os campos do formulário.
 
+
+  # Instruções para a Página "Meus Relatos":
+  
+      1. A página "Meus Relatos" exibirá todos os relatos cadastrados por você. Cada relato será exibido em um card com as seguintes funcionalidades:
+
+        1.1 Botão Excluir: Ao clicar neste botão, um alerta de confirmação será exibido. Se confirmar a exclusão, o relato será removido.
+        
+        1.2 Botão Alterar: Ao clicar neste botão, será aberta uma janela de edição onde você pode modificar os dados do relato. Após fazer as alterações, clique em "Salvar" para atualizar os dados. Para fechar a janela de edição, clique no "X" da janela.
+
+        1.3 Botão Visualizar: Ao clicar neste botão, uma janela será aberta mostrando todas as informações do relato.
+
+     2. Botão "Criar Relato": Este botão estará disponível na página e, ao clicar nele, você será direcionado para a página de "Cadastro de Relato".
+
+
+  # Instruções para a Página "Meus Anúncios":
+  
+      1. A página "Meus Anúncios" exibirá todos os anúncios cadastrados por você. Cada anúncio será exibido em um card com as seguintes funcionalidades:
+
+        1.1 Botão Excluir: Ao clicar neste botão, um alerta de confirmação será exibido. Se confirmar a exclusão, o anúncio será removido.
+
+        1.2 Botão Editar: Ao clicar neste botão, será aberta uma janela de edição onde você pode modificar os dados do anúncio. Após fazer as alterações, clique em "Salvar" para atualizar os dados. Para fechar a janela de edição, clique no "X" da janela.
+
+     2. Botão "Criar Anúncio": Este botão estará disponível na página e, ao clicar nele, você será direcionado para a página de "Cadastro de Anúncio".
 
 
   # Instruções para a Página "Cadastro de Usuário"
