@@ -67,6 +67,32 @@
         1
       ],
       "id": 3
+    },
+    {
+      "nome": "joao",
+      "email": "joao@gmail.com",
+      "senha": "080)05Jg!",
+      "relatos": [],
+      "animais_perdidos": [
+        4
+      ],
+      "id": 4
+    },
+    {
+      "nome": "joao",
+      "email": "joao123@gmail.com",
+      "senha": "080605Jg!",
+      "relatos": [],
+      "animais_perdidos": [],
+      "id": 5
+    },
+    {
+      "nome": "Carlos ",
+      "email": "carlos@gmail.com",
+      "senha": "Carlos123@",
+      "relatos": [],
+      "animais_perdidos": [],
+      "id": 6
     }
   ],
   "animais_perdidos": [
@@ -105,6 +131,18 @@
       "imagemUrl": "https://img.olx.com.br/images/81/811492418312826.webp",
       "id": 3,
       "userId": 1
+    },
+    {
+      "id": 4,
+      "status": "desaparecido",
+      "especie": "Cachorro",
+      "genero": "Macho",
+      "nome": "Scott",
+      "endereco": "Rua Nao sei O que, 12",
+      "descricao": "cachorro bonitinho fofinho",
+      "imagemUrl": "https://cdn.discordapp.com/attachments/664244340067008559/1256259307612405894/IMG_8093.jpg?ex=66801e27&is=667ecca7&hm=d54a1b11f69208c17ddb1c2068181a98f90178b10407696d61a3ae1c601fb667&",
+      "contatos": "joaogabrieeel2005@gmail.com",
+      "userId": 4
     }
   ]
 }
