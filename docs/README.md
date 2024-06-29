@@ -13,8 +13,7 @@ A documentação do projeto inclui as seguintes seções:
 7. Organização do Projeto
 8. Documentação Técnica
 9. Guia de Instalação e Uso
-10. Contribuição
-11. Referências Bibliográficas
+10. Referências Bibliográficas
 
 
 
@@ -380,12 +379,6 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 ![Login novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/1959f491-0864-400e-acba-415844ccc089)
 
 ![login mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/bcd40118-7b57-4a7c-bdf3-5ca2eca4ea33)
-
-
-###Cadastro do Anúncio:
-![cadastro_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e2d5432e-7ab9-4a60-949b-689123021de8)
-
-![cadastro do anuncio mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/0bffe516-5e3c-4d60-a882-5ee490320d79)
 
 
 ###Anúncio do usuário feito pela na conta logado:
