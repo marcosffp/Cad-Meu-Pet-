@@ -308,6 +308,11 @@ Os requisitos de um projeto são classificados em dois grupos:
     ![cadastro_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e2d5432e-7ab9-4a60-949b-689123021de8)
     ![cadastro do anuncio mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/0bffe516-5e3c-4d60-a882-5ee490320d79)
 
+ * Anúncio do usuário feito pela na conta logado:
+![meus relatos](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/bb4d72da-d29c-4e03-974f-a03e7aed39e6)
+
+![seus anuncios](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/934df7a0-0230-4486-b854-458bf095c55b)
+![seus anuncios mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8da41544-aea3-431c-aaf2-5a4c7c9ecc6d)
 
 
   * Cadastro de Usuário:
