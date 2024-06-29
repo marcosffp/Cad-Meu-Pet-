@@ -299,9 +299,16 @@ Os requisitos de um projeto são classificados em dois grupos:
     ![FAQ novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/156dcadf-3324-45c8-b906-e3cc983fffba)
     ![faq mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/92ac6789-c00a-455c-8a16-f9ca75b0490c)
 
+ * Relato do usuário feito pela na conta logado:
+![meus relatos](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/bb4d72da-d29c-4e03-974f-a03e7aed39e6)
+
+![meus relatos_mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/227b6494-8247-4c9d-9976-3dda61d319a4)
+
   * Cadastro do Anúncio:
-    ![Cadastro do anuncio novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/6ee951ad-97b8-410b-bce8-775882d8e170)
-    ![cadastro de anuncio mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d85747be-ebcf-42f7-8c44-319baaae3f29)
+    ![cadastro_anuncio](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e2d5432e-7ab9-4a60-949b-689123021de8)
+    ![cadastro do anuncio mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/0bffe516-5e3c-4d60-a882-5ee490320d79)
+
+
 
   * Cadastro de Usuário:
     ![Cadastro de usuario novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/e2fbda82-36f0-4761-b9d7-b2d7942e1ff2)
