@@ -5,7 +5,7 @@ Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho 
 A documentação do projeto inclui as seguintes seções:
 
 1. Introdução
-2. Solução do Problema
+2. Problema e Solução
 3. Requisitos do Projeto
 4. Gestão de Projeto
 5. Wireframes
@@ -71,7 +71,7 @@ A documentação do projeto inclui as seguintes seções:
 
 
 
-# 2. Solução do Problema
+# 2. Problema e Solução
 
 
 ## 2.1 Problema
@@ -388,7 +388,7 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 ![seus anuncios mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8da41544-aea3-431c-aaf2-5a4c7c9ecc6d)
 
 
-###Desaparecidos e localizados:
+### Desaparecidos e localizados:
 ![Desaparecidos e localizados novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/ae2932f0-d38c-4c1a-a2eb-a963bf1be12f)
 
 ![desaparecidos e localizados mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/dd2b5425-ad56-4d73-9e47-94ec291610e0)
@@ -433,11 +433,11 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 
 
 ## 5.3 Paleta de Cores:
-![fonte_secundaria](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/a35322fb-66d3-4bbc-9238-57d192d62494)
+![paletadecores](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/5b5ec059-1507-4e61-9f4a-1902d6af7b3e)
 
 
 ## 5.4 Fontes:
-![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8b225605-6880-4475-8e0c-caa02b495efb)
+![fonte_secundaria](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/a35322fb-66d3-4bbc-9238-57d192d62494)
 
 
 
@@ -446,10 +446,13 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 
 ## 6.1 Diagramas de Fluxo
 
+
 **Início:**
+
 ![userflowINICIO](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c20a903c-9567-47bf-bf99-b13ebacbaefc)
 
 **Final:**
+
 ![userflow](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/86019633-bcb8-417b-829d-fd3fb8424e2c)
 
 
