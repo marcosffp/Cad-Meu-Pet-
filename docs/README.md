@@ -282,10 +282,17 @@ Os requisitos de um projeto são classificados em dois grupos:
    ![Home p2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/a1f198d1-985d-4fe9-9daf-c8b0b1bb6e6a)
    ![home mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/44d0642b-b340-4bac-8b62-323bf7497924)
    
-
+  * Meus Relatos:
+    ![Meus relatos](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/8048edfd-986c-4387-b5ac-95caa00e2d65)
+    ![meus relatos mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/7d724ad2-64fa-472f-ae3d-5b3ad692c532)
+    
   * Desaparecidos e localizados:
     ![Desaparecidos e localizados novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/ae2932f0-d38c-4c1a-a2eb-a963bf1be12f)
     ![desaparecidos e localizados mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/dd2b5425-ad56-4d73-9e47-94ec291610e0)
+
+  * Meus anúncios:
+    ![meus anuncios](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/0a115705-d23d-4700-97fa-2e4b33569373)
+    ![Meus anuncios mobile](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/3eff2fd6-3e98-4450-9056-f3f5f226c68d)
 
   * Ferramentas:
     ![Ferramentas novo](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d51cce43-365f-4644-a7a4-b88cf7845e55)
