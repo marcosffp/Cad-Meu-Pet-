@@ -163,7 +163,7 @@ A documentação do projeto inclui as seguintes seções:
 
 
 
-# 4. Introdução
+# 4. Gestão de Projeto
 
 
 ## 4.1 Design Thinking
