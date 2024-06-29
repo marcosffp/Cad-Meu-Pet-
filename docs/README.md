@@ -453,7 +453,7 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 ## 6.1 Diagramas de Fluxo
 
 **Início:**
-![userflowINICIO](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/b509c542-340f-41f6-9bc0-6a1813609c81)
+![userflowINICIO](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/c20a903c-9567-47bf-bf99-b13ebacbaefc)
 
 **Final:**
 ![userflow](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/86019633-bcb8-417b-829d-fd3fb8424e2c)
@@ -743,9 +743,9 @@ Preparar para Executar:
 
 Navegando pelo Site:
 
-  #obs.: A maioria das funcionalidades descritas estarão disponíveis apenas para usuários cadastrados no site. Caso um usuário não esteja cadastrado, ao tentar utilizar essas funcionalidades, ele será redirecionado para a página de cadastro de usuário. Todas as funcionalidades da página funcionam normalmente tanto em telas de desktop quanto em dispositivos móveis. A única diferença na versão mobile é a exibição do cabeçalho. Para acessá-lo, clique no ícone de três barras ("menu hambúrguer"). Ao clicar, o cabeçalho se expandirá, permitindo que o usuário escolha para qual página deseja navegar.
+  ### obs.: A maioria das funcionalidades descritas estarão disponíveis apenas para usuários cadastrados no site. Caso um usuário não esteja cadastrado, ao tentar utilizar essas funcionalidades, ele será redirecionado para a página de cadastro de usuário. Todas as funcionalidades da página funcionam normalmente tanto em telas de desktop quanto em dispositivos móveis. A única diferença na versão mobile é a exibição do cabeçalho. Para acessá-lo, clique no ícone de três barras ("menu hambúrguer"). Ao clicar, o cabeçalho se expandirá, permitindo que o usuário escolha para qual página deseja navegar.
   
-  #Cabeçalho das páginas:
+  # Cabeçalho das páginas:
   
     1. No cabeçalho, clique na logo com o nome do site para ser redirecionado à página inicial.
     
@@ -766,7 +766,7 @@ Navegando pelo Site:
     9. Caso o botão estiver escrito "Logado", clique nele e será direcionado para a página "Editor de perfil".
     
 
-   #Rodapé das páginas:
+   # Rodapé das páginas:
   
      No rodapé da página, você encontrará:
      
@@ -779,7 +779,7 @@ Navegando pelo Site:
         4. Informações de Contato: Caso queira entrar em contato com a equipe.
         
 
-   #Instruções para a Página Home:
+   # Instruções para a Página Home:
    
       Na página Home, você encontrará as seguintes funcionalidades:
 
@@ -805,7 +805,7 @@ Navegando pelo Site:
            5.5. Clique no botão "Seus Relatos" para ser direcionado à página dos seus relatos.
 
 
-   #Instruções para a Página "Desaparecidos e Localizados":
+   # Instruções para a Página "Desaparecidos e Localizados":
    
        Na página "Desaparecidos e Localizados", você encontrará as seguintes funcionalidades:
 
