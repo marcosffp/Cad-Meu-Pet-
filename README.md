@@ -201,6 +201,22 @@ Navegando pelo Site:
            9.3. Ver Seus Anúncios: Clique neste botão para ser direcionado à página "Seus Anúncios".
 
 
+   # Instruções para a Página "Cadastro de Relato":
+       1. Campo Nome do Pet: Insira o nome do pet relacionado ao relato.
+
+       2. Campo Data: Selecione a data do reencontro ou do evento que você está relatando.
+
+       3. Campo Localização: Insira a localização onde o evento ocorreu.
+
+       4. Campo Descrição do Relato: Forneça uma descrição detalhada do reencontro ou do evento.
+
+       5. Campo URL da Imagem: Insira o link (URL) da imagem do pet. (Não é possível anexar uma imagem diretamente, apenas colar o link da imagem).
+
+       6. Botões de Ação:
+          6.1 Cadastrar: Clique neste botão para cadastrar o relato.
+          6.2 Limpar Formulário: Clique neste botão para limpar todos os campos do formulário.
+
+
 
   # Instruções para a Página "Cadastro de Usuário"
 
