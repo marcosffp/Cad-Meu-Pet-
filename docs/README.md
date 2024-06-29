@@ -21,98 +21,112 @@ A documentação do projeto inclui as seguintes seções:
 # 1. Introdução
 
 
+
 ## 1.1 Sobre o Projeto
 
    O "Cadê Meu Pet?" é uma plataforma online focada em auxiliar na busca por animais perdidos e na conexão de animais que precisam de adoção com novos lares.
 
 
+
  ## 1.2 Objetivos
 
-   O objetivo principal do projeto "Cadê meu pet?" é oferecer uma plataforma online onde os donos de animais perdidos possam registrar seus animais desaparecidos e onde membros da comunidade possam ajudar na busca e localização desses animais. Além disso, o projeto visa promover a conscientização sobre a importância da identificação e registro de animais de estimação, assim como a necessidade de colaboração da comunidade para reunir animais perdidos com seus donos.
+   O objetivo principal do projeto "Cadê Meu Pet?" é oferecer uma plataforma online onde os donos de animais perdidos possam registrar seus animais desaparecidos e onde membros da comunidade possam ajudar na busca e localização desses animais. Além disso, o projeto visa promover a conscientização sobre a importância da identificação e registro de animais de estimação, assim como a necessidade de colaboração da comunidade para reunir animais perdidos com seus donos.
+
 
 
  ## 1.3 Justificativa
 
-   Este projeto foi concebido como uma resposta à necessidade de uma solução eficaz e acessível para ajudar a localizar animais perdidos. Ao fornecer uma plataforma centralizada e de fácil acesso, o "Cadê meu pet?" visa facilitar o processo de busca e reunificação de animais perdidos com seus donos, reduzindo assim o tempo de separação e minimizando o sofrimento tanto dos animais quanto de seus donos.
+   Este projeto foi concebido como uma resposta à necessidade de uma solução eficaz e acessível para ajudar a localizar animais perdidos. Ao fornecer uma plataforma centralizada e de fácil acesso, o "Cadê Meu Pet?" visa facilitar o processo de busca e reunificação de animais perdidos com seus donos, reduzindo assim o tempo de separação e minimizando o sofrimento tanto dos animais quanto de seus donos.
 
 
  ## 1.4 Público-Alvo
 
+
+
 **Donos de Animais Perdidos:**
 
-   O público-alvo deste perfil é diversificado, abrangendo homens e mulheres de todas as faixas etárias, com variados níveis de renda e educação. Seu conhecimento prévio inclui habilidades básicas de navegação na web, e alguns podem ter alguma experiência anterior em lidar com animais perdidos. Em relação à tecnologia, são tanto usuários iniciantes quanto experientes, desde que capazes de usar um smartphone ou tablet ou desktop e navegar na internet. São receptivos a aprender novas ferramentas para auxiliar na busca por seus companheiros pets, valorizando a simplicidade e a acessibilidade do site. No contexto hierárquico, são os próprios donos dos animais que lideram a decisão de utilizar o site, embora possam buscar auxílio de familiares, amigos e vizinhos para utilizar e divulgar a busca.
+   O público-alvo deste perfil é diversificado, abrangendo homens e mulheres de todas as faixas etárias, com variados níveis de renda e educação. Seu conhecimento prévio inclui habilidades básicas de navegação na web, e alguns podem ter experiência anterior em lidar com animais perdidos. Em relação à tecnologia, são tanto usuários iniciantes quanto experientes, desde que capazes de usar um smartphone, tablet ou desktop e navegar na internet. São receptivos a aprender novas ferramentas para auxiliar na busca por seus companheiros pets, valorizando a simplicidade e a acessibilidade do site. No contexto hierárquico, são os próprios donos dos animais que lideram a decisão de utilizar o site, embora possam buscar auxílio de familiares, amigos e vizinhos para utilizar e divulgar a busca.
+
 
 
 **Membros da Comunidade:**
 
-   O público-alvo deste perfil é formado por pessoas de todas as idades interessadas em auxiliar animais vulneráveis, podendo ser parte de grupos de proteção animal, voluntários em abrigos ou indivíduos preocupados. Seu conhecimento prévio abrange familiaridade com a comunidade local, experiência em busca de animais perdidos e consciência dos recursos disponíveis. Em termos de tecnologia, são usuários de smartphone ou tablet ou desktop e navegar na internet, dispostos a utilizar o site para compartilhar informações e ajudar na busca. Valorizam a eficiência do site para essa causa e atuam de forma autônoma, colaborando entre si e com organizações de resgate.
+   O público-alvo deste perfil é formado por pessoas de todas as idades interessadas em auxiliar animais vulneráveis, incluindo membros de grupos de proteção animal, voluntários em abrigos ou indivíduos preocupados. Seu conhecimento prévio abrange familiaridade com a comunidade local, experiência na busca de animais perdidos e consciência dos recursos disponíveis. Em termos de tecnologia, são usuários de smartphone, tablet ou desktop e sabem navegar na internet. Estão dispostos a utilizar o site para compartilhar informações e ajudar na busca. Valorizam a eficiência do site para essa causa e atuam de forma autônoma, colaborando entre si e com organizações de resgate.
 
 
 **Organizações de Resgate de Animais e Abrigos:**
 
-   Organizações sem fins lucrativos e abrigos especializados em resgate, cuidado e reabilitação de animais perdidos e abandonados buscam parcerias e ferramentas tecnológicas para ampliar seu alcance e aumentar as chances de encontrar lares para os animais sob seus cuidados. Em termos de tecnologia, capacidade de integrar o site em seus sistemas de gestão e comunicação, buscando ferramentas que otimizem seus processos, aumentem a eficiência e ampliem o alcance de suas ações. Com vasta experiência no manejo de animais perdidos e conhecimento dos recursos disponíveis na comunidade, essas organizações valorizam a segurança, confiabilidade e integração de aplicativos em seus sistemas de gestão e comunicação. Autônomas em suas operações, elas podem colaborar entre si e com a comunidade para expandir suas ações de busca e resgate.
+   Organizações sem fins lucrativos e abrigos especializados em resgate, cuidado e reabilitação de animais perdidos e abandonados buscam parcerias e ferramentas tecnológicas para ampliar seu alcance e aumentar as chances de encontrar lares para os animais sob seus cuidados. Em termos de tecnologia, essas organizações procuram a capacidade de integrar o site em seus sistemas de gestão e comunicação, buscando ferramentas que otimizem seus processos, aumentem a eficiência e ampliem o alcance de suas ações. Com vasta experiência no manejo de animais perdidos e conhecimento dos recursos disponíveis na comunidade, essas organizações valorizam a segurança, confiabilidade e integração de aplicativos em seus sistemas. Autônomas em suas operações, elas podem colaborar entre si e com a comunidade para expandir suas ações de busca e resgate.
+
    
 
  ## 1.5 Personas
+
+
 
 **Pedro**
 
    Pedro, o Entusiasta da Comunidade, é um jovem de 22 anos apaixonado por jogar futebol e estudante com o sonho de atuar na área de seu interesse acadêmico. Ele desempenha um papel crucial na comunidade, utilizando uma variedade de ferramentas físicas e digitais, como cartazes, smartphones e redes sociais, para compartilhar informações e auxiliar na localização e devolução de animais perdidos. Seus objetivos principais ao utilizar serviços são encontrar o animal perdido, informar o tutor do animal e contribuir para a comunidade compartilhando informações sobre animais encontrados. Para Pedro, é essencial que o site ofereça facilidade de uso e comunicação eficaz, além de demonstrar empatia e compreensão em relação à sua situação emocional. Qualquer falha na comunicação sobre o progresso da busca ou falta de suporte pode deixá-lo furioso, então é crucial garantir uma experiência positiva para ele, reconhecendo e valorizando suas contribuições para a comunidade.
 
 
+
 **Heitor**
 
-   Heitor, aos 27 anos, é um vendedor de eletrodomésticos com um hobby de boxe. Sua personalidade observadora o leva a utilizar uma variedade de objetos físicos e digitais, como cartazes, flyers, smartphone, computador, mapas online e câmera, tanto em casa quanto durante buscas na vizinhança, parques ou outros locais onde o animal possa ter sido visto. Seus objetivos principais ao utilizar o serviço são encontrar seu animal perdido, aumentando as chances de localizá-lo, e receber apoio da comunidade. Heitor espera divulgar informações sobre seu pet, como fotos e detalhes do desaparecimento, para receber ajuda de outros usuários. Para ele, o site é essencial, oferecendo uma plataforma especializada que conecta tutores em busca de seus animais de estimação, fornecendo suporte emocional e recursos práticos durante esse momento estressante. No mapa de empatia, é crucial facilitar a navegação no site, tornando-o intuitivo e claro. Manter Heitor informado sobre o progresso das buscas é fundamental, enquanto a falta de comunicação e a dificuldade no uso do site são situações que o deixariam furioso. Ele valoriza a transparência e o suporte durante todo o processo de busca por seu animal de estimação perdido.
+   Heitor, aos 27 anos, é um vendedor de eletrodomésticos com um hobby de boxe. Sua personalidade observadora o leva a utilizar uma variedade de objetos físicos e digitais, como cartazes, flyers, smartphone, computador, mapas online e câmera, tanto em casa quanto durante buscas na vizinhança, parques ou outros locais onde o animal possa ter sido visto. Seus objetivos principais ao utilizar o serviço são encontrar seu animal perdido, aumentar as chances de localizá-lo e receber apoio da comunidade. Heitor espera divulgar informações sobre seu pet, como fotos e detalhes do desaparecimento, para receber ajuda de outros usuários. Para ele, o site é essencial, oferecendo uma plataforma especializada que conecta tutores em busca de seus animais de estimação, fornecendo suporte emocional e recursos práticos durante esse momento estressante. No mapa de empatia, é crucial facilitar a navegação no site, tornando-o intuitivo e claro. Manter Heitor informado sobre o progresso das buscas é fundamental, enquanto a falta de comunicação e a dificuldade no uso do site são situações que o deixariam furioso. Ele valoriza a transparência e o suporte durante todo o processo de busca por seu animal de estimação perdido.
 
 
 **Ana**
 
-   Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de ler livros. Sua personalidade simpática e seu sonho de conhecer lugares turísticos pelo mundo refletem sua disposição para ajudar os outros e sua curiosidade sobre o mundo. Ela utiliza uma variedade de objetos físicos, como cartazes e flyers, e digitais, como smartphone, computador, mapas online e câmera. Como voluntária, Ana acessa o site "Cade Meu Pet" pelo seu smartphone para anunciar informações adicionais sobre os animais perdidos. Para tratá-la bem, é fundamental manter uma comunicação clara e transparente, reconhecendo seu esforço e acolhendo suas contribuições. Ana valoriza ser mantida informada sobre as atividades e ações do site, e não suportaria a desvalorização de seu trabalho e esforço como voluntária, a falta de reconhecimento de seus feedbacks e sugestões, ou a criação de dificuldades no uso do site.
+   Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de ler livros. Sua personalidade simpática e seu sonho de conhecer lugares turísticos pelo mundo refletem sua disposição para ajudar os outros e sua curiosidade sobre o mundo. Ela utiliza uma variedade de objetos físicos, como cartazes e flyers, e digitais, como smartphone, computador, mapas online e câmera. Como voluntária, Ana acessa o site "Cadê Meu Pet?" pelo seu smartphone para anunciar informações adicionais sobre os animais perdidos. Para tratá-la bem, é fundamental manter uma comunicação clara e transparente, reconhecendo seu esforço e acolhendo suas contribuições. Ana valoriza ser mantida informada sobre as atividades e ações do site, e não suportaria a desvalorização de seu trabalho e esforço como voluntária, a falta de reconhecimento de seus feedbacks e sugestões, ou a criação de dificuldades no uso do site.
 
 
 
 # 2. Problema e Solução
 
 
+
 ## 2.1 Problema
 
-   Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
+   Milhões de animais de estimação são perdidos todos os anos no Brasil. Quando um animal se perde, isso pode causar angústia significativa para seus donos, além de representar um risco para a segurança e o bem-estar do próprio animal. Encontrar uma maneira eficiente de reunir animais perdidos com seus donos é crucial para diminuir o sofrimento de ambas as partes envolvidas.
+
 
 
  ## 2.2 Descrição da Solução
 
-   Para resolver o problema, desenvolvemos uma plataforma destinada aos tutores de animais perdidos. Nesta plataforma, os tutores podem publicar um anúncio com informações detalhadas sobre o pet desaparecido. Isso possibilita que diversos usuários da plataforma colaborem na busca, facilitando o reencontro entre o tutor e seu animal de estimação. 
+   Para resolver o problema, desenvolvemos uma plataforma destinada aos tutores de animais perdidos. Nesta plataforma, os tutores podem publicar um anúncio com informações detalhadas sobre o pet desaparecido. Isso possibilita que diversos usuários da plataforma colaborem na busca, facilitando o reencontro entre o tutor e seu animal de estimação.
+
 
 
  ## 2.3 Histórias de Usuários
 
-      -Eu, como Ana, sou tutora e quero cadastrar o meu animal perdido para encontrar ele.
+      -Eu, como Ana, sou tutora e quero cadastrar o meu animal perdido para encontrá-lo.
 
-      -Eu, como Ana, como usuária busco animais perdidos para auxiliar os tutores q perderam seus pets.
+      -Eu, como Ana, usuária, busco animais perdidos para auxiliar os tutores que perderam seus pets.
 
-      -Eu, como Ana, quero filtrar os animais por tipo de espécie ou status para encontrar o animal do interesse.
+      -Eu, como Ana, quero filtrar os animais por tipo de espécie ou status para encontrar o animal de interesse.
 
-      -Eu, como Ana, quero ver a quantidade de animais reencontrados os pets com seus tutores para ter entendimento melhor do site.
+      -Eu, como Ana, quero ver a quantidade de animais reencontrados com seus tutores para ter um melhor entendimento do site.
 
-      -Eu, como Heitor, quero publicar no anúncio a imagem do meu pet para melhor compreensão do meu pet perdido.
+      -Eu, como Heitor, quero publicar no anúncio a imagem do meu pet para facilitar a identificação do meu animal perdido.
 
-      -Eu, como Heitor, quero entrar em contato com o tutor para informar do animal que encontrei dele.
+      -Eu, como Heitor, quero entrar em contato com o tutor para informar sobre o animal que encontrei.
 
-      -Eu, como Heitor, quero editar os dados do meu perfil para atualizar os dados.
+      -Eu, como Heitor, quero editar os dados do meu perfil para atualizá-los.
 
-      -Eu, como Pedro, quero alterar os status do meu anúncio para atualizar as informações.
+      -Eu, como Pedro, quero alterar o status do meu anúncio para atualizar as informações.
 
-      -Eu, como Pedro, quero excluir o anúncio para ter opção de cancelar a postagem.
+      -Eu, como Pedro, quero excluir o anúncio para ter a opção de cancelar a postagem.
 
-      -Eu, como Pedro, quero criar o relato para dizer o reencontro com o animal.
+      -Eu, como Pedro, quero criar um relato para compartilhar o reencontro com o animal.
 
-      -Eu, como Pedro, quero editar o relato para atualizar informações desse relato.
+      -Eu, como Pedro, quero editar o relato para atualizar as informações desse relato.
 
-      -Eu, como Pedro, quero excluir o relato para ter opção de cancelar a postagem. 
+      -Eu, como Pedro, quero excluir o relato para ter a opção de cancelar a postagem. 
 
 
 
 # 3. Requisitos do Projeto
+
 
 
 ## 3.1 Requisitos Funcionais (RF)
@@ -142,6 +156,7 @@ A documentação do projeto inclui as seguintes seções:
       RF-012: Os usuários ou tutores podem excluir relatos sobre o reencontros de animais.(Prioridade MÉDIA).
 
 
+
 ## 3.2 Requisitos Funcionais (RF)
 
       RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA);
@@ -166,20 +181,29 @@ A documentação do projeto inclui as seguintes seções:
 # 4. Gestão de Projeto
 
 
+
 ## 4.1 Design Thinking
+
 ![matriz_de_alinhamento](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/51339850-d8ed-419d-bb37-73b028ed7249)
+
 
 ![mapa_de_stakeholders](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/bf980e98-c6f1-4288-8b80-d5d0f77d307b)
 
+
 ![persona1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/3cd761b4-f616-48bd-a10c-117eb03a9f82)
+
 
 ![persona2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/45c61d43-67c3-4ee7-a1e0-60198d874c39)
 
+
 ![persona3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/dc3a5e59-58f0-45fa-8e4f-c0cc3e98d403)
+
 
 ![mural_de_possibilidades](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e6a4e569-03f7-4f23-833d-c3ca24a106f0)
 
+
 ![mapa_de_prorizacao](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/e4ccf493-47c8-4401-a96c-a0e05e46bb5f)
+
 
 
  ## 4.1.1 Metodologia Scrum
@@ -188,13 +212,17 @@ A documentação do projeto inclui as seguintes seções:
 
 O projeto foi dividido em sprints curtos, cada um com metas e entregas específicas. A equipe planejava cada sprint em conjunto, definindo as tarefas e os critérios de aceitação.
 
+
 -Reuniões Semanais:
 
 Reuniões diárias curtas (daily scrums) sincronizavam a equipe, permitindo que cada membro compartilhasse seus progressos, desafios e impedimentos.
 
+
 -Retrospectivas Constantes:
 
 Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que poderia ser aprimorado, aprimorando continuamente seus processos e dinâmicas de trabalho.
+
+
 
 ### Sprints:
   
@@ -208,7 +236,9 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | Produção do protótipo das telas no Figma     |    Henrique Lima Volponi |
     | Documentação Inicial do Projeto     |    João Gabriel Silva Custódio |
 
+
     ![quadro kanban sprint 1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/c414a6b6-c6e5-4029-9651-7b7ed37f304d)
+
 
   * Sprint 2: Começo da produção das telas em Html, Css e JavaScript.
 
@@ -220,7 +250,9 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | O tutor faz o cadastro do animal perdido    |    Henrique Lima Volponi |
     | O usuário e o tutor podem editar seu perfil ou do pet na plataforma e o tutor deve atualizar os status do animal    |    João Gabriel Silva Custódio |
 
+
     ![quadro kanban sprint 2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/3b37b2ed-e0ab-48d9-a1ba-649e0bcc6433)
+
 
   * Sprint 3: Continuação da produção das telas em Html, Css e JavaScript e implementação do Json server para banco de dados.
 
@@ -232,7 +264,9 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | Tela de alteração de cadastro     |    Henrique Lima Volponi |
     | O usuário pode alterar seu perfil     |    João Gabriel Silva Custódio |
 
+
     ![quadro kanban sprint 3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/d4ace2d6-6652-48da-8a81-6f6507c10651)
+
 
   * Sprint 4: Últimas tarefas para entrega final.
 
@@ -245,7 +279,9 @@ Em retrospectivas regulares, a equipe refletia sobre o que funcionou bem e o que
     | Hospedagem do site     |    Henrique Lima Volponi |
     | Produção do vídeo de apresentação (pitch)    |    João Gabriel Silva Custódio |
 
+
     ![quadro kanban sprint 4](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/164196107/8327f70a-5e9b-4a24-8bfe-ab058d408a00)
+
 
 
  ## 4.2 Ferramentas
@@ -342,6 +378,7 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 ![faq](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/7b948456-0634-4082-91c1-96f88071e456)
 
 ![faqM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/d6a9f712-d1a8-40f9-bfe5-6e7d962cca1f)
+
 
 
 ## 5.2 Resultado final
@@ -554,6 +591,7 @@ projeto/
 ![userflowINICIO](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/b509c542-340f-41f6-9bc0-6a1813609c81)
 
 
+
 ## 8.2 Estrutura do Código
 
 ```plaintext
@@ -625,6 +663,7 @@ codigo/
 ```
 
 
+
 ## 8.3 Configurações e Dependências
 
 ### 8.3.1 Configurações
@@ -638,6 +677,7 @@ codigo/
    CITATION.cff: Arquivo de citação para o projeto. Fornece informações de como citar o projeto em trabalhos acadêmicos e outras publicações.
 
    LICENSE: Arquivo de licença do projeto. Define os termos sob os quais o projeto pode ser utilizado, modificado e distribuído.
+
 
 
 ### 8.3.2 Dependências
@@ -661,9 +701,11 @@ codigo/
 # 9. Guia de Instalação e Uso
 
 
+
 ## 9.1 Pré-requisitos
 
 - **Conta no Replit**: Para acessar e executar o projeto, é necessário ter uma conta na plataforma Replit. Caso ainda não tenha, você pode se cadastrar gratuitamente no site oficial do [Replit](https://replit.com/).
+
 
 ## 9.2 Instalação
 
@@ -718,6 +760,7 @@ Verificar a Instalação das Dependências:
 Preparar para Executar:
 
    Passo 6: Após garantir que todas as dependências e arquivos estão corretamente configurados, você pode proceder para a execução do projeto clicando no botão "Run".
+
 
 
 ## 9.4 Uso
