@@ -483,6 +483,10 @@ projeto/
 │   ├── db.json (Banco de dados principal utilizado pelo projeto)
 │   └── db_original.json
 │
+├── divulgação/
+│   ├── APRESENTAÇÃO FINAL CADE MEU Pet.pdf (Apresentação em slides do projeto)
+│   └── TRABALHO_MEU_PET_1.mp4 (Vídeo promocional do projeto)
+│
 ├── docs/
 │   ├── assets/ (Diretório para recursos adicionais de documentação)
 │   ├── LICENSE (Licença da documentação do projeto)
