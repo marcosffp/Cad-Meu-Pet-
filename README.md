@@ -102,6 +102,7 @@ Navegando pelo Site:
 
 
         5. Seção Relatos:
+        
            5.1. Depoimentos dos Usuários: Nessa seção, você encontrará depoimentos dos usuários do site.
           
            5.2. Clique em "Ver Mais" para ler mais informações sobre os depoimentos.
@@ -118,6 +119,7 @@ Navegando pelo Site:
        Na página "Desaparecidos e Localizados", você encontrará as seguintes funcionalidades:
 
           1. Coluna de Filtro (Canto Esquerdo):
+          
              1.1. Seção "Status": Escolha entre "Desaparecido" ou "Encontrado" para filtrar os anúncios conforme o status do animal.
 
              1.2. Seção "Localização": Digite um endereço preciso ou próximo para filtrar anúncios com base na localização.
@@ -151,6 +153,7 @@ Navegando pelo Site:
    # Instruções para a Página "Ferramentas": Na página, você encontrará as seguintes funcionalidades:
    
          1. Informações sobre o Anúncio: Esta seção fornece detalhes sobre como criar e gerenciar anúncios de pets desaparecidos ou encontrados.
+         
          2. Botão "Criar Anúncio": Clique no botão "Criar Anúncio" para ser direcionado à página de cadastro do anúncio.
          
 
@@ -206,15 +209,23 @@ Navegando pelo Site:
        2. Campo E-mail: Insira seu e-mail. Ao clicar em "Cadastrar", o sistema verificará se o e-mail já foi utilizado em outro cadastro.
 
        3. Campo Senha: Insira sua senha. O campo possui um ícone que permite ver ou ocultar a senha enquanto você digita. A senha deve atender aos seguintes requisitos de validação:
+       
           3.1. Pelo menos 1 número;
+          
           3.2 Pelo menos 1 símbolo;
+          
           3.3 Pelo menos 1 letra minúscula;
+          
           3.4 Pelo menos 1 letra maiúscula;
+          
           3.5 No mínimo 6 caracteres no total.
 
        4. Botões de Ação:
+       
           4.1. Cadastrar: Clique neste botão para concluir o cadastro.
+          
           4.2. Limpar Formulário: Clique neste botão para limpar todos os campos do formulário.
+          
           4.3. Faça Login: Se você já possui uma conta, clique em "Faça Login" para ser direcionado à página de login.
 
 
@@ -239,7 +250,9 @@ Navegando pelo Site:
      3. Para alterar a senha, ela deve atender aos mesmos requisitos do cadastro de usuário: pelo menos 1 número, 1 símbolo, 1 letra minúscula, 1 letra maiúscula e no mínimo 8 caracteres.
      
      4. Botões de Ação:
+     
         4.1. Salvar: Clique neste botão para salvar as alterações feitas no perfil.
+        
         4.2. Sair da Conta: Clique neste botão para sair da sua conta.
 
 # Requisitos
