@@ -489,13 +489,14 @@ projeto/
 │
 ├── docs/
 │   ├── assets/ (Diretório para recursos adicionais de documentação)
+│   ├── Ata de acordo Sem Cliente Externo.pdf (Documento das decisões e ações acordadas internamente em uma reunião)
 │   ├── LICENSE (Licença da documentação do projeto)
 │   ├── README.md (Documentação do projeto)
 │   └── index.html (Página HTML principal para a documentação)
 │
 ├── node_modules/ (Pacotes npm instalados são armazenados)
 │
-├── templates/ (Templates reutilizáveis do projeto)
+├── templates/ (Templates de documentos usados nas sprints do projeto)
 │
 ├── .gitignore
 │
