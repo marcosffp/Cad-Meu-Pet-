@@ -196,6 +196,8 @@ A documentação geral do projeto inclui as seguintes seções:
 
 ## 4.1 Solucionando Problemas de Acesso através da URL do Site
 
+- Devido à gratuidade do serviço na plataforma da Render, o site é desativado após um período de inatividade. Por esse motivo, é necessário realizar um novo deploy. Após colar o link na barra de busca do navegador e pressionar Enter, aguarde um intervalo de aproximadamente 30 a 50 segundos para o carregamento completo do site. Dessa forma, o link voltará a funcionar normalmente.
+    
 - Caso ao acessar pelo link do render o projeto e não conseguir acessar o site, provavelmente devido às limitações de hospedagem free na plataforma, pois há um limite de requisições e recursos disponíveis para projetos gratuitos.Nesse caso, recomendo acessar o projeto pela plataforma Replit.
 - Linka do Projeto hospedado: [ Link do Projeto hospedado](https://cademeupet.onrender.com).
 
