@@ -709,18 +709,20 @@ codigo/
 
 - Caso ao acessar pelo link do render o projeto e não conseguir acessar o site, provavelmente devido às limitações de hospedagem free na plataforma, pois há um limite de requisições e recursos disponíveis para projetos gratuitos. Nesse caso, recomendo acessar o projeto pela plataforma Replit.
   
-- Linka do Projeto hospedado: [ Link do Projeto hospedado](https://cademeupet.onrender.com).
+- Link do Projeto hospedado no Render: [Link do Projeto hospedado](https://cademeupet.onrender.com).
 
 ## 9.1.1 Pré-requisitos
 
 - **Conta no Replit**: Para acessar e executar o projeto, é necessário ter uma conta na plataforma Replit. Caso ainda não tenha, você pode se cadastrar gratuitamente no site oficial do [Replit](https://replit.com/).
+  
+- Link do Projeto hospedado no Replit: [Link do Projeto no Replit](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet)
 
 
 ## 9.2 Instalação
 
 1. **Acessar o Link do Projeto**:
    - Clique no link fornecido para acessar o projeto no Replit.
-   - Exemplo: [Link do Projeto no Replit]([https://replit.com/@SeuProjetoLink](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet))
+   - Projeto no Replit: [Link do Projeto no Replit](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet)
 
 2. **Dar um Fork no Projeto**:
    - No canto superior direito da página do projeto no Replit, clique no botão "Fork".
