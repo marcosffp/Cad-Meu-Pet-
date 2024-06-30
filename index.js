@@ -26,11 +26,32 @@ server.use((req, res, next) => {
     const novoRelato = req.body;
 
     if (novoRelato) {
-      novoRelato.liked = novoRelato.liked !== undefined ? novoRelato.liked : false;
-      novoRelato.likes = novoRelato.likes !== undefined ? novoRelato.likes : 0;
+      novoRelato.isLikedByUser = novoRelato.isLikedByUser !== undefined ? novoRelato.isLikedByUser : [];
     }
   }
   next();
+});
+
+server.post('/relatos/:id', (req, res) => {
+  const body = req.body;
+
+  const relato = db.get('relatos').find({ id: parseInt(id) }).value();
+  if (!relato) {
+    return res.status(404).json({ message: 'Relato not found' });
+  }
+
+  const isLikedByUser = relato.isLikedByUser.includes(userId);
+  if (isLikedByUser) {
+    relato.isLikedByUser = relato.isLikedByUser.filter(uid => uid !== userId);
+  } else {
+    relato.isLikedByUser.push(userId);
+  }
+
+  relato.likes = relato.isLikedByUser.length;
+
+  db.get('relatos').find({ id: parseInt(id) }).assign(relato).write();
+
+  res.json(relato);
 });
 
 server.use((req, res, next) => {

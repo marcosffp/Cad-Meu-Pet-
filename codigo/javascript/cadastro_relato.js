@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function createRelato(relato) {
-    relato.liked = relato.liked !== undefined ? relato.liked : false;
     relato.likes = relato.likes !== undefined ? relato.likes : 0;
 
     await fetch(apiUrl, {
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         console.log('Usuário atualizado com sucesso');
         setTimeout(function () {
-          window.location.href = "../html/Home.html";
+          window.location.href = "../html/home.html";
         }, 3000);
       })
       .catch(error => {

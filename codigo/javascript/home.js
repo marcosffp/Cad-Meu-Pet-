@@ -65,47 +65,71 @@ const RelatosApp = (function () {
             });
     }
 
-    function toggleLike(id, currentLiked, currentLikes, refreshFunction) {
-        const newLikes = currentLiked ? Math.max(0, currentLikes - 1) : currentLikes + 1;
-        const relato = {
-            liked: !currentLiked,
-            likes: newLikes
-        };
+    function toggleLike(id, currentLikes) {
+        const userId = sessionStorage.getItem('userId') || localStorage.getItem('userId');
+        if (!userId) {
+            displayMessage('Você precisa estar logado para curtir um relato.');
+            return;
+        }
+
+        const relato = db.find(relato => relato.id === id);
+        if (!relato) {
+            displayMessage('Relato não encontrado.');
+            return;
+        }
+
+        const isLikedByUser = relato.isLikedByUser.includes(userId);
+        if (isLikedByUser) {
+            relato.isLikedByUser = relato.isLikedByUser.filter(uid => uid !== userId);
+        } else {
+            relato.isLikedByUser.push(userId);
+        }
+
+
+        relato.likes = relato.isLikedByUser.length;
 
         fetch(`${apiUrl}/${id}`, {
-            method: 'PATCH',
+            method: 'PATCH', 
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(relato),
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao atualizar curtidas');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const likesCountElement = document.getElementById(`likes-${id}`);
-                if (likesCountElement) {
-                    likesCountElement.textContent = relato.likes;
-                } else {
-                    console.error(`Elemento com id likes-${id} não foi encontrado.`);
-                }
-                reloadPage();
-                if (refreshFunction) refreshFunction();
-            })
-            .catch(error => {
-                console.error('Erro ao atualizar curtidas via API JSONServer:', error);
-                displayMessage("Erro ao atualizar curtidas");
-            });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao atualizar curtidas');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const likesCountElement = document.getElementById(`likes-${id}`);
+            const likeIconElement = document.getElementById(`like-icon-${id}`);
+
+            if (likesCountElement && likeIconElement) {
+                likesCountElement.textContent = relato.likes;
+                likeIconElement.innerHTML = `
+                    <i class="fas fa-thumbs-up" style="color: ${isLikedByUser ? '#6c757d' : '#0E3B41'};"></i>
+                `;
+            } else {
+                console.error(`Elemento com id likes-${id} ou like-icon-${id} não encontrado.`);
+            }
+
+        })
+        .catch(error => {
+            console.error('Erro ao atualizar curtidas via API JSONServer:', error);
+            displayMessage("Erro ao atualizar curtidas");
+        });
     }
 
-    function handleLike(id, liked, likes, refreshFunction) {
-        toggleLike(id, liked, likes, refreshFunction);
+
+
+
+    function handleLike(id, likes) {
+        toggleLike(id, likes);
     }
 
     function ListaRelatos() {
+        const userId = sessionStorage.getItem('userId') || localStorage.getItem('userId');
         const DivRelatos = document.getElementById("relatos-container");
         DivRelatos.innerHTML = "";
         db.forEach(relato => {
@@ -134,10 +158,10 @@ const RelatosApp = (function () {
                         <p class="card-text">${relato.localizacao}</p>
                         <div id="descricao-${relato.id}" class="card-text ${isTruncated ? '' : 'expanded'}">${descricaoElement.innerHTML}</div>
                         <div class="like-section">
-                            <span id="like-icon-${relato.id}" class="like-icon" onclick="RelatosApp.handleLike(${relato.id}, ${relato.liked}, ${relato.likes})">
-                                <i class="fas fa-thumbs-up" style="color: ${relato.liked ? '#0E3B41' : '#6c757d'};"></i>
+                            <span id="like-icon-${relato.id}" class="like-icon" onclick="RelatosApp.handleLike(${relato.id}, ${relato.isLikedByUser})">
+                                <i class="fas fa-thumbs-up" style="color: ${relato.isLikedByUser.includes(userId) ? '#0E3B41' : '#6c757d'};"></i>
                             </span>
-                            <span id="likes-${relato.id}">${relato.likes}</span>
+                            <span id="likes-${relato.id}">${relato.isLikedByUser.length}</span>
                         </div>
                     </div>
                 </div>`;
