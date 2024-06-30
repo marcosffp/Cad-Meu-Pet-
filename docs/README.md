@@ -310,10 +310,13 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 [Link Apresentação](https://www.canva.com/design/DAGJC1dlcj4/jTF46fAZzt9mFX5HqhGiSg/edit?utm_content=DAGJC1dlcj4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 -Documento do projeto: Plataforma Google Docs
-[Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
+[Link Documento](https://docs.google.com/document/d/1hpAhHAtS2Vk12tVPDKL7mzTtkeb1Q0KWXFew_AXYG2U/edit?usp=sharing)
 
 -Hospedagem: Plataforma Replit
-[Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet?s=app)
+[Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet)
+
+-Hospedagem: Plataforma Render
+[Link Hospedagem](https://cademeupet.onrender.com)
 
 
 
@@ -557,42 +560,7 @@ projeto/
 
 # 8. Documentação Técnica
 
-
-## 8.1 Tecnologias Utilizadas
-
--Processo de Design Thinking: Plataforma Figma 
-[Link Design Thinking](https://www.figma.com/file/kIKNbYDNAJAC2btmjOb3zP/Untitled?type=design&node-id=0%3A1&mode=design&t=A09p9qmoB4UIzsRM-1)
-
--Repositório de código: Plataforma GitHub 
-[Link Repositório](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/)
-
--Projeção inicial das telas: Plataforma Figma 
-[Link Telas](https://www.figma.com/file/8Ekahg6I0uWMj7boDvXYoi?type=design)
-
--Projeção Final das telas: Plataforma Figma
-[Wireframe/User Flow Final](https://www.figma.com/design/mCIkWXsfOaR7kXdzdGCT5F/Untitled?node-id=0-1&t=BaHhOG1Ngoqo74p2-0)
-
--Projeção User Flow: Plataforma Miro
-[Link User Flow](https://miro.com/welcomeonboard/NmttR1ZoTWlUeXRaV2hscjJNZjZYY2g4ZDN4QlRUN3hSOWJLVjhmV1l2ZUpXbVpEa2pjdU5xeTAwbnNnb2ZCenwzNDU4NzY0NTg1Mzk5MDE4MDIyfDI=?share_link_id=495361633666)
-
--Apresentação do projeto: Plataforma Canva
-[Link Apresentação](https://www.canva.com/design/DAGB9QYXE1k/z5-R_lBn_G3hDf2q8SXGaQ/edit?utm_content=DAGB9QYXE1k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
--Apresentação do final projeto: Plataforma Canva
-[Link Apresentação](https://www.canva.com/design/DAGJC1dlcj4/jTF46fAZzt9mFX5HqhGiSg/edit?utm_content=DAGJC1dlcj4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
--Documento do projeto: Plataforma Google Docs
-[Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
-
--Hospedagem: Plataforma Replit
-[Link Hospedagem](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet?s=app)
-
-**Início:**
-![userflowINICIO](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/b509c542-340f-41f6-9bc0-6a1813609c81)
-
-
-
-## 8.2 Estrutura do Código
+## 8.1 Estrutura do Código
 
 ```plaintext
 codigo/
@@ -664,9 +632,9 @@ codigo/
 
 
 
-## 8.3 Configurações e Dependências
+## 8.2 Configurações e Dependências
 
-### 8.3.1 Configurações
+### 8.2.1 Configurações
    
    .replit: Este arquivo contém configurações específicas para a plataforma Replit. Define como o ambiente de desenvolvimento Replit deve se comportar ao executar o projeto.
 
@@ -680,7 +648,7 @@ codigo/
 
 
 
-### 8.3.2 Dependências
+### 8.2.2 Dependências
 
    package.json: Arquivo de metadados relevantes para o projeto Node.js. Especifica as dependências do projeto, scripts de execução, e outras informações importantes como o nome, versão e autor do projeto.
 
