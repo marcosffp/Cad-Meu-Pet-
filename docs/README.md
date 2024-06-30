@@ -527,6 +527,7 @@ projeto/
 ├── docs/
 │   ├── assets/ (Diretório para recursos adicionais de documentação)
 │   ├── Ata de acordo Sem Cliente Externo.pdf (Documento das decisões e ações acordadas internamente em uma reunião)
+│   ├── Documentação do projeto.pdf (Documento em pdf do projeto)
 │   ├── LICENSE (Licença da documentação do projeto)
 │   ├── README.md (Documentação do projeto)
 │   └── index.html (Página HTML principal para a documentação)
