@@ -157,7 +157,7 @@ A documentação do projeto inclui as seguintes seções:
 
 
 
-## 3.2 Requisitos Funcionais (RF)
+## 3.2 Requisitos Não-Funcionais (RNF)
 
       RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA);
     
