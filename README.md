@@ -168,7 +168,7 @@ A documentação geral do projeto inclui as seguintes seções:
 
 
 
-## 3.2 Requisitos Funcionais (RF)
+## 3.2 Requisitos Não-Funcionais (RNF)
 
       RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA);
     
@@ -212,7 +212,7 @@ A documentação geral do projeto inclui as seguintes seções:
 
 1. **Acessar o Link do Projeto**:
    - Clique no link fornecido para acessar o projeto no Replit.
-   - Exemplo: [Link do Projeto no Replit]([https://replit.com/@SeuProjetoLink](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet))
+   - Exemplo: [Link do Projeto no Replit](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet)
 
 2. **Dar um Fork no Projeto**:
    - No canto superior direito da página do projeto no Replit, clique no botão "Fork".
