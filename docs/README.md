@@ -702,7 +702,11 @@ codigo/
 
 
 
-## 9.1 Pré-requisitos
+## 9.1 Solucionando Problemas de Acesso através da URL do Site
+
+- Caso ao acessar pelo link do render o projeto e não conseguir acessar o site, provavelmente devido às limitações de hospedagem free na plataforma, pois há um limite de requisições e recursos disponíveis para projetos gratuitos.Nesse caso, recomendo acessar o projeto pela plataforma Replit.
+
+## 9.1.1 Pré-requisitos
 
 - **Conta no Replit**: Para acessar e executar o projeto, é necessário ter uma conta na plataforma Replit. Caso ainda não tenha, você pode se cadastrar gratuitamente no site oficial do [Replit](https://replit.com/).
 
