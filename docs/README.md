@@ -705,6 +705,7 @@ codigo/
 ## 9.1 Solucionando Problemas de Acesso através da URL do Site
 
 - Caso ao acessar pelo link do render o projeto e não conseguir acessar o site, provavelmente devido às limitações de hospedagem free na plataforma, pois há um limite de requisições e recursos disponíveis para projetos gratuitos.Nesse caso, recomendo acessar o projeto pela plataforma Replit.
+- Linka do Projeto hospedado: [ Link do Projeto hospedado](https://cademeupet.onrender.com).
 
 ## 9.1.1 Pré-requisitos
 
