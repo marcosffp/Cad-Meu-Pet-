@@ -714,9 +714,8 @@ codigo/
 ## 9.1.1 Pré-requisitos
 
 - **Conta no Replit**: Para acessar e executar o projeto, é necessário ter uma conta na plataforma Replit. Caso ainda não tenha, você pode se cadastrar gratuitamente no site oficial do [Replit](https://replit.com/).
-  
-- Link do Projeto hospedado no Replit: [Link do Projeto no Replit](https://replit.com/@mafpinto/plf-es-2024-1-ti1-0385200-cade-meu-pet)
 
+  
 
 ## 9.2 Instalação
 
