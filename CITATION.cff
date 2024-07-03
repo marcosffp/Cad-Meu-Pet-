@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Cadê meu Pet?
@@ -13,7 +12,6 @@ authors:
     given-names: ⁠João Gabriel
   - family-names: Ferreira Pinto
     given-names: Marcos Alberto
-
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: da Fonseca
@@ -29,4 +27,3 @@ repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-03
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2024-06-30
->>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
